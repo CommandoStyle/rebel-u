@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Marquee consistent speed with start and stop scrolltrigger    
-  
-const alumniMarquees = () => {
+export const alumniMarquees = () => {
 
 gsap.registerPlugin(ScrollTrigger, Observer);
 
@@ -103,5 +99,3 @@ Observer.create({
 });
 
 }
-
-export default alumniMarquees;
