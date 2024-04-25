@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-function propCurrencyPick() {
+export function propCurrencyPick() {
 
     var euro = gsap.utils.toArray([".eur-selected", ".cb-eur__cta", ".reb-s-eur__cta", ".reb-m-eur__cta", ".reb-xxl-eur__cta", ".spa-eur__cta"]);
     var euroSelect = gsap.utils.toArray(".eur-select");
@@ -179,5 +177,3 @@ sgdSelect.forEach(sgdSelect => {
             });
            }) 
 }
-
-export default propCurrencyPick;
