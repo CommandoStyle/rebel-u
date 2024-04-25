@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Mr Ebel hero intro revert
-
-const mrebelIntroCta = (container) => {
+export const mrebelIntroCta = (container) => {
  
 gsap.set(".mrebel-reveal", { x: -30, opacity: 0 });
 gsap.set(['.home-logo', ".menu-txt", '.beta__txt', ".query-txt", ".query-away__track"], {autoAlpha: 1});
@@ -34,5 +30,3 @@ fortyTwo.load(fortyTwodata);
       .set(".hero-scroll", { delay: 1, display: "block" });
 
 }
-
-export default mrebelIntroCta;
