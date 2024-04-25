@@ -1,5 +1,5 @@
 
-const legalLottie = () => {
+export const legalLottie = () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -50,5 +50,3 @@ function LegalScrollTrigger(vars) {
    
 
 }
-
-export default legalLottie;
