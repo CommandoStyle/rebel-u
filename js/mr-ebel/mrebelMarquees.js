@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Marquee consistent speed with start and stop scrolltrigger    
-  
-const mrebelMarquees = () => {
+export const mrebelMarquees = () => {
 
 gsap.registerPlugin(ScrollTrigger, Observer);
 
@@ -93,5 +89,3 @@ Observer.create({
 });
 
 }
-
-export default mrebelMarquees;
