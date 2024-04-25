@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const legalIntroOnce = (container) => {
+export const legalIntroOnce = (container) => {
 
     gsap.set(".legal-reveal", { x: -30, opacity: 0 });
     gsap.set(['.home-logo', ".menu-txt", ".touch-print-open__wrap", '.beta__txt', '.hero-info__marquee-wrap', '.legal-lottie__contain'], {autoAlpha: 0});
@@ -37,5 +35,3 @@ legalIntroOnce
 .to('.cookie__notice', { overflow: "visible", duration: 0.001 });
 
 }
-    
-export default legalIntroOnce;
