@@ -1,6 +1,4 @@
-  // Reveal video grid container on scroll
-  
-  const aboutStFrame1 = () => {
+export const aboutStFrame1 = () => {
 
 gsap.set('.about-team__hello-wrap', {yPercent: 120});
 
@@ -24,5 +22,3 @@ gsap.set('.about-team__hello-wrap', {yPercent: 120});
     });
   });
 }
-
-export default aboutStFrame1;
