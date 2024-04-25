@@ -1,7 +1,4 @@
-import gsap from 'gsap';
-
-// Mr Ebel Swiper slider tennis Q and A
-const homeEbelSwiper = () => {
+export const homeEbelSwiper = () => {
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -247,5 +244,3 @@ ScrollTrigger.create({
 
 
  }
-
- export default homeEbelSwiper;
