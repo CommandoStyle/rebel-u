@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const mrebelImages = () => {
+export const mrebelImages = () => {
       
 // Menu items image reveal hover
 
@@ -210,5 +208,3 @@ window.addEventListener('mousemove', ev => mousepos = getMousePos(ev));
 new subsLink(subsEl);
 
     }
-
-  export default mrebelImages;
