@@ -1,7 +1,4 @@
-
-// Muzak on BOOKING and QUIZ
-
-const muzak = () => {
+export const muzak = () => {
 
     var tlAudio_in = new gsap.timeline({paused: true});
           tlAudio_in.to(".audio-pause__img", {display: 'none', duration: 0.01 })
@@ -53,6 +50,5 @@ const muzak = () => {
       audio.pause();
       audio.currentTime = 0;
       }  
-    }
-
-export default muzak;
+    
+}
