@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const cursorFirstNew = () => {
+export const cursorFirstNew = () => {
 
   gsap.registerPlugin(ExpoScaleEase);
 
@@ -284,8 +282,5 @@ target.addEventListener("pointerup", () => {
       $( ".menu__btn, .menu-close__btn, .mrebel__submit-query, .currency__btn, .currency-exit__btn, .quiz-cta__btn, .cookie-ok__btn, .nav__logo-btn" ).mouseleave(function() {
       $('.cursor-dot').removeClass('top-stuck');
     }); 
-
-    
+  
 }
-
-export default cursorFirstNew;
