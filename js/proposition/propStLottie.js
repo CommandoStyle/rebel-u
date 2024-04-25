@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Proposition lotties
-
-const propStLottie = () => {
+export const propStLottie = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -20,5 +16,3 @@ const propStLottie = () => {
   });
 
 }
-
-export default propStLottie;
