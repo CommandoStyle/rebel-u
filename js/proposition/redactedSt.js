@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// QUIZ section lotties 
-
-const redactedSt = () => {
+export const redactedSt = () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,5 +10,3 @@ gsap.registerPlugin(ScrollTrigger);
     });
    });
 }
-
-  export default redactedSt;
