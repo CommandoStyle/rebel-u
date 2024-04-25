@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const propIntroCta = (container) => {
+export const propIntroCta = (container) => {
 
     gsap.set(".prop-reveal", {  "will-change": "transform, opacity", x: -30, opacity: 0 });
     gsap.set(['.home-logo', ".menu-txt", '.beta__txt', ".currencies-txt", '.hero-info__marquee-wrap', ".currencies-list__contain"], {autoAlpha: 1});
@@ -30,5 +28,3 @@ const propIntroCta = (container) => {
         return propIntroCta;
   
   }
-
-export default propIntroCta;
