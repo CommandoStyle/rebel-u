@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const aboutVidScreenSaver = () => {
+export const aboutVidScreenSaver = () => {
 
 var dot = document.querySelector(".screensaver"),
     sScontainer = document.querySelector(".screensaver__contain"),
@@ -44,5 +42,3 @@ function bounceModifier(min, max) {
     }
   }
 }
-
-export default aboutVidScreenSaver;
