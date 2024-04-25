@@ -1,8 +1,4 @@
-import gsap from 'gsap';
- 
- // Testimonials Swiper slider
-      
-const homeTestiSwiper = () => {
+export const homeTestiSwiper = () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,5 +75,3 @@ $('.cta__home-alumni').on('mouseout', function() {
   });
 
  }
-
- export default homeTestiSwiper;
