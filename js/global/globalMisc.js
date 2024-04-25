@@ -1,5 +1,4 @@
-
-const globalMisc = () => {
+export const globalMisc = () => {
 
 // disable hover on load
 
@@ -33,5 +32,3 @@ $(document).ready(function() {
   });
 
 }
-
-export default globalMisc;
