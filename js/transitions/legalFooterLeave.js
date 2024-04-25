@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Alum deets leave cover
-
-const legalFooterLeave = (container) => {
+export const legalFooterLeave = (container) => {
 
     gsap.registerPlugin(ExpoScaleEase);
 
@@ -32,5 +28,3 @@ const legalFooterLeave = (container) => {
     })
 
 }
-
-export default legalFooterLeave;
