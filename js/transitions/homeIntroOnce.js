@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const homeIntroOnce = (container) => {
+export const homeIntroOnce = (container) => {
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,5 +94,3 @@ employeeScrub.load(employeeScrubdata);
 	  });
         
     }
-
-    export default homeIntroOnce;
