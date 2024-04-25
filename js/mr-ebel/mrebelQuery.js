@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const mrebelQuery = () => {
+export const mrebelQuery = () => {
 
 gsap.registerPlugin(ExpoScaleEase);
 
@@ -351,5 +349,3 @@ query_cancel_success
 
 
 }
-
-export default mrebelQuery;
