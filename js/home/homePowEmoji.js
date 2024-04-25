@@ -1,7 +1,4 @@
-
-// POW sad emoji rain
-
-const homePowEmoji = () => {
+export const homePowEmoji = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +39,6 @@ const homePowEmoji = () => {
       
     }
 
-    export default homePowEmoji;
     
    
     
