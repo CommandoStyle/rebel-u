@@ -1,6 +1,4 @@
-// Go to Alum
-
-const alumniLeave = () => {
+export const alumniLeave = () => {
 
     gsap.registerPlugin(ExpoScaleEase);
 
@@ -56,6 +54,4 @@ alumBtn.forEach((alumBtn) => {
    })
   })
 
-    }
-
-export default alumniLeave;
+}
