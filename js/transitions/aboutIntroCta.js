@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// About hero intro from home CTA
-
-const aboutIntroCta = (container) => {
+export const aboutIntroCta = (container) => {
 
   gsap.registerPlugin(MorphSVGPlugin);
 
@@ -49,5 +45,3 @@ const aboutIntroCta = (container) => {
       });
     });
   }
-
-export default aboutIntroCta;
