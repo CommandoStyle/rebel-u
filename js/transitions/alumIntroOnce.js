@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Case files hero intro reveal
-
-const alumIntroOnce = (container) => {
+export const alumIntroOnce = (container) => {
 
 gsap.set(".alum-reveal", { x: -30, opacity: 0 });
 gsap.set(['.home-logo', ".menu-txt", ".touch-print-open__wrap", '.beta__txt', '.hero-info__marquee-wrap', '.alumni-name__inner', '.mrebel-says__deets-txt'], {autoAlpha: 0});
@@ -43,5 +39,3 @@ alumIntroOnce
 .to('.cookie__notice', { overflow: "visible", duration: 0.001 });
 
 }
-
-export default alumIntroOnce;
