@@ -1,6 +1,3 @@
-//import barba from '@barba/core';
-import barbaPrefetch from '@barba/prefetch';
-
 //Turn off GSAP alerts
 gsap.config({
   nullTargetWarn: false,
@@ -9,9 +6,6 @@ gsap.config({
 
 //Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, Observer, SplitText, ExpoScaleEase, MotionPathPlugin, MorphSVGPlugin);
-
-//Barba prefectch init
-barba.use(barbaPrefetch);
 
 /**
 * Scroll
@@ -75,8 +69,6 @@ import NavRevertCurrent from './global/NavRevertCurrent';
 import cookieSelect from './global/cookieSelect';
 import iframeOut from './global/iFrameOut';
 import iframeOutQuery from './global/iFrameOutQuery';
-//import initWebflow from './global/initWebflow';
-//import muzak from './global/muzak';
 
 /**
 * Home
@@ -88,7 +80,6 @@ import homeStReveal from './home/homeStReveal';
 import homeStLottie from './home/homeStLottie';
 import homeMarquees from './home/homeMarquees';
 import homeCloseNavHome from './home/homeCloseNavHome';
-//import homeTestiSwiper from './home/homeTestiSwiper';
 
 /**
 * Proposition
@@ -112,8 +103,6 @@ import propBookingRebM from './proposition/propBookingRebM';
 import propBookingRebXXL from './proposition/propBookingRebXXL';
 import propBookingSpa from './proposition/propBookingSpa';
 import propCbSwiper from './proposition/propCbSwiper';
-//import propStCB from './proposition/propStCB';
-//import propBooking from './proposition/propBooking';
 
 /**
 * Alumni
@@ -131,8 +120,6 @@ import aboutMarquees from './about/aboutMarquees';
 import aboutStGlobe from './about/aboutStGlobe';
 import aboutYouVideo from './about/aboutYouVideo';
 import aboutStX from './about/aboutStX';
-//import aboutVidScreenSaver from './about/aboutVidScreenSaver';
-//import aboutStFrame1 from './about/aboutStFrame1';
 
 /**
 * Mr Ebel
@@ -145,7 +132,6 @@ import mrebelTopicSwipers from './mr-ebel/mrebelTopicSwipers';
 import mrebelSubscribe from './mr-ebel/mrebelSubscribe';
 import mrebelImages from './mr-ebel/mrebelImages';
 import mrebelTopicCounters from './mr-ebel/mrebelTopicCounters';
-//import mrebelSubLinks from './mr-ebel/mrebelSubLinks';
 
 /**
 * Legal
