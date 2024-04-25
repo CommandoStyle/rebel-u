@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const propBookingRebM = () => {
+export const propBookingRebM = () => {
 
 gsap.registerPlugin(ExpoScaleEase);
 
@@ -497,5 +495,3 @@ rebMexitSuccess.forEach((rebMexitSuccess) => {
     })
   
 }
-
-export default propBookingRebM;
