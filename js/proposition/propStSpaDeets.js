@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Rebellion details synced images and text scroll slider
-
-const propStSpaDeets = () => {
+export const propStSpaDeets = () => {
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
   
@@ -115,5 +111,3 @@ if (i == 0) {
     });
 
 }
-
-export default propStSpaDeets;
