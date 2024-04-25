@@ -1,4 +1,4 @@
-const noHoverScroll = () => {
+export const noHoverScroll = () => {
 
  // pointer events none on buttons on scroll
 
@@ -20,5 +20,3 @@ const noHoverScroll = () => {
     });
     
   }
-
-export default noHoverScroll;
