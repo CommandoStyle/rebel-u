@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const morphCursor = () => {
+export const morphCursor = () => {
 
 gsap.registerPlugin( MorphSVGPlugin );
 
@@ -261,5 +259,3 @@ el.addEventListener("pointerdown", () => {
   }); 
     
 }
-
-export default morphCursor;
