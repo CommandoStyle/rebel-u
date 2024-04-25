@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// cookie policy leave cover
-
-const cookieLeave = (container) => {
+export const cookieLeave = (container) => {
 
     gsap.registerPlugin(ExpoScaleEase);
 
@@ -33,5 +29,3 @@ const cookieLeave = (container) => {
     })
 
 }
-
-export default cookieLeave;
