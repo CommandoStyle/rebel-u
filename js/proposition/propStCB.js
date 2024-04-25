@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const propStCB = () => {
+export const propStCB = () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,5 +28,3 @@ CBblocks.to(".carte__wrap", {
       }, "<");
 
 }
-
-export default propStCB;
