@@ -1,10 +1,6 @@
-import gsap from 'gsap';
+export const propFaqAccordion = () => {
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, MorphSVGPlugin);
-
-// Dynamic FAQ accordion
-
-const propFaqAccordion = () => {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, MorphSVGPlugin);
 
 // ball to faq arrow 
 
@@ -114,5 +110,3 @@ arrowFlip.forEach((arrowFlip) => {
     }); 
 
 }
-
-export default propFaqAccordion;
