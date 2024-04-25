@@ -1,6 +1,6 @@
 //REEVERT CURRENT
 
-const NavRevertCurrent = () => {
+export const NavRevertCurrent = () => {
 
 gsap.registerPlugin(ExpoScaleEase);
 
@@ -67,5 +67,3 @@ currentRevert.forEach((currentRevert) => {
       })
    });
 }
-
-export default NavRevertCurrent;
