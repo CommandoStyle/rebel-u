@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Case files hero intro reveal
-
-const alumniIntroOnce = (container) => {
+export const alumniIntroOnce = (container) => {
 
 var targets = gsap.utils.toArray(".hero-cases__slide-contain");
 var offset = 120;
@@ -64,5 +60,3 @@ alumniIntroOnce
 .to('.cookie__notice', { overflow: "visible", duration: 0.001 });
 
 }
-
-export default alumniIntroOnce;
