@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const propIntroOnce = (container) => {
+export const propIntroOnce = (container) => {
 
 gsap.registerPlugin(SplitText);
 
@@ -55,5 +53,3 @@ propIntroOnce
         return tl;
   
   }
-
-export default propIntroOnce;
