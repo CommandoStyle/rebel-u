@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Close nav on current click
-
-const navCurrentNew = () => {
+export const navCurrentNew = () => {
 
 $('.menu-item__current').click(function() { $('.nav__main-menu-button').click();
  });  
@@ -28,5 +24,3 @@ var tlcurr = gsap.timeline({ paused: true });
   });
  })
 } 
-
-export default navCurrentNew;
