@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Home hero intro after nav (remove blips)
-
-const homeIntro = (container) => {
+export const homeIntro = (container) => {
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,5 +72,3 @@ roundsAnim.fromTo(rounds, {
           });
     
         }
-    
-        export default homeIntro;
