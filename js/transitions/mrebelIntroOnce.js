@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Mr Ebel hero intro reveal
-
-const mrebelIntroOnce = (container) => {
+export const mrebelIntroOnce = (container) => {
 
 gsap.set(".mrebel-reveal", { x: -30, opacity: 0 });
 //gsap.set(".mrebel-rev__mask", { yPercent: 101 });
@@ -53,5 +49,3 @@ ebelIntroOnce
 .to('.cookie__notice', { overflow: "visible", duration: 0.001 });
 
 }
-
-export default mrebelIntroOnce;
