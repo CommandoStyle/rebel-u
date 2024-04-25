@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const mrebelSubscribe = () => {  
+export const mrebelSubscribe = () => {  
 
   // SET EMAIL COVER IF ALREADY COMPLETED
 if (sessionStorage.getItem("emailSuccessPlayed", true)) {
@@ -120,5 +118,3 @@ function subsSuccess() {
 function R(min,max) {return min+Math.random()*(max-min)};
 
 }
-
-export default mrebelSubscribe;
