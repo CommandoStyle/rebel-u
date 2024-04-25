@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const mrebelPostRevertSt = () => {
+export const mrebelPostRevertSt = () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,5 +47,3 @@ mm.add("(max-width: 428px)", () => {
       });
 
   }
-  
-  export default mrebelPostRevertSt;
