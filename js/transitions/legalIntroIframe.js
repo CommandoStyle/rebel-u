@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const legalIntroIframe = (container) => {
+export const legalIntroIframe = (container) => {
 
     gsap.set(".legal-reveal", { x: -30, opacity: 0 });
     gsap.set(['.home-logo', ".menu-txt", '.beta__txt', '.hero-info__marquee-wrap', '.legal-lottie__contain'], {autoAlpha: 1});
@@ -20,5 +18,3 @@ legalIntroIframe
 
 
 }
-    
-export default legalIntroIframe;
