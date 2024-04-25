@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const propBookingSpa = () => {
+export const propBookingSpa = () => {
 
 gsap.registerPlugin(ExpoScaleEase);
 
@@ -492,5 +490,3 @@ spaExitSuccess.forEach((spaExitSuccess) => {
       });
   })
 }
-
-export default propBookingSpa;
