@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Currency open - close
-
-function propCurrencyMenu() {
+export function propCurrencyMenu() {
 
  // Currency menu vars
 
@@ -366,5 +362,3 @@ currencySelect.forEach((currencySelect) => {
   }); 
   
 }
-
-export default propCurrencyMenu;
