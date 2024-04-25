@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Menu open - close
-
-function navMenuNew() {
+export function navMenuNew() {
 
 gsap.registerPlugin(ExpoScaleEase);
 
@@ -399,8 +395,5 @@ let direction = {x: mousePosCache.x-mousepos.x, y: mousePosCache.y-mousepos.y};
 window.addEventListener('mousemove', ev => mousepos = getMousePos(ev));
 
 new Menu(menuEl);
-
-
+            
 }
-
-export default navMenuNew;
