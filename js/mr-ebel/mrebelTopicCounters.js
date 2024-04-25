@@ -1,4 +1,4 @@
-const mrebelTopicCounters = () => {
+export const mrebelTopicCounters = () => {
 
 //Count Beginnings
 $(document).ready(function() {
@@ -19,5 +19,3 @@ $('.mrebel-beginnings__count').text(beginningscounter);
          });
 
 }
-
-export default mrebelTopicCounters;
