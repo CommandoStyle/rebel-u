@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Mr Ebel post intro reveal
-
-const ebelPostIntroOnce = (container) => {
+export const ebelPostIntroOnce = (container) => {
 
 gsap.registerPlugin(SplitText);
 
@@ -63,5 +59,3 @@ ebelPostIntroOnce
 });
 
 }
-
-export default ebelPostIntroOnce;
