@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const aboutStX = () => {
+export const aboutStX = () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,5 +40,3 @@ var rotate = gsap.timeline({
   })
   
 }
-
-export default aboutStX;
