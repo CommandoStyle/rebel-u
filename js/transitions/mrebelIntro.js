@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Mr Ebel hero intro revert
-
-const mrebelIntro = (container) => {
+export const mrebelIntro = (container) => {
 
   var navHideTop = gsap.utils.toArray(".menu__txt-wrap");
   var navHideTopInner = gsap.utils.toArray(".menu__txt-inner");
@@ -50,5 +46,3 @@ fortyTwo.load(fortyTwodata);
       .set(".hero-scroll", { delay: 1, display: "block" });
 
 }
-
-export default mrebelIntro;
