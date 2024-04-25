@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const alumRevertSt = () => {
+export const alumRevertSt = () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -35,5 +33,3 @@ const alumRevertSt = () => {
       });
 
   }
-  
-  export default alumRevertSt;
