@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const bookedCover = () => {
+export const bookedCover = () => {
 
 const randomX = random(1, 10);
 const randomY = random(1, 10);
@@ -57,8 +55,5 @@ function moveY(target, direction) {
 function random(min, max) {
   const delta = max - min;
   return (direction = 1) => (min + delta * Math.random()) * direction;
+  }
 }
-
-}
-
-export default bookedCover;
