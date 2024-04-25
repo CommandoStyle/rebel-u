@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Reveal spacer lines from left on scroll
-
-const propStSpacers = () => {
+export const propStSpacers = () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -163,8 +159,4 @@ mm.add("(max-width: 428px)", () => {
     });
 });
 
-
-
 }
-
-export default propStSpacers;
