@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Arrow side-side CTA button
-
-const smlArrowCta = () => {
+export const smlArrowCta = () => {
   
 gsap.set(".topic-nav__track-right", { xPercent: 0 });
 gsap.set(".topic-nav__track-left", { xPercent: 0 });
@@ -111,5 +107,3 @@ rArrows.forEach(function(el) {
   });
 
 }
-
-export default smlArrowCta;
