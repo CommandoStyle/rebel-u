@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const legalIntroCookie = (container) => {
+export const legalIntroCookie = (container) => {
 
     gsap.registerPlugin(ExpoScaleEase);
 
@@ -26,4 +24,3 @@ legalIntroCookie
 
 }
     
-export default legalIntroCookie;
