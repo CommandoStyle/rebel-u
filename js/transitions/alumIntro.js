@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Alum deets intro reveal
-
-const alumIntro = (container) => {
+export const alumIntro = (container) => {
 
 gsap.set('.revert-arrow__track', { x: 100, opacity: 1, overwrite: "auto" });
 gsap.set(".alum-reveal", { x: -30, opacity: 0 });
@@ -25,5 +21,3 @@ alumIntro
 .set(".hero-scroll", { display: "block" }, "<");
 
 }
-
-export default alumIntro;
