@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const propIntro = (container) => {
+export const propIntro = (container) => {
 
     var navHideTopInner = gsap.utils.toArray(".menu__txt-inner");
     var navBotRev = gsap.utils.toArray(".nav-bot-rev");
@@ -43,5 +41,3 @@ const propIntro = (container) => {
         return propIntro;
   
   }
-
-export default propIntro;
