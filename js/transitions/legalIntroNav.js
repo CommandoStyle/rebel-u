@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const legalIntroNav = (container) => {
+export const legalIntroNav = (container) => {
 
     gsap.set(".legal-reveal", { x: -30, opacity: 0 });
     gsap.set(['.home-logo', '.beta__txt', '.hero-info__marquee-wrap', '.legal-lottie__contain'], {autoAlpha: 1});
@@ -34,5 +32,3 @@ legalIntroNav
 
 
 }
-    
-export default legalIntroNav;
