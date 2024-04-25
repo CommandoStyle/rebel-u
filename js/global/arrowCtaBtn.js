@@ -1,8 +1,5 @@
-import gsap from 'gsap';
 
-// Arrow side-side CTA button
-
-const arrowCtaBtn = (ArrowOnEnter, ArrowOnLeave) => {
+export const arrowCtaBtn = (ArrowOnEnter, ArrowOnLeave) => {
   
   let arrows = gsap.utils.toArray('.arrow__btn'); 
   let revertBack = gsap.utils.toArray('.revert-back__btn'); 
@@ -111,5 +108,3 @@ const arrowCtaBtn = (ArrowOnEnter, ArrowOnLeave) => {
     }  
   });
 }
-
-export default arrowCtaBtn;
