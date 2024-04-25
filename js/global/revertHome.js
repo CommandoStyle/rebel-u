@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Home revert CTA
-
-const revertHome = () => {
+export const revertHome = () => {
 
     gsap.registerPlugin(ExpoScaleEase);
 
@@ -58,5 +54,3 @@ const revertHome = () => {
         })
 
     }
-
-export default revertHome;
