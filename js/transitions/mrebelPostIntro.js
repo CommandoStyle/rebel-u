@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Mr Ebel post intro reveal
-
-const ebelPostIntro = (container) => {
+export const ebelPostIntro = (container) => {
 
 gsap.set('.mrebel-says__bg', { scaleX: 0});
 gsap.set(".mrebel-says__img-inner", { autoAlpha: 0 });
@@ -38,5 +34,3 @@ ebelPostIntro
 });
 
 }
-
-export default ebelPostIntro;
