@@ -1,4 +1,4 @@
-const legalLinksSt = () => {    
+export const legalLinksSt = () => {    
     
     // REVEAL EMAIL INPUT
 
@@ -23,5 +23,3 @@ const legalLinksSt = () => {
     })
 
 }
-
-export default legalLinksSt;
