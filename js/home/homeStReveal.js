@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Spacer lines reveal from side on scroll
-
-const homeStReveal = () => {
+export const homeStReveal = () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,5 +46,3 @@ gsap.utils.toArray(".lg-cta__btn").forEach(ctaBtn => {
   });
 
 }
-
-export default homeStReveal;
