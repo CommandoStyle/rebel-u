@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Case files hero intro reveal
-
-const alumniIntro = (container) => {
+export const alumniIntro = (container) => {
   
   var targets = gsap.utils.toArray(".hero-cases__slide-contain");
   //var navHideTop = gsap.utils.toArray(".menu__txt-wrap");
@@ -63,5 +59,3 @@ const alumniIntro = (container) => {
         .set(".hero-scroll", { display: "block" }, "<");
   
 }
-
-export default alumniIntro;
