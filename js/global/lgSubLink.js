@@ -1,6 +1,4 @@
- // Sub-links hover fill
-  
- const lgSubLink = (mouseenter, mouseout) => {
+export const lgSubLink = (mouseenter, mouseout) => {
  
     $(function() {  
       $('.sub__link')
@@ -26,9 +24,7 @@
     $('.cursor-dot').removeClass('hide');
       });
 
-
-
 }
 
-export default lgSubLink;
+
  
