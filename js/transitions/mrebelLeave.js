@@ -1,6 +1,4 @@
-// Go to Mr Ebel post
-
-const mrebelLeave = () => {
+export const mrebelLeave = () => {
 
     gsap.registerPlugin(ExpoScaleEase);
 
@@ -104,6 +102,4 @@ touchBtn.forEach((touchBtn) => {
    })
   })
 
-    }
-
-export default mrebelLeave;
+}
