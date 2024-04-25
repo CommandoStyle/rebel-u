@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Close nav on Home click
-    
-const homeCloseNavHome = () => {
+export const homeCloseNavHome = () => {
 
     $(".home-nav__btn").click(function() {
       $('.menu-close__btn').click(); 
@@ -61,5 +57,3 @@ var navBotRev = gsap.utils.toArray(".nav-bot-rev");
       });
    })
 }
-
-export default homeCloseNavHome;
