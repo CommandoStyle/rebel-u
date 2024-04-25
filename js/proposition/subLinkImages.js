@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const subLinkImages = () => {
+export const subLinkImages = () => {
       
       // Menu items image reveal hover
 
@@ -211,5 +209,3 @@ window.addEventListener('mousemove', ev => mousepos = getMousePos(ev));
       new subsLink(subsEl);
 
     }
-
-  export default subLinkImages;
