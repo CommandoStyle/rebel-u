@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Close nav on current click
-
-const navHoverNew = () => {
+export const navHoverNew = () => {
 
 // Menu items image reveal hover
 
@@ -215,5 +211,3 @@ window.addEventListener('mousemove', ev => mousepos = getMousePos(ev));
 new Menu(menuEl);
 
 }
-
-export default navHoverNew;
