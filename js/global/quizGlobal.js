@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const quizGlobal = () => {
+export const quizGlobal = () => {
 
 // SET QUIZ COVER OTHER PAGES IF ALREADY COMPLETED
 if (sessionStorage.getItem("quizSuccessPlayed", true)) {
@@ -271,8 +269,4 @@ quizCancelSuccess.addEventListener("click", (e) => {
 
       })
    });
-
-
 }
-
-export default quizGlobal;
