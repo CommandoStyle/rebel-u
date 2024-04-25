@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Paperform REB booking success balloon drop
-
-const propREBsuccess = () => {
+export const propREBsuccess = () => {
 
 gsap.set(".reb-drop__contain", {display: "none"})
 gsap.set("img", {xPercent:"-50%", yPercent:"-50%"})
@@ -67,8 +63,4 @@ rebDrop.from(elem, {delay: () => gsap.utils.random(0, 3.5), autoAlpha: 0, durati
 
     function R(min,max) {return min+Math.random()*(max-min)};
 
-
-
 }
-
-export default propREBsuccess;
