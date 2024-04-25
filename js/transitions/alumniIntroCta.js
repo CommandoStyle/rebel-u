@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Case files hero intro reveal
-
-const alumniIntroCta = (container) => {
+export const alumniIntroCta = (container) => {
   
   var targets = gsap.utils.toArray(".hero-cases__slide-contain");
   var offset = 120;
@@ -47,5 +43,3 @@ const alumniIntroCta = (container) => {
         .set(".hero-scroll", { display: "block" }, "<");
   
 }
-
-export default alumniIntroCta;
