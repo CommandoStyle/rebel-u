@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// revert Alum and Posts CTA
-
-const revertSubPg = () => {
+export const revertSubPg = () => {
 
     gsap.registerPlugin(ExpoScaleEase);
 
@@ -33,5 +29,3 @@ const revertSubPg = () => {
         })
 
     }
-
-export default revertSubPg;
