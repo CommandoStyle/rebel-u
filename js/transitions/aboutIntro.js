@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// About hero intro after nav
-
-const aboutIntro = (container) => {
+export const aboutIntro = (container) => {
 
   gsap.registerPlugin(MorphSVGPlugin);
 
@@ -63,5 +59,3 @@ const aboutIntro = (container) => {
       });
     });
   }
-
-export default aboutIntro;
