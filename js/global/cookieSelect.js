@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// revert Alum and Posts CTA
-
-const cookieSelect = () => {
+export const cookieSelect = () => {
 
     var cookieSelectBtn = gsap.utils.toArray(".cookie-cta__btn");
 
@@ -23,5 +19,3 @@ const cookieSelect = () => {
         })
 
     }
-
-export default cookieSelect;
