@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const iframeOut = () => {
+export const iframeOut = () => {
 
 window.onmessage = function (event) {
     if (event.data === "link-out") {
@@ -41,5 +39,3 @@ let iframe_cancel = gsap.timeline();
 
     }
 }
-
-export default iframeOut; 
