@@ -1,8 +1,4 @@
-import gsap from 'gsap';
- 
- // Home lotties 
-
- const homeStLottie = () => {
+export const homeStLottie = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -89,5 +85,3 @@ import gsap from 'gsap';
     });
 
 }
-
-export default homeStLottie;
