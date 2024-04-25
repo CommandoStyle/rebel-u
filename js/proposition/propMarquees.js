@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Marquee consistent speed with start and stop scrolltrigger    
-  
-const propMarquees = () => {
+export const propMarquees = () => {
 
 gsap.registerPlugin(ScrollTrigger, Observer);
 
@@ -179,5 +175,3 @@ Observer.create({
 });
 
 }
-
-export default propMarquees;
