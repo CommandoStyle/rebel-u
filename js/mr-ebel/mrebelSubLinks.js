@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const mrebelSubLinks = () => {
+export const mrebelSubLinks = () => {
       
   // Mr ebel sub links
 
@@ -43,5 +41,3 @@ el.addEventListener('mouseleave', function() {
 })
 
 }
-
-  export default mrebelSubLinks;
