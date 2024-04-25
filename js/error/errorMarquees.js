@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Marquee consistent speed with start and stop scrolltrigger    
-  
-const errorMarquees = () => {
+export const errorMarquees = () => {
 
 gsap.set(".redact-cover-nav", {scaleX: 0 });
 
@@ -89,5 +85,3 @@ ScrollTrigger.create({
   });
 
 }
-
-export default errorMarquees;
