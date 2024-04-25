@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const iframeOutQuery = () => {
+export const iframeOutQuery = () => {
 
 window.onmessage = function (event) {
     if (event.data === "link-out-query") {
@@ -36,5 +34,3 @@ let iframeQ_cancel = gsap.timeline();
 
     }
 }
-
-export default iframeOutQuery; 
