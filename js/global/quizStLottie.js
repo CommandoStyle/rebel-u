@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// QUIZ section lotties 
-
-const quizStLottie = () => {
+export const quizStLottie = () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,5 +35,3 @@ gsap.utils.toArray(".lg-arrow__track").forEach(function(elem) {
   });
 
 }
-
-export default quizStLottie;
