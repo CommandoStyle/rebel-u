@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Home all leave
-
-const homeLeave = (container) => {
+export const homeLeave = (container) => {
 
     gsap.registerPlugin(ExpoScaleEase);
 
@@ -135,5 +131,3 @@ const homeLeave = (container) => {
 
 
 }
-
-export default homeLeave;
