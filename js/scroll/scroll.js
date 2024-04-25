@@ -1,6 +1,4 @@
-import { gsap } from "gsap";
-
-const scroll = () => {
+export const scroll = () => {
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
@@ -315,5 +313,3 @@ LegalCookiesLink.forEach(CookiesLink => {
 })
 
 }
-
-export default scroll;
