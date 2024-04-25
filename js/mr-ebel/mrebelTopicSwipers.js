@@ -1,4 +1,4 @@
-const mrebelTopicSwipers = () => {
+export const mrebelTopicSwipers = () => {
 
 //RANDOM Swiper
   const BegSwiper = new Swiper(".swiper.ebel-beginnings", {
@@ -102,5 +102,3 @@ const mrebelTopicSwipers = () => {
   });
 
 }
-
-export default mrebelTopicSwipers;
