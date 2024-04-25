@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const aboutStGlobe = () => {
+export const aboutStGlobe = () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +14,4 @@ const aboutStGlobe = () => {
       });
 
   }
-  
-  export default aboutStGlobe;
 
