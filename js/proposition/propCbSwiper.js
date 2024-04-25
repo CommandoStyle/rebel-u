@@ -1,6 +1,4 @@
-// CB Slick slider
-
-const propCbSwiper = () => {
+export const propCbSwiper = () => {
   
     const cbSwiper = new Swiper('.swiper.cb-options', {
       direction: "vertical",
@@ -15,5 +13,3 @@ const propCbSwiper = () => {
     });
     
   }
-  
-export default propCbSwiper;
