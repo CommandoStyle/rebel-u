@@ -1,5 +1,5 @@
 
-const aboutYouVideo = () => {
+export const aboutYouVideo = () => {
  
 // Video opt-in
 
@@ -77,5 +77,3 @@ const toggleCam = () => {
     });
 
 }
-
-export default aboutYouVideo;
