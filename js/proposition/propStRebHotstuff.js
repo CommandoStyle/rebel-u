@@ -1,8 +1,4 @@
-import gsap from 'gsap';
-
-// Reveal REB potency hot stuff text on scroll
-
-const propStRebHotstuff = () => {
+export const propStRebHotstuff = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -32,8 +28,6 @@ const propStRebHotstuff = () => {
   });
 }
 
-
-export default propStRebHotstuff;
 
 
   
