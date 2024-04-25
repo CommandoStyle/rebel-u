@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-
-const alumniImages = () => {
+export const alumniImages = () => {
       
 // Menu items image reveal hover
 
@@ -213,5 +211,3 @@ window.addEventListener('mousemove', ev => mousepos = getMousePos(ev));
 new subsLink(subsEl);
 
     }
-
-  export default alumniImages;
