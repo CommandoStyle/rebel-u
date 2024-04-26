@@ -11,8 +11,8 @@ export const homeStLottie = () => {
     start: "top 70%",
     onEnter: () => indieCircle.play(),
     //onLeave: () => indieCircle.seek('0%'),
-    onEnterBack: () => indieCircle.play(),
-    onLeaveBack: () => indieCircle.seek('0%')
+    //onEnterBack: () => indieCircle.play(),
+    //onLeaveBack: () => indieCircle.seek('0%')
   });
 
   const corpScrub = document.getElementById("corporate-scrub");
@@ -24,8 +24,8 @@ export const homeStLottie = () => {
     start: "top 75%",
     onEnter: () => corpScrub.play(),
     //onLeave: () => corpScrub.seek('0%'),
-    onEnterBack: () => corpScrub.play(),
-    onLeaveBack: () => corpScrub.seek('0%')
+    //onEnterBack: () => corpScrub.play(),
+    //onLeaveBack: () => corpScrub.seek('0%')
   });
 
   const rebBridge = document.getElementById("reb-bridge");
@@ -37,8 +37,8 @@ export const homeStLottie = () => {
     start: "top 72%",
     onEnter: () => rebBridge.play(),
     //onLeave: () => rebBridge.seek('0%'),
-    onEnterBack: () => rebBridge.play(),
-    onLeaveBack: () => rebBridge.reverse()
+    //onEnterBack: () => rebBridge.play(),
+    //onLeaveBack: () => rebBridge.reverse()
   });
                 
  var elem = document.getElementById('hap-sad');
