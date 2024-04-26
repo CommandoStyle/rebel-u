@@ -18,9 +18,7 @@ export const cursorFirstNew = () => {
       var setY = gsap.quickSetter(cursor, "y");
       gsap.set(cursor, {
         scale: 0,
-        autoAlpha: 0,
-        setX: 0,
-        setY: 0
+        autoAlpha: 0
       });
 
   
@@ -31,8 +29,6 @@ export const cursorFirstNew = () => {
       gsap.to(cursor, {
         scale: 1,
         autoAlpha: 1,
-        setX: 0,
-        setY: 0
       });
       firstMouseMove = false;
     } else {
