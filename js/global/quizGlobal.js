@@ -184,8 +184,8 @@ quizCancel.forEach((quizCancel) => {
     
   var total = 22;
   var warp = document.getElementById("quiz-drop__contain"),  w = window.innerWidth , h = window.innerHeight;
-   
-   for (i=0; i<total; i++){ 
+
+   for (var i=0; i<total; i++){ 
      var Div = document.createElement('div');
      gsap.set(Div,{attr:{class:'reb-drop'}, x:R(0,w), y:R(-200  -150), z:R(-200, 200)});
      warp.appendChild(Div);
