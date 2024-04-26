@@ -38,7 +38,7 @@ export const homeStLottie = () => {
     onEnter: () => rebBridge.play(),
     //onLeave: () => rebBridge.seek('0%'),
     onEnterBack: () => rebBridge.play(),
-    onLeaveBack: () => rebBridge.seek('0%')
+    onLeaveBack: () => rebBridge.reverse()
   });
                 
  var elem = document.getElementById('hap-sad');
