@@ -8,7 +8,7 @@ export const homePowEmoji = () => {
     var total = 14;
     var warp = document.getElementById("petal_contain"),  w = window.innerWidth , h = window.innerHeight;
      
-     for (i=0; i<total; i++) { 
+     for (var i=0; i<total; i++) { 
        var Div = document.createElement('div');
        gsap.set(Div, {attr:{class:'petal'}, x:R(0,w),y:R(-200,-150),z:R(-200,200)});
        warp.appendChild(Div);
