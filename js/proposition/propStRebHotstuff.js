@@ -4,8 +4,8 @@ export const propStRebHotstuff = () => {
 
   gsap.utils.toArray('.is--hot-stuff').forEach(function(elem) {
 
-    gsap.set('.is--hot-stuff', {yPercent: -105});
-    gsap.set(".reb-m__hot-stuff-contain", {yPercent: 105});
+    gsap.set('.is--hot-stuff', {x: -30, opacity: 0});
+    //gsap.set(".reb-m__hot-stuff-contain", {yPercent: 105});
     
     const hotTimeline = gsap.timeline({
         scrollTrigger: {
@@ -16,14 +16,14 @@ export const propStRebHotstuff = () => {
       });
   
     hotTimeline.to(elem, {
-      duration: 1,
-      yPercent: 0,
-      ease: "expo"
+      duration: 0.6,
+      x: 0,
+      ease: "power1.out"
     })
-    .to(".reb-m__hot-stuff-contain", {
-      duration: 1,
-      yPercent: 0,
-      ease: "expo"
+    .to(elem, {
+      duration: 0.6,
+      opacity: 1,
+      ease: "linear"
      }, "<")
   });
 }
