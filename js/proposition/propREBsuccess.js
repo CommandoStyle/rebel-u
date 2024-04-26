@@ -12,7 +12,7 @@ gsap.set([".reb-success-items__contain", ".cb-success-items__contain", ".spa-suc
 var total = 22;
     var warp = document.getElementById("reb-drop__contain"),  w = window.innerWidth , h = window.innerHeight;
      
-     for (i=0; i<total; i++){ 
+     for (var i=0; i<total; i++){ 
        var DivReb = document.createElement('reb-div');
        gsap.set(DivReb, {attr:{class:'reb-drop'}, x:R(0,w), y:R(-200, -150), z:R(-200, 200)});
        warp.appendChild(DivReb);
