@@ -11,141 +11,141 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, Observer, SplitText, ExpoScal
 * Scroll
 */
 
-import { scroll } from './scroll/scroll';
-import { resetScroll } from './scroll/resetScroll';
-import { noHoverScroll } from './scroll/noHoverScroll';
+import { scroll } from './scroll/scroll.js';
+import { resetScroll } from './scroll/resetScroll.js';
+import { noHoverScroll } from './scroll/noHoverScroll.js';
 
 /**
 * Transition animations
 */
 
-import { homeIntroOnce } from './transitions/homeIntroOnce';
-import { homeIntro } from './transitions/homeIntro';
-import { propIntroOnce } from './transitions/propIntroOnce';
-import { propIntroCta } from './transitions/propIntroCta';
-import { propIntro } from './transitions/propIntro';
-import { alumniIntroOnce } from './transitions/alumniIntroOnce';
-import { alumniIntroCta } from './transitions/alumniIntroCta';
-import { alumniIntro } from './transitions/alumniIntro';
-import { alumniLeave } from './transitions/alumniLeave';
-import { alumIntro } from './transitions/alumIntro';
-import { alumIntroOnce } from './transitions/alumIntroOnce';
-import { aboutIntroOnce } from './transitions/aboutIntroOnce';
-import { aboutIntroCta } from './transitions/aboutIntroCta';
-import { aboutIntro } from './transitions/aboutIntro';
-import { homeLeave } from './transitions/homeLeave';
-import { mrebelIntroOnce } from './transitions/mrebelIntroOnce';
-import { mrebelIntroCta } from './transitions/mrebelIntroCta';
-import { mrebelIntro } from './transitions/mrebelIntro';
-import { mrebelLeave } from './transitions/mrebelLeave';
-import { ebelPostIntroOnce } from './transitions/mrebelPostIntroOnce';
-import { ebelPostIntro } from './transitions/mrebelPostIntro';
-import { legalFooterLeave } from './transitions/legalFooterLeave';
-import { legalIntroOnce } from './transitions/legalIntroOnce';
-import { legalIntro } from './transitions/legalIntro';
-import { legalIntroIframe } from './transitions/legalIntroIframe';
-import { legalIntroNav } from './transitions/legalIntroNav';
-import { legalIntroCookie } from './transitions/legalIntroCookie';
-import { cookieLeave } from './transitions/cookieLeave';
+import { homeIntroOnce } from './transitions/homeIntroOnce.js';
+import { homeIntro } from './transitions/homeIntro.js';
+import { propIntroOnce } from './transitions/propIntroOnce.js';
+import { propIntroCta } from './transitions/propIntroCta.js';
+import { propIntro } from './transitions/propIntro.js';
+import { alumniIntroOnce } from './transitions/alumniIntroOnce.js';
+import { alumniIntroCta } from './transitions/alumniIntroCta.js';
+import { alumniIntro } from './transitions/alumniIntro.js';
+import { alumniLeave } from './transitions/alumniLeave.js';
+import { alumIntro } from './transitions/alumIntro.js';
+import { alumIntroOnce } from './transitions/alumIntroOnce.js';
+import { aboutIntroOnce } from './transitions/aboutIntroOnce.js';
+import { aboutIntroCta } from './transitions/aboutIntroCta.js';
+import { aboutIntro } from './transitions/aboutIntro.js';
+import { homeLeave } from './transitions/homeLeave.js';
+import { mrebelIntroOnce } from './transitions/mrebelIntroOnce.js';
+import { mrebelIntroCta } from './transitions/mrebelIntroCta.js';
+import { mrebelIntro } from './transitions/mrebelIntro.js';
+import { mrebelLeave } from './transitions/mrebelLeave.js';
+import { ebelPostIntroOnce } from './transitions/mrebelPostIntroOnce.js';
+import { ebelPostIntro } from './transitions/mrebelPostIntro.js';
+import { legalFooterLeave } from './transitions/legalFooterLeave.js';
+import { legalIntroOnce } from './transitions/legalIntroOnce.js';
+import { legalIntro } from './transitions/legalIntro.js';
+import { legalIntroIframe } from './transitions/legalIntroIframe.js';
+import { legalIntroNav } from './transitions/legalIntroNav.js';
+import { legalIntroCookie } from './transitions/legalIntroCookie.js';
+import { cookieLeave } from './transitions/cookieLeave.js';
 
 /**
 * Global
 */
 
-import { arrowCtaBtn } from './global/arrowCtaBtn';
-import { cursorFirstNew } from './global/cursorFirstNew';
-import { globalMisc } from './global/globalMisc';
-import { navMenuNew } from './global/navMenuNew';
-import { quizGlobal } from './global/quizGlobal';
-import { morphCursor } from './global/morphCursor';
-import { smlArrowCta } from './global/smlArrowCta';
-import { revertHome } from './global/revertHome';
-import { revertSubPg } from './global/revertSubPg';
-import { lgSubLink } from './global/lgSubLink';
-import { quizStLottie } from './global/quizStLottie';
-import { navHoverNew } from './global/navHoverNew';
-import { bookedCover } from './global/bookedCover';
-import { NavRevertCurrent } from './global/NavRevertCurrent';
-import { cookieSelect } from './global/cookieSelect';
-import { iframeOut } from './global/iFrameOut';
-import { iframeOutQuery } from './global/iFrameOutQuery';
+import { arrowCtaBtn } from './global/arrowCtaBtn.js';
+import { cursorFirstNew } from './global/cursorFirstNew.js';
+import { globalMisc } from './global/globalMisc.js';
+import { navMenuNew } from './global/navMenuNew.js';
+import { quizGlobal } from './global/quizGlobal.js';
+import { morphCursor } from './global/morphCursor.js';
+import { smlArrowCta } from './global/smlArrowCta.js';
+import { revertHome } from './global/revertHome.js';
+import { revertSubPg } from './global/revertSubPg.js';
+import { lgSubLink } from './global/lgSubLink.js';
+import { quizStLottie } from './global/quizStLottie.js';
+import { navHoverNew } from './global/navHoverNew.js';
+import { bookedCover } from './global/bookedCover.js';
+import { NavRevertCurrent } from './global/NavRevertCurrent.js';
+import { cookieSelect } from './global/cookieSelect.js';
+import { iframeOut } from './global/iFrameOut.js';
+import { iframeOutQuery } from './global/iFrameOutQuery.js';
 
 /**
 * Home
 */
 
-import { homeEbelSwiper } from './home/homeEbelSwiper';
-import { homePowEmoji } from './home/homePowEmoji';
-import { homeStReveal } from './home/homeStReveal';
-import { homeStLottie } from './home/homeStLottie';
-import { homeMarquees } from './home/homeMarquees';
-import { homeCloseNavHome } from './home/homeCloseNavHome';
+import { homeEbelSwiper } from './home/homeEbelSwiper.js';
+import { homePowEmoji } from './home/homePowEmoji.js';
+import { homeStReveal } from './home/homeStReveal.js';
+import { homeStLottie } from './home/homeStLottie.js';
+import { homeMarquees } from './home/homeMarquees.js';
+import { homeCloseNavHome } from './home/homeCloseNavHome.js';
 
 /**
 * Proposition
 */
 
-import { propMarquees } from './proposition/propMarquees';
-import { propREBsuccess } from './proposition/propREBsuccess';
-import { propFaqAccordion } from './proposition/propFaqAccordion';
-import { propStLottie } from './proposition/propStLottie';
-import { propStSpacers } from './proposition/propStSpacers';
-import { propStRebHotstuff } from './proposition/propStRebHotstuff';
-import { redactedSt } from './proposition/redactedSt';
-import { subLinkImages } from './proposition/subLinkImages';
-import { propCurrencyMenu } from './proposition/propCurrencyMenu';
-import { propStRebDeets } from './proposition/propStRebDeets';
-import { propStSpaDeets } from './proposition/propStSpaDeets';
-import { propCurrencyPick } from './proposition/propCurrencyPick';
-import { propBookingCb } from './proposition/propBookingCb';
-import { propBookingRebS } from './proposition/propBookingRebS';
-import { propBookingRebM } from './proposition/propBookingRebM';
-import { propBookingRebXXL } from './proposition/propBookingRebXXL';
-import { propBookingSpa } from './proposition/propBookingSpa';
-import { propCbSwiper } from './proposition/propCbSwiper';
+import { propMarquees } from './proposition/propMarquees.js';
+import { propREBsuccess } from './proposition/propREBsuccess.js';
+import { propFaqAccordion } from './proposition/propFaqAccordion.js';
+import { propStLottie } from './proposition/propStLottie.js';
+import { propStSpacers } from './proposition/propStSpacers.js';
+import { propStRebHotstuff } from './proposition/propStRebHotstuff.js';
+import { redactedSt } from './proposition/redactedSt.js';
+import { subLinkImages } from './proposition/subLinkImages.js';
+import { propCurrencyMenu } from './proposition/propCurrencyMenu.js';
+import { propStRebDeets } from './proposition/propStRebDeets.js';
+import { propStSpaDeets } from './proposition/propStSpaDeets.js';
+import { propCurrencyPick } from './proposition/propCurrencyPick.js';
+import { propBookingCb } from './proposition/propBookingCb.js';
+import { propBookingRebS } from './proposition/propBookingRebS.js';
+import { propBookingRebM } from './proposition/propBookingRebM.js';
+import { propBookingRebXXL } from './proposition/propBookingRebXXL.js';
+import { propBookingSpa } from './proposition/propBookingSpa.js';
+import { propCbSwiper } from './proposition/propCbSwiper.js';
 
 /**
 * Alumni
 */
 
-import { alumRevertSt } from './alumni/alumRevertSt';
-import { alumniImages } from './alumni/alumniImages';
-import { alumniMarquees } from './alumni/alumniMarquees';
+import { alumRevertSt } from './alumni/alumRevertSt.js';
+import { alumniImages } from './alumni/alumniImages.js';
+import { alumniMarquees } from './alumni/alumniMarquees.js';
 
 /**
 * About
 */
 
-import { aboutMarquees } from './about/aboutMarquees';
-import { aboutStGlobe } from './about/aboutStGlobe';
-import { aboutYouVideo } from './about/aboutYouVideo';
-import { aboutStX } from './about/aboutStX';
+import { aboutMarquees } from './about/aboutMarquees.js';
+import { aboutStGlobe } from './about/aboutStGlobe.js';
+import { aboutYouVideo } from './about/aboutYouVideo.js';
+import { aboutStX } from './about/aboutStX.js';
 
 /**
 * Mr Ebel
 */
 
-import { mrebelMarquees } from './mr-ebel/mrebelMarquees';
-import { mrebelPostRevertSt } from './mr-ebel/mrebelPostRevertSt';
-import { mrebelQuery } from './mr-ebel/mrebelQuery';
-import { mrebelTopicSwipers } from './mr-ebel/mrebelTopicSwipers';
-import { mrebelSubscribe } from './mr-ebel/mrebelSubscribe';
-import { mrebelImages } from './mr-ebel/mrebelImages';
-import { mrebelTopicCounters } from './mr-ebel/mrebelTopicCounters';
+import { mrebelMarquees } from './mr-ebel/mrebelMarquees.js';
+import { mrebelPostRevertSt } from './mr-ebel/mrebelPostRevertSt.js';
+import { mrebelQuery } from './mr-ebel/mrebelQuery.js';
+import { mrebelTopicSwipers } from './mr-ebel/mrebelTopicSwipers.js';
+import { mrebelSubscribe } from './mr-ebel/mrebelSubscribe.js';
+import { mrebelImages } from './mr-ebel/mrebelImages.js';
+import { mrebelTopicCounters } from './mr-ebel/mrebelTopicCounters.js';
 
 /**
 * Legal
 */
 
-import { legalLottie } from './legal/legalLottie';
-import { legalMarquees } from './legal/legalMarquees';
-import { legalLinksSt } from './legal/legalLinksSt';
+import { legalLottie } from './legal/legalLottie.js';
+import { legalMarquees } from './legal/legalMarquees.js';
+import { legalLinksSt } from './legal/legalLinksSt.js';
 
 /**
 * Error
 */
 
-import { errorMarquees } from './error/errorMarquees';
+import { errorMarquees } from './error/errorMarquees.js';
 
 // Get mouse position on click  
 let percentTop;
