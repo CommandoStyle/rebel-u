@@ -1,13 +1,7 @@
-
 @font-face {
-    font-family: 'DiatypeReg';
-    src: url("https://assets.website-files.com/64217a46f171f9b7cb4bcfcf/64217a46f171f9451b4bd0a1_ABCDiatype-Regular.woff") format("woff");
-  }
-  
-  @font-face {
-    font-family: 'DiatypeMed';
-    src: url("https://assets.website-files.com/64217a46f171f9b7cb4bcfcf/64217a46f171f9667b4bd0c7_ABCDiatype-Medium.woff") format("woff");
-  }
+  font-family: 'StarlitDrive';
+  src: url("https://dl.dropboxusercontent.com/scl/fi/q6wc9roztl2214u3n6r66/StarlitDrive.woff2?rlkey=28c15algfje62nn8gxp1scnt3") format("woff2"),
+}
   
   body {
     font-size: 1vw;
