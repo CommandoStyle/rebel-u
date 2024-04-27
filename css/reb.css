@@ -1,6 +1,11 @@
 @font-face {
-  font-family: 'StarlitDrive';
-  src: url("https://dl.dropboxusercontent.com/scl/fi/q6wc9roztl2214u3n6r66/StarlitDrive.woff2?rlkey=28c15algfje62nn8gxp1scnt3") format("woff2"),
+  font-family: 'DiatypeReg';
+  src: url("https://dl.dropboxusercontent.com/s/rm4l2ae3ii4yrly/ABCDiatype-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'DiatypeMed';
+  src: url("https://dl.dropboxusercontent.com/s/xe500fztn93pt2d/ABCDiatype-Medium.woff2") format("woff2");
 }
   
   body {
