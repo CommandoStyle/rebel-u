@@ -7,8 +7,8 @@ gsap.set(".skip-btn-arrow-up__wrap", { yPercent: 0 });
   
 let rArrows = gsap.utils.toArray('.topic-nav__next'); 
 let lArrows = gsap.utils.toArray('.topic-nav__prev'); 
-let dArrows = gsap.utils.toArray('.reb__skip-btn'); 
-let uArrows = gsap.utils.toArray('.reb__skip-up-btn'); 
+let dArrows = gsap.utils.toArray(['.reb__skip-btn', '.spa__skip-btn']); 
+let uArrows = gsap.utils.toArray(['.reb__skip-up-btn', '.spa__skip-up-btn']); 
   
 rArrows.forEach(function(el) { 
     
