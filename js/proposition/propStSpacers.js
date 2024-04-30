@@ -26,7 +26,7 @@ gsap.set(".cta-txt", { autoAlpha: 0 });
 
 gsap.utils.toArray(".lg-cta__btn, .reb__skip-btn, .reb__skip-up-btn, .spa__skip-btn, .spa__skip-up-btn").forEach(ctaBtn => {
 
- const ctaTxt = ctaBtn.querySelectorAll([".cta-txt", ".skip-btn-arrow__wrap"]);
+ const ctaTxt = ctaBtn.querySelectorAll([".cta-txt", ".skip-btn-arrow__wrap", ".skip-btn-arrow-up__wrap"]);
  const ctaCover = ctaBtn.querySelectorAll(".cta-redact-cover");
 
  gsap.set(ctaTxt, { autoAlpha: 0 });
