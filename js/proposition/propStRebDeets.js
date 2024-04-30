@@ -18,9 +18,9 @@ var rebTl = gsap.timeline({
     pin: "overflow",
     snap: 
     {snapTo: "labelsDirectional",
-    duration: {min: 0.3, max: 0.6},
-    delay: 0.15,
-    ease: "linear" }
+    duration: {min: 0.2, max: 0.4},
+    delay: 0.1,
+    ease: "power1.easeOut" }
     //snap: 1 / (points.length - 1)
   }
 })
@@ -200,9 +200,9 @@ if (i !=points.length-1) {
 // Skip direction arrow
 let scrollDirArrow = gsap.timeline( { paused: true });
 
-scrollDirArrow//.fromTo([".skip-btn-arrow__wrap", ".skip-btn-arrow-up__wrap"], { rotateX: 0 }, { rotateX: 180, duration: 0.2, overwrite: 'auto' }).progress(1)
-              .fromTo([".reb__skip-btn", ".spa__skip-btn"], { display: "flex" }, { display: "none", duration: 0 }, "<").progress(1)
-              .fromTo([".reb__skip-up-btn", ".spa__skip-up-btn"], { display: "none" }, { display: "flex", duration: 0 }, "<").progress(1);
+scrollDirArrow.fromTo([".skip-btn-arrow__wrap", ".skip-btn-arrow-up__wrap"], { rotateX: 0 }, { rotateX: 180, duration: 0.2, overwrite: 'auto', ease: "power1.easeOut" })
+              .fromTo([".reb__skip-btn", ".spa__skip-btn"], { display: "flex" }, { display: "none", duration: 0, overwrite: 'auto' }, "<")
+              .fromTo([".reb__skip-up-btn", ".spa__skip-up-btn"], { display: "none" }, { display: "flex", duration: 0, overwrite: 'auto' }, "<").progress(1);
 
 ScrollTrigger.create({
   invalidateOnRefresh: false,
