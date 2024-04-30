@@ -18,7 +18,8 @@ var rebTl = gsap.timeline({
     pin: "overflow",
     snap: 
     {snapTo: "labelsDirectional",
-    duration: {min: 0.6, max: 1.2},
+    duration: {min: 0.45, max: 0.9},
+    delay: 0.3,
     ease: "linear" }
     //snap: 1 / (points.length - 1)
   }
