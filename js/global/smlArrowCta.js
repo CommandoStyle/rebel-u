@@ -127,7 +127,7 @@ rArrows.forEach(function(el) {
       
       if (!aAnimationDown) {      
         smlArrowD.fromTo(aTrackDown, { yPercent: 0}, { yPercent: 0, duration: 0.2})
-        .fromTo(aTrackDown, { yPercent: 100 }, {
+        .fromTo(aTrackDown, { yPercent: -100 }, {
         yPercent: 0,
         ease: "power1.easeOut",
         duration: 0.4,
