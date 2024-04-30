@@ -205,7 +205,8 @@ scrollDirArrow.fromTo([".skip-btn-arrow__wrap", ".skip-btn-arrow-up__wrap"], { r
               .fromTo([".reb__skip-up-btn", ".spa__skip-up-btn"], { display: "none" }, { display: "flex", duration: 0, overwrite: 'auto' }, "<").progress(1);
 
 ScrollTrigger.create({
-  invalidateOnRefresh: false,
+  //invalidateOnRefresh: false,
+  scrub: 2, 
   onRefresh: () => scrollDirArrow.pause(),
   onUpdate: self => {
     self.direction === 1 ? scrollDirArrow.reverse() : scrollDirArrow.play(); },
