@@ -865,6 +865,7 @@ cookieLeave();
 globalMisc();
 NavRevertCurrent();
 propCbSwiper();
+smlArrowCta();
 
 }, 0);
     
