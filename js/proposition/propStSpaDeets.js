@@ -17,8 +17,9 @@ var spaTl = gsap.timeline({
     pin: "overflow",
     snap: 
     {snapTo: "labelsDirectional",
-    duration: {min: 1, max: 1},
-    ease: "sine.easeInOut" }
+    duration: {min: 0.2, max: 0.4},
+    delay: 0.1,
+    ease: "power1.easeOut" }
   }
 })
 
