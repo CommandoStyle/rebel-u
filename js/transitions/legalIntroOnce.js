@@ -23,7 +23,7 @@ legalIntroOnce
 .to(".redact-cover-nav", { delay: 1.134, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
 .to([".menu-txt", ".touch-print-open__wrap"], { autoAlpha: 1, duration: 0.001})
 .to(".redact-cover-nav", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
-.to(".legal-lottie__cover", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.3, ease: "linear" })
+.to(".legal-lottie__cover", { delay: 2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.3, ease: "linear" })
 .to(".legal-lottie__contain", { autoAlpha: 1, duration: 0.001 })
 .to(".legal-lottie__cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear"}, "-=0.01")
 .to(".sub-hero__spacer-line", { duration: 1.2, scaleX: 1, transformOrigin: "0% 100%", ease: "power2.easeOut" }, "<")
