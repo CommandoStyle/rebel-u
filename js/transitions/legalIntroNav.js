@@ -26,7 +26,7 @@ legalIntroNav
 .to(".legal-reveal", { duration: 1, x: 0, stagger: 0.03, ease: "expo.out" }, "<")
 .to(".legal-reveal", { duration: 0.4, opacity: 1, stagger: 0.03, ease: "linear" }, "<")
 .set(".menu-txt", { color: '#000000'}, "-=0.85")
-.to(".legal-lottie__cover", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.3, ease: "linear" })
+.to(".legal-lottie__cover", { delay: 2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.3, ease: "linear" })
 .to(".legal-lottie__contain", { autoAlpha: 1, duration: 0.001 })
 .to(".legal-lottie__cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear"}, "-=0.01");
 
