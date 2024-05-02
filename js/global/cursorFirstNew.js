@@ -261,11 +261,11 @@ target.addEventListener("pointerup", () => {
 
      // Add class on CTAs to center cursor and lower Z
     
-     $( ".cta-btn, .lg-cta__btn, .vid-start__btn, .revert-back__btn, .footer__cta-legal, .footer__cta-contact, .footer__cta-top, .topic-nav__next, .topic-nav__prev, .reb__skip-btn, .reb__skip-up-btn, .spa__skip-btn, .spa__skip-up-btn" ).mouseenter(function() {
+     $( ".cta-btn, .lg-cta__btn, .vid-start__btn, .revert-back__btn, .footer__cta-legal, .footer__cta-share, .footer__cta-share-fallback, .footer__cta-contact, .footer__cta-top, .topic-nav__next, .topic-nav__prev, .reb__skip-btn, .reb__skip-up-btn, .spa__skip-btn, .spa__skip-up-btn" ).mouseenter(function() {
       $('.cursor-dot').addClass('cta-stuck');
     });
     
-      $( ".cta-btn, .lg-cta__btn, .vid-start__btn, .revert-back__btn, .footer__cta-legal, .footer__cta-contact, .footer__cta-top, .topic-nav__next, .topic-nav__prev, .reb__skip-btn, .reb__skip-up-btn, .spa__skip-btn, .spa__skip-up-btn" ).mouseleave(function() {
+      $( ".cta-btn, .lg-cta__btn, .vid-start__btn, .revert-back__btn, .footer__cta-legal, .footer__cta-share, .footer__cta-share-fallback, .footer__cta-contact, .footer__cta-top, .topic-nav__next, .topic-nav__prev, .reb__skip-btn, .reb__skip-up-btn, .spa__skip-btn, .spa__skip-up-btn" ).mouseleave(function() {
       $('.cursor-dot').removeClass('cta-stuck');
     });
       
