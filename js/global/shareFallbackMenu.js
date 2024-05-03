@@ -7,7 +7,7 @@ var navBotRev = gsap.utils.toArray(".nav-bot-rev");
 var shareBg = gsap.utils.toArray('.share__backdrop');
 var shareWrap = gsap.utils.toArray('.share__items-container');
 var shareOpen = gsap.utils.toArray('.footer__cta-share-fallback');
-var shareExit = gsap.utils.toArray('.footer__exit-share-fallback');
+var shareExit = gsap.utils.toArray('.share-exit__btn');
 
 let mm = gsap.matchMedia();
 
@@ -17,7 +17,7 @@ gsap.set(shareBg, {autoAlpha: 0});
 gsap.set(shareExit, {display: 'none'});
 gsap.set(navBotRev, { x: -30, opacity: 0 });
 gsap.set(".nav-bot-rev-vert", { y: 15, opacity: 0 });
-gsap.set([".home-nav__btn", ".share-active__btn"], {autoAlpha: 0});
+gsap.set([".home-nav__btn", ".share-exit__btn"], {autoAlpha: 0});
 gsap.set([".nav__logo-btn", '.footer__cta-share-fallback'], {autoAlpha: 1});
 gsap.set(".share-exit-txt", {autoAlpha: 0});
  
@@ -34,19 +34,19 @@ shareIn.set(shareRev, { x: -30, opacity: 0 })
           .set(".cursor-dot", {display: "none"}, "<")
           .set(shareOpen, {display: "none"}, "<")
           .set(shareExit, {display: "flex"}, "<")
-          .set(".share-list__contain", { filter: 'invert(100%)'}, "<")
+          .set(".share-open-txt", { filter: 'invert(100%)'}, "<")
           .fromTo(shareBg, { scale: 1 }, { scale: 40, transformOrigin: "50% 50%", ease: Expo.easeInOut, duration: 1.2})
           .to(".nav__logo-btn", { autoAlpha: 0, duration: 0.01 }, "-=0.6")
           .to(".home-nav__btn", { autoAlpha: 1, duration: 0.01 }, "<")
           .to(shareWrap, { display: 'flex', duration: 0.001 },"<")
-          .set('.hole.is--share', {display: "block"}, "<")
+          .set('.share-hole', {display: "block"}, "<")
           .to(shareRev, { duration: 1.6, x: 0, stagger: 0.06, ease: "expo.out" }, "-=0.4")
           .to(shareRev, { duration: 0.4, opacity: 1, stagger: 0.06, ease: "linear" }, "<")
           .to(navBotRev, { x: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "-=1.2" )
           .to(".nav-bot-rev-vert", { y: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "<")
           .to(".redact-cover-share-lg", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}, ">")
           .to(".share-exit-txt", { autoAlpha: 1, duration: 0.001 })
-          .to(".share-list__contain", { autoAlpha: 0, duration: 0.001 }, "<")
+          .to(".share-open-txt", { autoAlpha: 0, duration: 0.001 }, "<")
           .to(".redact-cover-share-lg", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"});
           
           shareOpen.addEventListener('click', () => {
@@ -62,7 +62,7 @@ shareExit.forEach(shareExit => {
       currencyOut
            .set(shareExit, {display: "none"})
            .set(shareOpen, {display: "flex"}, "<")
-           .set('.hole.is--share', { display: "none" },"<")
+           .set('.share-hole', { display: "none" },"<")
            .to(shareRev, { duration: 0.7, x: 30, stagger: 0, ease: "expo.out" }, "<")
            .to(shareRev, { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
            .to(navBotRev, { x: 30, opacity: 0, ease: "expo.out", duration: 0.3 },"-=0.65")
@@ -74,11 +74,11 @@ shareExit.forEach(shareExit => {
            .to(".cursor-dot", { display: "flex", duration: 0.001 }, "-=0.27")
            .to(shareBg, { autoAlpha: 0, duration: 0.001 },"<")
            .to(".share-exit-txt", { color: '#000000', duration: 0.001}, "<")
-           .to(".share-list__contain", { filter: 'invert(0%)', duration: 0.001}, "<")
+           .to(".share-open-txt", { filter: 'invert(0%)', duration: 0.001}, "<")
            .to(".redact-cover-share-lg", { scaleX: 0, backgroundColor: '#000000'}, "<") 
            .to(".redact-cover-share-lg", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
            .to(".share-exit-txt", { autoAlpha: 0, duration: 0.001 })
-           .to(".share-list__contain", { autoAlpha: 1, duration: 0.001 }, "<")
+           .to(".share-open-txt", { autoAlpha: 1, duration: 0.001 }, "<")
            .to(".redact-cover-share-lg", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
            .set(shareRev, { x: -20, opacity: 0 })
            .set(navBotRev, { x: -10, opacity: 0 })
@@ -114,13 +114,13 @@ const getMousePos = (e) => {
     return { x : posx, y : posy };
 };
 
-class currMenu {
+class shareMenu {
 
   constructor(el) {
 
     this.DOM = {el: el};
 
-    this.DOM.currMenuItems = this.DOM.el.querySelectorAll('.currency-dropdown__select');
+    this.DOM.shareMenuItems = this.DOM.el.querySelectorAll('.share-dropdown__select');
     
     this.animatableProperties = {
         // translationX
@@ -131,22 +131,22 @@ class currMenu {
         rotation: {previous: 0, current: 0, amt: 0.12}
     };
 
-    this.currMenuItems = [];
+    this.shareMenuItems = [];
 
-    [...this.DOM.currMenuItems].forEach((item, pos) => {
-      this.currMenuItems.push(new currMenuItem(item, pos, this.animatableProperties));
+    [...this.DOM.shareMenuItems].forEach((item, pos) => {
+      this.shareMenuItems.push(new shareMenuItem(item, pos, this.animatableProperties));
     });
 
   }
 
 }
 
-class currMenuItem {
+class shareMenuItem {
 
-  constructor(el, inCurrMenuPosition, animatableProperties) {
+  constructor(el, inshareMenuPosition, animatableProperties) {
 
     this.DOM = {el: el};
-    this.inCurrMenuPosition = inCurrMenuPosition;
+    this.inshareMenuPosition = inshareMenuPosition;
     this.animatableProperties = animatableProperties;
     this.layout();
     this.initEvents();
@@ -160,7 +160,7 @@ class currMenuItem {
           this.DOM.revealInner.className = 'hover-reveal__inner';
           this.DOM.revealImage = document.createElement('div');
           this.DOM.revealImage.className = 'hover-reveal__img';
-          this.DOM.revealImage.style.backgroundImage = `url(${Images[this.inCurrMenuPosition][1]})`;
+          this.DOM.revealImage.style.backgroundImage = `url(${Images[this.inshareMenuPosition][1]})`;
           this.DOM.revealInner.appendChild(this.DOM.revealImage);
           this.DOM.reveal.appendChild(this.DOM.revealInner);
           this.DOM.el.appendChild(this.DOM.reveal);
@@ -280,9 +280,9 @@ class currMenuItem {
 
 }
 
-const currMenuEl = document.querySelector('.currency__menu');
+const shareMenuEl = document.querySelector('.share__menu');
 
-const ImagesEl = document.querySelectorAll('.currency-dropdown__select');
+const ImagesEl = document.querySelectorAll('.share-dropdown__select');
 let ImagesArr = [];
 ImagesEl.forEach(Image => {
   ImagesArr.push(Image.dataset.img);
@@ -294,60 +294,58 @@ let direction = {x: mousePosCache.x-mousepos.x, y: mousePosCache.y-mousepos.y};
 
 window.addEventListener('mousemove', ev => mousepos = getMousePos(ev));
 
-new currMenu(currMenuEl);
+new shareMenu(shareMenuEl);
 
 //Select currency and close menu
  
 gsap.registerPlugin(ExpoScaleEase);
 
-const currencySelect = document.querySelectorAll('.currency-dropdown__select')
+const shareSelect = document.querySelectorAll('.share-dropdown__select')
 
-currencySelect.forEach((currencySelect) => {
-    if (!currencySelect) return
-    const currencyHole = document.querySelector('.currency-hole')
-    if (!currencyHole) return
-    const currencyContain = document.querySelector('.currency__items-container')
-    if (!currencyContain) return
+shareSelect.forEach((shareSelect) => {
+    if (!shareSelect) return
+    const shareHole = document.querySelector('.share-hole')
+    if (!shareHole) return
+    const shareContain = document.querySelector('.share__items-container')
+    if (!shareContain) return
 
-    gsap.set(currencyHole, { scale: 1, display: "none" })
+    gsap.set(shareHole, { scale: 1, display: "none" })
 
-    currencySelect.addEventListener("click", (e) => {
+    shareSelect.addEventListener("click", (e) => {
         // Calculate distance between user click and top left corner of button
-        let xDist = e.clientX - currencyContain.getBoundingClientRect().x + 4
-        let yDist = e.clientY - currencyContain.getBoundingClientRect().y
-        let currSelectOut = gsap.timeline();
+        let xDist = e.clientX - shareContain.getBoundingClientRect().x + 4
+        let yDist = e.clientY - shareContain.getBoundingClientRect().y
+        let shareSelectOut = gsap.timeline();
 
         // Immediately set left and top properties to position the circle element where user clicks
-        gsap.set(currencyHole, { left: xDist, top: yDist })
+        gsap.set(shareHole, { left: xDist, top: yDist })
       
- currSelectOut
-        .set(currencyExit, {delay: 0.3, display: "none"})
-        .set(currencyOpen, {display: "flex"}, "<")
-        .set(currencyHole, {display: "block"}, "<")
+ shareSelectOut
+        .set(shareExit, {delay: 0.3, display: "none"})
+        .set(shareOpen, {display: "flex"}, "<")
+        .set(shareHole, {display: "block"}, "<")
         .set(".cursor-dot", { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
-        .set(currBg, {display: "none", scale: 1}, "<")
-        .to([currRev, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.7, x: 30, stagger: 0, ease: "expo.out" }, "<")
-        .to([currRev, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
+        .set(shareBg, {display: "none", scale: 1}, "<")
+        .to(shareRev, { duration: 0.7, x: 30, stagger: 0, ease: "expo.out" }, "<")
+        .to(shareRev, { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
         .to(navBotRev, { x: 30, opacity: 0, ease: "expo.out", duration: 0.3 },"-=0.65")
         .to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<") 
-        .fromTo(currencyHole, { scale: 1 }, { duration: 1.2, scale: 2000, ease: "expoScale(1, 2000, power1.easeOut)" }, "-=0.3")  
+        .fromTo(shareHole, { scale: 1 }, { duration: 1.2, scale: 2000, ease: "expoScale(1, 2000, power1.easeOut)" }, "-=0.3")  
         .to('[data-img]', { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" },"-=1.5")
         .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.001 }, "<")
-        .to(".currency-exit-txt", { color: '#000000', duration: 0.001}, "<")
-        .to(".currencies-list__contain", { filter: 'invert(0%)', duration: 0.001}, "<")
-        .to(".currency-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
-        .to(".currencies-list__contain", { autoAlpha: 1, duration: 0.001 }, "<")
+        .to(".share-exit-txt", { color: '#000000', duration: 0.001}, "<")
+        .to(".share-open-txt", { filter: 'invert(0%)', duration: 0.001}, "<")
+        .to(".share-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+        .to(".share-open-txt", { autoAlpha: 1, duration: 0.001 }, "<")
         .to(".cursor-dot", { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
-        .set(currWrap, {display: 'none'})
-        .set(currencyHole, {display: "none", clearProps: "all"})
-        .set(currRev, { x: -20, opacity: 0 })
+        .set(shareWrap, {display: 'none'})
+        .set(shareHole, {display: "none", clearProps: "all"})
+        .set(shareRev, { x: -20, opacity: 0 })
         .set(navBotRev, { x: -10, opacity: 0 })
         .set(".nav-bot-rev-vert", { y: 5, opacity: 0 })
-        .set(".currency-exit-txt", { color: '#ffffff'})
-        .set(".current-arrow-right__track", { xPercent: 105, x: 0, opacity: 1 })
-        .set(".current-arrow-left__track", { xPercent: -105, x: 0, opacity: 1 })
-        .set(".redact-cover-currency-lg", { scaleX: 0 })
+        .set(".share-exit-txt", { color: '#ffffff'})
+        .set(".redact-cover-share-lg", { scaleX: 0 })
         .set('[data-img]', { autoAlpha: 1 });
                 
     })
