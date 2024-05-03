@@ -69,6 +69,7 @@ import { NavRevertCurrent } from './global/NavRevertCurrent.js';
 import { cookieSelect } from './global/cookieSelect.js';
 import { iframeOut } from './global/iFrameOut.js';
 import { iframeOutQuery } from './global/iFrameOutQuery.js';
+import { shareFallbackMenu } from './global/shareFallbackMenu.js';
 
 /**
 * Home
@@ -816,6 +817,7 @@ quizGlobal();
 bookedCover();
 cookieSelect();
 iframeOut();
+shareFallbackMenu();
 
 }, 0);
 
