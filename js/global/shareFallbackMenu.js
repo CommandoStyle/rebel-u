@@ -17,8 +17,8 @@ gsap.set(shareBg, {autoAlpha: 0});
 gsap.set(shareExit, {display: 'none'});
 gsap.set(navBotRev, { x: -30, opacity: 0 });
 gsap.set(".nav-bot-rev-vert", { y: 15, opacity: 0 });
-gsap.set([".home-nav__btn", ".share-exit__btn"], {autoAlpha: 0});
-gsap.set([".nav__logo-btn", '.footer__cta-share-fallback'], {autoAlpha: 1});
+gsap.set(".home-nav__btn", {autoAlpha: 0});
+gsap.set(".nav__logo-btn", {autoAlpha: 1});
 gsap.set(".share-exit-txt", {autoAlpha: 0});
  
 shareOpen.forEach(shareOpen => {
