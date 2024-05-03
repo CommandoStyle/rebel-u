@@ -39,8 +39,8 @@ let smoother = ScrollSmoother.create({
 
 // SS stop / start on button click
       
-var ssClickStop = document.querySelectorAll('.cta-btn, .menu__btn, .nav__logo-btn, .currency__btn, mrebel__submit-query, .quiz-cta__btn');
-var ssClickStart = document.querySelectorAll('.currency-exit__btn, .menu-close__btn');
+var ssClickStop = document.querySelectorAll('.cta-btn, .menu__btn, .nav__logo-btn, .currency__btn, .footer__cta-share-fallback, mrebel__submit-query, .quiz-cta__btn');
+var ssClickStart = document.querySelectorAll('.currency-exit__btn, .share-exit__btn, .menu-close__btn');
 
     ssClickStop.forEach(function(ssClickStop) {
       ssClickStop.addEventListener('click', function clickin() { smoother.paused(true); });
