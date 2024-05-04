@@ -20,7 +20,7 @@ gsap.set(".nav-bot-rev-vert", { y: 15, opacity: 0 });
 gsap.set(".home-nav__btn", {autoAlpha: 0});
 gsap.set(".nav__logo-btn", {autoAlpha: 1});
 gsap.set(".share-exit-txt", {autoAlpha: 0});
-gsap.set(".redact-cover-share-lg", {scaleX: 0});
+gsap.set([".redact-cover-share", ".redact-cover-contact", ".redact-cover-legal"], {scaleX: 0});
  
 shareOpen.forEach(shareOpen => {
       
@@ -30,12 +30,12 @@ shareIn.set(shareRev, { x: -30, opacity: 0 })
           .set(navBotRev, { x: -30, opacity: 0 })
           .set(".nav-bot-rev-vert", { y: 15, opacity: 0 })
           .set(shareBg, {scale: 1, display: "block" })
-          .set(".redact-cover-share-lg", { scaleX: 0, backgroundColor: '#ffffff'})
+          .set([".redact-cover-share", ".redact-cover-contact", ".redact-cover-legal"], { scaleX: 0, backgroundColor: '#ffffff'})
           .set(shareBg, { autoAlpha: 1 })
           .set(".cursor-dot", {display: "none"}, "<")
           .set(shareOpen, {display: "none"}, "<")
           .set(shareExit, {display: "flex"}, "<")
-          .set(".share-open-txt", { filter: 'invert(100%)'}, "<")
+          .set([".share-open-txt", ".contact-txt", ".legal-txt"], { filter: 'invert(100%)'}, "<")
           .fromTo(shareBg, { scale: 1 }, { scale: 40, transformOrigin: "50% 50%", ease: Expo.easeInOut, duration: 1.2})
           .to(".nav__logo-btn", { autoAlpha: 0, duration: 0.01 }, "-=0.6")
           .to(".home-nav__btn", { autoAlpha: 1, duration: 0.01 }, "<")
@@ -45,10 +45,12 @@ shareIn.set(shareRev, { x: -30, opacity: 0 })
           .to(shareRev, { duration: 0.4, opacity: 1, stagger: 0.06, ease: "linear" }, "<")
           .to(navBotRev, { x: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "-=1.2" )
           .to(".nav-bot-rev-vert", { y: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "<")
-          .to(".redact-cover-share-lg", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}, ">")
+          .to(".redact-cover-contact", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.15, ease: "linear"}, ">")
+          .to(".redact-cover-share", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
           .to(".share-exit-txt", { autoAlpha: 1, duration: 0.001 })
           .to(".share-open-txt", { autoAlpha: 0, duration: 0.001 }, "<")
-          .to(".redact-cover-share-lg", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"});
+          .to(".redact-cover-share", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
+          .to(".redact-cover-legal", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"});
           
           shareOpen.addEventListener('click', () => {
             shareIn.play(0);
@@ -75,12 +77,15 @@ shareExit.forEach(shareExit => {
            .to(".cursor-dot", { display: "flex", duration: 0.001 }, "-=0.27")
            .to(shareBg, { autoAlpha: 0, duration: 0.001 },"<")
            .to(".share-exit-txt", { color: '#000000', duration: 0.001}, "<")
-           .to(".share-open-txt", { filter: 'invert(0%)', duration: 0.001}, "<")
-           .to(".redact-cover-share-lg", { scaleX: 0, backgroundColor: '#000000'}, "<") 
-           .to(".redact-cover-share-lg", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
+           .to([".share-open-txt", ".contact-txt", ".legal-txt"], { filter: 'invert(0%)', duration: 0.001}, "<")
+           .to(".redact-cover-share", { scaleX: 0, backgroundColor: '#000000'}, "<")
+           .set([".redact-cover-contact", ".redact-cover-contact"], { backgroundColor: '#000000'}, "<") 
+           .to(".redact-cover-contact", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.15, ease: "linear"})
+           .to(".redact-cover-share", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
            .to(".share-exit-txt", { autoAlpha: 0, duration: 0.001 })
            .to(".share-open-txt", { autoAlpha: 1, duration: 0.001 }, "<")
-           .to(".redact-cover-share-lg", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
+           .to(".redact-cover-share", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
+           .to(".redact-cover-legal", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
            .set(shareRev, { x: -20, opacity: 0 })
            .set(navBotRev, { x: -10, opacity: 0 })
            .set(".nav-bot-rev-vert", { y: 5, opacity: 0 })
@@ -346,7 +351,7 @@ shareSelect.forEach((shareSelect) => {
         .set(navBotRev, { x: -10, opacity: 0 })
         .set(".nav-bot-rev-vert", { y: 5, opacity: 0 })
         .set(".share-exit-txt", { color: '#ffffff'})
-        .set(".redact-cover-share-lg", { scaleX: 0 })
+        .set(".redact-cover-share", { scaleX: 0 })
         .set('[data-img]', { autoAlpha: 1 });
                 
     })
