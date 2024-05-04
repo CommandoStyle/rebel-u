@@ -76,7 +76,7 @@ shareExit.forEach(shareExit => {
            .to(".home-nav__btn", { autoAlpha: 0, duration: 0.01 }, "<")
            .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.01 }, "<")
            .to([shareWrap, ".redact-cover-top-left"], { display: 'none', duration: 0.01 },"<") 
-           .set([".redact-cover-contact", ".redact-cover-legal"], { backgroundColor: '#000000'}, "-=0.4") 
+           .set([".redact-cover-contact", ".redact-cover-legal"], { backgroundColor: '#000000'}, "-=0.45") 
            .to(".cursor-dot", { display: "flex", duration: 0.001 }, "-=0.27")
            .to(shareBg, { autoAlpha: 0, duration: 0.001 },"<")
            .to(".share-exit-txt", { color: '#000000', duration: 0.001}, "<")
