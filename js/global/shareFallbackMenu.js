@@ -74,7 +74,7 @@ shareExit.forEach(shareExit => {
            .to(navBotRev, { x: 30, opacity: 0, ease: "expo.out", duration: 0.3 },"-=0.65")
            .to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<")
            .fromTo(shareBg, { scale:40 }, {scale: 0.6, ease: Expo.easeOut, duration: 1.1 })
-           .to(".home-nav__btn", { autoAlpha: 0, duration: 0.01 }, "-=0.95")
+           .to(".home-nav__btn", { autoAlpha: 0, duration: 0.01 }, "-=0.9")
            .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.01 }, "<")
            .to([shareWrap, ".redact-cover-top-left"], { display: 'none', duration: 0.01 },"<") 
            .set([".redact-cover-contact", ".redact-cover-legal"], { backgroundColor: '#000000'}, "-=0.47") 
