@@ -80,7 +80,7 @@ shareExit.forEach(shareExit => {
            .to(".home-nav__btn", { autoAlpha: 0, duration: 0.01 }, "-=0.9")
            .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.01 }, "<")
            .to([shareWrap, ".redact-cover-top-left"], { display: 'none', duration: 0.01 },"<")
-           .set(".footer-reb-time__contain", { filter: 'invert(0%)' }, "-=0.67")
+           .set(".footer-reb-time__contain", { filter: 'invert(0%)' }, "-=0.57")
            .set([".redact-cover-contact", ".redact-cover-legal"], { backgroundColor: '#000000'}, "-=0.47") 
            .to(".cursor-dot", { display: "flex", duration: 0.001 }, "-=0.27")
            .to(shareBg, { autoAlpha: 0, duration: 0.001 },"<")
