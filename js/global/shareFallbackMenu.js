@@ -3,7 +3,6 @@ export function shareFallbackMenu() {
  // Share menu vars
 
 var shareRev = gsap.utils.toArray(".share-dropdown__wrap");
-//var navBotRev = gsap.utils.toArray(".nav-bot-rev");
 var shareBg = gsap.utils.toArray('.share__backdrop');
 var shareWrap = gsap.utils.toArray('.share__items-container');
 var shareOpen = gsap.utils.toArray('.footer__cta-share-fallback');
@@ -15,8 +14,6 @@ gsap.set(shareRev, { x: -30, opacity: 0 });
 gsap.set(shareWrap, {display: 'none'});
 gsap.set(shareBg, {autoAlpha: 0});
 gsap.set(shareExit, {display: 'none'});
-//gsap.set(navBotRev, { x: -30, opacity: 0 });
-//gsap.set(".nav-bot-rev-vert", { y: 15, opacity: 0 });
 gsap.set(".home-nav__btn", {autoAlpha: 0});
 gsap.set(".nav__logo-btn", {autoAlpha: 1});
 gsap.set(".share-exit-txt", {autoAlpha: 0});
@@ -27,15 +24,14 @@ shareOpen.forEach(shareOpen => {
 var shareIn = new gsap.timeline({ paused: true });
 
 shareIn.set(shareRev, { x: -30, opacity: 0 })
-          //.set(navBotRev, { x: -30, opacity: 0 })
-          //.set(".nav-bot-rev-vert", { y: 15, opacity: 0 })
           .set(shareBg, {scale: 1, display: "block" })
-          .set([".redact-cover-share", ".redact-cover-contact", ".redact-cover-legal"], { scaleX: 0, backgroundColor: '#ffffff'})       
+          .set([".redact-cover-share", ".redact-cover-contact", ".redact-cover-legal", ".redact-cover-nav"], { scaleX: 0, backgroundColor: '#ffffff'})       
           .set(shareBg, { autoAlpha: 1 })
           .set(".cursor-dot", {display: "none"}, "<")
           .set(shareOpen, {display: "none"}, "<")
           .set(shareExit, {display: "flex"}, "<")
           .set(".share-open-txt", { filter: 'invert(100%)'}, "<")
+          .set([".home-nav__btn", ".quiz-cta__btn", ".footer__cta-legal", ".footer__cta-contact", ".menu__btn"], { pointerEvents: "none" }, "<")
           .fromTo(shareBg, { scale: 1 }, { scale: 40, transformOrigin: "50% 50%", ease: Expo.easeInOut, duration: 1.2})
           .set([".contact-txt", ".legal-txt"], { filter: 'invert(100%)'}, "-=1.05")
           .set(".footer-reb-time__contain", { filter: 'invert(100%)' }, "-=0.72")
@@ -47,15 +43,14 @@ shareIn.set(shareRev, { x: -30, opacity: 0 })
           .set('.share-hole', {display: "block"}, "<")
           .to(shareRev, { duration: 1.6, x: 0, stagger: 0.06, ease: "expo.out" }, "-=0.4")
           .to(shareRev, { duration: 0.4, opacity: 1, stagger: 0.06, ease: "linear" }, "<")
-          //.to(navBotRev, { x: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "-=1.2" )
-          //.to(".nav-bot-rev-vert", { y: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "<")
-          .to([".redact-cover-contact", ".redact-cover-top-left"], { scaleX: 1, transformOrigin: "0% 100%", duration: 0.15, ease: "linear"})
+          .to([".redact-cover-contact", ".redact-cover-top-left"], { scaleX: 1, transformOrigin: "0% 100%", duration: 0.15, ease: "linear"}, "<")
           .to(".redact-cover-share", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
           .to(".share-exit-txt", { autoAlpha: 1, duration: 0.001 })
           .to(".share-open-txt", { autoAlpha: 0, duration: 0.001 }, "<")
           .to(".redact-cover-share", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
-          .to(".redact-cover-legal", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"});
-          
+          .to(".redact-cover-legal", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
+          .to(".redact-cover-nav", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"});
+ 
           shareOpen.addEventListener('click', () => {
             shareIn.play(0);
             });
@@ -70,11 +65,10 @@ shareExit.forEach(shareExit => {
            .set(shareExit, {display: "none"})
            .set(shareOpen, {display: "flex"}, "<")
            .set('.share-hole', { display: "none" },"<")
-           .to(".redact-cover-top-left", {scaleX: 0, transformOrigin: "100% 0%", duration: 0.15, ease: "linear"})
+           .set([".home-nav__btn", ".quiz-cta__btn", ".footer__cta-legal", ".footer__cta-contact", ".menu__btn"], { pointerEvents: "auto" }, "<")
+           .to([".redact-cover-top-left", ".redact-cover-nav"], {scaleX: 0, transformOrigin: "100% 0%", duration: 0.15, ease: "linear"})
            .to(shareRev, { duration: 0.7, x: 30, stagger: 0, ease: "expo.out" }, "<")
            .to(shareRev, { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
-           //.to(navBotRev, { x: 30, opacity: 0, ease: "expo.out", duration: 0.3 },"-=0.65")
-           //.to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<")
            .fromTo(shareBg, { scale:40 }, {scale: 0.6, ease: Expo.easeOut, duration: 1.1 })
            .set(".footer__copyright-wrap", { filter: 'invert(0%)' }, "-=1")
            .to(".home-nav__btn", { autoAlpha: 0, duration: 0.01 }, "-=0.9")
@@ -86,7 +80,7 @@ shareExit.forEach(shareExit => {
            .to(shareBg, { autoAlpha: 0, duration: 0.001 },"<")
            .to(".share-exit-txt", { color: '#000000', duration: 0.001}, "<")
            .to([".share-open-txt", ".contact-txt", ".legal-txt"], { filter: 'invert(0%)', duration: 0.001}, "<")
-           .set(".redact-cover-share", { scaleX: 0, backgroundColor: '#000000'}, "<")
+           .set([".redact-cover-share", ".redact-cover-nav"], { scaleX: 0, backgroundColor: '#000000'}, "<")
            .to(".redact-cover-contact", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.15, ease: "linear"})
            .to(".redact-cover-share", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
            .to(".share-exit-txt", { autoAlpha: 0, duration: 0.001 })
@@ -94,8 +88,6 @@ shareExit.forEach(shareExit => {
            .to(".redact-cover-share", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
            .to(".redact-cover-legal", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
            .set(shareRev, { x: -20, opacity: 0 })
-           //.set(navBotRev, { x: -10, opacity: 0 })
-           //.set(".nav-bot-rev-vert", { y: 5, opacity: 0 })
            .set(".share-exit-txt", { color: '#ffffff'}); 
            
            shareExit.addEventListener('click', () => {
