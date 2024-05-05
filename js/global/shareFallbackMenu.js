@@ -43,13 +43,14 @@ shareIn.set(shareRev, { x: -30, opacity: 0 })
           .set('.share-hole', {display: "block"}, "<")
           .to(shareRev, { duration: 1.6, x: 0, stagger: 0.06, ease: "expo.out" }, "-=0.4")
           .to(shareRev, { duration: 0.4, opacity: 1, stagger: 0.06, ease: "linear" }, "<")
-          .to([".redact-cover-contact", ".redact-cover-top-left"], { scaleX: 1, transformOrigin: "0% 100%", duration: 0.15, ease: "linear"}, "-=0.4")
+          .to(".redact-cover-top-left", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.15, ease: "linear"})
+          .to(".redact-cover-nav", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
+          .to(".redact-cover-contact", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.15, ease: "linear"})
           .to(".redact-cover-share", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
           .to(".share-exit-txt", { autoAlpha: 1, duration: 0.001 })
           .to(".share-open-txt", { autoAlpha: 0, duration: 0.001 }, "<")
           .to(".redact-cover-share", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
-          .to(".redact-cover-legal", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
-          .to(".redact-cover-nav", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"});
+          .to(".redact-cover-legal", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"});
  
           shareOpen.addEventListener('click', () => {
             shareIn.play(0);
