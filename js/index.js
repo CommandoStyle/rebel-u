@@ -70,6 +70,7 @@ import { cookieSelect } from './global/cookieSelect.js';
 import { iframeOut } from './global/iFrameOut.js';
 import { iframeOutQuery } from './global/iFrameOutQuery.js';
 import { shareFallbackMenu } from './global/shareFallbackMenu.js';
+import { share } from './global/share.js';
 
 /**
 * Home
@@ -817,6 +818,7 @@ quizGlobal();
 bookedCover();
 cookieSelect();
 iframeOut();
+share();
 shareFallbackMenu();
 
 }, 0);
