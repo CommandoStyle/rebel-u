@@ -1,4 +1,4 @@
-const share = () => {
+export function share() => {
   
 if (navigator.share) {
     const title = document.title;
