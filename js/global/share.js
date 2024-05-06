@@ -26,10 +26,13 @@ if (navigator.share) {
 
 const sharingURL = window.location.href;
 
-  function popUpShare(sharingURL) {
+  function popUpShare(sharingURL, popupWinWidth, popupWinHeight) {
+    let left = (screen.width - popupWinWidth) / 2;
+    let top = (screen.height - popupWinHeight) / 4;
     
     // Open a new pop-up window with the sharing URL.
-    window.open(sharingURL, 'CustomShareWindow', 'width=500, height=400, left=400, top=100');
+    window.open(sharingURL, 'CustomShareWindow', 'resizable=yes, width=' + popupWinWidth + ', height=' + popupWinHeight + ', top=' + top + ', left=' + left);
+  
   }
   
   const facebook = document.getElementById("fb-share");
