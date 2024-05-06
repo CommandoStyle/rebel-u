@@ -26,12 +26,14 @@ if (navigator.share) {
 
 const sharingURL = window.location.href;
 
-  function popUpShare(sharingURL, popupWinWidth, popupWinHeight) {
-    let left = (screen.width - popupWinWidth) / 2;
-    let top = (screen.height - popupWinHeight) / 4;
+  function popUpShare(sharingURL, width, height) {
+    var width = 600;
+    var height = 600;
+    var left = (screen.width - width) / 2;
+    var top = (screen.height - height) / 2;
     
     // Open a new pop-up window with the sharing URL.
-    window.open(sharingURL, 'CustomShareWindow', 'resizable=yes, width=' + popupWinWidth + ', height=' + popupWinHeight + ', top=' + top + ', left=' + left);
+    window.open(sharingURL, 'CustomShareWindow', "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
   
   }
   
