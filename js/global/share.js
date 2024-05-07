@@ -40,6 +40,7 @@ const sharingURL = window.location.href;
   const facebook = document.getElementById("fb-share");
   const linkedin = document.getElementById("in-share");
   const twitter = document.getElementById("x-share");
+  const email = document.getElementById("email-share");
   
   facebook.addEventListener("click", ()=> popUpShare(
     `https://www.facebook.com/sharer/sharer.php?u=${sharingURL}`
@@ -53,7 +54,18 @@ const sharingURL = window.location.href;
     `https://twitter.com/share?url=${sharingURL}`
     ));
 
-  var email = document.getElementById("email-share").value;
-  window.location.href = "mailto:?subject=Found this and thought of you...&body=`${sharingURL}`" + email;
+  email.addEventListener("click", ()=> SendLinkByMail());
+
+              function SendLinkByMail(href) {
+                var subject= "Found this and thought of you";
+                var body = "REBEL U – independent by design:\r\n\r\n<";
+                body += window.location.href;
+                body += ">";
+                var uri = "mailto:?subject=";
+                uri += encodeURIComponent(subject);
+                uri += "&body=";
+                uri += encodeURIComponent(body);
+                window.open(uri);
+            }
 
 }
