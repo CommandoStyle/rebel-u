@@ -53,4 +53,7 @@ const sharingURL = window.location.href;
     `https://twitter.com/share?url=${sharingURL}`
     ));
 
+  var email = document.getElementById("email-share").value;
+  window.location.href = "mailto:?subject=Found this and thought of you...&body=`${sharingURL}`" + email;
+
 }
