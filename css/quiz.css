@@ -63,17 +63,15 @@
          text-transform: uppercase;
   }
   
-  /* PRELOAD */
+    /* PRELOAD FONTS */
   body::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-    content:url("https://dl.dropboxusercontent.com/s/xe500fztn93pt2d/ABCDiatype-Medium.woff2") format("woff2"),
-            url("https://dl.dropboxusercontent.com/s/k1kk280nh3azrwd/ABCDiatype-Medium.woff") format("woff");
+    content:url("https://s3.amazonaws.com/pf-user-files-01/u-213437/uploads/2024-05-07/l723q16/ABCDiatype-Regular.woff2") format("woff2");
   }
   
   body::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-    content:url("https://dl.dropboxusercontent.com/s/rm4l2ae3ii4yrly/ABCDiatype-Regular.woff2") format("woff2"),
-            url("https://dl.dropboxusercontent.com/s/ym9pmpl99viy75q/ABCDiatype-Regular.woff") format("woff");
+    content:url("https://s3.amazonaws.com/pf-user-files-01/u-213437/uploads/2024-05-07/q033qas/ABCDiatype-Medium.woff2") format("woff2");
   }
   
   /* SUMMARY - main txt */
