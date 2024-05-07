@@ -1,11 +1,13 @@
 @font-face {
   font-family: 'DiatypeReg';
   src: url("https://s3.amazonaws.com/pf-user-files-01/u-213437/uploads/2024-05-07/l723q16/ABCDiatype-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'DiatypeMed';
   src: url("https://s3.amazonaws.com/pf-user-files-01/u-213437/uploads/2024-05-07/q033qas/ABCDiatype-Medium.woff2") format("woff2");
+  font-display: swap;
 }
   
 @font-face {
