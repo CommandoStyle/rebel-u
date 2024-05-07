@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'DiatypeReg';
-  src: url("https://dl.dropboxusercontent.com/s/rm4l2ae3ii4yrly/ABCDiatype-Regular.woff2") format("woff2");
+  src: url("https://s3.amazonaws.com/pf-user-files-01/u-213437/uploads/2024-05-07/l723q16/ABCDiatype-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: 'DiatypeMed';
-  src: url("https://dl.dropboxusercontent.com/s/xe500fztn93pt2d/ABCDiatype-Medium.woff2") format("woff2");
+  src: url("https://s3.amazonaws.com/pf-user-files-01/u-213437/uploads/2024-05-07/q033qas/ABCDiatype-Medium.woff2") format("woff2");
 }
   
   /* NEW */
