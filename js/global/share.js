@@ -58,9 +58,9 @@ const sharingURL = window.location.href;
 
               function SendLinkByMail(href) {
                 var subject= "Found this and thought of you";
-                var body = "REBEL U – independent by design:\r\n\r\n<";
+                var body = "REBEL U – independent by design:\r\n\r\n";
                 body += window.location.href;
-                body += ">";
+                //body += ">";
                 var uri = "mailto:?subject=";
                 uri += encodeURIComponent(subject);
                 uri += "&body=";
