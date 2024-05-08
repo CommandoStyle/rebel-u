@@ -5,7 +5,7 @@ gsap.registerPlugin(MorphSVGPlugin);
 gsap.set(".about-reveal", { x: -30, opacity: 0 });
 gsap.set(['.home-logo', ".menu-txt", ".touch-print-open__wrap", '.beta__txt', '.hero-info__marquee-wrap', '.reb-globe-html'], {autoAlpha: 0});
 gsap.set([".redact-cover-logo", ".redact-cover-info", ".redact-cover-nav"], {scaleX: 0 });
-gsap.set([".redact-cover-globe", ".redact-cover-your"], {scaleX: 0 });
+gsap.set([".rblu-exit__cover", ".redact-cover-globe", ".redact-cover-your"], {scaleX: 0 });
 gsap.set('.cookie__wrap', { xPercent: -105 });
 gsap.set('.cookie__container', { xPercent: 105 });
 gsap.set('.cookie-txt__reveal', { x: -30, opacity: 0 });
@@ -28,9 +28,12 @@ aboutIntroOnce
 .to(".redact-cover-nav", { delay: 1.134, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
 .to([".menu-txt", ".touch-print-open__wrap"], { autoAlpha: 1, duration: 0.001})
 .to(".redact-cover-nav", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
-.to(".redact-cover-globe", { delay: 0.25, scaleX: 1, transformOrigin: "0% 100%", duration: 0.5, ease: "linear"})
+.to(".rblu-exit__cover", { delay: 0.25, scaleX: 1, transformOrigin: "0% 100%", duration: 0.35, ease: "linear"})
+.to(".rblu-exit__img", { autoAlpha: 1, duration: 0.001})
+.to(".rblu-exit__cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.35, ease: "linear"}, "+=0.01")
+.to(".redact-cover-globe", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.5, ease: "linear"})
 .to( ".reb-globe-html", { autoAlpha: 1, duration: 0.001})
-.to(".redact-cover-globe", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.5, ease: "linear"}, "-=0.01")
+.to(".redact-cover-globe", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.5, ease: "linear"}, "+=0.01")
 .to(".about-reveal", { duration: 1.2, x: 0, stagger: 0.03, ease: "expo.out" }, "-=1.001")
 .to(".about-reveal", { duration: 0.4, opacity: 1, stagger: 0.03, ease: "linear" }, "<")
 .to('.about-hero-o__wrap', { duration: 0.5, rotationY: 180, ease: "power1.inOut" }, "-=0.501")
