@@ -743,6 +743,7 @@ const initRblu = () => {
             navMenuNew(data.next.container);
             initHome(data.next.container); 
             noHoverScroll(data.next.container);
+            share(data.next.container);
             }
           }, {
             namespace: 'proposition',
@@ -751,6 +752,7 @@ const initRblu = () => {
               initBooking(data.next.container);
               navMenuNew(data.next.container); 
               noHoverScroll(data.next.container);
+              share(data.next.container);
             }
           }, {
             namespace: 'alumni',
@@ -758,6 +760,7 @@ const initRblu = () => {
              initAlumni(data.next.container);
              navMenuNew(data.next.container);
              noHoverScroll(data.next.container);
+             share(data.next.container);
             }
           }, {
             namespace: 'alum',
@@ -765,6 +768,7 @@ const initRblu = () => {
               initAlum(data.next.container);
               navMenuNew(data.next.container);
               noHoverScroll(data.next.container);
+              share(data.next.container);
             }
           }, {
             namespace: 'about',
@@ -772,6 +776,7 @@ const initRblu = () => {
               initAbout(data.next.container);  
               navMenuNew(data.next.container);
               noHoverScroll(data.next.container);
+              share(data.next.container);
             }
         }, {
             namespace: 'mrebel',
@@ -779,6 +784,7 @@ const initRblu = () => {
               navMenuNew(data.next.container);
               initEbel(data.next.container); 
               noHoverScroll(data.next.container);
+              share(data.next.container);
             }
         }, {
             namespace: 'mrebel-post',
@@ -786,6 +792,7 @@ const initRblu = () => {
               navMenuNew(data.next.container);
               initEbelPost(data.next.container); 
               noHoverScroll(data.next.container);
+              share(data.next.container);
           }
         }, { 
            namespace: 'legal',
@@ -793,6 +800,7 @@ const initRblu = () => {
              initLegal(data.next.container);
              navMenuNew(data.next.container);
              noHoverScroll(data.next.container);
+             share(data.next.container);
          }
        }, { 
         namespace: 'error',
@@ -818,7 +826,6 @@ quizGlobal();
 bookedCover();
 cookieSelect();
 iframeOut();
-share();
 shareFallbackMenu();
 
 }, 0);
