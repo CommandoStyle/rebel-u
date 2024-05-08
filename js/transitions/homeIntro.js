@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.set(".home-reveal", { "will-change": "transform, opacity", x: -30, opacity: 0 });
 gsap.set(['.home-logo', ".menu-txt", '.beta__txt', '.hero-info__marquee-wrap', ".sml__square"], {autoAlpha: 1});
 gsap.set([".redact-cover-logo", ".redact-cover-beta", ".redact-cover-info", ".redact-cover-nav", ".rblu-exit__cover", ".ampersand-redact-cover", ".sneaky__dot-bg"], {scaleX: 0 });
-///gsap.set('.sneaky__dot-bg', { yPercent: 0, display: "none" });
+//gsap.set('.sneaky__dot-bg', { yPercent: 0, display: "none" });
 gsap.set(".sneaky__dot-contain", {autoAlpha: 1});
 gsap.set(".hero-scroll", { display: "none" });
  
