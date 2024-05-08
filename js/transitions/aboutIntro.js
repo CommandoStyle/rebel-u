@@ -44,7 +44,7 @@ export const aboutIntro = (container) => {
            .to(".rblu-exit__cover", { delay: 0.25, scaleX: 1, transformOrigin: "0% 100%", duration: 0.35, ease: "linear"})
            .from(".rblu-exit__img", { autoAlpha: 0, duration: 0.001})
            .to(".rblu-exit__cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.35, ease: "linear"}, "+=0.01")
-           .set(".menu-txt", { color: '#000000'}, "-=2.631")
+           .set(".menu-txt", { color: '#000000'}, "-=2.301")
            .set(".hero-scroll", { delay: 1, display: "block" });
   
   //REB GLOBE SVG ROTATION
