@@ -29,7 +29,7 @@ aboutIntroOnce
 .to([".menu-txt", ".touch-print-open__wrap"], { autoAlpha: 1, duration: 0.001})
 .to(".redact-cover-nav", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
 .to(".rblu-exit__cover", { delay: 0.25, scaleX: 1, transformOrigin: "0% 100%", duration: 0.35, ease: "linear"})
-.to(".rblu-exit__img", { autoAlpha: 1, duration: 0.001})
+.from(".rblu-exit__img", { autoAlpha: 0, duration: 0.001})
 .to(".rblu-exit__cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.35, ease: "linear"}, "+=0.01")
 .to(".redact-cover-globe", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.5, ease: "linear"})
 .to( ".reb-globe-html", { autoAlpha: 1, duration: 0.001})
