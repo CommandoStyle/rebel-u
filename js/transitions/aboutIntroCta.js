@@ -3,7 +3,7 @@ export const aboutIntroCta = (container) => {
   gsap.registerPlugin(MorphSVGPlugin);
 
   gsap.set(".about-reveal", { x: -30, opacity: 0 });
-  gsap.set(['.home-logo', ".menu-txt", '.beta__txt', ".sml__square", '.hero-info__marquee-wrap', '.reb-globe-html', ".rblu-exit__img"], {autoAlpha: 1});
+  gsap.set(['.home-logo', ".menu-txt", '.beta__txt', ".sml__square", '.hero-info__marquee-wrap', '.reb-globe-html'], {autoAlpha: 1});
   gsap.set([".redact-cover-logo", ".redact-cover-beta", ".redact-cover-info", ".redact-cover-nav"], {scaleX: 0 });
   gsap.set([".redact-cover-globe", ".redact-cover-your", ".rblu-exit__cover"], {scaleX: 0 });
   gsap.set('.about-hero__cm-bg', { yPercent: 0 });
