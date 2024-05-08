@@ -2,7 +2,7 @@ export const propIntroCta = (container) => {
 
     gsap.set(".prop-reveal", {  "will-change": "transform, opacity", x: -30, opacity: 0 });
     gsap.set(['.home-logo', ".menu-txt", '.beta__txt', ".currencies-txt", '.hero-info__marquee-wrap', ".currencies-list__contain"], {autoAlpha: 1});
-    gsap.set([".redact-cover-logo", ".redact-cover-info", ".redact-cover-currency-lg", ".redact-cover-nav"], {scaleX: 0 });
+    gsap.set([".redact-cover-logo", ".redact-cover-info", ".redact-cover-currency-lg", ".redact-cover-nav", ".rblu-exit__cover"], {scaleX: 0 });
     gsap.set(['.repackaged__wrap', ".currency-exit-txt"], { autoAlpha: 0 });
     gsap.set('.redact-cover-repack', { scaleX: 0 });
     gsap.set('.hero-yes-you__bg', { "will-change": "transform", scaleX: 0, display: "none" });
@@ -23,6 +23,9 @@ export const propIntroCta = (container) => {
         .to(".redact-cover-repack", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.3, ease: "linear"}, "+=1.3")
         .to('.repackaged__wrap', { autoAlpha: 1, duration: 0.001})
         .to(".redact-cover-repack", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear"}, "-=0.01")
+        .to(".rblu-exit__cover", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.3, ease: "linear"})
+        .from(".rblu-exit__img", { autoAlpha: 0, duration: 0.001})
+        .to(".rblu-exit__cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear"}, "+=0.01")
         .set(".hero-scroll", { display: "block" }, "<");
   
         return propIntroCta;
