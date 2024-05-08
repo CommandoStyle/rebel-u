@@ -5,7 +5,7 @@ gsap.set(".mrebel-reveal", { x: -30, opacity: 0 });
 gsap.set(['.home-logo', ".menu-txt", ".touch-print-open__wrap", '.beta__txt', ".query-txt", ".query-away__track"], {autoAlpha: 0});
 gsap.set([".redact-cover-logo", ".redact-cover-query", ".redact-cover-nav", ".redact-cover-qa"], {scaleX: 0 });
 gsap.set(['.indie-advisory__img', '.ebel-42__wrap'], { autoAlpha: 0 });
-gsap.set(['.redact-cover-advisory', '.redact-cover-42'], { scaleX: 0 });
+gsap.set(['.redact-cover-advisory', '.redact-cover-42', ".rblu-exit__cover"], { scaleX: 0 });
 gsap.set('.cookie__wrap', { xPercent: -105 });
 gsap.set('.cookie__container', { xPercent: 105 });
 gsap.set('.cookie-txt__reveal', { x: -30, opacity: 0 });
@@ -42,6 +42,9 @@ ebelIntroOnce
 .to(".redact-cover-42", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.125, ease: "linear"}, "-=0.02")
 .to(".mrebel-reveal", { duration: 1.6, x: 0, stagger: 0.03, ease: "expo.out" }, "-=1.581")
 .to(".mrebel-reveal", { duration: 0.4, opacity: 1, stagger: 0.03, ease: "linear" }, "<")
+.to(".rblu-exit__cover", { delay: 0.25, scaleX: 1, transformOrigin: "0% 100%", duration: 0.35, ease: "linear"})
+.from(".rblu-exit__img", { autoAlpha: 0, duration: 0.001})
+.to(".rblu-exit__cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.35, ease: "linear"}, "+=0.01")
 .add(gsap.delayedCall(0.8, function() { fortyTwo.play(); }))
 .to('.cookie__wrap', { delay: 0.5, xPercent: 0, duration: 1.6, ease: "expo.easeOut" })
 .to('.cookie__container', { xPercent: 0, duration: 1.6, ease: "expo.easeOut" }, "<")
