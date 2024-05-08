@@ -27,7 +27,10 @@ export const aboutIntroCta = (container) => {
            .to('.about-hero-u__wrap', { duration: 0.5, rotationY: 180, ease: "power1.inOut" }, "-=0.3")
            .to('.about-hero-logo__wrap', { duration: 0.5, rotationY: 0, ease: "power1.inOut" }, "<")
            .to('.about-hero-logo__wrap', { z: 50, duration: 0.001 }, "-=0.32")
-           .set(".menu-txt", { color: '#000000'}, "-=1.5")
+            .to(".rblu-exit__cover", { delay: 0.25, scaleX: 1, transformOrigin: "0% 100%", duration: 0.35, ease: "linear"})
+           .from(".rblu-exit__img", { autoAlpha: 0, duration: 0.001})
+           .to(".rblu-exit__cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.35, ease: "linear"}, "+=0.01")
+           .set(".menu-txt", { color: '#000000'}, "-=2.201")
            .set(".hero-scroll", { delay: 1, display: "block" });
   
   //REB GLOBE SVG ROTATION
