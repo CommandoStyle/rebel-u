@@ -74,6 +74,8 @@ shareExit.forEach(shareExit => {
            .to(shareRev, { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
            .fromTo(shareBg, { scale:40 }, {scale: 0.6, ease: Expo.easeOut, duration: 1.1 })
            .set([".footer__copyright-wrap", ".menu-txt"], { filter: 'invert(0%)' }, "-=1")
+           .set(".touch-print-open__wrap", {autoAlpha: 1}, "<")
+           .set(".touch-print-close__wrap", {filter: "invert(0)", autoAlpha: 0}, "<")
            .to(".home-nav__btn", { autoAlpha: 0, duration: 0.01 }, "-=0.9")
            .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.01 }, "<")
            .to([shareWrap, ".redact-cover-top-left"], { display: 'none', duration: 0.01 },"<")
