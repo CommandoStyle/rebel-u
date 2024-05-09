@@ -12,7 +12,7 @@ export const aboutIntro = (container) => {
   gsap.set('.u-txt', { autoAlpha: 1 });
   gsap.set(['.about-hero__cm-wrap', ".about-hero-logo__wrap"], { rotationY: -180 });
  gsap.set([".about-hero-o__contain", ".about-hero-u__contain"], { transformStyle: "preserve-3d" });
- gsap.set([".hero-scroll", ".beta__contain"], { display: "none" });
+ gsap.set(".hero-scroll", { display: "none" });
 
   //var navHideTop = gsap.utils.toArray(".menu__txt-wrap");
   var navHideTopInner = gsap.utils.toArray(".menu__txt-inner");
