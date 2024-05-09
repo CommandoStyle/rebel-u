@@ -13,6 +13,7 @@ gsap.set('.cookie__notice', { overflow: "hidden" });
 gsap.set('.u-txt', { autoAlpha: 1 });
 gsap.set(['.about-hero__cm-wrap', ".about-hero-logo__wrap"], { rotationY: -180 });
 gsap.set([".about-hero-o__contain", ".about-hero-u__contain"], { transformStyle: "preserve-3d" });
+gsap.set('.beta__contain', {clipPath: "inset(0% 100% 0% 0%)"});
                
 var aboutIntroOnce = gsap.timeline();
       
@@ -46,7 +47,6 @@ aboutIntroOnce
 .to('.cookie__container', { xPercent: 0, duration: 1.6, ease: "expo.easeOut" }, "<")
 .to(".cookie-txt__reveal", { x: 0, opacity: 1, duration: 0.3, ease: "power1.out" }, "-=0.2")
 .to('.cookie__notice', { overflow: "visible", duration: 0.001 });
-gsap.set('.beta__contain', {clipPath: "inset(0% 100% 0% 0%)"});
 
   
   //REB GLOBE SVG ROTATION
