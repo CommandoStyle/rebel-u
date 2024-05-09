@@ -818,7 +818,6 @@ quizGlobal();
 bookedCover();
 cookieSelect();
 iframeOut();
-shareFallbackMenu();
 
 }, 0);
 
@@ -841,6 +840,7 @@ function initHome() {
   cookieLeave();
   globalMisc();
   share();
+  shareFallbackMenu();
   //homeTestiSwiper();
   //muzak();
   
@@ -871,6 +871,7 @@ NavRevertCurrent();
 propCbSwiper();
 smlArrowCta();
 share();
+shareFallbackMenu();
 
 }, 0);
     
@@ -909,6 +910,7 @@ function initAlumni() {
   globalMisc();
   NavRevertCurrent();
   share();
+  shareFallbackMenu();
   //muzak();
   
 }, 0);
@@ -932,6 +934,7 @@ function initAlum() {
   globalMisc();
   NavRevertCurrent();
   share();
+  shareFallbackMenu();
   //muzak();
   
   }, 0);
@@ -955,6 +958,7 @@ globalMisc();
 NavRevertCurrent();
 propFaqAccordion();
 share();
+shareFallbackMenu();
 //muzak();
 //aboutVidScreenSaver();
 //aboutStFrame1();
@@ -985,6 +989,7 @@ mrebelTopicCounters();
 NavRevertCurrent();
 iframeOutQuery();
 share();
+shareFallbackMenu();
 
 }, 0);
 
@@ -1010,6 +1015,7 @@ function initEbelPost() {
   globalMisc();
   NavRevertCurrent();
   share();
+  shareFallbackMenu();
  
   }, 0);
   
@@ -1029,6 +1035,7 @@ function initLegal() {
     quizStLottie();
     legalLinksSt();
     share();
+    shareFallbackMenu();
  
   }, 0);
 
