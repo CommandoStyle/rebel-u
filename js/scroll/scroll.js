@@ -28,7 +28,7 @@ let smoother = ScrollSmoother.create({
 
   // SS stop / start on button hovers
       
-  var ssHoverStop = document.querySelectorAll('.cta-btn, .menu__btn, .nav__logo-btn, .mrebel__submit-query, .nav__items-container, .nav__container, .currency__items-container, .booking-items__container, .currency__btn, .query-items__container, .mrebel-sub__link, .quiz-items__container, .quiz-cta__btn, .subs-privacy__btn, .inline__btn');
+  var ssHoverStop = document.querySelectorAll('.cta-btn, .menu__btn, .nav__logo-btn, .mrebel__submit-query, .nav__items-container, .nav__container, .currency__items-container, .booking-items__container, .currency__btn, .query-items__container, .mrebel-sub__link, .quiz-items__container, .quiz-cta__btn, .subs-privacy__btn, .inline__btn, .share__items-container, .share__backdrop');
       
     ssHoverStop.forEach(function(ssStop) {
          ssStop.addEventListener('mouseover', function hover() { smoother.paused(true); 
