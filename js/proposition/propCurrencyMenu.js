@@ -22,6 +22,9 @@ gsap.set([".nav__logo-btn", ".currency__btn"], {autoAlpha: 1});
 gsap.set(".currency-exit-txt", {autoAlpha: 0});
 gsap.set(".current-arrow-right__track", { xPercent: 105 });
 gsap.set(".current-arrow-left__track", { xPercent: -105 });
+
+//Desktop
+mm.add("(min-width: 990px)", () => {
  
 currencyOpen.forEach(currOpen => {
       
@@ -105,7 +108,96 @@ currencyExit.forEach(currExit => {
            currExit.addEventListener('click', () => {
             currencyOut.play(0);
             });
-          })   
+          })
+});
+
+//iPAD and MOBILE
+mm.add("(max-width: 991px)", () => {
+ 
+currencyOpen.forEach(currOpen => {
+      
+var currencyIn = new gsap.timeline({ paused: true });
+
+currencyIn.set(currRev, { x: -30, opacity: 0 })
+          .set(navBotRev, { x: -30, opacity: 0 })
+          .set(".nav-bot-rev-vert", { y: 15, opacity: 0 })
+          .set(currBg, {scale: 1, display: "block" })
+          .set(".redact-cover-nav", { scaleX: 0, backgroundColor: '#ffffff'}) 
+          .set(".redact-cover-currency-lg", { scaleX: 0, backgroundColor: '#ffffff'})
+          .set(".current-arrow__contain", { yPercent: 0 })
+          .set(".current-arrow-right__track", { yPercent: 0, xPercent: 105 })
+          .set(".current-arrow-left__track", { yPercent: 0, xPercent: -105 })
+          .set(currBg, { autoAlpha: 1 })
+          .set(".cursor-dot", {display: "none"}, "<")
+          .set(currencyOpen, {display: "none"}, "<")
+          .set(currencyExit, {display: "flex"}, "<")
+          .set(".currencies-list__contain", { filter: 'invert(100%)'}, "<")
+          .set([".menu__btn", ".menu-close__btn"], { pointerEvents: "none" }, "<")
+          .fromTo(currBg, { scale: 1 }, { scale: 40, transformOrigin: "50% 50%", ease: Expo.easeInOut, duration: 1.2})
+          .set(".touch-print-open__wrap", {autoAlpha: 0}, "-=1.15")
+          .set(".touch-print-close__wrap", {filter: "invert(1)", autoAlpha: 1}, "<")
+          .to(".nav__logo-btn", { autoAlpha: 0, duration: 0.01 }, "-=0.8")
+          .to(".home-nav__btn", { autoAlpha: 1, duration: 0.01 }, "<")
+          .to(currWrap, { display: 'flex', duration: 0.001 },"<")
+          .set('.hole.is--currency', {display: "block"}, "<")
+          .to(currRev, { duration: 1.6, x: 0, stagger: 0.06, ease: "expo.out" }, "-=0.4")
+          .to(currRev, { duration: 0.4, opacity: 1, stagger: 0.06, ease: "linear" }, "<")
+          .to(navBotRev, { x: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "-=1.2" )
+          .to(".nav-bot-rev-vert", { y: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "<")
+          .to([".current-arrow-right__track", ".current-arrow-left__track"], { xPercent: 0, ease: "power3.easeOut", duration: 0.55 }, "-=0.15")
+          .to(".redact-cover-currency-lg", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}, ">")
+          .to(".currency-exit-txt", { autoAlpha: 1, duration: 0.001 })
+          .to(".currencies-list__contain", { autoAlpha: 0, duration: 0.001 }, "<")
+          .to(".redact-cover-currency-lg", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
+          .to(".redact-cover-nav", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.15, ease: "linear"});
+          
+          currOpen.addEventListener('click', () => {
+            currencyIn.play(0);
+            });
+           })   
+
+          
+currencyExit.forEach(currExit => {
+
+      var currencyOut = new gsap.timeline({paused: true});
+
+      currencyOut
+           .set(currencyExit, {display: "none"})
+           .set(currencyOpen, {display: "flex"}, "<")
+           .set('.hole.is--currency', { display: "none" },"<")
+           .set([".menu__btn", ".menu-close__btn"], { pointerEvents: "auto" }, "<")
+           .to(".redact-cover-nav", {scaleX: 0, transformOrigin: "100% 0%", duration: 0.15, ease: "linear"})
+           .to([currRev, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.7, x: 30, stagger: 0, ease: "expo.out" }, "<")
+           .to([currRev, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
+           .to(navBotRev, { x: 30, opacity: 0, ease: "expo.out", duration: 0.3 },"-=0.65")
+           .to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<")
+           .fromTo(currBg, { scale:40 }, {scale: 0.6, ease: Expo.easeOut, duration: 1.1 })
+           .to(".home-nav__btn", { autoAlpha: 0, duration: 0.01 }, "-=0.9")
+           .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.01 }, "<")
+           .to(currWrap, { display: 'none', duration: 0.01 },"<") 
+           .to(".cursor-dot", { display: "flex", duration: 0.001 }, "-=0.27")
+           .to(currBg, { autoAlpha: 0, duration: 0.001 },"<")
+           .to(".currency-exit-txt", { color: '#000000', duration: 0.001}, "<")
+           .to(".currencies-list__contain", { filter: 'invert(0%)', duration: 0.001}, "<")
+           .set(".touch-print-open__wrap", {autoAlpha: 1}, "-=0.37")
+           .set(".touch-print-close__wrap", {filter: "invert(0)", autoAlpha: 0}, "<")
+           .to(".redact-cover-currency-lg", { scaleX: 0, backgroundColor: '#000000'}, "<") 
+           .to(".redact-cover-currency-lg", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
+           .to(".currency-exit-txt", { autoAlpha: 0, duration: 0.001 })
+           .to(".currencies-list__contain", { autoAlpha: 1, duration: 0.001 }, "<")
+           .to(".redact-cover-currency-lg", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
+           .set(currRev, { x: -20, opacity: 0 })
+           .set(navBotRev, { x: -10, opacity: 0 })
+           .set(".nav-bot-rev-vert", { y: 5, opacity: 0 })
+           .set(".currency-exit-txt", { color: '#ffffff'})
+           .set(".current-arrow-right__track", { xPercent: 105, x: 0, opacity: 1 })
+           .set(".current-arrow-left__track", { xPercent: -105, x: 0, opacity: 1 }); 
+           
+           currExit.addEventListener('click', () => {
+            currencyOut.play(0);
+            });
+          })
+});
 
 // Menu items image reveal hover
 
