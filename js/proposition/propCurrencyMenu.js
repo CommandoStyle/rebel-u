@@ -179,7 +179,7 @@ currencyExit.forEach(currExit => {
            .to(currBg, { autoAlpha: 0, duration: 0.001 },"<")
            .to(".currency-exit-txt", { color: '#000000', duration: 0.001}, "<")
            .to(".currencies-list__contain", { filter: 'invert(0%)', duration: 0.001}, "<")
-           .set(".touch-print-open__wrap", {autoAlpha: 1}, "-=0.42")
+           .set(".touch-print-open__wrap", {autoAlpha: 1}, "-=0.47")
            .set(".touch-print-close__wrap", {filter: "invert(0)", autoAlpha: 0}, "<")
            .to(".redact-cover-currency-lg", { scaleX: 0, backgroundColor: '#000000'}, "<") 
            .to(".redact-cover-currency-lg", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
