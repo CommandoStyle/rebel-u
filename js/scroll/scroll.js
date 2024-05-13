@@ -2,17 +2,19 @@ export const scroll = () => {
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
+ScrollTrigger.config({ ignoreMobileResize: true });
+
 let smoother = ScrollSmoother.create({
         wrapper: "#smooth-wrapper",
         content: "#smooth-content",
         smooth: 3,
         speed: 1,
         effects: true,
-        ignoreMobileResize: true,
+        //ignoreMobileResize: true,
         smoothTouch: 0.1,
         //normalizeScroll: true,
-        preventDefault: true,
-        normalizeScroll: !!ScrollTrigger.isTouch
+        //preventDefault: true,
+        //normalizeScroll: !!ScrollTrigger.isTouch
     });
 
     // SS stop / start on first load
