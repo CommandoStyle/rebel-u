@@ -1,8 +1,8 @@
 export function share() {
   
 if (navigator.share) {
-    const title = document.title;
-    const header = document.querySelector("header").innerText;
+    //const title = document.title;
+    //const header = document.querySelector("header").innerText;
     // If Web Share API is supported, enable the Web Share API button
     const shareButton = document.getElementById("main-share");
     shareButton.style.display = "flex"; // Show the button
@@ -10,12 +10,12 @@ if (navigator.share) {
   
       navigator
         .share({
-          title,
-          text: header,
+          //title,
+          //text: header,
           url: window.location.href,
         })
-        .then(() => console.log("Shared successfully"))
-        .catch((error) => console.error("Sharing failed:", error));
+        //.then(() => console.log("Shared successfully"))
+        //.catch((error) => console.error("Sharing failed:", error));
     });
   
   } else {
