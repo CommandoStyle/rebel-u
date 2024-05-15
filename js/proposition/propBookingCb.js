@@ -25,16 +25,13 @@ var cbBg = gsap.utils.toArray('.cb__backdrop');
 var rebsBg = gsap.utils.toArray('.reb-s__backdrop');
 var rebmBg = gsap.utils.toArray('.reb-m__backdrop');
 var rebxxlBg = gsap.utils.toArray('.reb-xxl__backdrop');
-var audioWrap = gsap.utils.toArray(['.audio-graphic__wrap', '.quiz-audio-graphic__wrap']);
-var audioGraph = gsap.utils.toArray('.audio-on-off__graphic');
-var muzakTrack = gsap.utils.toArray('.muzak-marquee__track'); 
 let cursor = gsap.utils.toArray(".cursor-dot");
 let bookSuccessBtn = gsap.utils.toArray([".cb-exit__success", ".rebs-exit__success", ".rebm-exit__success", ".rebxxl-exit__success"]);
 
 // GSAP SET GLOBAL
-gsap.set([audioWrap, bookCancelinner], { x: -30, opacity: 0 });
+gsap.set(bookCancelinner, { x: -30, opacity: 0 });
 gsap.set([CategoryCb, CategoryReb], { display: "none", x: -30, opacity: 0 });
-gsap.set([BookContain], { display: "none" });
+gsap.set(BookContain, { display: "none" });
 gsap.set([cbWrap, rebsWrap, rebmWrap, rebxxlWrap], { display: "none" });
 gsap.set([cbBg, rebsBg, rebmBg, rebxxlBg], { autoAlpha: 0 });
 
@@ -93,9 +90,6 @@ cbEurOpen.forEach(cbEurOp => {
                 .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
                 .fromTo(cbEurWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
                 .set(bookHole, {display: "block"}, "<")
-                .to([audioWrap, muzakTrack], { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-                .to(audioGraph, {clearProps: 'x'})
-                .set(audioGraph, {x: 20.8})
                 .set(ctaMask, {filter:"invert(0%)"});
          
     cbEurOp.addEventListener('click', () => {   
@@ -125,11 +119,11 @@ CbEurCancel.forEach((CbEurCancel) => {
              .set(".cta-txt", { autoAlpha: 1}, "<")
              .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
              .set(cbBg, {autoAlpha: 0, scale: 1}, "<")
-             .to([audioWrap, muzakTrack, cbEurWrap, CategoryCb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+             .to([cbEurWrap, CategoryCb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
              .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
              .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
              .set(CategoryCb, { x: -30, opacity: 0, display: "none" })
-             .set([bookCancelinner, audioWrap, muzakTrack], { x: -30, opacity: 0 })
+             .set(bookCancelinner, { x: -30, opacity: 0 })
              .set(cbWrap, { display: "none" })
              .set(cbBtnsWrap, { display: "none" })
              .set(CbEurCancel, { display: "none" })
@@ -169,9 +163,6 @@ cbusd_open = gsap.timeline({ paused: true });
                 .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
                 .fromTo(cbUsdWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
                 .set(bookHole, {display: "block"}, "<")
-                .to([audioWrap, muzakTrack], { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-                .to(audioGraph, {clearProps: 'x'})
-                .set(audioGraph, {x: 20.8})
                 .set(ctaMask, {filter:"invert(0%)"});
        
   cbUsdOp.addEventListener('click', () => {   
@@ -201,11 +192,11 @@ CbUsdCancel.forEach((CbUsdCancel) => {
              .set(".cta-txt", { autoAlpha: 1}, "<")
              .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
              .set(cbBg, {autoAlpha: 0, scale: 1}, "<")
-             .to([audioWrap, muzakTrack, cbUsdWrap, CategoryCb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+             .to([cbUsdWrap, CategoryCb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
              .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
              .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
              .set(CategoryCb, { x: -30, opacity: 0, display: "none" })
-             .set([bookCancelinner, audioWrap, muzakTrack], { x: -30, opacity: 0 })
+             .set(bookCancelinner, { x: -30, opacity: 0 })
              .set(cbWrap, { display: "none" })
              .set(cbBtnsWrap, { display: "none" })
              .set(CbUsdCancel, { display: "none" })
@@ -245,9 +236,6 @@ cbgbp_open = gsap.timeline({ paused: true });
                 .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
                 .fromTo(cbGbpWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
                 .set(bookHole, {display: "block"}, "<")
-                .to([audioWrap, muzakTrack], { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-                .to(audioGraph, {clearProps: 'x'})
-                .set(audioGraph, {x: 20.8})
                 .set(ctaMask, {filter:"invert(0%)"});
        
   cbGbpOp.addEventListener('click', () => {   
@@ -277,11 +265,11 @@ CbGbpCancel.forEach((CbGbpCancel) => {
              .set(".cta-txt", { autoAlpha: 1}, "<")
              .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
              .set(cbBg, {autoAlpha: 0, scale: 1}, "<")
-             .to([audioWrap, muzakTrack, cbGbpWrap, CategoryCb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+             .to([cbGbpWrap, CategoryCb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
              .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
              .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
              .set(CategoryCb, { x: -30, opacity: 0, display: "none" })
-             .set([bookCancelinner, audioWrap, muzakTrack], { x: -30, opacity: 0 })
+             .set(bookCancelinner, { x: -30, opacity: 0 })
              .set(cbWrap, { display: "none" })
              .set(cbBtnsWrap, { display: "none" })
              .set(CbGbpCancel, { display: "none" })
@@ -321,9 +309,6 @@ cbsek_open = gsap.timeline({ paused: true });
                 .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
                 .fromTo(cbSekWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
                 .set(bookHole, {display: "block"}, "<")
-                .to([audioWrap, muzakTrack], { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-                .to(audioGraph, {clearProps: 'x'})
-                .set(audioGraph, {x: 20.8})
                 .set(ctaMask, {filter:"invert(0%)"});
        
   cbSekOp.addEventListener('click', () => {   
@@ -353,11 +338,11 @@ CbSekCancel.forEach((CbSekCancel) => {
              .set(".cta-txt", { autoAlpha: 1}, "<")
              .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
              .set(cbBg, {autoAlpha: 0, scale: 1}, "<")
-             .to([audioWrap, muzakTrack, cbSekWrap, CategoryCb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+             .to(cbSekWrap, CategoryCb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
              .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
              .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
              .set(CategoryCb, { x: -30, opacity: 0, display: "none" })
-             .set([bookCancelinner, audioWrap, muzakTrack], { x: -30, opacity: 0 })
+             .set(bookCancelinner, { x: -30, opacity: 0 })
              .set(cbWrap, { display: "none" })
              .set(cbBtnsWrap, { display: "none" })
              .set(CbSekCancel, { display: "none" })
@@ -397,9 +382,6 @@ cbsgd_open = gsap.timeline({ paused: true });
                 .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
                 .fromTo(cbSgdWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
                 .set(bookHole, {display: "block"}, "<")
-                .to([audioWrap, muzakTrack], { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-                .to(audioGraph, {clearProps: 'x'})
-                .set(audioGraph, {x: 20.8})
                 .set(ctaMask, {filter:"invert(0%)"});
        
   cbSgdOp.addEventListener('click', () => {   
@@ -429,11 +411,11 @@ CbSgdCancel.forEach((CbSgdCancel) => {
              .set(".cta-txt", { autoAlpha: 1}, "<")
              .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
              .set(cbBg, {autoAlpha: 0, scale: 1}, "<")
-             .to([audioWrap, muzakTrack, cbSgdWrap, CategoryCb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+             .to([cbSgdWrap, CategoryCb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
              .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
              .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
              .set(CategoryCb, { x: -30, opacity: 0, display: "none" })
-             .set([bookCancelinner, audioWrap, muzakTrack], { x: -30, opacity: 0 })
+             .set(bookCancelinner, { x: -30, opacity: 0 })
              .set(cbWrap, { display: "none" })
              .set(cbBtnsWrap, { display: "none" })
              .set(CbSgdCancel, { display: "none" })
@@ -468,12 +450,12 @@ cbExitSuccess.forEach((cbExitSuccess) => {
            .set(".cb-booked__cover", { display: "block" }, "<")
            .set([".rebs-btn__covered", ".rebm-btn__covered", ".rebxxl-btn__covered", ".spa-btn__covered"], { display: "flex" }, "<")
            .to([".cb-success-marquee__wrap", ".cb-success-img__wrap"], { delay: 0.6, x: 30, opacity: 0, ease: "expo.out", duration: 0.6})
-           .to([CategoryCb, bookCancelinner, audioWrap, muzakTrack], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+           .to([CategoryCb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
            .to([cbEurWrap, cbUsdWrap, cbGbpWrap, cbSgdWrap, cbSekWrap], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
            .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)", onComplete() { sessionStorage.setItem("cbSuccessPlayed", true) } }, "-=0.2")
            .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
            .set(CategoryCb, { x: -30, opacity: 0, display: "none" })
-           .set([audioWrap, muzakTrack, bookCancelinner], { x: -30, opacity: 0 })
+           .set(bookCancelinner, { x: -30, opacity: 0 })
            .set(cbWrap, { display: "none" })
            .set(cbBtnsWrap, { display: "none" })
            .set([CbEurCancel, CbUsdCancel, CbGbpCancel, CbSgdCancel, CbSekCancel, ".cb-eur__cta", ".cb-usd__cta", ".cb-gbp__cta", ".cb-sek__cta", ".cb-sgd__cta"], { display: "none" })
