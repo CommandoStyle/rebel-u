@@ -20,7 +20,7 @@ var quizOpen = gsap.utils.toArray('.quiz-cta__btn');
 var quizInnerWrap = gsap.utils.toArray('.quiz-inner__booking-wrap');
 const quizCancel = document.querySelectorAll(".quiz-cancel");
 const quizCancelSuccess = document.querySelectorAll(".quiz-cancel__success");
-var quizHole = gsap.utils.toArray(".quiz-hole");
+const quizHole = document.querySelectorAll(".quiz-hole");
 
 gsap.registerPlugin(ExpoScaleEase);
 
@@ -113,7 +113,7 @@ quiz_open = gsap.timeline({ paused: true });
               .set(CategoryQuiz, { display: "block" }, "<")
               .to(arrowMask, {filter:"invert(100%)", duration: 0.001}, "<")
               .to(quizBg, { scale: 12, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 1.2 })
-	      .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.95")
+	      .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.6")
               .to(".arrow-redact-cover", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 4.3, ease: "power0.easeOut" })
               .to(arrowTrack, { autoAlpha: 0, duration: 0.001})
               .to(".arrow-redact-cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
@@ -154,7 +154,7 @@ quizCancel.forEach((quizCancel) => {
          .set(".menu__btn", { display: "none", opacity: 0 })
          .set(cursor, { scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
          .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
-         .to([CategoryQuiz, quizCancelinner, quizInnerWrap],{ x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
+         .to([CategoryQuiz, quizCancelinner, quizInnerWrap], { x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
          .fromTo(quizHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
          .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
          .set(CategoryQuiz, { x: -30, opacity: 0, display: "none" })
