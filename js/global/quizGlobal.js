@@ -15,11 +15,6 @@ var QuizContain = gsap.utils.toArray('.quiz-items__container');
 var CategoryQuiz = gsap.utils.toArray('.category-quiz__track');
 var QuizWrap = gsap.utils.toArray('.quiz__booking-wrap');
 var quizBg = gsap.utils.toArray('.quiz__backdrop');
-var audioWrap = gsap.utils.toArray(['.audio-graphic__wrap', '.quiz-audio-graphic__wrap']);
-//var audioMask = gsap.utils.toArray('.audio-graphic__mask');
-var audioGraph = gsap.utils.toArray('.audio-on-off__graphic');
-var muzakTrack = gsap.utils.toArray('.muzak-marquee__track'); 
-//var quizTopMask = gsap.utils.toArray(['.quiz-top-bar__mask', '.quiz-cancel__mask']);
 let cursor = gsap.utils.toArray(".cursor-dot");
 var quizOpen = gsap.utils.toArray('.quiz-cta__btn');
 var quizInnerWrap = gsap.utils.toArray('.quiz-inner__booking-wrap');
@@ -30,7 +25,7 @@ var quizHole = gsap.utils.toArray(".quiz-hole");
 gsap.registerPlugin(ExpoScaleEase);
 
 // GSAP SET QUIZ
-gsap.set([audioWrap, quizCancelinner], { x: -30, opacity: 0 });
+gsap.set(quizCancelinner, { x: -30, opacity: 0 });
 gsap.set(CategoryQuiz, { display: "none", x: -30, opacity: 0 });
 gsap.set([QuizWrap, QuizContain, quizCancel, quizCancelSuccess], { display: "none" });
 gsap.set(quizBg, { autoAlpha: 0 });
@@ -125,9 +120,6 @@ quiz_open = gsap.timeline({ paused: true });
               .to([quizCancelinner, CategoryQuiz], { delay: 0.2, x: 0, opacity: 1, ease: "expo.out", duration: 1.2 })
               .fromTo(quizInnerWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
               .set(quizHole, {display: "block"}, "<")
-              .to([audioWrap, muzakTrack], { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-              .to(audioGraph, {clearProps: 'x'})
-              .set(audioGraph, {x: 20.8})
               .set(arrowMask, { filter:"invert(0%)" })
               .set(arrowTrack, { autoAlpha: 1 })
 	      .set(".touch-print-open__wrap", { autoAlpha: 1 });
@@ -162,13 +154,11 @@ quizCancel.forEach((quizCancel) => {
          .set(".menu__btn", { display: "none", opacity: 0 })
          .set(cursor, { scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
          .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
-         .to([CategoryQuiz, audioWrap, muzakTrack, quizCancelinner, quizInnerWrap],{ x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
+         .to([CategoryQuiz, quizCancelinner, quizInnerWrap],{ x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
          .fromTo(quizHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
          .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
          .set(CategoryQuiz, { x: -30, opacity: 0, display: "none" })
          .set(quizCancelinner, { x: -30, opacity: 0 })
-         .set(audioWrap, { x: -30, opacity: 0 })
-         .set(muzakTrack, { x: -30, opacity: 0 })
          .set(quizCancel, { display: "none" })
          .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 })
          .set(QuizContain, { display: "none" })
@@ -252,13 +242,11 @@ quizCancelSuccess.addEventListener("click", (e) => {
            .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
            .set(".quiz-done__cover", { display: "block" }, "<")
            .to(".ready-fini__mask", { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-           .to([CategoryQuiz, audioWrap, muzakTrack, quizCancelinner, quizInnerWrap],{ x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
+           .to([CategoryQuiz, quizCancelinner, quizInnerWrap],{ x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
            .fromTo(quizHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
            .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
            .set(CategoryQuiz, { x: -30, yPercent: 0, display: "none" })
            .set(quizCancelinner, { x: -30, yPercent: 0 })
-           .set(audioWrap, { xPercent: 101, yPercent: 0 })
-           .set(muzakTrack, { xPercent: 101, yPercent: 0 })
            .set([QuizContain, quizCancel, quizCancelSuccess, QuizWrap], { display: "none" })
            .set(quizInnerWrap, { opacity: 0, display: "none", x: -30 })
            .set(quizHole, {display: "none", clearProps: "all"})
