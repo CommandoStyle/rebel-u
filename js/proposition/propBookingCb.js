@@ -338,7 +338,7 @@ CbSekCancel.forEach((CbSekCancel) => {
              .set(".cta-txt", { autoAlpha: 1}, "<")
              .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
              .set(cbBg, {autoAlpha: 0, scale: 1}, "<")
-             .to(cbSekWrap, CategoryCb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+             .to(cbSekWrap, CategoryCb, bookCancelinner), { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
              .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
              .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
              .set(CategoryCb, { x: -30, opacity: 0, display: "none" })
