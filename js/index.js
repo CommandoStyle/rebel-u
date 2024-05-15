@@ -99,7 +99,7 @@ import { propCurrencyMenu } from './proposition/propCurrencyMenu.js';
 import { propStRebDeets } from './proposition/propStRebDeets.js';
 import { propStSpaDeets } from './proposition/propStSpaDeets.js';
 import { propCurrencyPick } from './proposition/propCurrencyPick.js';
-import { propBookingCb } from './proposition/propBookingCb.js';
+//import { propBookingCb } from './proposition/propBookingCb.js';
 import { propBookingRebS } from './proposition/propBookingRebS.js';
 import { propBookingRebM } from './proposition/propBookingRebM.js';
 import { propBookingRebXXL } from './proposition/propBookingRebXXL.js';
@@ -884,7 +884,7 @@ function initBooking() {
   propCurrencyPick();
   propCurrencyMenu();
   propREBsuccess();
-  propBookingCb();
+  //propBookingCb();
   propBookingRebS();
   propBookingRebM();
   propBookingRebXXL();
