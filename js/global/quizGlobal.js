@@ -25,7 +25,7 @@ var quizOpen = gsap.utils.toArray('.quiz-cta__btn');
 var quizInnerWrap = gsap.utils.toArray('.quiz-inner__booking-wrap');
 const quizCancel = document.querySelectorAll(".quiz-cancel");
 const quizCancelSuccess = document.querySelectorAll(".quiz-cancel__success");
-const quizHole = document.querySelectorAll(".quiz-hole");
+var quizHole = gsap.utils.toArray(".quiz-hole");
 
 gsap.registerPlugin(ExpoScaleEase);
 
@@ -118,6 +118,7 @@ quiz_open = gsap.timeline({ paused: true });
               .set(CategoryQuiz, { display: "block" }, "<")
               .to(arrowMask, {filter:"invert(100%)", duration: 0.001}, "<")
               .to(quizBg, { scale: 12, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 1.2 })
+	      .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.95")
               .to(".arrow-redact-cover", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 4.3, ease: "power0.easeOut" })
               .to(arrowTrack, { autoAlpha: 0, duration: 0.001})
               .to(".arrow-redact-cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
@@ -128,7 +129,8 @@ quiz_open = gsap.timeline({ paused: true });
               .to(audioGraph, {clearProps: 'x'})
               .set(audioGraph, {x: 20.8})
               .set(arrowMask, { filter:"invert(0%)" })
-              .set(arrowTrack, { autoAlpha: 1 });
+              .set(arrowTrack, { autoAlpha: 1 })
+	      .set(".touch-print-open__wrap", { autoAlpha: 1 });
        
  quizOpen.addEventListener('click', () => {   
     quiz_open.play(0);
