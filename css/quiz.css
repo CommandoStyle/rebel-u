@@ -2770,7 +2770,7 @@
   
   /* Full height container */
   .LiveField .LiveField__container {
-      height: 100vh !important;
+      height: 100dvh !important;
       padding-top: 1em;
   }
   
