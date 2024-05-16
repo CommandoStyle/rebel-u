@@ -193,14 +193,14 @@ queryCancel.forEach((queryCancel) => {
   const queryContain = document.querySelector('.query-items__container')
   if (!queryContain) return
 
-  gsap.set(queryHoleMobile, { scale: 1 })
+  gsap.set(queryHoleMobile, { scale: 1 });
 
   queryCancel.addEventListener("click", (e) => {
       let xDist = e.clientX - queryContain.getBoundingClientRect().x + 4
       let yDist = e.clientY - queryContain.getBoundingClientRect().y
       let query_cancel = gsap.timeline();
 
-      gsap.set(queryHoleMobile, { left: xDist, top: yDist })
+      gsap.set(queryHoleMobile, { left: xDist, top: yDist });
        
 query_cancel
          .set(".menu__btn", { display: "none", opacity: 0 })
