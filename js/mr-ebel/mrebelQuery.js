@@ -69,6 +69,9 @@ gsap.set(queryCancel, { display: "none" });
 //gsap.set(".query-q__wrap", { xPercent: -60 });
 
 // OPEN QUERY
+// DESKTOP
+mm.add("(min-width: 992px)", () => {
+      
 queryOpen.forEach(queryOpen => {
 
   let ctaMask = queryOpen.querySelector(".book-cta__mask"),
@@ -141,6 +144,85 @@ query_cancel
          .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
 
     })
+  });
+});
+
+// MOBILE
+mm.add("(max-width: 428px)", () => {
+      
+queryOpen.forEach(queryOpen => {
+
+  let ctaMask = queryOpen.querySelector(".book-cta__mask"),
+      
+query_open = gsap.timeline({ paused: true });
+
+    query_open.set(queryBg, { scale: 1, autoAlpha: 1 })
+              .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
+              .set(QueryContain, { display: "flex" }, "<")
+              .set(queryCancel, { display: "flex" }, "<")
+              .set(queryInnerWrap, { display: "flex" }, "<")
+              .set(CategoryQ, { display: "block" }, "<")
+              .set(".redact-cover-query", { scaleX: 0 }, "<")
+              .set(".nav__items-container", {display: "none" }, "<")
+              .to(ctaMask, {filter:"invert(100%)", duration: 0.001}, "<")
+              .to(queryBg, { scale: 24, transformOrigin: "50% 50%", ease: "expoScale(1, 24, power2.inOut)", duration: 1 })
+              .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.75")
+              .to(".beta__contain", {display: "none", duration: 0.001}, "-=0.5")
+              .to(".redact-cover-query", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 4, ease: "power0.easeOut" })
+              .to(".query-txt", { autoAlpha: 0, duration: 0.001})
+              .to(".redact-cover-query", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
+              .to(CategoryQ, { delay: 0.2, x: 0, opacity: 1, ease: "expo.out", duration: 1.2 })
+              .to(queryCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
+              .fromTo(queryInnerWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
+              .set(".query-hole-mobile", {display: "flex"}, "<")
+              .set(ctaMask, {filter:"invert(0%)" })
+              .set(".touch-print-open__wrap", { autoAlpha: 1 });
+       
+    queryOpen.addEventListener('click', () => {   
+      query_open.play(0);
+  });
+})
+
+// CLOSE QUERY
+
+//All devices: close query
+queryCancel.forEach((queryCancel) => {
+  if (!queryCancel) return
+  const queryHoleMobile = document.querySelector(".query-hole-mobile")
+  if (!queryHoleMobile) return
+  const queryContain = document.querySelector('.query-items__container')
+  if (!queryContain) return
+
+  gsap.set(queryHoleMobile, { scale: 1 })
+
+  queryCancel.addEventListener("click", (e) => {
+      let xDist = e.clientX - queryContain.getBoundingClientRect().x + 4
+      let yDist = e.clientY - queryContain.getBoundingClientRect().y
+      let query_cancel = gsap.timeline();
+
+      gsap.set(queryHoleMobile, { left: xDist, top: yDist })
+       
+query_cancel
+         .set(".menu__btn", { display: "none", opacity: 0 })
+         .set(".query-txt", { autoAlpha: 1 })
+         .set(cursor, { scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
+         .set(queryBg, {autoAlpha: 0, scale: 1}, "<")
+         .to(queryInnerWrap, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+         .to(CategoryQ, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+         .to(queryCancelinner, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+         .fromTo(queryHoleMobile, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
+         .to(".beta__contain", {display: "flex", duration: 0.001}, "-=0.6")
+         .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
+         .set(CategoryQ, { x: -30, opacity: 0, display: "none" })
+         .set(queryCancelinner, { x: -30, opacity: 0 })
+         .set(queryCancel, { display: "none" })
+         .set(queryInnerWrap, { opacity: 0, display: "none", x: -30 })
+         .set(QueryContain, { display: "none" })
+         .set(queryHoleMobile, {display: "none", clearProps: "all"})
+         .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+
+    })
+  });
 });
 
 // PONG ANIM SUCCESS
