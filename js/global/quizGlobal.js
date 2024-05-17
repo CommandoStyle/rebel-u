@@ -9,6 +9,8 @@ if (sessionStorage.getItem("quizSuccessPlayed", true)) {
 
 gsap.registerPlugin(ExpoScaleEase);
 
+let mm = gsap.matchMedia();
+
 // GLOBAL QUIZ VARS
 var quizCancelinner = gsap.utils.toArray('.quiz-cancel__track');
 var QuizContain = gsap.utils.toArray('.quiz-items__container');
@@ -21,6 +23,7 @@ var quizInnerWrap = gsap.utils.toArray('.quiz-inner__booking-wrap');
 const quizCancel = document.querySelectorAll(".quiz-cancel");
 const quizCancelSuccess = document.querySelectorAll(".quiz-cancel__success");
 const quizHole = document.querySelectorAll(".quiz-hole");
+const quizHoleMobile = document.querySelectorAll(".quiz-hole-mobile");
 
 gsap.registerPlugin(ExpoScaleEase);
 
@@ -94,8 +97,11 @@ function horizontalLoop(items, config) {
 const finiMarquee = gsap.utils.toArray(".marquee__items.is--ready-fini");
 
 const loopFini = horizontalLoop(finiMarquee, {repeat: -1, speed: 0.4, reversed: true, paused: true});
-
+	
 // OPEN QUIZ
+// DESKTOP
+mm.add("(min-width: 992px)", () => {
+	
 quizOpen.forEach(quizOpen => {
 
   let arrowMask = quizOpen.querySelector(".is--arrow-inner"),
@@ -167,6 +173,83 @@ quizCancel.forEach((quizCancel) => {
 
         })
       });
+    });
+
+// MOBILE
+mm.add("(max-width: 428px)", () => {
+	
+quizOpen.forEach(quizOpen => {
+
+  let arrowMask = quizOpen.querySelector(".is--arrow-inner"),
+      arrowTrack = quizOpen.querySelector(".lg-arrow__track"),
+      
+quiz_open = gsap.timeline({ paused: true });
+
+    quiz_open.set(quizBg, { scale: 1, autoAlpha: 1 })
+              .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
+              .set(QuizContain, { display: "flex" }, "<")
+              .set(QuizWrap, { display: "flex"}, "<")
+              .set(quizCancel, { display: "flex" }, "<")
+              .set(quizCancelSuccess, { display: "none" }, "<")
+              .set(quizInnerWrap, { display: "flex" }, "<")
+              .set(CategoryQuiz, { display: "block" }, "<")
+              .to(arrowMask, {filter:"invert(100%)", duration: 0.001}, "<")
+              .to(quizBg, { scale: 12, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 1.2 })
+	      .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.6")
+              .to(".arrow-redact-cover", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 4.3, ease: "power0.easeOut" })
+              .to(arrowTrack, { autoAlpha: 0, duration: 0.001})
+              .to(".arrow-redact-cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
+              .to([quizCancelinner, CategoryQuiz], { delay: 0.2, x: 0, opacity: 1, ease: "expo.out", duration: 1.2 })
+              .fromTo(quizInnerWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
+              .set(quizHoleMobile, {display: "flex"}, "<")
+              .set(arrowMask, { filter:"invert(0%)" })
+              .set(arrowTrack, { autoAlpha: 1 });
+	      
+ quizOpen.addEventListener('click', () => {   
+    quiz_open.play(0);
+  });
+})
+
+// CLOSE QUIZ
+
+//All devices: close quiz
+quizCancel.forEach((quizCancel) => {
+    if (!quizCancel) return
+    const quizHoleMobile = document.querySelector('.quiz-hole-mobile')
+    if (!quizHole) return
+    const quizContain = document.querySelector('.quiz-items__container')
+    if (!quizContain) return
+
+    gsap.set(quizHole, { scale: 1 })
+
+    quizCancel.addEventListener("click", (e) => {
+        // Calculate distance between user click and top left corner of button
+        //let xDist = e.clientX - quizContain.getBoundingClientRect().x + 4
+        //let yDist = e.clientY - quizContain.getBoundingClientRect().y
+        let quiz_cancel = gsap.timeline();
+
+        // Immediately set left and top properties to position the circle element where user clicks
+        //gsap.set(quizHole, { left: xDist, top: yDist })
+       
+  quiz_cancel
+         .set(".menu__btn", { display: "none", opacity: 0 })
+         .set(cursor, { scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
+         .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
+	 .set(".touch-print-open__wrap", { autoAlpha: 1 })
+         .to([CategoryQuiz, quizCancelinner, quizInnerWrap], { x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
+         .fromTo(quizHoleMobile, { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)" }, "-=0.4")
+         .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
+         .set(CategoryQuiz, { x: -30, opacity: 0, display: "none" })
+         .set(quizCancelinner, { x: -30, opacity: 0 })
+         .set(quizCancel, { display: "none" })
+         .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 })
+         .set(QuizContain, { display: "none" })
+         .set(quizHoleMobile, {display: "none", clearProps: "all"})
+         .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+
+        })
+      });
+    });
 
   // QUIZ SUCCESS
 
