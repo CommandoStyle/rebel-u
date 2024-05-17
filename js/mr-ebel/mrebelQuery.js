@@ -210,7 +210,7 @@ query_cancel
          .to(queryInnerWrap, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .to(CategoryQ, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .to(queryCancelinner, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-         .fromTo(queryHoleMobile, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
+         .fromTo(queryHoleMobile, { force3D: false, scale: 1 }, { force3D: false, duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.4")
          .to(".beta__contain", {display: "flex", duration: 0.001}, "-=0.6")
          .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
          .set(CategoryQ, { x: -30, opacity: 0, display: "none" })
