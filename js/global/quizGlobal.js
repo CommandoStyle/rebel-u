@@ -216,7 +216,7 @@ quiz_open = gsap.timeline({ paused: true });
 quizCancel.forEach((quizCancel) => {
     if (!quizCancel) return
     const quizHoleMobile = document.querySelector('.quiz-hole-mobile')
-    if (!quizHole) return
+    if (!quizHoleMobile) return
     const quizContain = document.querySelector('.quiz-items__container')
     if (!quizContain) return
 
@@ -229,7 +229,7 @@ quizCancel.forEach((quizCancel) => {
         let quiz_cancel = gsap.timeline();
 
         // Immediately set left and top properties to position the circle element where user clicks
-        //gsap.set(quizHole, { left: xDist, top: yDist })
+        //gsap.set(quizHoleMobile, { left: xDist, top: yDist })
        
   quiz_cancel
          .set(".menu__btn", { display: "none", opacity: 0 })
