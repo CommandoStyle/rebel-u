@@ -220,7 +220,7 @@ quizCancel.forEach((quizCancel) => {
     const quizContain = document.querySelector('.quiz-items__container')
     if (!quizContain) return
 
-    gsap.set(quizHole, { scale: 1 })
+    gsap.set(quizHoleMobile, { scale: 1 })
 
     quizCancel.addEventListener("click", (e) => {
         // Calculate distance between user click and top left corner of button
