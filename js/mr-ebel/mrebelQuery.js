@@ -175,8 +175,7 @@ query_open = gsap.timeline({ paused: true });
               .to(queryCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
               .fromTo(queryInnerWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
               .set(".query-hole-mobile", {display: "flex"}, "<")
-              .set(ctaMask, {filter:"invert(0%)" })
-              .set(".touch-print-open__wrap", { autoAlpha: 1 });
+              .set(ctaMask, {filter:"invert(0%)" });
        
     queryOpen.addEventListener('click', () => {   
       query_open.play(0);
@@ -205,6 +204,7 @@ queryCancel.forEach((queryCancel) => {
 query_cancel
          .set(".menu__btn", { display: "none", opacity: 0 })
          .set(".query-txt", { autoAlpha: 1 })
+         .set(".touch-print-open__wrap", { autoAlpha: 1 })
          .set(cursor, { scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
          .set(queryBg, {autoAlpha: 0, scale: 1}, "<")
          .to(queryInnerWrap, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
