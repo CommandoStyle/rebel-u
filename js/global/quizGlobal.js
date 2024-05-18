@@ -201,7 +201,7 @@ quiz_open = gsap.timeline({ paused: true });
               .to(".arrow-redact-cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
               .to([quizCancelinner, CategoryQuiz], { delay: 0.2, x: 0, opacity: 1, ease: "expo.out", duration: 1.2 })
               .fromTo(quizInnerWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-              .set('.quiz-hole-mobile', { display: "flex" }, "<")
+              .set('.quiz-hole-mobile', { scale: 1, display: "flex" }, "<")
               .set(arrowMask, { filter:"invert(0%)" })
               .set(arrowTrack, { autoAlpha: 1 });
 	      
@@ -220,7 +220,7 @@ quizCancel.forEach((quizCancel) => {
    // const quizContain = document.querySelector('.quiz-items__container')
     //if (!quizContain) return
 
-    gsap.set('.quiz-hole-mobile', { scale: 1, display: "flex" });
+    //gsap.set('.quiz-hole-mobile', { scale: 1, display: "flex" });
 
     quizCancel.addEventListener("click", (e) => {
         // Calculate distance between user click and top left corner of button
