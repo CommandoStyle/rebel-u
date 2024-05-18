@@ -2,7 +2,7 @@ export const scroll = () => {
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
-ScrollTrigger.config({ ignoreMobileResize: true });
+//ScrollTrigger.config({ ignoreMobileResize: true });
 
 let smoother = ScrollSmoother.create({
         wrapper: "#smooth-wrapper",
@@ -10,7 +10,7 @@ let smoother = ScrollSmoother.create({
         smooth: 3,
         speed: 1,
         effects: true,
-        //ignoreMobileResize: false,
+        ignoreMobileResize: true,
         smoothTouch: 0.3,
         normalizeScroll: false,
         //preventDefault: true,
