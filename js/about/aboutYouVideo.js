@@ -43,6 +43,7 @@ gsap.set(vidCover, {autoAlpha: 0, scale: 1});
         .fromTo(".vid-container", { clipPath: "circle(0% at center)" },
           { clipPath: "circle(140.9% at center)", delay: 0.65, duration: 1.9, ease: "power2.inOut", clearProps: "clipPath"})
         .to('.script-xl', { autoAlpha: 0, duration: 0.01 }, "<")
+        .set(vidCover, { display: "none" })
         .set(".cta-inner__wrap", {filter:"invert(0%)"}) 
         .set(vidBtn, {display: "none"})
         .set([".cta-inner__wrap", ".cta-inner__contain"], { yPercent: 0 })
