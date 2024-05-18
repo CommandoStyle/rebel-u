@@ -214,13 +214,13 @@ quiz_open = gsap.timeline({ paused: true });
 
 //All devices: close quiz
 quizCancel.forEach((quizCancel) => {
-    if (!quizCancel) return
-    const quizHoleMobile = document.querySelector('.quiz-hole-mobile')
-    if (!quizHoleMobile) return
-    const quizContain = document.querySelector('.quiz-items__container')
-    if (!quizContain) return
+    //if (!quizCancel) return
+    //const quizHoleMobile = document.querySelector('.quiz-hole-mobile')
+    //if (!quizHoleMobile) return
+   // const quizContain = document.querySelector('.quiz-items__container')
+    //if (!quizContain) return
 
-    gsap.set(quizHoleMobile, { scale: 1 });
+    gsap.set('.quiz-hole-mobile', { scale: 1 });
 
     quizCancel.addEventListener("click", (e) => {
         // Calculate distance between user click and top left corner of button
@@ -237,14 +237,14 @@ quizCancel.forEach((quizCancel) => {
          .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
 	 .set(".touch-print-open__wrap", { autoAlpha: 1 })
          .to([CategoryQuiz, quizCancelinner, quizInnerWrap], { x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
-         .fromTo(quizHoleMobile, { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)" }, "-=0.4")
+         .fromTo('.quiz-hole-mobile', { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)" }, "-=0.4")
          .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
          .set(CategoryQuiz, { x: -30, opacity: 0, display: "none" })
          .set(quizCancelinner, { x: -30, opacity: 0 })
          .set(quizCancel, { display: "none" })
          .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 })
          .set(QuizContain, { display: "none" })
-         .set(quizHoleMobile, {display: "none", clearProps: "all"})
+         .set('.quiz-hole-mobile', {display: "none", clearProps: "all"})
          .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
 
         })
