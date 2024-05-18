@@ -10,7 +10,7 @@ let smoother = ScrollSmoother.create({
         smooth: 3,
         speed: 1,
         effects: true,
-        ignoreMobileResize: false,
+        //ignoreMobileResize: false,
         smoothTouch: 0.3,
         normalizeScroll: false,
         //preventDefault: true,
