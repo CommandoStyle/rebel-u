@@ -37,7 +37,7 @@ gsap.set(vidCover, {autoAlpha: 0, scale: 1});
         .to(vidCover, { autoAlpha: 1, duration: 0.001 })
         .to(cursor, { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".cta-inner__wrap", {filter:"invert(100%)", duration: 0.001}, "<")
-        .to(vidCover, { scale: 4, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 0.7 })
+        .to(vidCover, { scale: 5, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 0.7 })
         //.to(".cta-inner__wrap", {yPercent: -101, ease: "power2.easeOut", duration: 0.7 }, "<")
         .to(".cta-inner__contain", {delay: 0.45, x: 15, opacity: 0, ease: "expo.out", duration: 0.77}, "<")
         .fromTo(".vid-container", { clipPath: "circle(0% at center)" },
