@@ -11,10 +11,10 @@ let smoother = ScrollSmoother.create({
         speed: 1,
         effects: true,
         //ignoreMobileResize: true,
-        smoothTouch: 0.5,
+        smoothTouch: 0.3,
         //normalizeScroll: true,
         //preventDefault: true,
-        normalizeScroll: !!ScrollTrigger.isTouch
+        //normalizeScroll: !!ScrollTrigger.isTouch
     });
 
     // SS stop / start on first load
