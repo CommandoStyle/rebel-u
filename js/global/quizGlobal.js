@@ -244,7 +244,7 @@ quizCancel.forEach((quizCancel) => {
          .set(quizCancel, { display: "none" })
          .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 })
          .set(QuizContain, { display: "none" })
-         .set('.quiz-hole-mobile', {display: "none", clearProps: "all", onComplete:  () => { ScrollTrigger.refresh(); } })
+         .set('.quiz-hole-mobile', {display: "none", clearProps: "all" })
          .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
 
         })
