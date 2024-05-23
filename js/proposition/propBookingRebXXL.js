@@ -24,15 +24,12 @@ var rebxxlWrap = gsap.utils.toArray('.rebxxl__booking-wrap'); // formerly eur, u
 var cbBg = gsap.utils.toArray('.cb__backdrop');
 var rebsBg = gsap.utils.toArray('.reb-s__backdrop');
 var rebmBg = gsap.utils.toArray('.reb-m__backdrop');
-var rebxxlBg = gsap.utils.toArray('.reb-xxl__backdrop');
-var audioWrap = gsap.utils.toArray(['.audio-graphic__wrap', '.quiz-audio-graphic__wrap']);
-var audioGraph = gsap.utils.toArray('.audio-on-off__graphic');
-var muzakTrack = gsap.utils.toArray('.muzak-marquee__track'); 
+var rebxxlBg = gsap.utils.toArray('.reb-xxl__backdrop'); 
 let cursor = gsap.utils.toArray(".cursor-dot");
 let bookSuccessBtn = gsap.utils.toArray([".cb-exit__success", ".rebs-exit__success", ".rebm-exit__success", ".rebxxl-exit__success"]);
 
 // GSAP SET GLOBAL
-gsap.set([audioWrap, bookCancelinner], { x: -30, opacity: 0 });
+gsap.set(bookCancelinner, { x: -30, opacity: 0 });
 gsap.set([CategoryCb, CategoryReb], { display: "none", x: -30, opacity: 0 });
 gsap.set([BookContain], { display: "none" });
 gsap.set([cbWrap, rebsWrap, rebmWrap, rebxxlWrap], { display: "none" });
@@ -94,9 +91,6 @@ rebxxlEurOpen.forEach(rebxxlEurOp => {
   .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .fromTo(rebxxlEurWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .set(bookHole, {display: "block"}, "<")
-  .to([audioWrap, muzakTrack], { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-  .to(audioGraph, {clearProps: 'x'})
-  .set(audioGraph, {x: 20.8})
   .set(ctaMask, {filter:"invert(0%)" });
        
    rebxxlEurOp.addEventListener('click', () => {   
@@ -126,11 +120,11 @@ rebxxleur_cancel
 .set(".cta-txt", { autoAlpha: 1}, "<")
 .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
 .set(rebxxlBg, {autoAlpha: 0, scale: 1}, "<")
-.to([audioWrap, muzakTrack, rebxxlEurWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+.to([rebxxlEurWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
 .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
 .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
 .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
-.set([bookCancelinner, audioWrap, muzakTrack], { x: -30, opacity: 0 })
+.set(bookCancelinner, { x: -30, opacity: 0 })
 .set(rebxxlWrap, { display: "none" })
 .set(rebxxlBtnsWrap, { display: "none" })
 .set(RebxxlEurCancel, { display: "none" })
@@ -171,9 +165,6 @@ rebxxlUsdOpen.forEach(rebxxlUsdOp => {
   .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .fromTo(rebxxlUsdWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .set(bookHole, {display: "block"}, "<")
-  .to([audioWrap, muzakTrack], { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-  .to(audioGraph, {clearProps: 'x'})
-  .set(audioGraph, {x: 20.8})
   .set(ctaMask, {filter:"invert(0%)" });
        
    rebxxlUsdOp.addEventListener('click', () => {   
@@ -203,11 +194,11 @@ rebxxlusd_cancel
 .set(".cta-txt", { autoAlpha: 1}, "<")
 .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
 .set(rebxxlBg, {autoAlpha: 0, scale: 1}, "<")
-.to([audioWrap, muzakTrack, rebxxlUsdWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+.to([rebxxlUsdWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
 .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
 .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
 .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
-.set([bookCancelinner, audioWrap, muzakTrack], { x: -30, opacity: 0 })
+.set(bookCancelinner, { x: -30, opacity: 0 })
 .set(rebxxlWrap, { display: "none" })
 .set(rebxxlBtnsWrap, { display: "none" })
 .set(RebxxlUsdCancel, { display: "none" })
@@ -248,9 +239,6 @@ rebxxlGbpOpen.forEach(rebxxlGbpOp => {
   .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .fromTo(rebxxlGbpWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .set(bookHole, {display: "block"}, "<")
-  .to([audioWrap, muzakTrack], { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-  .to(audioGraph, {clearProps: 'x'})
-  .set(audioGraph, {x: 20.8})
   .set(ctaMask, {filter:"invert(0%)" });
        
    rebxxlGbpOp.addEventListener('click', () => {   
@@ -280,11 +268,11 @@ rebxxlgbp_cancel
 .set(".cta-txt", { autoAlpha: 1}, "<")
 .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
 .set(rebxxlBg, {autoAlpha: 0, scale: 1}, "<")
-.to([audioWrap, muzakTrack, rebxxlGbpWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+.to([rebxxlGbpWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
 .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
 .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
 .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
-.set([bookCancelinner, audioWrap, muzakTrack], { x: -30, opacity: 0 })
+.set(bookCancelinner, { x: -30, opacity: 0 })
 .set(rebxxlWrap, { display: "none" })
 .set(rebxxlBtnsWrap, { display: "none" })
 .set(RebxxlGbpCancel, { display: "none" })
@@ -325,9 +313,6 @@ rebxxlSekOpen.forEach(rebxxlSekOp => {
   .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .fromTo(rebxxlSekWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .set(bookHole, {display: "block"}, "<")
-  .to([audioWrap, muzakTrack], { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-  .to(audioGraph, {clearProps: 'x'})
-  .set(audioGraph, {x: 20.8})
   .set(ctaMask, {filter:"invert(0%)" });
        
    rebxxlSekOp.addEventListener('click', () => {   
@@ -357,11 +342,11 @@ rebxxlsek_cancel
 .set(".cta-txt", { autoAlpha: 1}, "<")
 .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
 .set(rebxxlBg, {autoAlpha: 0, scale: 1}, "<")
-.to([audioWrap, muzakTrack, rebxxlSekWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+.to([rebxxlSekWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
 .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
 .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
 .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
-.set([bookCancelinner, audioWrap, muzakTrack], { x: -30, opacity: 0 })
+.set(bookCancelinner, { x: -30, opacity: 0 })
 .set(rebxxlWrap, { display: "none" })
 .set(rebxxlBtnsWrap, { display: "none" })
 .set(RebxxlSekCancel, { display: "none" })
@@ -402,9 +387,6 @@ rebxxlSgdOpen.forEach(rebxxlSgdOp => {
   .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .fromTo(rebxxlSgdWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .set(bookHole, {display: "block"}, "<")
-  .to([audioWrap, muzakTrack], { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-  .to(audioGraph, {clearProps: 'x'})
-  .set(audioGraph, {x: 20.8})
   .set(ctaMask, {filter:"invert(0%)" });
        
    rebxxlSgdOp.addEventListener('click', () => {   
@@ -434,11 +416,11 @@ rebxxlsgd_cancel
 .set(".cta-txt", { autoAlpha: 1}, "<")
 .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
 .set(rebxxlBg, {autoAlpha: 0, scale: 1}, "<")
-.to([audioWrap, muzakTrack, rebxxlSgdWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+.to([rebxxlSgdWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
 .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
 .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
 .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
-.set([bookCancelinner, audioWrap, muzakTrack], { x: -30, opacity: 0 })
+.set(bookCancelinner, { x: -30, opacity: 0 })
 .set(rebxxlWrap, { display: "none" })
 .set(rebxxlBtnsWrap, { display: "none" })
 .set(RebxxlSgdCancel, { display: "none" })
@@ -475,12 +457,12 @@ rebXXLexitSuccess.forEach((rebXXLexitSuccess) => {
              .set(".rebxxl-booked__cover", { display: "block" }, "<")
              .set([".cb-btn__covered", ".rebs-btn__covered", ".rebm-btn__covered", ".spa-btn__covered"], { display: "flex" }, "<")
              .to([".reb-success-marquee__wrap", ".reb-success-img__wrap"], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
-             .to([CategoryReb, bookCancelinner, audioWrap, muzakTrack], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+             .to([CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
              .to([rebxxlEurWrap, rebxxlUsdWrap, rebxxlGbpWrap, rebxxlSgdWrap, rebxxlSekWrap], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
              .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)", onComplete() { sessionStorage.setItem("rebxxlSuccessPlayed", true) } }, "-=0.2")
              .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
              .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
-             .set([audioWrap, muzakTrack, bookCancelinner], { x: -30, opacity: 0 })
+             .set(bookCancelinner, { x: -30, opacity: 0 })
              .set(rebxxlWrap, { display: "none" })
              .set(rebxxlBtnsWrap, { display: "none" })
              .set([RebxxlEurCancel, RebxxlUsdCancel, RebxxlGbpCancel, RebxxlSgdCancel, RebxxlSekCancel], { display: "none" })
