@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.set(".home-reveal", { "will-change": "transform, opacity", x: -30, opacity: 0 });
 gsap.set(['.home-logo', ".menu-txt", '.beta__txt', '.hero-info__marquee-wrap', ".sml__square"], {autoAlpha: 1});
-gsap.set([".redact-cover-logo", ".redact-cover-beta", ".redact-cover-info", ".redact-cover-nav", ".rblu-exit__cover", ".ampersand-redact-cover", ".sneaky__dot-bg"], {scaleX: 0 });
+gsap.set([".redact-cover-logo", ".redact-cover-beta", ".redact-cover-info", ".redact-cover-nav", ".ampersand-redact-cover", ".sneaky__dot-bg"], {scaleX: 0 });
 //gsap.set('.sneaky__dot-bg', { yPercent: 0, display: "none" });
 gsap.set(".sneaky__dot-contain", {autoAlpha: 1});
 gsap.set(".hero-scroll", { display: "none" });
@@ -51,13 +51,13 @@ roundsAnim.fromTo(rounds, {
   
         homeIntro
         .to(".sneaky__dot-contain", { delay: 0.55, autoAlpha: 1, duration: 0.001 })
-        .to([".rblu-exit__cover", ".ampersand-redact-cover", ".sneaky__dot-bg"], { scaleX: 1, transformOrigin: "0% 100%", duration: 0.45, ease: "linear" }, "+=0.1")
-        .from([".rblu-exit__img", ".ampersand__img"], { autoAlpha: 0, duration: 0.001 })
+        .to([".ampersand-redact-cover", ".sneaky__dot-bg"], { scaleX: 1, transformOrigin: "0% 100%", duration: 0.45, ease: "linear" }, "+=0.1")
+        .from(".ampersand__img", { autoAlpha: 0, duration: 0.001 })
         .to(".sneaky__dot-round", { autoAlpha: 1, duration: 0.001 }, "<")
         .to(roundsHidden, {display: 'flex', duration: 0.001}, "<")
         .to(imgHidden, {autoAlpha: 1, duration: 0.001}, "<")
         .call(function() {roundsAnim.play()}) 
-        .to([".rblu-exit__cover", ".ampersand-redact-cover", ".sneaky__dot-bg"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.45, ease: "linear"}, "+=0.01")
+        .to([".ampersand-redact-cover", ".sneaky__dot-bg"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.45, ease: "linear"}, "+=0.01")
         .to(".home-reveal", { duration: 1.6, x: 0, stagger: 0.03, ease: "expo.out" }, "<")
         .to(".home-reveal", { duration: 0.4, opacity: 1, stagger: 0.03, ease: "linear" }, "<")
         .add(gsap.delayedCall(0.3, function() { employeeScrub.play(); }))	  
