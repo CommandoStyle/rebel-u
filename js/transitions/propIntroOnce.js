@@ -6,7 +6,7 @@ gsap.set(".prop-reveal", { "will-change": "transform, opacity", x: -20, opacity:
 gsap.set(['.home-logo', ".menu-txt", ".touch-print-open__wrap", '.beta__txt', ".currencies-txt", '.hero-info__marquee-wrap', ".currencies-list__contain"], {autoAlpha: 0});
 gsap.set([".redact-cover-logo", ".redact-cover-info", ".redact-cover-currency-lg", ".redact-cover-nav"], {scaleX: 0 });
 gsap.set(['.repackaged__wrap', ".hero-yes-you__wrap"], { autoAlpha: 0 });
-gsap.set(['.redact-cover-repack', '.hero-yes-you__bg', ".rblu-exit__cover"], { scaleX: 0 });
+gsap.set(['.redact-cover-repack', '.hero-yes-you__bg'], { scaleX: 0 });
 gsap.set('.hero-yes-you__bg', { "will-change": "transform", scaleX: 0, display: "block" });
 gsap.set('.cookie__wrap', { xPercent: -105 });
 gsap.set('.cookie__container', { xPercent: 105 });
@@ -44,9 +44,6 @@ propIntroOnce
         .to(".redact-cover-repack", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.4, ease: "linear"}, "-=0.212")
         .to('.repackaged__wrap', { autoAlpha: 1, duration: 0.001})
         .to(".redact-cover-repack", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.4, ease: "linear"}, "-=0.01")
-        .to(".rblu-exit__cover", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.35, ease: "linear"})
-        .from(".rblu-exit__img", { autoAlpha: 0, duration: 0.001})
-        .to(".rblu-exit__cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.35, ease: "linear"}, "+=0.01")
         .call(function() { packagedCirc.play(); })
         .to('.cookie__wrap', { delay: 0.5, xPercent: 0, duration: 1.6, ease: "expo.easeOut" })
         .to('.cookie__container', { xPercent: 0, duration: 1.6, ease: "expo.easeOut" }, "<")
