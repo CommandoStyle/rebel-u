@@ -5,7 +5,7 @@ gsap.registerPlugin(MorphSVGPlugin);
 gsap.set(".about-reveal", { x: -30, opacity: 0 });
 gsap.set(['.home-logo', ".menu-txt", ".touch-print-open__wrap", '.beta__txt', '.hero-info__marquee-wrap', '.reb-globe-html'], {autoAlpha: 0});
 gsap.set([".redact-cover-logo", ".redact-cover-info", ".redact-cover-nav"], {scaleX: 0 });
-gsap.set([".rblu-exit__cover", ".redact-cover-globe", ".redact-cover-your"], {scaleX: 0 });
+gsap.set([".redact-cover-globe", ".redact-cover-your"], {scaleX: 0 });
 gsap.set('.cookie__wrap', { xPercent: -105 });
 gsap.set('.cookie__container', { xPercent: 105 });
 gsap.set('.cookie-txt__reveal', { x: -30, opacity: 0 });
@@ -40,9 +40,6 @@ aboutIntroOnce
 .to('.about-hero-u__wrap', { duration: 0.5, rotationY: 180, ease: "power1.inOut" }, "-=0.3")
 .to('.about-hero-logo__wrap', { duration: 0.5, rotationY: 0, ease: "power1.inOut" }, "<")
 .to('.about-hero-logo__wrap', { z: 50, duration: 0.001 }, "-=0.32")
-.to(".rblu-exit__cover", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.35, ease: "linear"})
-.from(".rblu-exit__img", { autoAlpha: 0, duration: 0.001})
-.to(".rblu-exit__cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.35, ease: "linear"}, "+=0.01")
 .to('.cookie__wrap', { delay: 0.5, xPercent: 0, duration: 1.6, ease: "expo.easeOut" })
 .to('.cookie__container', { xPercent: 0, duration: 1.6, ease: "expo.easeOut" }, "<")
 .to(".cookie-txt__reveal", { x: 0, opacity: 1, duration: 0.3, ease: "power1.out" }, "-=0.2")
