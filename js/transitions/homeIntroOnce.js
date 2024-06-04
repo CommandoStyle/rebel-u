@@ -10,7 +10,7 @@ gsap.set('.cookie__wrap', { xPercent: -105 });
 gsap.set('.cookie__container', { xPercent: 105 });
 gsap.set('.cookie-txt__reveal', { x: -30, opacity: 0 });
 gsap.set('.cookie__notice', { overflow: "hidden", display: "flex" });
-gsap.set([".rblu-exit__cover", ".sneaky__dot-bg", ".ampersand-redact-cover"], { "will-change": "transform", scaleX: 0 });
+gsap.set([".sneaky__dot-bg", ".ampersand-redact-cover"], { "will-change": "transform", scaleX: 0 });
 gsap.set('.beta__contain', {clipPath: "inset(0% 100% 0% 0%)"});
 
 let roundsAnim = gsap.timeline({repeat:-1, paused: true});
@@ -70,13 +70,13 @@ employeeScrub.load(employeeScrubdata);
 	  .to(".home-reveal", { delay: 0.3, duration: 1.6, x: 0, stagger: 0.03, ease: "expo.out" })
 	  .to(".home-reveal", { duration: 0.4, opacity: 1, stagger: 0.03, ease: "linear" }, "<")
 	  .to(".sneaky__dot-contain", { autoAlpha: 1, duration: 0.001 }, "-=0.4")
-	  .to([".rblu-exit__cover", ".ampersand-redact-cover", ".sneaky__dot-bg"], { scaleX: 1, transformOrigin: "0% 100%", duration: 0.45, ease: "linear" }, "<")
-	  .from([".ampersand__img", ".rblu-exit__img"], { autoAlpha: 0, duration: 0.001 })
+	  .to([".ampersand-redact-cover", ".sneaky__dot-bg"], { scaleX: 1, transformOrigin: "0% 100%", duration: 0.45, ease: "linear" }, "<")
+	  .from(".ampersand__img", { autoAlpha: 0, duration: 0.001 })
 	  .to(".sneaky__dot-round", { autoAlpha: 1, duration: 0.001 }, "<")
 	  .to(roundsHidden, {display: 'flex', duration: 0.001}, "<")
           .to(imgHidden, {autoAlpha: 1, duration: 0.001}, "<")
 	  .call(function() {roundsAnim.play()}) 
-	  .to([".rblu-exit__cover", ".ampersand-redact-cover", ".sneaky__dot-bg"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.45, ease: "linear"}, "+=0.01")
+	  .to([".ampersand-redact-cover", ".sneaky__dot-bg"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.45, ease: "linear"}, "+=0.01")
 	  .add(gsap.delayedCall(0.3, function() { employeeScrub.play(); }))	  
 	  .to(".sneaky__dot-bg", { display: "none", duration: 0.1 }) 
 	  .to('.cookie__wrap', { delay: 0.5, xPercent: 0, duration: 1.6, ease: "expo.easeOut" })
