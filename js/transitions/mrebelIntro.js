@@ -10,7 +10,7 @@ gsap.set(['.home-logo', ".menu-txt", '.beta__txt', ".query-txt", ".query-away__t
 gsap.set([".redact-cover-logo", ".redact-cover-beta", ".redact-cover-query", ".redact-cover-nav", ".redact-cover-qa"], {scaleX: 0 });
 gsap.set('.ebel-42__wrap', { autoAlpha: 0 });
 gsap.set('.indie-advisory__img', { autoAlpha: 1 });
-gsap.set(['.redact-cover-advisory', '.redact-cover-42', ".rblu-exit__cover"], { scaleX: 0 });
+gsap.set(['.redact-cover-advisory', '.redact-cover-42'], { scaleX: 0 });
 gsap.set(".hero-scroll", { display: "none" });
 
 const circleXL = document.getElementById("hero__lottie-answer");
@@ -32,9 +32,6 @@ fortyTwo.load(fortyTwodata);
       .to(".exit-txt", { autoAlpha: 0, duration: 0.001 })
       .to(".menu-txt", { autoAlpha: 1, duration: 0.001 }, "<")
       .to(".redact-cover-nav", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
-      .to(".rblu-exit__cover", { delay: 0.25, scaleX: 1, transformOrigin: "0% 100%", duration: 0.35, ease: "linear"})
-      .from(".rblu-exit__img", { autoAlpha: 0, duration: 0.001})
-      .to(".rblu-exit__cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.35, ease: "linear"}, "+=0.01")
       .to([navHideTopInner, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 1, x: 30, stagger: 0, ease: "expo.out" },"<")
       .to([navHideTopInner, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.4, opacity: 0, stagger: 0, ease: "linear" },"<")
       .to(navBotRev, { x: 30, opacity: 0, ease: "expo.out", duration: 0.3 },"<" )
