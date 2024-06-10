@@ -473,12 +473,12 @@ mm.add("(max-width: 991px)", () => {
 
 currencySelect.forEach((currencySelect) => {
     if (!currencySelect) return
-    const currencyHole = document.querySelector('.currency-hole-mobile')
-    if (!currencyHole) return
+    const currencyHoleMob = document.querySelector('.currency-hole-mobile')
+    if (!currencyHoleMob) return
     const currencyContain = document.querySelector('.currency__items-container')
     if (!currencyContain) return
 
-    gsap.set(currencyHole, { scale: 1, display: "none" })
+    gsap.set(currencyHoleMob, { scale: 1, display: "none" })
 
     currencySelect.addEventListener("click", (e) => {
         // Calculate distance between user click and top left corner of button
@@ -487,12 +487,12 @@ currencySelect.forEach((currencySelect) => {
         let currSelectOut = gsap.timeline();
 
         // Immediately set left and top properties to position the circle element where user clicks
-        gsap.set(currencyHole, { left: xDist, top: yDist })
+        gsap.set(currencyHoleMob, { left: xDist, top: yDist })
       
  currSelectOut
         .set(currencyExit, {delay: 0.3, display: "none"})
         .set(currencyOpen, {display: "flex"}, "<")
-        .set(currencyHole, {display: "flex"}, "<")
+        .set(currencyHoleMob, {display: "flex"}, "<")
         .set(".cursor-dot", { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
         .set(currBg, {display: "none", scale: 1}, "<")
         .set([".menu__btn", ".menu-close__btn"], { pointerEvents: "auto" }, "<")
@@ -501,7 +501,7 @@ currencySelect.forEach((currencySelect) => {
         .to([currRev, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
         .to(navBotRev, { x: 30, opacity: 0, ease: "expo.out", duration: 0.3 },"-=0.65")
         .to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<") 
-        .fromTo(currencyHole, { scale: 1 }, { duration: 1.2, scale: 2000, ease: "expoScale(1, 2000, power1.easeOut)" }, "-=0.3")  
+        .fromTo(currencyHoleMob, { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)" }, "-=0.3")  
         .to('[data-img]', { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" },"-=1.5")
         .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.001 }, "<")
@@ -514,7 +514,7 @@ currencySelect.forEach((currencySelect) => {
         .set(".touch-print-close__wrap", {filter: "invert(0)", autoAlpha: 0}, "<")
         .to(".cursor-dot", { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
         .set(currWrap, {display: 'none'})
-        .set(currencyHole, {display: "none", clearProps: "all"})
+        .set(currencyHoleMob, {display: "none", clearProps: "all"})
         .set(currRev, { x: -20, opacity: 0 })
         .set(navBotRev, { x: -10, opacity: 0 })
         .set(".nav-bot-rev-vert", { y: 5, opacity: 0 })
