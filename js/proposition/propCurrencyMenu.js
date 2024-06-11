@@ -486,9 +486,9 @@ currencySelect.forEach((currencySelect) => {
 
     currencySelect.addEventListener("touchstart", (e) => {
       
-       let touch = e.touches[0]; 
-       let xDist = touch.clientX - currencyContain.getBoundingClientRect().left + 4
-       let yDist = touch.clientY - currencyContain.getBoundingClientRect().top
+       let touch = e.targetTouches[0]; 
+       let xDist = touch.pageX - currencyContain.getBoundingClientRect().left + 4
+       let yDist = touch.pageY - currencyContain.getBoundingClientRect().top
 
         //let xDist = e.clientX - currencyContain.getBoundingClientRect().x
         //let yDist = e.clientY - currencyContain.getBoundingClientRect().y
