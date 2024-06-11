@@ -486,12 +486,19 @@ currencySelect.forEach((currencySelect) => {
 
     currencySelect.addEventListener("click", (e) => {
 
-     var currencyContain = element.getBoundingClientRect();
-         let xDist = event.touches[0].clientX - currencyContain.left;
-         let xDist = event.touches[0].clientY - currencyContain.top;
+    if(e.type.includes(`touch`)) {
+    const { touches, changedTouches } = e.originalEvent ?? e;
+    const touch = touches[0] ?? changedTouches[0];
+    let xDist = touch.pageX - currencyContain.getBoundingClientRect().x
+    let yDist = touch.pageY - currencyContain.getBoundingClientRect().y
+    } else if (e.type.includes(`mouse`)) {
+    x = e.clientX;
+    y = e.clientY;
+    }
+
         // Calculate distance between user click and top left corner of button
-        //let xDist = e.touches[0].clientX - currencyContain.getBoundingClientRect().x
-        //let yDist = e.touches[0].clientY - currencyContain.getBoundingClientRect().y
+        //let xDist = e.clientX - currencyContain.getBoundingClientRect().x
+        //let yDist = e.clientY - currencyContain.getBoundingClientRect().y
         let currSelectOutMob = gsap.timeline();
 
         // Immediately set left and top properties to position the circle element where user clicks
