@@ -407,6 +407,9 @@ new currMenu(currMenuEl);
  
 gsap.registerPlugin(ExpoScaleEase);
 
+ //iPAD and MOBILE
+mm.add("(min-width: 991px)", () => {
+
 const currencySelect = document.querySelectorAll('.currency-dropdown__select')
 
 currencySelect.forEach((currencySelect) => {
@@ -465,6 +468,7 @@ currencySelect.forEach((currencySelect) => {
                 
     })
   }); 
+ });
 
  //iPAD and MOBILE
 mm.add("(max-width: 991px)", () => {
