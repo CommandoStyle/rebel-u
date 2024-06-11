@@ -486,7 +486,7 @@ currencySelect.forEach((currencySelect) => {
 
     currencySelect.addEventListener("touchstart", (e) => {
        
-       let spot =  e.currencyContain.getBoundingClientRect();
+       let spot =  currencyContain.getBoundingClientRect();
        let touch = e.touches[0]; 
        let xDist = touch.clientX - spot.left
        let yDist = touch.clientY - spot.top
@@ -496,7 +496,6 @@ currencySelect.forEach((currencySelect) => {
         //let yDist = e.clientY - currencyContain.getBoundingClientRect().y
         let currSelectOutMob = gsap.timeline();
 
-        // Immediately set left and top properties to position the circle element where user clicks
         gsap.set(currencyHoleMob, { left: xDist, top: yDist })
       
  currSelectOutMob
