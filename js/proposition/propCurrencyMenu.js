@@ -485,16 +485,21 @@ currencySelect.forEach((currencySelect) => {
     gsap.set(currencyHoleMob, { scale: 1, display: "none" })
 
     currencySelect.addEventListener("touchstart", (e) => {
+
+  let touchTop = e.pageY - $(window).scrollTop();
+  let touchLeft = e.pageX;
+  let xDist = (touchTop / $(window).height()) * 100;
+  let yDist = (touchLeft / $(window).width()) * 100;
       
-       let touch = e.targetTouches[0]; 
-       let xDist = touch.clientX - currencyContain.offsetLeft;
-       let yDist = touch.clientY - currencyContain.offsetTop;
+       //let touch = e.targetTouches[0]; 
+       //let xDist = touch.clientX - currencyContain.offsetLeft;
+       //let yDist = touch.clientY - currencyContain.offsetTop;
 
         //let xDist = e.clientX - currencyContain.getBoundingClientRect().x
         //let yDist = e.clientY - currencyContain.getBoundingClientRect().y
         let currSelectOutMob = gsap.timeline();
 
-        gsap.set(currencyHoleMob, { left: xDist, top: yDist })
+        gsap.set(currencyHoleMob, { left: xDist, top: yDist });
       
  currSelectOutMob
         .set(currencyExit, {delay: 0.3, display: "none"})
