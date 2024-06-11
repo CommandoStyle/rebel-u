@@ -484,17 +484,11 @@ currencySelect.forEach((currencySelect) => {
 
     gsap.set(currencyHoleMob, { scale: 1, display: "none" })
 
-    currencySelect.addEventListener("click", (e) => {
+    currencySelect.addEventListener("touchstart", (e) => {
 
-    if(e.type.includes(`touch`)) {
-    const { touches, changedTouches } = e.originalEvent ?? e;
-    const touch = touches[0] ?? changedTouches[0];
-    let xDist = touch.pageX - currencyContain.getBoundingClientRect().x
-    let yDist = touch.pageY - currencyContain.getBoundingClientRect().y
-    } else if (e.type.includes(`mouse`)) {
-    x = e.clientX;
-    y = e.clientY;
-    }
+       const touch = e.touches[0]; // e.touches is an array containing all touches
+       const xDist = touch.clientX;
+       const yDist = touch.clientY;
 
         // Calculate distance between user click and top left corner of button
         //let xDist = e.clientX - currencyContain.getBoundingClientRect().x
