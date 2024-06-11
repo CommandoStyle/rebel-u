@@ -487,8 +487,8 @@ currencySelect.forEach((currencySelect) => {
     currencySelect.addEventListener("touchstart", (e) => {
 
        const touch = e.touches[0]; // e.touches is an array containing all touches
-       const xDist = touch.clientX;
-       const yDist = touch.clientY;
+       const xDist = touch.clientX - currencyContain.getBoundingClientRect().x + 4
+       const yDist = touch.clientY - currencyContain.getBoundingClientRect().y
 
         // Calculate distance between user click and top left corner of button
         //let xDist = e.clientX - currencyContain.getBoundingClientRect().x
