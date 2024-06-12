@@ -505,7 +505,7 @@ currencySelect.forEach((currencySelect) => {
  currSelectOutMob
         .set(currencyExit, {delay: 0.3, display: "none"})
         .set(currencyOpen, {display: "flex"}, "<")
-        .set(currencyHoleMob, { display: "flex", left: `${xDist}%`, top: `${yDist}%` }, "<")
+        .set(currencyHoleMob, { display: "flex", left: `${xDist}%` "-600em", top: `${yDist}%` "-600em" }, "<")
         .set(".cursor-dot", { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
         .set(currBg, {display: "none", scale: 1}, "<")
         .set([".menu__btn", ".menu-close__btn"], { pointerEvents: "auto" }, "<")
