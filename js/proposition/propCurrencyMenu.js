@@ -494,6 +494,8 @@ currencySelect.forEach((currencySelect) => {
   let touchLeft = e.pageX;
   xDist = (touchTop / $(window).height()) * 100;
   yDist = (touchLeft / $(window).width()) * 100;
+
+   gsap.set(currencyHoleMob, { left: `${xDist}%`, top: `${yDist}%` })
       
        //let touch = e.targetTouches[0]; 
        //let xDist = touch.clientX - currencyContain.offsetLeft;
@@ -505,7 +507,7 @@ currencySelect.forEach((currencySelect) => {
  currSelectOutMob
         .set(currencyExit, {delay: 0.3, display: "none"})
         .set(currencyOpen, {display: "flex"}, "<")
-        .set(currencyHoleMob, { display: "flex", left: `${xDist}%` "-600em", top: `${yDist}%` "-600em" }, "<")
+        .to(currencyHoleMob, { display: "flex", x: "-600em", y: "-600em", duration: 0.001 }, "<")
         .set(".cursor-dot", { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
         .set(currBg, {display: "none", scale: 1}, "<")
         .set([".menu__btn", ".menu-close__btn"], { pointerEvents: "auto" }, "<")
