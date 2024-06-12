@@ -484,12 +484,16 @@ currencySelect.forEach((currencySelect) => {
 
     gsap.set(currencyHoleMob, { scale: 1, display: "none" })
 
-    currencySelect.addEventListener("touchstart", (e) => {
+     let xDist;
+     let yDist;
 
+  currencySelect.addEventListener("touchstart", (e) => {
+  
+  let currSelectOutMob = gsap.timeline();
   let touchTop = e.pageY - $(window).scrollTop();
   let touchLeft = e.pageX;
-  let xDist = (touchTop / $(window).height()) * 100;
-  let yDist = (touchLeft / $(window).width()) * 100;
+  xDist = (touchTop / $(window).height()) * 100;
+  yDist = (touchLeft / $(window).width()) * 100;
       
        //let touch = e.targetTouches[0]; 
        //let xDist = touch.clientX - currencyContain.offsetLeft;
@@ -497,14 +501,11 @@ currencySelect.forEach((currencySelect) => {
 
         //let xDist = e.clientX - currencyContain.getBoundingClientRect().x
         //let yDist = e.clientY - currencyContain.getBoundingClientRect().y
-        let currSelectOutMob = gsap.timeline();
-
-        gsap.set(currencyHoleMob, { left: xDist, top: yDist });
-      
+       
  currSelectOutMob
         .set(currencyExit, {delay: 0.3, display: "none"})
         .set(currencyOpen, {display: "flex"}, "<")
-        .set(currencyHoleMob, {display: "flex"}, "<")
+        .set(currencyHoleMob, { display: "flex", left: `${xDist}%`, top: `${yDist}%` }, "<")
         .set(".cursor-dot", { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
         .set(currBg, {display: "none", scale: 1}, "<")
         .set([".menu__btn", ".menu-close__btn"], { pointerEvents: "auto" }, "<")
