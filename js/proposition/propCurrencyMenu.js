@@ -136,9 +136,9 @@ currencyIn.set(currRev, { x: -30, opacity: 0 })
           .fromTo(currBg, { scale: 1 }, { scale: 40, transformOrigin: "50% 50%", ease: Expo.easeInOut, duration: 1.2})
           .set(".touch-print-open__wrap", {autoAlpha: 0}, "-=0.95")
           .set(".touch-print-close__wrap", {filter: "invert(1)", autoAlpha: 1}, "<")
-          .to(".nav__logo-btn", { autoAlpha: 0, duration: 0.01 }, "-=0.65")
-          .to(".home-nav__btn", { autoAlpha: 1, duration: 0.01 }, "<")
+          .to(".nav__logo-btn", { autoAlpha: 0, duration: 0.01 }, "-=0.68")
           .to(".beta__contain", {display: "none", duration: 0.01}, "<")
+          .to(".home-nav__btn", { autoAlpha: 1, duration: 0.01 }, "<")
           .to(currWrap, { display: 'flex', duration: 0.001 },"<")
           .set('.hole.is--currency', {display: "block"}, "<")
           .to(currRev, { duration: 1.6, x: 0, stagger: 0.06, ease: "expo.out" }, "-=0.4")
@@ -496,12 +496,12 @@ currencySelect.forEach((currencySelect) => {
    let yDist = touch.clientY - currencyContain.getBoundingClientRect().y
    let currSelectOutMob = gsap.timeline();
 
-   //gsap.set(currencyHoleMob, { left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
+   gsap.set(currencyHoleMob, { left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
        
  currSelectOutMob
         .set(currencyExit, {delay: 0.3, display: "none"})
         .set(currencyOpen, {display: "flex"}, "<")
-        .set(currencyHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 }, "<")
+        .set(currencyHoleMob, { display: "flex" }, "<")
         .set(currBg, {display: "none", scale: 1}, "<")
         .set([".menu__btn", ".menu-close__btn"], { pointerEvents: "auto" }, "<")
         .to(".redact-cover-nav", {scaleX: 0, transformOrigin: "100% 0%", duration: 0.15, ease: "linear"})
@@ -511,7 +511,7 @@ currencySelect.forEach((currencySelect) => {
         .to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<") 
         .fromTo(currencyHoleMob, { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)" }, "-=0.15")  
         .to('[data-img]', { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" },"-=1.5")
-        .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "-=0.3")
+        .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "-=0.65")
         .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.001 }, "<")
         .to(".beta__contain", {display: "flex", duration: 0.001}, "<")
         .to(".currency-exit-txt", { color: '#000000', duration: 0.001}, "<")
