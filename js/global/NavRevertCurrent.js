@@ -11,10 +11,10 @@ var navOpen = gsap.utils.toArray('.menu__btn');
 var navClose = gsap.utils.toArray('.menu-close__btn');
 var navBotRev = gsap.utils.toArray(".nav-bot-rev");
 
-const currentRevert = document.querySelectorAll(".menu-item__current")
-
 //Desktop
 mm.add("(min-width: 990px)", () => {
+
+const currentRevert = document.querySelectorAll(".menu-item__current");
     
 currentRevert.forEach((currentRevert) => {
     if (!currentRevert) return
@@ -73,6 +73,8 @@ currentRevert.forEach((currentRevert) => {
 
 //iPad and Mobile
 mm.add("(max-width: 991px)", () => {
+
+const currentRevert = document.querySelectorAll(".menu-item__current");
     
 currentRevert.forEach((currentRevert) => {
     if (!currentRevert) return
