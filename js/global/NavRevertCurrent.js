@@ -44,6 +44,7 @@ currentRevert.forEach((currentRevert) => {
         .to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<")  
         .fromTo(navHole, { scale: 1 }, { duration: 1.2, scale: 2000, ease: "expoScale(1, 2000, power1.easeOut)" }, "-=0.3")  
         .to('[data-img]', { autoAlpha: 0, duration: 0.3, ease: "sine.easeIn" },"-=1.3")
+        .to(".beta__contain", {display: "flex", duration: 0.001}, "-=0.68")
         .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.001 }, "<")
         .to([".menu-txt", ".exit-txt"], { color: '#000000', duration: 0.001}, "-=0.2")
