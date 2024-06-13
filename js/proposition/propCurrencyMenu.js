@@ -518,7 +518,7 @@ currencySelect.forEach((currencySelect) => {
         .to(".currencies-list__contain", { filter: 'invert(0%)', duration: 0.001}, "<")
         .to(".currency-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".currencies-list__contain", { autoAlpha: 1, duration: 0.001 }, "<")
-        .set(".menu-txt", { filter: 'invert(0%)' }, "-=0.45")
+        .set(".menu-txt", { filter: 'invert(0%)' }, "-=0.52")
         .set(".touch-print-open__wrap", {autoAlpha: 1}, "<")
         .set(".touch-print-close__wrap", {filter: "invert(0)", autoAlpha: 0}, "<")
         .set(currWrap, {display: 'none'})
