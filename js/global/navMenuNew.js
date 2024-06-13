@@ -22,6 +22,7 @@ gsap.set(".nav__logo-btn", {autoAlpha: 1});
 gsap.set(".exit-txt", {autoAlpha: 0});
 gsap.set(".current-arrow-right__track", { xPercent: 105 });
 gsap.set(".current-arrow-left__track", { xPercent: -105 });
+gsap.set(".redact-cover-top-left", {scaleX: 0});
 
 //Desktop
 mm.add("(min-width: 990px)", () => {
