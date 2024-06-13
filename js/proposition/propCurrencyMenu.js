@@ -47,9 +47,9 @@ currencyIn.set(currRev, { x: -30, opacity: 0 })
           .set([".menu__btn", ".menu-close__btn"], { pointerEvents: "none" }, "<")
           .fromTo(currBg, { scale: 1 }, { scale: 40, transformOrigin: "50% 50%", ease: Expo.easeInOut, duration: 1.2})
           .set(".menu-txt", { filter: 'invert(100%)' }, "-=0.8")
+          .to(".beta__contain", {display: "none", duration: 0.01}, "-=0.68")
           .to(".nav__logo-btn", { autoAlpha: 0, duration: 0.01 }, "-=0.56")
-          .to(".home-nav__btn", { autoAlpha: 1, duration: 0.01 }, "<")
-          .to(".beta__contain", {display: "none", duration: 0.01}, "<")
+          .to(".home-nav__btn", { autoAlpha: 1, duration: 0.01 }, "<") 
           .to(currWrap, { display: 'flex', duration: 0.001 },"<")
           .set('.hole.is--currency', {display: "block"}, "<")
           .to(currRev, { duration: 1.6, x: 0, stagger: 0.06, ease: "expo.out" }, "-=0.4")
@@ -86,7 +86,7 @@ currencyExit.forEach(currExit => {
            .fromTo(currBg, { scale:40 }, {scale: 0.6, ease: Expo.easeOut, duration: 1.1 })
            .to(".home-nav__btn", { autoAlpha: 0, duration: 0.01 }, "<")
            .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.01 }, "<")
-           .to(".beta__contain", {display: "flex", duration: 0.01}, "<")
+           .to(".beta__contain", {display: "flex", duration: 0.01}, "-=0.94")
            .to(currWrap, { display: 'none', duration: 0.01 },"<") 
            .to(".cursor-dot", { display: "flex", duration: 0.001 }, "-=0.27")
            .to(currBg, { autoAlpha: 0, duration: 0.001 },"<")
@@ -496,12 +496,12 @@ currencySelect.forEach((currencySelect) => {
    let yDist = touch.clientY - currencyContain.getBoundingClientRect().y
    let currSelectOutMob = gsap.timeline();
 
-   gsap.set(currencyHoleMob, { left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
+   gsap.set(currencyHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
        
  currSelectOutMob
         .set(currencyExit, {delay: 0.3, display: "none"})
         .set(currencyOpen, {display: "flex"}, "<")
-        .set(currencyHoleMob, { display: "flex" }, "<")
+        //.set(currencyHoleMob, { display: "flex" }, "<")
         .set(currBg, {display: "none", scale: 1}, "<")
         .set([".menu__btn", ".menu-close__btn"], { pointerEvents: "auto" }, "<")
         .to(".redact-cover-nav", {scaleX: 0, transformOrigin: "100% 0%", duration: 0.15, ease: "linear"})
@@ -518,10 +518,9 @@ currencySelect.forEach((currencySelect) => {
         .to(".currencies-list__contain", { filter: 'invert(0%)', duration: 0.001}, "<")
         .to(".currency-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".currencies-list__contain", { autoAlpha: 1, duration: 0.001 }, "<")
-        .set(".menu-txt", { filter: 'invert(0%)' }, "-=0.25")
+        .set(".menu-txt", { filter: 'invert(0%)' }, "-=0.35")
         .set(".touch-print-open__wrap", {autoAlpha: 1}, "<")
         .set(".touch-print-close__wrap", {filter: "invert(0)", autoAlpha: 0}, "<")
-        .to(".cursor-dot", { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
         .set(currWrap, {display: 'none'})
         .set(currencyHoleMob, {display: "none", clearProps: "all"})
         .set(currRev, { x: -20, opacity: 0 })
