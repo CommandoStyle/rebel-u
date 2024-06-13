@@ -115,7 +115,7 @@ currentRevert.forEach((currentRevert) => {
         .to(".touch-print-open__wrap", {autoAlpha: 1, duration: 0.001}, "<")
         .to(".touch-print-close__wrap", {filter: "invert(0)", autoAlpha: 0, duration: 0.001}, "<")
         .to(".redact-cover-nav", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
-        .to(".cursor-dot", { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
+        //.to(".cursor-dot", { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
         .set(navWrap, {display: 'none'})
         .set(navHoleMob, {display: "none", clearProps: "all"})
         .set( ".redact-cover-nav", { scaleX: 0 })
