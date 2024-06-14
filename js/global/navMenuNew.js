@@ -115,7 +115,7 @@ mm.add("(max-width: 991px)", () => {
     var navIn = new gsap.timeline({ paused: true });
     
          navIn
-              .set(navHole, {display: "none"})
+              .set('.nav-hole-mobile', {display: "none"})
               .set(navRevIn, { x: -30, opacity: 0 }, "<")
               .set(navBotRev, { x: -30, opacity: 0 })
               .set(".nav-bot-rev-vert", { y: 15, opacity: 0 })
@@ -138,7 +138,7 @@ mm.add("(max-width: 991px)", () => {
               .to(navBotRev, { x: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "-=1.4")
               .to(".nav-bot-rev-vert", { y: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "<")
               //.to(".redact-cover-nav", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}, "-=0.271")
-              .set(navHole, {display: "block"}, "<")
+              .set('.nav-hole-mobile', {display: "block"}, "<")
               //.to(".exit-txt", { autoAlpha: 1, duration: 0.001 })
               //.to(".menu-txt", { autoAlpha: 0, duration: 0.001 }, "<")
               //.to(".redact-cover-nav", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
@@ -155,7 +155,7 @@ mm.add("(max-width: 991px)", () => {
     
          navOut.set(navClose, {display: "none"})
                .set(navOpen, {display: "flex"}, "<")
-               .set(navHole, {display: "none"}, "<")
+               .set('.nav-hole-mobile', {display: "none"}, "<")
                .to([navRevIn, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.7, x: 30, stagger: 0, ease: "expo.out" }, "<")
                .to([navRevIn, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
                .to(navBotRev, { x: 30, opacity: 0, ease: "expo.out", duration: 0.3 },"-=0.65")
