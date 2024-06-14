@@ -152,11 +152,12 @@ import { errorMarquees } from './error/errorMarquees.js';
 // Get mouse position on click  
 let percentTop;
 let percentLeft;
-$(document).on("click", function (e) {
+$(document).on("click touchstart", function (e) {
   let mouseTop = e.pageY - $(window).scrollTop();
   let mouseLeft = e.pageX;
   percentTop = (mouseTop / $(window).height()) * 100;
   percentLeft = (mouseLeft / $(window).width()) * 100;
+  return false; 
 });
 
 // Load all functions on first load
