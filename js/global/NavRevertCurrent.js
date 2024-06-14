@@ -51,7 +51,7 @@ currentRevert.forEach((currentRevert) => {
         .to(".beta__contain", {display: "flex", duration: 0.001}, "-=0.1")
         .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.001 }, "<")
-        .to([".menu-txt", ".exit-txt"], { color: '#000000', duration: 0.001}, "-=0.6")
+        .to([".menu-txt", ".exit-txt"], { color: '#000000', duration: 0.001}, "<")
         .to(".redact-cover-nav", { scaleX: 0, backgroundColor: '#000000'}, "<") 
         .to(".redact-cover-nav", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"})
         .to(".exit-txt", { autoAlpha: 0, duration: 0.001 })
