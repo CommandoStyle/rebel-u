@@ -11,6 +11,8 @@ var navOpen = gsap.utils.toArray('.menu__btn');
 var navClose = gsap.utils.toArray('.menu-close__btn');
 var navBotRev = gsap.utils.toArray(".nav-bot-rev");
 
+let mm = gsap.matchMedia();
+
 //Desktop
 mm.add("(min-width: 990px)", () => {
 
