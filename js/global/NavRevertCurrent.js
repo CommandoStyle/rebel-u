@@ -94,7 +94,7 @@ currentRevert.forEach((currentRevert) => {
    let yDist = touch.clientY - navContain.getBoundingClientRect().y
    let currentRevOutMob = gsap.timeline();
 
-    gsap.set(navHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -75, yPercent: -75 });
+    gsap.set(navHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: 0, yPercent: 0 });
        
  currentRevOutMob
         .set(navClose, {delay: 0.3, display: "none"})
