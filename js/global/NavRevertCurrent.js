@@ -14,7 +14,7 @@ var navBotRev = gsap.utils.toArray(".nav-bot-rev");
 let mm = gsap.matchMedia();
 
 //Desktop
-mm.add("(min-width: 990px)", () => {
+mm.add("(min-width: 991px)", () => {
 
 const currentRevert = document.querySelectorAll(".menu-item__current");
     
@@ -74,7 +74,7 @@ currentRevert.forEach((currentRevert) => {
 });
 
 //iPad and Mobile
-mm.add("(max-width: 991px)", () => {
+mm.add("(max-width: 990px)", () => {
 
 const currentRevert = document.querySelectorAll(".menu-item__current");
     
