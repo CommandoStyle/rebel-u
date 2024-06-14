@@ -94,14 +94,12 @@ currentRevert.forEach((currentRevert) => {
    let yDist = touch.clientY - navContain.getBoundingClientRect().y
    let currentRevOutMob = gsap.timeline();
 
-    gsap.set(navHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
+    gsap.set(navHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -75, yPercent: -75 });
        
  currentRevOutMob
-        .set(navClose, {display: "none"})
+        .set(navClose, {delay: 0.3, display: "none"})
         .set(navOpen, {display: "flex"}, "<")
-        //.set(navHole, {display: "block"}, "<")
-       //.set(".cursor-dot", { scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
-        .set(navBg, {display: "none"}, "<")
+        .set(navBg, {display: "none", scale: 1}, "<")
         .to([navRevIn, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.7, x: 30, stagger: 0, ease: "expo.out" }, "<")
         .to([navRevIn, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
         .to(navBotRev, { x: 30, ease: "expo.out", opacity: 0, duration: 0.3 },"-=0.65")
