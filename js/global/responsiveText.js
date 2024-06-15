@@ -34,8 +34,8 @@ function calculateCh(element, fontSize) {
 }
 
 document.querySelectorAll(".p-full").forEach((pfull) => {
-  pfull.style.fontSize = clampBuilder(320, 512, 0.8, 1.6);
-  pfull.style.width = `${(320 / calculateCh(pfull, "1rem")) * 0.9}ch`;
+  pfull.style.fontSize = clampBuilder(320, 480, 0.75, 1.5);
+  pfull.style.width = `${(320 / calculateCh(pfull, "0.75rem")) * 0.9}ch`;
   });
   
  }
