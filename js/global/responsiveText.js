@@ -1,9 +1,11 @@
 export const responsiveText = () => {
 
-let mm = gsap.matchMedia();
+const mmObj = window.matchMedia("(max-width: 640px)")
+
+myFunction(mmObj);
 
 //iPad and Mobile
-mm.add("(max-width: 640px)", () => {
+mmObj.addEventListener("change", function() {
   
 function clampBuilder(minWidthPx, maxWidthPx, minFontSize, maxFontSize) {
   const root = document.querySelector("html");
