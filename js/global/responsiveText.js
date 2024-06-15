@@ -33,10 +33,14 @@ function calculateCh(element, fontSize) {
   return chPixels;
 }
 
-document.querySelectorAll(".is--bread").forEach((bread) => {
-  bread.style.fontSize = clampBuilder(320, 480, 1, 1.5);
-  bread.style.width = `${(320 / calculateCh(bread, "1rem")) * 1}ch`;
-  });
+//document.querySelectorAll(".is--bread").forEach((bread) => {
+  //bread.style.fontSize = clampBuilder(320, 480, 1, 1.5);
+  //bread.style.width = `${(320 / calculateCh(bread, "1rem")) * 1}ch`;
+  //});
+  
+const txtfull = document.querySelectorAll(".txt-full");
+txtfull.style.fontSize = clampBuilder(320, 480, 1, 1.5);
+txtfull.style.width = `${(320 / calculateCh(txtfull, "1rem")) * 0.9}ch`;
   
  }
 
