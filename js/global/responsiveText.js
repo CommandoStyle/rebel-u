@@ -39,7 +39,7 @@ function calculateCh(element, fontSize) {
   //});
   
 const txtfull = document.querySelectorAll(".txt-full");
-txtfull.style.fontSize = clampBuilder(320, 480, 1, 1.5);
+txtfull.style.fontSize = clampBuilder(320, 480, 2, 3);
 txtfull.style.width = `${(320 / calculateCh(txtfull, "1rem")) * 0.9}ch`;
   
  }
