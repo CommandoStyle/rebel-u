@@ -34,7 +34,7 @@ function calculateCh(element, fontSize) {
 }
 
 document.querySelectorAll(".is--bread").forEach((bread) => {
-  bread.style.fontSize = clampBuilder(320, 640, 0.5, 1);
+  bread.style.fontSize = clampBuilder(320, 480, 1, 1.5);
   bread.style.width = `${(320 / calculateCh(bread, "1rem")) * 1}ch`;
   });
   
