@@ -1,6 +1,6 @@
 export const responsiveText = () => {
 
-const mmObj = window.matchMedia("(max-width: 640px)")
+const mmObj = window.matchMedia("(max-width: 480px)")
 
 myFunction(mmObj);
 
