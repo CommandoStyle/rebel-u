@@ -71,6 +71,7 @@ import { iframeOut } from './global/iFrameOut.js';
 import { iframeOutQuery } from './global/iFrameOutQuery.js';
 import { shareFallbackMenu } from './global/shareFallbackMenu.js';
 import { share } from './global/share.js';
+import { responsiveText } from './global/responsiveText.js';
 
 /**
 * Home
@@ -819,6 +820,7 @@ quizGlobal();
 bookedCover();
 cookieSelect();
 iframeOut();
+responsiveText();
 
 }, 0);
 
