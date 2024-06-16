@@ -33,6 +33,11 @@ function calculateCh(element, fontSize) {
   return chPixels;
 }
 
+document.querySelectorAll(".h-full").forEach((hfull) => {
+  hfull.style.fontSize = clampBuilder(320, 640, 2, 4);
+  hfull.style.width = `${(320 / calculateCh(hfull, "2rem")) * 0.92}ch`;
+  });
+
 document.querySelectorAll(".p-full").forEach((pfull) => {
   pfull.style.fontSize = clampBuilder(320, 640, 0.82, 1.64);
   pfull.style.width = `${(320 / calculateCh(pfull, "0.82rem")) * 0.92}ch`;
