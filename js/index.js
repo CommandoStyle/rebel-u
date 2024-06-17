@@ -321,14 +321,29 @@ const initRblu = () => {
             $(data.next.container).addClass("fixed");
                                       
             propIntroCta();
+
+            //iPad and Mobile
+            if (mmTrans.matches) {
                                        
+            return gsap.fromTo(
+            data.next.container,
+            { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+            { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+             onComplete: () => {
+             window.scrollTo({ top: 0, behavior: 'instant' });
+             $(data.next.container).removeClass("fixed"); }});  
+
+              } else {
+
             return gsap.fromTo(
             data.next.container,
             { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
             { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
              onComplete: () => {
              window.scrollTo({ top: 0, behavior: 'instant' });
-             $(data.next.container).removeClass("fixed"); }});   
+             $(data.next.container).removeClass("fixed"); }});  
+
+            }
                                           
             },
             after(data) { scroll(data.next.container); 
@@ -346,14 +361,29 @@ const initRblu = () => {
           $(data.next.container).addClass("fixed");
                                     
           propIntroCta();
+
+          //iPad and Mobile
+          if (mmTrans.matches) {
                                      
+          return gsap.fromTo(
+          data.next.container,
+          { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+          { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+           onComplete: () => {
+           window.scrollTo({ top: 0, behavior: 'instant' });
+           $(data.next.container).removeClass("fixed"); }}); 
+
+             } else {
+
           return gsap.fromTo(
           data.next.container,
           { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
           { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
            onComplete: () => {
            window.scrollTo({ top: 0, behavior: 'instant' });
-           $(data.next.container).removeClass("fixed"); }});   
+           $(data.next.container).removeClass("fixed"); }}); 
+
+          }
                                         
           },
           after(data) { scroll(data.next.container); },
@@ -376,14 +406,29 @@ const initRblu = () => {
               $(data.next.container).addClass("fixed");
             
               alumniIntro(); 
+
+          //iPad and Mobile
+          if (mmTrans.matches) {
                
               return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
+
+          } else {
+
+                return gsap.fromTo(
                 data.next.container,
                 { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
                 { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
-                $(data.next.container).removeClass("fixed"); }});   
+                $(data.next.container).removeClass("fixed"); }}); 
+
+          }
                   
             },
             afterEnter(data) {},
@@ -405,14 +450,29 @@ const initRblu = () => {
           $(data.next.container).addClass("fixed");
                                       
           alumniIntroCta();
+
+          //iPad and Mobile
+          if (mmTrans.matches) {
                                        
+          return gsap.fromTo(
+          data.next.container,
+          { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+          { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+          onComplete: () => {
+          window.scrollTo({ top: 0, behavior: 'instant' });
+          $(data.next.container).removeClass("fixed"); }}); 
+
+          } else {
+
           return gsap.fromTo(
           data.next.container,
           { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
           { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
           onComplete: () => {
           window.scrollTo({ top: 0, behavior: 'instant' });
-          $(data.next.container).removeClass("fixed"); }});   
+          $(data.next.container).removeClass("fixed"); }});
+
+          }
                                           
           },
           after(data) { scroll(data.next.container); },
@@ -429,14 +489,29 @@ const initRblu = () => {
           $(data.next.container).addClass("fixed");
                                                   
           alumniIntroCta();
+
+          //iPad and Mobile
+          if (mmTrans.matches) {
                                                    
+          return gsap.fromTo(
+          data.next.container,
+          { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+          { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+          onComplete: () => {
+          window.scrollTo({ top: 0, behavior: 'instant' });
+          $(data.next.container).removeClass("fixed"); }});  
+
+          } else {
+
           return gsap.fromTo(
           data.next.container,
           { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
           { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
           onComplete: () => {
           window.scrollTo({ top: 0, behavior: 'instant' });
-          $(data.next.container).removeClass("fixed"); }});   
+          $(data.next.container).removeClass("fixed"); }});
+
+          }
                                                       
           },
           after(data) { scroll(data.next.container); },
@@ -467,14 +542,29 @@ const initRblu = () => {
               $(data.next.container).addClass("fixed");              
 
               alumIntro(data.next.container);
+
+              //iPad and Mobile
+              if (mmTrans.matches) {
  
               return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
+
+              } else {
+
+                return gsap.fromTo(
                 data.next.container,
                 { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
                 { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
-                $(data.next.container).removeClass("fixed"); }});   
+                $(data.next.container).removeClass("fixed"); }}); 
+
+              }
 
             },
             afterEnter(data) {},
@@ -498,14 +588,29 @@ const initRblu = () => {
               $(data.next.container).addClass("fixed");
               
               aboutIntro();
+
+              //iPad and Mobile
+              if (mmTrans.matches) {
                
               return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }});  
+
+              } else {
+
+                return gsap.fromTo(
                 data.next.container,
                 { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
                 { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
-                $(data.next.container).removeClass("fixed"); }});   
+                $(data.next.container).removeClass("fixed"); }});  
+
+              }
                   
             },
             after(data) {
@@ -526,14 +631,29 @@ const initRblu = () => {
            $(data.next.container).addClass("fixed");
                             
            aboutIntroCta();
-                             
+
+           //iPad and Mobile
+           if (mmTrans.matches) {
+                                 
+           return gsap.fromTo(
+           data.next.container,
+           { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+           { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+           onComplete: () => {
+           window.scrollTo({ top: 0, behavior: 'instant' });
+           $(data.next.container).removeClass("fixed"); }}); 
+
+           } else {
+
            return gsap.fromTo(
            data.next.container,
            { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
            { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
            onComplete: () => {
            window.scrollTo({ top: 0, behavior: 'instant' });
-           $(data.next.container).removeClass("fixed"); }});   
+           $(data.next.container).removeClass("fixed"); }});
+
+           }
                                 
            },
            after(data) { scroll(data.next.container); },
@@ -555,14 +675,29 @@ const initRblu = () => {
               $(data.next.container).addClass("fixed");
               
               mrebelIntro(); 
+
+              //iPad and Mobile
+              if (mmTrans.matches) {
  
               return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
+
+              } else {
+
+                return gsap.fromTo(
                 data.next.container,
                 { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
                 { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
-                $(data.next.container).removeClass("fixed"); }});   
+                $(data.next.container).removeClass("fixed"); }}); 
+
+              }
                   
             },
             afterEnter(data) {},
@@ -584,7 +719,20 @@ const initRblu = () => {
            $(data.next.container).addClass("fixed");
                                                   
            mrebelIntroCta();
+
+          //iPad and Mobile
+          if (mmTrans.matches) {
                                                    
+           return gsap.fromTo(
+           data.next.container,
+           { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+           { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+           onComplete: () => {
+           window.scrollTo({ top: 0, behavior: 'instant' });
+          $(data.next.container).removeClass("fixed"); }});   
+
+          } else {
+
            return gsap.fromTo(
            data.next.container,
            { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
@@ -592,6 +740,8 @@ const initRblu = () => {
            onComplete: () => {
            window.scrollTo({ top: 0, behavior: 'instant' });
           $(data.next.container).removeClass("fixed"); }});   
+
+          }
                                                       
           },
           after(data) { scroll(data.next.container); },
@@ -608,14 +758,29 @@ const initRblu = () => {
             $(data.next.container).addClass("fixed");
                                                    
             mrebelIntroCta();
+
+          //iPad and Mobile
+          if (mmTrans.matches) {
                                                     
+            return gsap.fromTo(
+            data.next.container,
+            { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+            { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+            onComplete: () => {
+            window.scrollTo({ top: 0, behavior: 'instant' });
+           $(data.next.container).removeClass("fixed"); }});  
+
+          } else {
+
             return gsap.fromTo(
             data.next.container,
             { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
             { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
             onComplete: () => {
             window.scrollTo({ top: 0, behavior: 'instant' });
-           $(data.next.container).removeClass("fixed"); }});   
+           $(data.next.container).removeClass("fixed"); }});  
+
+          }
                                                        
            },
            after(data) { scroll(data.next.container); },
@@ -645,14 +810,29 @@ const initRblu = () => {
               $(data.next.container).addClass("fixed");
 
               ebelPostIntro(); 
+
+          //iPad and Mobile
+          if (mmTrans.matches) {
  
               return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
+
+          } else {
+
+                return gsap.fromTo(
                 data.next.container,
                 { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
                 { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
-                $(data.next.container).removeClass("fixed"); }});   
+                $(data.next.container).removeClass("fixed"); }}); 
+
+          }
 
             },
             afterEnter(data) {},
@@ -687,14 +867,29 @@ const initRblu = () => {
               $(data.next.container).addClass("fixed");
 
               legalIntro();
+
+             //iPad and Mobile
+             if (mmTrans.matches) {
                
               return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => { 
+                scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
+
+             } else {
+
+                return gsap.fromTo(
                 data.next.container,
                 { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
                 { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => { 
                 scrollTo({ top: 0, behavior: 'instant' });
-                $(data.next.container).removeClass("fixed"); }});   
+                $(data.next.container).removeClass("fixed"); }}); 
+
+             }
                   
              },
              afterEnter(data) {},
@@ -716,14 +911,29 @@ const initRblu = () => {
             $(data.next.container).addClass("fixed");
                                        
             legalIntroNav();
+
+            //iPad and Mobile
+            if (mmTrans.matches) {
                                         
+           return gsap.fromTo(
+           data.next.container,
+           { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
+           { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+           onComplete: () => {
+           window.scrollTo({ top: 0, behavior: 'instant' });
+           $(data.next.container).removeClass("fixed"); }});
+
+            } else {
+
            return gsap.fromTo(
            data.next.container,
            { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
            { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
            onComplete: () => {
            window.scrollTo({ top: 0, behavior: 'instant' });
-           $(data.next.container).removeClass("fixed"); }});   
+           $(data.next.container).removeClass("fixed"); }});
+
+            }
                                            
             },
             after(data) { scroll(data.next.container); },
@@ -758,14 +968,29 @@ const initRblu = () => {
             $(data.next.container).addClass("fixed");
                                        
             legalIntroIframe();
+
+            //iPad and Mobile
+            if (mmTrans.matches) {
                                         
+           return gsap.fromTo(
+           data.next.container,
+           { clipPath: `circle(3% at 34.5% 32%)` },
+           { clipPath: `circle(140.9% at 34.5% 32%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+           onComplete: () => {
+           window.scrollTo({ top: 0, behavior: 'instant' });
+           $(data.next.container).removeClass("fixed"); }});
+
+            } else {
+
            return gsap.fromTo(
            data.next.container,
            { clipPath: `circle(0% at 34.5% 32%)` },
            { clipPath: `circle(140.9% at 34.5% 32%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
            onComplete: () => {
            window.scrollTo({ top: 0, behavior: 'instant' });
-           $(data.next.container).removeClass("fixed"); }});   
+           $(data.next.container).removeClass("fixed"); }});
+
+            }
                                            
             },
             after(data) { scroll(data.next.container); },
