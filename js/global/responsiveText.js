@@ -41,9 +41,9 @@ document.querySelectorAll(".h-full").forEach((hfull) => {
 
 //Sub 100% width text w. indent
 document.querySelectorAll(".sub-full-indent").forEach((subfullind) => {
-  subfullind.style.fontSize = clampBuilder(320, 640, 1.456, 2.912);
-  subfullind.style.width = `${(320 / calculateCh(subfullind, "1.456rem")) * 0.92}ch`;
-  subfullind.style.textIndent = "1.4rem";
+  subfullind.style.fontSize = clampBuilder(320, 640, 1.452, 2.904);
+  subfullind.style.width = `${(320 / calculateCh(subfullind, "1.452rem")) * 0.92}ch`;
+  subfullind.style.textIndent = "1.9rem";
   });
   
 //Paragraph 100% width text
