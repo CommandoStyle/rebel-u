@@ -33,16 +33,19 @@ function calculateCh(element, fontSize) {
   return chPixels;
 }
 
+//Headline text 100% width
 document.querySelectorAll(".h-full").forEach((hfull) => {
   hfull.style.fontSize = clampBuilder(320, 640, 2.65, 5.3);
   hfull.style.width = `${(320 / calculateCh(hfull, "2.65rem")) * 0.92}ch`;
   });
-
+  
+//Paragraph 100% width text
 document.querySelectorAll(".p-full").forEach((pfull) => {
   pfull.style.fontSize = clampBuilder(320, 640, 0.82, 1.64);
   pfull.style.width = `${(320 / calculateCh(pfull, "0.82rem")) * 0.92}ch`;
   });
 
+//Paragraph 50% width text
 document.querySelectorAll(".p-full-indent").forEach((pfullind) => {
   pfullind.style.fontSize = clampBuilder(320, 640, 0.82, 1.64);
   pfullind.style.width = `${(320 / calculateCh(pfullind, "0.82rem")) * 0.92}ch`;
