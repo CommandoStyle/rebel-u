@@ -39,6 +39,12 @@ document.querySelectorAll(".h-full").forEach((hfull) => {
   hfull.style.width = `${(320 / calculateCh(hfull, "2.65rem")) * 0.92}ch`;
   });
 
+//Sub 100% width text
+document.querySelectorAll(".sub-full").forEach((subfull) => {
+  subfull.style.fontSize = clampBuilder(320, 640, 1.456, 2.912);
+  subfull.style.width = `${(320 / calculateCh(subfull, "1.456rem")) * 0.88}ch`;
+  });
+
 //Sub 100% width text w. indent
 document.querySelectorAll(".sub-full-indent").forEach((subfullind) => {
   subfullind.style.fontSize = clampBuilder(320, 640, 1.456, 2.912);
