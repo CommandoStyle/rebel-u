@@ -156,8 +156,8 @@ const mmTrans = window.matchMedia("(max-width: 480px)");
 if (mmTrans.matches) {
   
 let touch = e.targetTouches[0]; 
-let xDist = touch.clientX - window.getBoundingClientRect().x
-let yDist = touch.clientY - window.getBoundingClientRect().y
+let xDist = touch.clientX - element.getBoundingClientRect().x
+let yDist = touch.clientY - element.getBoundingClientRect().y
 
 } else {
 
