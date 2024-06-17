@@ -163,7 +163,7 @@ $(document).on("touchstart", function (e) {
   let mouseLeftMob = e.pageX;
   percentTopMob = (mouseTopMob / $(window).height()) * 100;
   percentLeftMob = (mouseLeftMob / $(window).width()) * 100;
-  return false; 
+  //return false; 
 });
 
 } else {
@@ -176,7 +176,7 @@ $(document).on("click", function (e) {
   let mouseLeft = e.pageX;
   percentTop = (mouseTop / $(window).height()) * 100;
   percentLeft = (mouseLeft / $(window).width()) * 100;
-  return false; 
+  //return false; 
 });
 
 }
