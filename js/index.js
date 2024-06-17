@@ -154,17 +154,19 @@ const mmTrans = window.matchMedia("(max-width: 480px)");
 
 //iPad and Mobile
 if (mmTrans.matches) {
-  
+
+$(document).on("touchstart", function (e) {
 let touch = e.targetTouches[0]; 
 let xDist = touch.clientX - element.getBoundingClientRect().x
 let yDist = touch.clientY - element.getBoundingClientRect().y
+});
 
 } else {
 
 // Get mouse position on click  
 let percentTop;
 let percentLeft;
-$(document).on("click touchstart", function (e) {
+$(document).on("click", function (e) {
   let mouseTop = e.pageY - $(window).scrollTop();
   let mouseLeft = e.pageX;
   percentTop = (mouseTop / $(window).height()) * 100;
