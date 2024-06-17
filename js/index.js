@@ -150,6 +150,17 @@ import { legalLinksSt } from './legal/legalLinksSt.js';
 
 import { errorMarquees } from './error/errorMarquees.js';
 
+const mmTrans = window.matchMedia("(max-width: 480px)");
+
+//iPad and Mobile
+if (mmTrans.matches) {
+  
+let touch = e.targetTouches[0]; 
+let xDist = touch.clientX - window.getBoundingClientRect().x
+let yDist = touch.clientY - window.getBoundingClientRect().y
+
+} else {
+
 // Get mouse position on click  
 let percentTop;
 let percentLeft;
@@ -161,7 +172,7 @@ $(document).on("click touchstart", function (e) {
   return false; 
 });
 
-const mmTrans = window.matchMedia("(max-width: 480px)");
+}
 
 // Load all functions on first load
 
@@ -234,8 +245,8 @@ const initRblu = () => {
 
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${xDist}% ${yDist}%)` },
+                { clipPath: `circle(140.9% at ${xDist}% ${yDist}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
@@ -283,8 +294,8 @@ const initRblu = () => {
                
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${xDist}% ${yDist}%)` },
+                { clipPath: `circle(140.9% at ${xDist}% ${yDist}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
