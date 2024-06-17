@@ -234,7 +234,7 @@ const initRblu = () => {
 
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(5% at ${percentLeft}% ${percentTop}%)` },
+                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
                 { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
@@ -283,7 +283,7 @@ const initRblu = () => {
                
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(5% at ${percentLeft}% ${percentTop}%)` },
+                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
                 { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
