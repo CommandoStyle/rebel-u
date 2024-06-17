@@ -159,8 +159,8 @@ if (mmTrans.matches) {
 let percentTopMob;
 let percentLeftMob;
 $(document).on("touchstart", function (e) {
-  let mouseTopMob = e.clientY - $(window).scrollTop();
-  let mouseLeftMob = e.clientX;
+  let mouseTopMob = e.pageY - $(window).scrollTop();
+  let mouseLeftMob = e.pageX;
   percentTopMob = (mouseTopMob / $(window).height()) * 100;
   percentLeftMob = (mouseLeftMob / $(window).width()) * 100;
   return false; 
