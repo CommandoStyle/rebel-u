@@ -156,9 +156,10 @@ const mmTrans = window.matchMedia("(max-width: 480px)");
 if (mmTrans.matches) {
 
 document.addEventListener("touchstart", function(e) {
+   let elem = document.querySelector(".content-wrapper");
    let touch = e.targetTouches[0]; 
-   let xDistMob = touch.clientX - element.getBoundingClientRect().x
-   let yDistMob = touch.clientY - element.getBoundingClientRect().y
+   let xDistMob = touch.clientX - elem.getBoundingClientRect().x
+   let yDistMob = touch.clientY - elem.getBoundingClientRect().y
 });
 
 } else {
@@ -247,8 +248,8 @@ const initRblu = () => {
 
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${yDistMob}% ${xDistMob}%)` },
-                { clipPath: `circle(140.9% at ${yDistMob}% ${xDistMob}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${xDistMob}% ${yDistMob}%)` },
+                { clipPath: `circle(140.9% at ${xDistMob}% ${yDistMob}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
