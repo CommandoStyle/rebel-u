@@ -161,6 +161,8 @@ $(document).on("click touchstart", function (e) {
   return false; 
 });
 
+const mmTrans = window.matchMedia("(max-width: 480px)");
+
 // Load all functions on first load
 
 const initRblu = () => {
@@ -227,13 +229,27 @@ const initRblu = () => {
 
               homeIntro();
 
+              //iPad and Mobile
+              if (mmTrans.matches) {
+
               return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(15% at ${percentLeft}% ${percentTop}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
+
+              } else {
+                
+                return gsap.fromTo(
                 data.next.container,
                 { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
                 { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
-                $(data.next.container).removeClass("fixed"); }});   
+                $(data.next.container).removeClass("fixed"); }}); 
+              }
 
             },
             afterEnter(data) {},
@@ -261,14 +277,29 @@ const initRblu = () => {
               $(data.next.container).addClass("fixed");
 
               propIntro();
+
+             //iPad and Mobile
+              if (mmTrans.matches) {
                
               return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(15% at ${percentLeft}% ${percentTop}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
+
+                } else {
+
+               return gsap.fromTo(
                 data.next.container,
                 { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
                 { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
+
+              }
                       
             },
             after(data) {
