@@ -155,15 +155,10 @@ const mmTrans = window.matchMedia("(max-width: 480px)");
 //iPad and Mobile
 if (mmTrans.matches) {
 
-// Get mouse position on click  
-let percentTopMob;
-let percentLeftMob;
-$(document).on("touchstart", function (e) {
-  let mouseTopMob = e.pageY - $(window).scrollTop();
-  let mouseLeftMob = e.pageX;
-  percentTopMob = (mouseTopMob / $(window).height()) * 100;
-  percentLeftMob = (mouseLeftMob / $(window).width()) * 100;
-  //return false; 
+document.addEventListener("touchstart", function(e) {
+   let touch = e.targetTouches[0]; 
+   let xDistMob = touch.clientX - element.getBoundingClientRect().x
+   let yDistMob = touch.clientY - element.getBoundingClientRect().y
 });
 
 } else {
@@ -252,8 +247,8 @@ const initRblu = () => {
 
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeftMob}% ${percentTopMob}%)` },
-                { clipPath: `circle(140.9% at ${percentLeftMob}% ${percentTopMob}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${yDistMob}% ${xDistMob}%)` },
+                { clipPath: `circle(140.9% at ${yDistMob}% ${xDistMob}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
@@ -301,8 +296,8 @@ const initRblu = () => {
                
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeftMob}% ${percentTopMob}%)` },
-                { clipPath: `circle(140.9% at ${percentLeftMob}% ${percentTopMob}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${xDistMob}% ${yDistMob}%)` },
+                { clipPath: `circle(140.9% at ${xDistMob}% ${yDistMob}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
