@@ -19,7 +19,7 @@ export const homeLeave = (container) => {
             .to(subCover, { autoAlpha: 1, duration: 0.001 })
             .to(cursor, { autoAlpha: 0, duration: 0.001 }, "<")
             .to(".cta-inner__wrap", {filter:"invert(100%)", duration: 0.001}, "<")
-            .to(subCover, { scale: 22, transformOrigin: "50% 50%", ease: "expoScale(1, 22)", duration: 1.1 })
+            .to(subCover, { scale: 28, transformOrigin: "50% 50%", ease: "expoScale(1, 28)", duration: 1.1 })
             .to(".cta-inner__wrap", {delay: 0.95, x: 15, opacity: 0, ease: "expo.out", duration: 0.77}, "<")
             .set(".transition-cover", { display: 'block' }, 1.1)
             .set(".cta-inner__wrap", {filter:"invert(0%)"});
