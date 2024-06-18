@@ -325,13 +325,13 @@ const initRblu = () => {
             //iPad and Mobile
             if (mmTrans.matches) {
                                        
-            return gsap.fromTo(
-            data.next.container,
-            { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-            { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
-             onComplete: () => {
-             window.scrollTo({ top: 0, behavior: 'instant' });
-             $(data.next.container).removeClass("fixed"); }});  
+              return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
 
               } else {
 
@@ -365,13 +365,13 @@ const initRblu = () => {
           //iPad and Mobile
           if (mmTrans.matches) {
                                      
-          return gsap.fromTo(
-          data.next.container,
-          { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-          { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
-           onComplete: () => {
-           window.scrollTo({ top: 0, behavior: 'instant' });
-           $(data.next.container).removeClass("fixed"); }}); 
+              return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
 
              } else {
 
@@ -412,8 +412,8 @@ const initRblu = () => {
                
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
@@ -454,13 +454,13 @@ const initRblu = () => {
           //iPad and Mobile
           if (mmTrans.matches) {
                                        
-          return gsap.fromTo(
-          data.next.container,
-          { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-          { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
-          onComplete: () => {
-          window.scrollTo({ top: 0, behavior: 'instant' });
-          $(data.next.container).removeClass("fixed"); }}); 
+              return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
 
           } else {
 
@@ -493,13 +493,13 @@ const initRblu = () => {
           //iPad and Mobile
           if (mmTrans.matches) {
                                                    
-          return gsap.fromTo(
-          data.next.container,
-          { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-          { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
-          onComplete: () => {
-          window.scrollTo({ top: 0, behavior: 'instant' });
-          $(data.next.container).removeClass("fixed"); }});  
+              return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
 
           } else {
 
@@ -548,8 +548,8 @@ const initRblu = () => {
  
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
@@ -594,11 +594,11 @@ const initRblu = () => {
                
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
-                $(data.next.container).removeClass("fixed"); }});  
+                $(data.next.container).removeClass("fixed"); }}); 
 
               } else {
 
@@ -635,13 +635,13 @@ const initRblu = () => {
            //iPad and Mobile
            if (mmTrans.matches) {
                                  
-           return gsap.fromTo(
-           data.next.container,
-           { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-           { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
-           onComplete: () => {
-           window.scrollTo({ top: 0, behavior: 'instant' });
-           $(data.next.container).removeClass("fixed"); }}); 
+              return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
 
            } else {
 
@@ -681,8 +681,8 @@ const initRblu = () => {
  
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
@@ -723,13 +723,13 @@ const initRblu = () => {
           //iPad and Mobile
           if (mmTrans.matches) {
                                                    
-           return gsap.fromTo(
-           data.next.container,
-           { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-           { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
-           onComplete: () => {
-           window.scrollTo({ top: 0, behavior: 'instant' });
-          $(data.next.container).removeClass("fixed"); }});   
+              return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }});   
 
           } else {
 
@@ -762,13 +762,13 @@ const initRblu = () => {
           //iPad and Mobile
           if (mmTrans.matches) {
                                                     
-            return gsap.fromTo(
-            data.next.container,
-            { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-            { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
-            onComplete: () => {
-            window.scrollTo({ top: 0, behavior: 'instant' });
-           $(data.next.container).removeClass("fixed"); }});  
+              return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
 
           } else {
 
@@ -816,8 +816,8 @@ const initRblu = () => {
  
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
@@ -873,10 +873,10 @@ const initRblu = () => {
                
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
-                onComplete: () => { 
-                scrollTo({ top: 0, behavior: 'instant' });
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
 
              } else {
@@ -915,13 +915,13 @@ const initRblu = () => {
             //iPad and Mobile
             if (mmTrans.matches) {
                                         
-           return gsap.fromTo(
-           data.next.container,
-           { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)` },
-           { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
-           onComplete: () => {
-           window.scrollTo({ top: 0, behavior: 'instant' });
-           $(data.next.container).removeClass("fixed"); }});
+              return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
 
             } else {
 
