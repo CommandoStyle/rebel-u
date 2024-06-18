@@ -150,32 +150,18 @@ import { legalLinksSt } from './legal/legalLinksSt.js';
 
 import { errorMarquees } from './error/errorMarquees.js';
 
-const mmTrans = window.matchMedia("(max-width: 480px)");
-
-//iPad and Mobile
-if (mmTrans.matches) {
-
-document.addEventListener("touchstart", function(e) {
-   let elem = document.querySelector(".content-wrapper");
-   let touch = e.targetTouches[0]; 
-   let xDistMob = touch.clientX - elem.getBoundingClientRect().x
-   let yDistMob = touch.clientY - elem.getBoundingClientRect().y
-});
-
-} else {
-
 // Get mouse position on click  
 let percentTop;
 let percentLeft;
-$(document).on("click", function (e) {
+$(document).on("click touchstart", function (e) {
   let mouseTop = e.pageY - $(window).scrollTop();
   let mouseLeft = e.pageX;
   percentTop = (mouseTop / $(window).height()) * 100;
   percentLeft = (mouseLeft / $(window).width()) * 100;
-  //return false; 
+  return false; 
 });
 
-}
+const mmTrans = window.matchMedia("(max-width: 480px)");
 
 // Load all functions on first load
 
@@ -248,8 +234,8 @@ const initRblu = () => {
 
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${xDistMob}% ${yDistMob}%)` },
-                { clipPath: `circle(140.9% at ${xDistMob}% ${yDistMob}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)`, yPercent: -3 },
+                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, yPercent: 0, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
@@ -297,8 +283,8 @@ const initRblu = () => {
                
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${xDistMob}% ${yDistMob}%)` },
-                { clipPath: `circle(140.9% at ${xDistMob}% ${yDistMob}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${percentLeft}% ${percentTop}%)`, yPercent: -3 },
+                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, yPercent: 0, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
