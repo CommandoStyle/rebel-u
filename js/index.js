@@ -316,7 +316,7 @@ const initRblu = () => {
             route: [ 'home' ] }, 
             to : { namespace: ['proposition'] },
             leave(data) { 
-              //return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 0.75, autoAlpha: 1, duration: 0.001 }); },
+               },
             enter(data) {
                         
             $(data.next.container).addClass("fixed");
