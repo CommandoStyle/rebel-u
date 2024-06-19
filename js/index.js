@@ -315,7 +315,9 @@ const initRblu = () => {
             from : { custom: ({ trigger }) => { return trigger.classList && trigger.classList.contains('cta__home-sub'); },
             route: [ 'home' ] }, 
             to : { namespace: ['proposition'] },
-            leave(data) { return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 0.9, autoAlpha: 1, duration: 0.001 }); },
+            leave(data) { 
+              $(data.current.container).addClass("fixed");
+              return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 0.9, autoAlpha: 1, duration: 0.001 }); },
             enter(data) {
                         
             $(data.next.container).addClass("fixed");
@@ -331,7 +333,8 @@ const initRblu = () => {
                 { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
-                $(data.next.container).removeClass("fixed"); }}); 
+                $(data.next.container).removeClass("fixed"); 
+                $(data.current.container).removeClass("fixed"); }}); 
 
               } else {
 
