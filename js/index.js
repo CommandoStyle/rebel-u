@@ -315,7 +315,7 @@ const initRblu = () => {
             from : { custom: ({ trigger }) => { return trigger.classList && trigger.classList.contains('cta__home-sub'); },
             route: [ 'home' ] }, 
             to : { namespace: ['proposition'] },
-            leave(data) { 
+            leave(data) { return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 1.1, autoAlpha: 1, duration: 0.001 });
                },
             enter(data) {
                         
