@@ -329,7 +329,7 @@ const initRblu = () => {
               return gsap.fromTo(
                 data.next.container,
                 { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.3, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
