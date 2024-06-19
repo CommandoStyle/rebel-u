@@ -44,7 +44,7 @@ export const homeLeave = (container) => {
         .to(escapeCover, { autoAlpha: 1, duration: 0.001 })
         .to(cursor, { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".cta-inner__wrap", {filter:"invert(100%)", duration: 0.001}, "<")
-        .to(escapeCover, { scale: 22, transformOrigin: "50% 50%", ease: "expoScale(1, 22)", duration: 1.1 })
+        .to(escapeCover, { scale: 28, transformOrigin: "50% 50%", ease: "expoScale(1, 28)", duration: 1.1 })
         .to(".cta-inner__wrap", {delay: 0.95, x: 15, opacity: 0, ease: "expo.out", duration: 0.77}, "<")
         .set(".transition-cover", { display: 'block' }, 1.1)
         .set(".cta-inner__wrap", {filter:"invert(0%)"});
@@ -69,7 +69,7 @@ export const homeLeave = (container) => {
         .to(alumniCover, { autoAlpha: 1, duration: 0.001 })
         .to(cursor, { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".cta-inner__wrap", {filter:"invert(100%)", duration: 0.001}, "<")
-        .to(alumniCover, { scale: 22, transformOrigin: "50% 50%", ease: "expoScale(1, 22)", duration: 1.1 })
+        .to(alumniCover, { scale: 28, transformOrigin: "50% 50%", ease: "expoScale(1, 28)", duration: 1.1 })
         .to(".cta-inner__wrap", {delay: 0.95, x: 15, opacity: 0, ease: "expo.out", duration: 0.77}, "<")
         .set(".transition-cover", { display: 'block' }, 1)
         .set(".cta-inner__wrap", {filter:"invert(0%)"});
@@ -94,7 +94,7 @@ export const homeLeave = (container) => {
         .to(aboutCover, { autoAlpha: 1, duration: 0.001 })
         .to(cursor, { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".cta-inner__wrap", {filter:"invert(100%)", duration: 0.001}, "<")
-        .to(aboutCover, { scale: 22, transformOrigin: "50% 50%", ease: "expoScale(1, 22)", duration: 1.1 })
+        .to(aboutCover, { scale: 28, transformOrigin: "50% 50%", ease: "expoScale(1, 28)", duration: 1.1 })
         .to(".cta-inner__wrap", {delay: 0.95, x: 15, opacity: 0, ease: "expo.out", duration: 0.77}, "<")
         .set(".transition-cover", { display: 'block' }, 1)
         .set(".cta-inner__wrap", {filter:"invert(0%)"});
@@ -119,7 +119,7 @@ export const homeLeave = (container) => {
         .to(ebelCover, { autoAlpha: 1, duration: 0.001 })
         .to(cursor, { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".cta-inner__wrap", {filter:"invert(100%)", duration: 0.001}, "<")
-        .to(ebelCover, { scale: 22, transformOrigin: "50% 50%", ease: "expoScale(1, 22)", duration: 1.1 })
+        .to(ebelCover, { scale: 28, transformOrigin: "50% 50%", ease: "expoScale(1, 28)", duration: 1.1 })
         .to(".cta-inner__wrap", {delay: 0.95, x: 15, opacity: 0, ease: "expo.out", duration: 0.77 }, "<")
         .set(".transition-cover", { display: 'block' }, 1)
         .set(".cta-inner__wrap", {filter:"invert(0%)"});
