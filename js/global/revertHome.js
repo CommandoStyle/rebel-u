@@ -19,7 +19,7 @@ export const revertHome = () => {
         .to(homeCover, { autoAlpha: 1, duration: 0.001 })
         .to(cursor, { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".home-logo", {filter: "invert(100%)", duration: 0.001}, "<")
-        .to(homeCover, { scale: 40, transformOrigin: "50% 50%", ease: "expoScale(1, 40)", duration: 1.1 })
+        .to(homeCover, { scale: 44, transformOrigin: "50% 50%", ease: "expoScale(1, 44)", duration: 1.1 })
         .to(".beta__contain", {display: "none", duration: 0.001}, "-=0.9")
         .set(".home-logo", {delay: 1.6, filter: "invert(0%)"});
                    
