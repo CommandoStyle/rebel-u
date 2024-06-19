@@ -328,8 +328,8 @@ const initRblu = () => {
                                        
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 6}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 6}%)`, delay: 0.5, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 9}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 9}%)`, delay: 0.5, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
@@ -356,7 +356,7 @@ const initRblu = () => {
           from : { custom: ({ trigger }) => { return trigger.classList && trigger.classList.contains('cta__home-escape'); },
           route: [ 'home' ] }, 
           to : { namespace: ['proposition'] },
-          leave(data) { return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 0.9, autoAlpha: 1, duration: 0.001 }); },
+          leave(data) { return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 1, autoAlpha: 1, duration: 0.001 }); },
           enter(data) {
                       
           $(data.next.container).addClass("fixed");
@@ -368,8 +368,8 @@ const initRblu = () => {
                                      
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 9}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 9}%)`, delay: 0.5, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
@@ -445,7 +445,7 @@ const initRblu = () => {
           from : { custom: ({ trigger }) => { return trigger.classList && trigger.classList.contains('cta__home-alumni'); },
           route: [ 'home' ] }, 
           to : { namespace: ['alumni'] },
-          leave(data) { return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 0.9, autoAlpha: 1, duration: 0.001 }); },
+          leave(data) { return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 1, autoAlpha: 1, duration: 0.001 }); },
           enter(data) {
                         
           $(data.next.container).addClass("fixed");
@@ -457,8 +457,8 @@ const initRblu = () => {
                                        
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 9}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 9}%)`, delay: 0.5, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
@@ -626,7 +626,7 @@ const initRblu = () => {
            from : { custom: ({ trigger }) => { return trigger.classList && trigger.classList.contains('cta__home-who'); },
            route: [ 'home' ] }, 
            to : { namespace: ['about'] },
-           leave(data) { return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 0.9, autoAlpha: 1, duration: 0.001 }); },
+           leave(data) { return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 1, autoAlpha: 1, duration: 0.001 }); },
            enter(data) {
               
            $(data.next.container).addClass("fixed");
@@ -638,8 +638,8 @@ const initRblu = () => {
                                  
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 9}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 9}%)`, delay: 0.5, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }}); 
@@ -714,7 +714,7 @@ const initRblu = () => {
            from : { custom: ({ trigger }) => { return trigger.classList && trigger.classList.contains('cta__home-mr'); },
            route: [ 'home' ] }, 
            to : { namespace: ['mrebel'] },
-           leave(data) { return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 0.9, autoAlpha: 1, duration: 0.001 }); },
+           leave(data) { return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 1, autoAlpha: 1, duration: 0.001 }); },
            enter(data) {
                                     
            $(data.next.container).addClass("fixed");
@@ -726,8 +726,8 @@ const initRblu = () => {
                                                    
               return gsap.fromTo(
                 data.next.container,
-                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
-                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 9}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 9}%)`, delay: 0.5, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
                 onComplete: () => {
                 window.scrollTo({ top: 0, behavior: 'instant' });
                 $(data.next.container).removeClass("fixed"); }});   
