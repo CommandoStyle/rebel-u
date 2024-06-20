@@ -499,7 +499,7 @@ cbEurOpen.forEach(cbEurOp => {
                 .set(ctaCover, { scaleX: 0 }, "<")
                 .to(ctaMask, {filter:"invert(100%)", duration: 0.001}, "<")
                 .to(cbBg, { scale: 12, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 1.2 })
-                .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=1")
+                .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.4")
                 .to(ctaCover, { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 6, ease: "power0.easeOut" })
                 .to(ctaTxt, { autoAlpha: 0, duration: 0.001})
                 .to(ctaCover, { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
@@ -574,6 +574,7 @@ cbusd_open = gsap.timeline({ paused: true });
                 .set(ctaCover, { scaleX: 0 }, "<")
                 .to(ctaMask, {filter:"invert(100%)", duration: 0.001}, "<")
                 .to(cbBg, { scale: 12, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 1.2 })
+                .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.4")
                 .to(ctaCover, { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 6, ease: "power0.easeOut" })
                 .to(ctaTxt, { autoAlpha: 0, duration: 0.001})
                 .to(ctaCover, { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
@@ -607,6 +608,7 @@ CbUsdCancel.forEach((CbUsdCancel) => {
        
   cbusd_cancel
              .set(".menu__btn", { display: "none", opacity: 0 })
+             .set(".touch-print-open__wrap", { autoAlpha: 1 })
              .set(".cta-txt", { autoAlpha: 1}, "<")
              .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
              .set(cbBg, {autoAlpha: 0, scale: 1}, "<")
@@ -647,6 +649,7 @@ cbgbp_open = gsap.timeline({ paused: true });
                 .set(ctaCover, { scaleX: 0 }, "<")
                 .to(ctaMask, {filter:"invert(100%)", duration: 0.001}, "<")
                 .to(cbBg, { scale: 12, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 1.2 })
+                .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.4")
                 .to(ctaCover, { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 6, ease: "power0.easeOut" })
                 .to(ctaTxt, { autoAlpha: 0, duration: 0.001})
                 .to(ctaCover, { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
@@ -680,6 +683,7 @@ CbGbpCancel.forEach((CbGbpCancel) => {
        
   cbgbp_cancel
              .set(".menu__btn", { display: "none", opacity: 0 })
+             .set(".touch-print-open__wrap", { autoAlpha: 1 })
              .set(".cta-txt", { autoAlpha: 1}, "<")
              .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
              .set(cbBg, {autoAlpha: 0, scale: 1}, "<")
@@ -720,6 +724,7 @@ cbsek_open = gsap.timeline({ paused: true });
                 .set(ctaCover, { scaleX: 0 }, "<")
                 .to(ctaMask, {filter:"invert(100%)", duration: 0.001}, "<")
                 .to(cbBg, { scale: 12, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 1.2 })
+                .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.4")
                 .to(ctaCover, { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 6, ease: "power0.easeOut" })
                 .to(ctaTxt, { autoAlpha: 0, duration: 0.001})
                 .to(ctaCover, { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
@@ -753,6 +758,7 @@ CbSekCancel.forEach((CbSekCancel) => {
        
   cbsek_cancel
              .set(".menu__btn", { display: "none", opacity: 0 })
+             .set(".touch-print-open__wrap", { autoAlpha: 1 })
              .set(".cta-txt", { autoAlpha: 1}, "<")
              .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
              .set(cbBg, {autoAlpha: 0, scale: 1}, "<")
@@ -793,6 +799,7 @@ cbsgd_open = gsap.timeline({ paused: true });
                 .set(ctaCover, { scaleX: 0 }, "<")
                 .to(ctaMask, {filter:"invert(100%)", duration: 0.001}, "<")
                 .to(cbBg, { scale: 12, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 1.2 })
+                .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.4")
                 .to(ctaCover, { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 6, ease: "power0.easeOut" })
                 .to(ctaTxt, { autoAlpha: 0, duration: 0.001})
                 .to(ctaCover, { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
@@ -826,6 +833,7 @@ CbSgdCancel.forEach((CbSgdCancel) => {
        
   cbsgd_cancel
              .set(".menu__btn", { display: "none", opacity: 0 })
+             .set(".touch-print-open__wrap", { autoAlpha: 1 })
              .set(".cta-txt", { autoAlpha: 1}, "<")
              .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
              .set(cbBg, {autoAlpha: 0, scale: 1}, "<")
@@ -863,6 +871,7 @@ cbExitSuccess.forEach((cbExitSuccess) => {
          
   cb_cancel_success
            .set(".menu__btn", { display: "none", opacity: 0 })
+           .set(".touch-print-open__wrap", { autoAlpha: 1 })
            .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
            .set(cbBg, {autoAlpha: 0, scale: 1}, "<")
            .set(".cb-booked__cover", { display: "block" }, "<")
