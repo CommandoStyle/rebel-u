@@ -40,9 +40,9 @@ let smoother = ScrollSmoother.create({
        });
 
 // SS stop / start on button click
-      
+     
 var ssClickStop = document.querySelectorAll('.cta-btn, .menu__btn, .nav__logo-btn, .currency__btn, .footer__cta-share-fallback, mrebel__submit-query, .quiz-cta__btn');
-var ssClickStart = document.querySelectorAll('.currency-exit__btn, .share-exit__btn, .menu-close__btn, .quiz-cancel, .quiz-cancel__success, .query-cancel, .query-cancel__success');
+var ssClickStart = document.querySelectorAll('.rebxxl-exit__success, .rebxxl-sgd-cancel, .rebxxl-sek-cancel, .rebxxl-gbp-cancel, .rebxxl-usd-cancel, .rebxxl-eur-cancel, .rebm-exit__success, .rebm-sgd-cancel, .rebm-sek-cancel, .rebm-gbp-cancel, .rebm-usd-cancel, .rebm-eur-cancel, .rebs-exit__success, .rebs-sgd-cancel, .rebs-sek-cancel, .rebs-gbp-cancel, .rebs-usd-cancel, .rebs-eur-cancel, .cb-eur-cancel, .cb-usd-cancel, .cb-gbp-cancel, .cb-sek-cancel, .cb-sgd-cancel, .cb-exit__success, .currency-exit__btn, .share-exit__btn, .menu-close__btn, .quiz-cancel, .quiz-cancel__success, .query-cancel, .query-cancel__success');
 
     ssClickStop.forEach(function(ssClickStop) {
       ssClickStop.addEventListener('click', function clickin() { smoother.paused(true); });
