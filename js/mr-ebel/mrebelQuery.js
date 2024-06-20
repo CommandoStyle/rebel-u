@@ -70,7 +70,7 @@ gsap.set(queryCancel, { display: "none" });
 
 // OPEN QUERY
 // DESKTOP
-mm.add("(min-width: 992px)", () => {
+mm.add("(min-width: 991px)", () => {
       
 queryOpen.forEach(queryOpen => {
 
@@ -148,7 +148,7 @@ query_cancel
 });
 
 // MOBILE
-mm.add("(max-width: 428px)", () => {
+mm.add("(max-width: 990px)", () => {
       
 queryOpen.forEach(queryOpen => {
 
