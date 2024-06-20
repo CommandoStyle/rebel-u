@@ -72,6 +72,7 @@ import { iframeOutQuery } from './global/iFrameOutQuery.js';
 import { shareFallbackMenu } from './global/shareFallbackMenu.js';
 import { share } from './global/share.js';
 import { responsiveText } from './global/responsiveText.js';
+import { initWebflow } from './global/initWebflow.js';
 
 /**
 * Home
@@ -1132,6 +1133,7 @@ propCbSwiper();
 smlArrowCta();
 share();
 shareFallbackMenu();
+initWebflow();
 
 }, 0);
     
