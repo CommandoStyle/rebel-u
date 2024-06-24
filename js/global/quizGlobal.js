@@ -212,25 +212,25 @@ quiz_open = gsap.timeline({ paused: true });
 
 // CLOSE QUIZ
 
-//All devices: close quiz
+//iPad and mobile
 quizCancel.forEach((quizCancel) => {
-    //if (!quizCancel) return
-    //const quizHoleMobile = document.querySelector('.quiz-hole-mobile')
-    //if (!quizHoleMobile) return
-   // const quizContain = document.querySelector('.quiz-items__container')
-    //if (!quizContain) return
+    if (!quizCancel) return
+    const quizHoleMobile = document.querySelector('.quiz-hole-mobile')
+    if (!quizHoleMobile) return
+   const quizContain = document.querySelector('.quiz-items__container')
+    if (!quizContain) return
 
-    //gsap.set('.quiz-hole-mobile', { scale: 1, display: "flex" });
+  gsap.set(quizHoleMobile, { scale: 1, display: "none" })
 
-    quizCancel.addEventListener("click", (e) => {
-        // Calculate distance between user click and top left corner of button
-        //let xDist = e.clientX - quizContain.getBoundingClientRect().x + 4
-        //let yDist = e.clientY - quizContain.getBoundingClientRect().y
-        let quiz_cancel = gsap.timeline();
+  quizCancel.addEventListener("touchstart", (e) => {
 
-        // Immediately set left and top properties to position the circle element where user clicks
-        //gsap.set(quizHoleMobile, { left: xDist, top: yDist })
-       
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - quizContain.getBoundingClientRect().x
+   let yDist = touch.clientY - quizContain.getBoundingClientRect().y
+   let quiz_cancel = gsap.timeline();
+
+   gsap.set(quizHoleMobile, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
+
   quiz_cancel
          .set(".menu__btn", { display: "none", opacity: 0 })
          .set(cursor, { scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
