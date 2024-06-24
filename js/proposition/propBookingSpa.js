@@ -525,14 +525,16 @@ SpaEurCancel.forEach((SpaEurCancel) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  SpaEurCancel.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let spaeur_cancel = gsap.timeline();
+  SpaEurCancel.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let spaeur_cancel = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
            
       spaeur_cancel
              .set(".menu__btn", { display: "none", opacity: 0 })
@@ -600,14 +602,16 @@ SpaUsdCancel.forEach((SpaUsdCancel) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  SpaUsdCancel.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let spausd_cancel = gsap.timeline();
+  SpaUsdCancel.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let spausd_cancel = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
        
   spausd_cancel
              .set(".menu__btn", { display: "none", opacity: 0 })
@@ -675,14 +679,16 @@ SpaGbpCancel.forEach((SpaGbpCancel) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  SpaGbpCancel.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let spagbp_cancel = gsap.timeline();
+  SpaGbpCancel.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let spagbp_cancel = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
        
   spagbp_cancel
              .set(".menu__btn", { display: "none", opacity: 0 })
@@ -750,14 +756,16 @@ SpaSekCancel.forEach((SpaSekCancel) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  SpaSekCancel.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let spasek_cancel = gsap.timeline();
+  SpaSekCancel.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let spasek_cancel = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
        
   spasek_cancel
              .set(".menu__btn", { display: "none", opacity: 0 })
@@ -825,14 +833,16 @@ SpaSgdCancel.forEach((SpaSgdCancel) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  SpaSgdCancel.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let spasgd_cancel = gsap.timeline();
+  SpaSgdCancel.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let spasgd_cancel = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
        
   spasgd_cancel
              .set(".menu__btn", { display: "none", opacity: 0 })
@@ -863,14 +873,16 @@ spaExitSuccess.forEach((spaExitSuccess) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  spaExitSuccess.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let spa_cancel_success = gsap.timeline();
+  spaExitSuccess.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let spa_cancel_success = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
          
   spa_cancel_success
            .set(".menu__btn", { display: "none", opacity: 0 })
