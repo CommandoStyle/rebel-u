@@ -522,14 +522,16 @@ CbEurCancel.forEach((CbEurCancel) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  CbEurCancel.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let cbeur_cancel = gsap.timeline();
+  CbEurCancel.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let cbeur_cancel = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
            
       cbeur_cancel
              .set(".menu__btn", { display: "none", opacity: 0 })
