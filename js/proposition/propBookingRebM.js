@@ -530,14 +530,16 @@ RebmEurCancel.forEach((RebmEurCancel) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  RebmEurCancel.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let rebmeur_cancel = gsap.timeline();
+  RebmEurCancel.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let rebmeur_cancel = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
     
 rebmeur_cancel
 .set(".menu__btn", { display: "none", opacity: 0 })
@@ -606,14 +608,16 @@ RebmUsdCancel.forEach((RebmUsdCancel) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  RebmUsdCancel.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let rebmusd_cancel = gsap.timeline();
+  RebmUsdCancel.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let rebmusd_cancel = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
        
 rebmusd_cancel
 .set(".menu__btn", { display: "none", opacity: 0 })
@@ -682,14 +686,16 @@ RebmGbpCancel.forEach((RebmGbpCancel) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  RebmGbpCancel.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let rebmgbp_cancel = gsap.timeline();
+  RebmGbpCancel.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let rebmgbp_cancel = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
        
 rebmgbp_cancel
 .set(".menu__btn", { display: "none", opacity: 0 })
@@ -758,14 +764,16 @@ RebmSekCancel.forEach((RebmSekCancel) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  RebmSekCancel.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let rebmsek_cancel = gsap.timeline();
+  RebmSekCancel.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let rebmsek_cancel = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
        
 rebmsek_cancel
 .set(".menu__btn", { display: "none", opacity: 0 })
@@ -834,14 +842,16 @@ RebmSgdCancel.forEach((RebmSgdCancel) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  RebmSgdCancel.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let rebmsgd_cancel = gsap.timeline();
+  RebmSgdCancel.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let rebmsgd_cancel = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
        
 rebmsgd_cancel
 .set(".menu__btn", { display: "none", opacity: 0 })
@@ -874,14 +884,16 @@ rebMexitSuccess.forEach((rebMexitSuccess) => {
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHoleMob, { scale: 1 })
+  gsap.set(bookHoleMob, { scale: 1, display: "none" })
 
-  rebMexitSuccess.addEventListener("click", (e) => {
-      //let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
-      //let yDist = e.clientY - bookingContain.getBoundingClientRect().y
-      let rebm_cancel_success = gsap.timeline();
+rebMexitSuccess.addEventListener("touchstart", (e) => {
 
-      //gsap.set(bookHoleMob, { left: xDist, top: yDist })
+   let touch = e.targetTouches[0]; 
+   let xDist = touch.clientX - bookingContain.getBoundingClientRect().x
+   let yDist = touch.clientY - bookingContain.getBoundingClientRect().y
+   let rebm_cancel_success = gsap.timeline();
+
+   gsap.set(bookHoleMob, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
            
     rebm_cancel_success
              .set(".menu__btn", { display: "none", opacity: 0 })
