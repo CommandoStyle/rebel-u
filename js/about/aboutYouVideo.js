@@ -16,9 +16,16 @@ export const aboutYouVideo = () => {
  let vidCover = gsap.utils.toArray(".vid-start__backdrop");
  let cursor = gsap.utils.toArray(".cursor-dot");
 
+//video.style.width = document.width + 'px';
+//video.style.height = document.height + 'px';
+video.setAttribute('autoplay', '');
+video.setAttribute('muted', '');
+video.setAttribute('playsinline', '');
+
 gsap.set(vidCover, {autoAlpha: 0, scale: 1});
 
   const constraints = {
+    audio: false,
     video: {
       width: {
         min: 1280,
@@ -53,7 +60,7 @@ function takepic() {
     }
   }
 
-  function initializeCamera() {
+  async function initializeCamera() {
     stopVideoStream();
     constraints.video.facingMode = useFrontCamera ? "user" : "environment";
 
@@ -84,9 +91,9 @@ function takepic() {
         .set(cursor, {delay: 1, autoAlpha: 1 });
  
 vidBtn.addEventListener("click", () => {
-    showVid.play(0);    
     initializeCamera();
     video.play();
+    showVid.play(0);    
     setTimeout(takepic, 1700);
    })
  });
