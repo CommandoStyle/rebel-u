@@ -16,8 +16,6 @@ export const aboutYouVideo = () => {
  let vidCover = gsap.utils.toArray(".vid-start__backdrop");
  let cursor = gsap.utils.toArray(".cursor-dot");
 
-//video.style.width = document.width + 'px';
-//video.style.height = document.height + 'px';
 video.setAttribute('autoplay', '');
 video.setAttribute('muted', '');
 video.setAttribute('playsinline', '');
