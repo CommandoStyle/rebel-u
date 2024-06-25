@@ -45,7 +45,7 @@ var rotate = gsap.timeline({
       trigger: ctaBtn,
       start: "top 82%",
       onEnter: () => ctaReveal.play(),
-      //onLeaveBack: () => ctaReveal.reverse(),
+      onLeaveBack: () => ctaReveal.reverse(),
     })
   })
   
