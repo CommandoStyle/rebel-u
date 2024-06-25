@@ -95,6 +95,7 @@ vidBtn.addEventListener("click", () => {
     video.play();
     showVid.play(0);    
     setTimeout(takepic, 1700);
+    setTimeout(track.stop();, 3400);
    })
  });
 
