@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
   
   ScrollTrigger.create({
       trigger: ".escape-underline__wrap",
-      start: "top 90%",
+      start: "top 94%",
       onEnter: () => underlineLG.play()
   });
 
@@ -45,7 +45,7 @@ var rotate = gsap.timeline({
       trigger: ctaBtn,
       start: "top 82%",
       onEnter: () => ctaReveal.play(),
-      onLeaveBack: () => ctaReveal.reverse(),
+      //onLeaveBack: () => ctaReveal.reverse(),
     })
   })
   
