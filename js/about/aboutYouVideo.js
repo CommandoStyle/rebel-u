@@ -13,8 +13,8 @@ export const aboutYouVideo = () => {
  const video = document.querySelector("#video");
  const selfieContainer = document.querySelector("#selfieContain");
  const canvas = document.querySelector("#canvas");
- var vidBtn = gsap.utils.toArray(".vid-start__btn");
- var vidCover = gsap.utils.toArray(".vid-start__backdrop");
+ let vidBtn = gsap.utils.toArray(".vid-start__btn");
+ let vidCover = gsap.utils.toArray(".vid-start__backdrop");
  let cursor = gsap.utils.toArray(".cursor-dot");
 
 gsap.set(vidCover, {autoAlpha: 0, scale: 1});
@@ -66,8 +66,6 @@ function takepic() {
     }
   }
 
-})();
- 
  vidBtn.forEach(vidBtn => {
 
  let showVid = gsap.timeline({ paused: true });
@@ -103,5 +101,7 @@ vidBtn.addEventListener("click", () => {
       $( '.blk-cursor__buffer' ).mouseleave(function() {
       $('.cursor-dot').removeClass('hide');
     });
+
+ })();
 
 }
