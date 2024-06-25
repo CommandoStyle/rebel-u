@@ -73,7 +73,7 @@ function takepic() {
         .to(vidCover, { autoAlpha: 1, duration: 0.001 })
         .to(cursor, { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".cta-inner__wrap", {filter:"invert(100%)", duration: 0.001}, "<")
-        .to(vidCover, { scale: 5, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 0.7 })
+        .to(vidCover, { scale: 5, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 0.8 })
         .to(".cta-inner__contain", {delay: 0.45, x: 15, opacity: 0, ease: "expo.out", duration: 0.77}, "<")
         .fromTo(".vid-container", { clipPath: "circle(0% at center)" },
           { clipPath: "circle(140.9% at center)", delay: 0.65, duration: 1.9, ease: "power2.inOut", clearProps: "clipPath"})
@@ -87,7 +87,7 @@ vidBtn.addEventListener("click", () => {
     showVid.play(0);    
     initializeCamera();
     video.play();
-    setTimeout(takepic, 700);
+    setTimeout(takepic, 1250);
    })
  });
 
