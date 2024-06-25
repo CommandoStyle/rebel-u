@@ -1,7 +1,6 @@
 
 export const aboutYouVideo = () => {
  
-(function () {
   if (
     !"mediaDevices" in navigator ||
     !"getUserMedia" in navigator.mediaDevices
@@ -101,7 +100,5 @@ vidBtn.addEventListener("click", () => {
       $( '.blk-cursor__buffer' ).mouseleave(function() {
       $('.cursor-dot').removeClass('hide');
     });
-
- })();
 
 }
