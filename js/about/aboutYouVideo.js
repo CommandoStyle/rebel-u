@@ -109,4 +109,26 @@ vidBtn.addEventListener("click", () => {
       $('.cursor-dot').removeClass('hide');
     });
 
+ var isAuthorized: Bool {
+    get async {
+        let status = AVCaptureDevice.authorizationStatus(for: video)
+        
+        var isAuthorized = status == .authorized
+        
+        if status == .notDetermined {
+            isAuthorized = await AVCaptureDevice.requestAccess(for: video)
+        }
+        
+        return isAuthorized
+    }
+}
+
+func setUpCaptureSession() async {
+    guard await isAuthorized else { return }
+    initializeCamera();
+    video.play(); 
+    setTimeout(takepic, 1700);
+    setTimeout(stopVideoStream, 3400);
+}
+
 }
