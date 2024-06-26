@@ -88,14 +88,16 @@ function takepic() {
         .set(cursor, {delay: 1, autoAlpha: 1 });
  
 vidBtn.addEventListener("click", () => {
-    initializeCamera();
-    video.play();
+    //initializeCamera();
+    //video.play();
+    getPermission();
     showVid.play(0);    
-    setTimeout(takepic, 1700);
-    setTimeout(stopVideoStream, 3400);
+    //setTimeout(takepic, 1700);
+    //setTimeout(stopVideoStream, 3400);
    })
  });
 
+function getPermission() {
 navigator.permissions.query({ name: "camera" }).then((result) => {
   if (result.state === "granted") {
     initializeCamera();
@@ -106,7 +108,8 @@ navigator.permissions.query({ name: "camera" }).then((result) => {
    //activateCam();
   }
   // Don't do anything if the permission was denied.
-});
+ });
+} 
 
      // Hide cursor on Vid btn
     
