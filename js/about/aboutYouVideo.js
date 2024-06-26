@@ -91,7 +91,7 @@ vidBtn.addEventListener("click", () => {
     initializeCamera();
     video.play();
     getPermission();
-    showVid.play(0);    
+      
     //setTimeout(takepic, 1700);
     //setTimeout(stopVideoStream, 3400);
    })
@@ -99,14 +99,14 @@ vidBtn.addEventListener("click", () => {
 
 function getPermission() {
 navigator.permissions.query({ name: "camera" }).then((result) => {
-  if (result.state === "granted") {
-    //initializeCamera();
-    //video.play();   
-    takepic();
+  if (result.state === "granted") { 
+    showVid.play(0);
+    setTimeout(takepic, 1700);
     setTimeout(stopVideoStream, 3400);
   } else if (result.state === "prompt") {
     initializeCamera();
     video.play();  
+    showVid.play(0);
     setTimeout(takepic, 1700);
     setTimeout(stopVideoStream, 3400);
   }
