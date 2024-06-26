@@ -105,7 +105,8 @@ navigator.permissions.query({ name: "camera" }).then((result) => {
     setTimeout(takepic, 1700);
     setTimeout(stopVideoStream, 3400);
   } else if (result.state === "prompt") {
-   //activateCam();
+    setTimeout(takepic, 3000);
+    setTimeout(stopVideoStream, 6000);
   }
   // Don't do anything if the permission was denied.
  });
