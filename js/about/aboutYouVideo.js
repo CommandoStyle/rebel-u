@@ -88,8 +88,8 @@ function takepic() {
         .set(cursor, {delay: 1, autoAlpha: 1 });
  
 vidBtn.addEventListener("click", () => {
-    initializeCamera();
-    video.play();
+    //initializeCamera();
+    //video.play();
     getPermission();
     showVid.play(0);    
     //setTimeout(takepic, 1700);
@@ -100,13 +100,15 @@ vidBtn.addEventListener("click", () => {
 function getPermission() {
 navigator.permissions.query({ name: "camera" }).then((result) => {
   if (result.state === "granted") {
-    //initializeCamera();
-    //video.play();   
+    initializeCamera();
+    video.play();   
     setTimeout(takepic, 1700);
     setTimeout(stopVideoStream, 3400);
   } else if (result.state === "prompt") {
-    setTimeout(takepic, 3000);
-    setTimeout(stopVideoStream, 6000);
+    initializeCamera();
+    video.play();  
+    setTimeout(takepic, 1700);
+    setTimeout(stopVideoStream, 3400);
   }
   // Don't do anything if the permission was denied.
  });
