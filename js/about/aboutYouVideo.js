@@ -69,7 +69,7 @@ function takepic() {
     }
   }
 
- vidBtn.forEach(vidBtn => {
+
 
  let showVid = gsap.timeline({ paused: true });
 
@@ -86,7 +86,9 @@ function takepic() {
         .set(vidBtn, {display: "none"})
         .set([".cta-inner__wrap", ".cta-inner__contain"], { yPercent: 0 })
         .set(cursor, {delay: 1, autoAlpha: 1 });
- 
+
+vidBtn.forEach(vidBtn => {
+  
 vidBtn.addEventListener("click", () => {
     initializeCamera();
     video.play();
