@@ -57,11 +57,10 @@ function takepic() {
       });
     }
   }
-
+ 
   async function initializeCamera() {
     stopVideoStream();
     constraints.video.facingMode = useFrontCamera ? "user" : "environment";
-
     try {
       videoStream = await navigator.mediaDevices.getUserMedia(constraints);
       video.srcObject = videoStream;
@@ -96,6 +95,18 @@ vidBtn.addEventListener("click", () => {
     setTimeout(stopVideoStream, 3400);
    })
  });
+
+navigator.permissions.query({ name: "camera" }).then((result) => {
+  if (result.state === "granted") {
+    initializeCamera();
+    video.play();   
+    setTimeout(takepic, 1700);
+    setTimeout(stopVideoStream, 3400);
+  } else if (result.state === "prompt") {
+   //activateCam();
+  }
+  // Don't do anything if the permission was denied.
+});
 
      // Hide cursor on Vid btn
     
