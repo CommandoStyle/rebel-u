@@ -88,6 +88,8 @@ function takepic() {
         .set([".cta-inner__wrap", ".cta-inner__contain"], { yPercent: 0 })
         .set(cursor, {delay: 1, autoAlpha: 1 });
 
+  return tl;
+
  }
 
 vidBtn.forEach(vidBtn => {
@@ -95,7 +97,7 @@ vidBtn.forEach(vidBtn => {
 vidBtn.addEventListener("click", () => {
     initializeCamera();
     video.play();
-    getPermission();
+    getPermissionOne();
       
     //setTimeout(takepic, 1700);
     //setTimeout(stopVideoStream, 3400);
