@@ -70,9 +70,7 @@ function takepic() {
   }
 
 
- function revealPic() {
-
- let showVid = gsap.timeline();
+ let showVid = gsap.timeline({ paused: true });
 
  showVid
         .to(vidCover, { autoAlpha: 1, duration: 0.001 })
@@ -88,38 +86,20 @@ function takepic() {
         .set([".cta-inner__wrap", ".cta-inner__contain"], { yPercent: 0 })
         .set(cursor, {delay: 1, autoAlpha: 1 });
 
-  return tl;
-
- }
 
 vidBtn.forEach(vidBtn => {
   
 vidBtn.addEventListener("click", () => {
     initializeCamera();
     video.play();
-    getPermissionOne();
-      
-    //setTimeout(takepic, 1700);
-    //setTimeout(stopVideoStream, 3400);
+    getPermission();
    })
  });
 
-function getPermissionOne () {
+function getPermission() {
 navigator.permissions.query({ name: "camera" }).then((result) => {
   if (result.state === "granted") { 
-    //showVid.play(0);
-    setTimeout(getPermissionTwo, 2000);
-
-  } 
-  // Don't do anything if the permission was denied.
- });
-} 
-
-function getPermissionTwo () {
-navigator.permissions.query({ name: "camera" }).then((result) => {
-  if (result.state === "granted") { 
-    //showVid.play(0);
-    revealPic();
+    showVid.play(0);
     setTimeout(takepic, 1700);
     setTimeout(stopVideoStream, 3400);
   } 
