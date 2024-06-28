@@ -4365,19 +4365,24 @@
 
   body {
   /* mobile viewport bug fix */
-  /* min-height: -webkit-fill-available;*/
+  min-height: -webkit-fill-available !important;
   height: 100% !important;
   max-height: 100% !important;
 }
 
 html {
-   /*height: -webkit-fill-available;*/
-  height: 100% !important;
+  height: -webkit-fill-available !important;
+  /* height: 100% !important;*/
   max-height: 100% !important;
 }
 
 iframe {
-  /*height: -webkit-fill-available;*/
+  height: -webkit-fill-available !important;
+  /*height: 100% !important;*/
+  max-height: 100% !important;
+}
+
+._iframe._inline {
   height: 100% !important;
   max-height: 100% !important;
 }
