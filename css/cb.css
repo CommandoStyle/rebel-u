@@ -4360,23 +4360,24 @@
   /* MOBILE **************************************************************************************************/
   /* MOBILE **************************************************************************************************/
   /* MOBILE **************************************************************************************************/
+  
+  @media (max-width: 428px) {
 
-body {
-  height: 100%;
+  body {
   /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
+  /* min-height: -webkit-fill-available;*/
+  height: 100% !important;
 }
 
 html {
-  height: -webkit-fill-available;
+   /*height: -webkit-fill-available;*/
+  height: 100% !important;
 }
 
 iframe {
-  height: -webkit-fill-available;
-  height: 100%;
+  /*height: -webkit-fill-available;*/
+  height: 100% !important;
 }
-  
-  @media (max-width: 428px) {
   
   /* SUMMARY - main txt */
   [style="font-family: Poppins, rag4;"] {
