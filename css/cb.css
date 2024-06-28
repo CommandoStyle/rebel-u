@@ -4367,16 +4367,19 @@
   /* mobile viewport bug fix */
   /* min-height: -webkit-fill-available;*/
   height: 100% !important;
+  max-height: 100% !important;
 }
 
 html {
    /*height: -webkit-fill-available;*/
   height: 100% !important;
+  max-height: 100% !important;
 }
 
 iframe {
   /*height: -webkit-fill-available;*/
   height: 100% !important;
+  max-height: 100% !important;
 }
   
   /* SUMMARY - main txt */
