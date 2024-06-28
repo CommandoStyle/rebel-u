@@ -4362,7 +4362,7 @@
   /* MOBILE **************************************************************************************************/
 
 body {
-  max-height: 100vh;
+  height: 100%;
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
 }
@@ -4373,6 +4373,7 @@ html {
 
 iframe {
   height: -webkit-fill-available;
+  height: 100%;
 }
   
   @media (max-width: 428px) {
