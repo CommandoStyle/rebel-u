@@ -1150,7 +1150,7 @@ function initBooking() {
   //propBookingRebS();
   //propBookingRebM();
   //propBookingRebXXL();
-  propBookingSpa();
+  //propBookingSpa();
   
   }, 0);
       
