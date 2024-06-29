@@ -1146,11 +1146,11 @@ function initBooking() {
   propCurrencyPick();
   propCurrencyMenu();
   propREBsuccess();
-  propBookingCb();
-  propBookingRebS();
-  propBookingRebM();
-  propBookingRebXXL();
-  propBookingSpa();
+  //propBookingCb();
+  //propBookingRebS();
+  //propBookingRebM();
+  //propBookingRebXXL();
+  //propBookingSpa();
   
   }, 0);
       
