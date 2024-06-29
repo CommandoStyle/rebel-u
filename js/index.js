@@ -1008,7 +1008,7 @@ const initRblu = () => {
             namespace: 'proposition',
             afterEnter(data) {      
               //initProposition(data.next.container); 
-              //initBooking(data.next.container);
+              initBooking(data.next.container);
               navMenuNew(data.next.container); 
               noHoverScroll(data.next.container);
             }
