@@ -1007,8 +1007,8 @@ const initRblu = () => {
           }, {
             namespace: 'proposition',
             afterEnter(data) {      
-              initProposition(data.next.container); 
-              //initBooking(data.next.container);
+              //initProposition(data.next.container); 
+              initBooking(data.next.container);
               navMenuNew(data.next.container); 
               noHoverScroll(data.next.container);
             }
@@ -1143,14 +1143,14 @@ function initBooking() {
 
   setTimeout(() => {
   
-  //propCurrencyPick();
-  //propCurrencyMenu();
-  //propREBsuccess();
-  //propBookingCb();
-  //propBookingRebS();
-  //propBookingRebM();
-  //propBookingRebXXL();
-  //propBookingSpa();
+  propCurrencyPick();
+  propCurrencyMenu();
+  propREBsuccess();
+  propBookingCb();
+  propBookingRebS();
+  propBookingRebM();
+  propBookingRebXXL();
+  propBookingSpa();
   
   }, 0);
       
