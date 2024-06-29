@@ -24,7 +24,7 @@ gsap.set(".current-arrow-right__track", { xPercent: 105 });
 gsap.set(".current-arrow-left__track", { xPercent: -105 });
 
 //Desktop
-mm.add("(min-width: 990px)", () => {
+mm.add("(min-width: 991px)", () => {
  
 currencyOpen.forEach(currOpen => {
       
@@ -112,7 +112,7 @@ currencyExit.forEach(currExit => {
 });
 
 //iPAD and MOBILE
-mm.add("(max-width: 991px)", () => {
+mm.add("(max-width: 990px)", () => {
  
 currencyOpen.forEach(currOpen => {
       
@@ -475,7 +475,7 @@ currencySelect.forEach((currencySelect) => {
  });
 
  //iPAD and MOBILE
-mm.add("(max-width: 991px)", () => {
+mm.add("(max-width: 990px)", () => {
 
  const currencySelect = document.querySelectorAll('.currency-dropdown__select')
 
