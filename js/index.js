@@ -305,7 +305,7 @@ const initRblu = () => {
             },
             after(data) {
 
-              //initWebflow(data.next.container);
+              initWebflow(data.next.container);
               scroll(data.next.container);
     
             },
@@ -348,7 +348,9 @@ const initRblu = () => {
             }
                                           
             },
-            after(data) { scroll(data.next.container); 
+            after(data) { 
+              initWebflow(data.next.container);
+              scroll(data.next.container); 
                }
             },
          // proposition from home CTA (Escape btn)
@@ -388,7 +390,9 @@ const initRblu = () => {
           }
                                         
           },
-          after(data) { scroll(data.next.container); },
+          after(data) { 
+            initWebflow(data.next.container);
+            scroll(data.next.container); },
           },
              // alumni
            {
@@ -1133,7 +1137,6 @@ propCbSwiper();
 smlArrowCta();
 share();
 shareFallbackMenu();
-//initWebflow();
 
 }, 0);
     
