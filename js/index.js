@@ -1144,7 +1144,7 @@ function initBooking() {
   setTimeout(() => {
   
   propCurrencyPick();
-  propCurrencyMenu();
+  //propCurrencyMenu();
   propREBsuccess();
   //propBookingCb();
   //propBookingRebS();
