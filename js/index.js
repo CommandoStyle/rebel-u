@@ -1143,14 +1143,14 @@ function initBooking() {
 
   setTimeout(() => {
   
-  propCurrencyPick();
+  //propCurrencyPick();
   //propCurrencyMenu();
-  propREBsuccess();
+  //propREBsuccess();
   //propBookingCb();
   //propBookingRebS();
   //propBookingRebM();
   //propBookingRebXXL();
-  //propBookingSpa();
+  propBookingSpa();
   
   }, 0);
       
