@@ -4366,25 +4366,25 @@
   body {
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available !important;
-  height: 100% !important;
-  max-height: 100% !important;
+  height: 100dvh !important;
+  max-height: 100vh !important;
 }
 
 html {
-  height: -webkit-fill-available !important;
+  height: 100dvh !important;
   /* height: 100% !important;*/
-  max-height: 100% !important;
+  max-height: 100vh !important;
 }
 
 iframe {
-  height: -webkit-fill-available !important;
+  height: 100dvh !important;
   /*height: 100% !important;*/
-  max-height: 100% !important;
+  max-height: 100vh !important;
 }
 
 ._iframe._inline {
-  height: 100% !important;
-  max-height: 100% !important;
+  height: 100dvh !important;
+  max-height: 100vh !important;
 }
   
   /* SUMMARY - main txt */
