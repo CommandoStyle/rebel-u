@@ -4363,36 +4363,41 @@
   
   @media (max-width: 428px) {
 
-  body {
+  html, body {
   /* mobile viewport bug fix */
   /* min-height: -webkit-fill-available !important; */
   min-height: 100dvh !important;
   height: 100dvh !important;
   max-height: 100dvh !important;
-    
-}
-
-html {
-  height: 100dvh !important;
-  /* height: 100% !important;*/
-  max-height: 100dvh !important;
+  top:0px;
+  left:0px; 
+  bottom:0px;
+  right:0px;
+  position:fixed;   
 }
 
 iframe {
-  height: 100dvh !important;
-  /*height: 100% !important;*/
-  max-height: 100dvh !important;
+    position:fixed;
+    top:0px;
+    left:0px; 
+    bottom:0px;
+    right:0px;
+    width:100%; 
+    height:100%;
+    border:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
 }
 
 ._iframe._inline {
   height: 100dvh !important;
   max-height: 100dvh !important;
-}
-
-.body--nobranding._iframe._inline body--live.body--cb-eur.__guidedMode.wf-poppins-n3-active.wf-poppins-n7-active.wf-poppins-n4-active.wf-active {
-  height: 100dvh !important;
-  min-height: 100dvh !important;
-  max-height: 100dvh !important;
+    top:0px;
+    left:0px; 
+    bottom:0px;
+    right:0px;
+    overflow:hidden;
 }
   
   /* SUMMARY - main txt */
