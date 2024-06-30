@@ -4366,7 +4366,7 @@
   html, body {
   min-height: -webkit-fill-available;
   height: 100%;
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100dvh;
   top:0px;
   left:0px; 
   bottom:0px;
@@ -4374,11 +4374,11 @@
   position:fixed;   
 }
 
-iframe {
+[style="width: 100%; box-sizing: border-box; height: 766px; max-height: 900px;"] {
   min-height: -webkit-fill-available;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  margin: 0 auto;
+  height: 100%;
+  height: 100dvh !important;
+  max-height: 100dvh !important;
 }
   
   /* SUMMARY - main txt */
