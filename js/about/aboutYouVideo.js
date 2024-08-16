@@ -102,8 +102,9 @@ navigator.permissions.query({ name: "camera" }).then((result) => {
     showVid.play(0);
     setTimeout(takepic, 1700);
     setTimeout(stopVideoStream, 3400);
-  } 
-  // Don't do anything if the permission was denied.
+  } else if (result.state === "denied") {
+    gsap.to(".no-footage", {display: "flex"});
+  }
  });
 } 
 
