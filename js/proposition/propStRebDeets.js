@@ -39,18 +39,20 @@ ScrollTrigger.create({
 points.forEach(function(elem, i) {
   
 gsap.set(elem, { position: "absolute", top: 0 });
-gsap.set('#reb-item__img-1', { autoAlpha: 1, clipPath: "inset(0% 0% 0% 0%)" });//"circle(110% at center)"
+//gsap.set('#reb-item__img-1', { autoAlpha: 1, clipPath: "inset(0% 0% 0% 0%)" });//"circle(110% at center)"
+gsap.set('#reb-item__img-1', { clipPath: "inset(0% 0% 0% 0%)" });//"circle(110% at center)"
 gsap.set(['.is--s-scroll', '.is--m-scroll'], {scaleX: 0})
 
 if (i == 0) {
 
-  //rebTl.to(elem.querySelector('#reb-item__img'), { delay: 1, autoAlpha: 0, clipPath: "inset(0% 0% 0% 0%)", ease: Power1.easeInOut, duration: 1 }, i)//"circle(110% at center)" 
-  rebTl.set(elem.querySelector('#reb-item__img'), { autoAlpha: 0, clipPath: "inset(0% 0% 0% 0%)" }, i)//"circle(110% at center)" 
+  //rebTl.to(elem.querySelector('#reb-item__img'), { delay: 1, autoAlpha: 0, clipPath: "inset(0% 0% 0% 0%)", ease: Power1.easeInOut, duration: 1 }, i)//"circle(110% at center)"
+  rebTl.to(elem.querySelector('#reb-item__img'), { clipPath: "inset(0% 0% 0% 0%)", ease: Power1.easeInOut, duration: 1 }, i)//"circle(110% at center)"
   rebTl.set(elem.querySelectorAll('.reb-items__txt'), { autoAlpha:1 }, i)
   
 } else if (i == 6) {
 
-  rebTl.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
+  rebTl
+    //.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
   .fromTo(elem.querySelector('#reb-item__img'), { clipPath: "inset(0% 100% 0% 0%)" //"circle(0% at center)"
 }, { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(110% at center)"
         .from(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
@@ -59,7 +61,8 @@ if (i == 0) {
 
 } else if (i == 10) {
 
-        rebTl.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
+        rebTl
+          //.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
         .fromTo(elem.querySelector('#reb-item__img'), { clipPath: "inset(0% 100% 0% 0%)" //"circle(0% at center)"
       }, { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(110% at center)"
               .from(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
@@ -68,8 +71,8 @@ if (i == 0) {
 
 } else {
 
-  rebTl.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
-    .set(elem.querySelector('#reb-item__img-1'), {autoAlpha: 0}, i)
+  rebTl
+    //.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
 .fromTo(elem.querySelector('#reb-item__img'), { clipPath: "inset(100% 0% 0% 0%)" //"circle(0% at center)"
 }, { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(110% at center)"
   .from(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
@@ -81,8 +84,8 @@ if (i !=points.length-1) {
 
   rebTl
       .to(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear" }, i + 1)//x: "-100vw", delay: 0.3, duration: 0.7, ease: Power1.easeInOut
-      .to(elem.querySelector('#reb-item__img'), { clipPath: "inset(100% 0% 0% 0%)", autoAlpha: 0 //"circle(0% at center)"
-      }, { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", autoAlpha: 0, delay: 0.3, duration: 0.7 }, i + 1)
+      .to(elem.querySelector('#reb-item__img'), { clipPath: "inset(100% 0% 0% 0%)", //autoAlpha: 0 //"circle(0% at center)"
+      }, { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7, //autoAlpha: 0 }, i + 1)
  
     }
 
