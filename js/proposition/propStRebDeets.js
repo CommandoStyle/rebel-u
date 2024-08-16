@@ -44,7 +44,8 @@ gsap.set(['.is--s-scroll', '.is--m-scroll'], {scaleX: 0})
 
 if (i == 0) {
 
-  rebTl.to(elem.querySelector('#reb-item__img'), { delay: 1, autoAlpha: 0, clipPath: "inset(0% 0% 0% 0%)", ease: Power1.easeInOut, duration: 1 }, i) //"circle(110% at center)" 
+  //rebTl.to(elem.querySelector('#reb-item__img'), { delay: 1, autoAlpha: 0, clipPath: "inset(0% 0% 0% 0%)", ease: Power1.easeInOut, duration: 1 }, i)//"circle(110% at center)" 
+  rebTl.set(elem.querySelector('#reb-item__img'), { autoAlpha: 0, clipPath: "inset(0% 0% 0% 0%)" }, i)//"circle(110% at center)" 
   rebTl.set(elem.querySelectorAll('.reb-items__txt'), { autoAlpha:1 }, i)
   
 } else if (i == 6) {
@@ -68,6 +69,7 @@ if (i == 0) {
 } else {
 
   rebTl.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
+    .set(elem.querySelector('#reb-item__img-1'), {autoAlpha: 0}, i)
 .fromTo(elem.querySelector('#reb-item__img'), { clipPath: "inset(100% 0% 0% 0%)" //"circle(0% at center)"
 }, { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(110% at center)"
   .from(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
