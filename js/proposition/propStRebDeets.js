@@ -53,8 +53,8 @@ if (i == 0) {
 
   rebTl
     //.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
-  .fromTo(elem.querySelector('#reb-item__img'), { clipPath: "inset(0% 100% 0% 0%)" //"circle(0% at center)"
-}, { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(110% at center)"
+  .fromTo(elem.querySelector('#reb-item__img'), { clipPath: "inset(0% 100% 0% 0%)" },
+ { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(0% at center)" //"circle(110% at center)"
         .from(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
         .add("label" + i)
         .to('.is--s-scroll', {scaleX: 1, duration: 0.3, ease: "power1.easeOut", transformOrigin: "0% 100%"}, "-=0.3")
@@ -63,8 +63,8 @@ if (i == 0) {
 
         rebTl
           //.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
-        .fromTo(elem.querySelector('#reb-item__img'), { clipPath: "inset(0% 100% 0% 0%)" //"circle(0% at center)"
-      }, { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(110% at center)"
+        .fromTo(elem.querySelector('#reb-item__img'), { clipPath: "inset(0% 100% 0% 0%)" },
+       { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(0% at center)" //"circle(110% at center)"
               .from(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
               .add("label" + i)
               .to('.is--m-scroll', {scaleX: 1, duration: 0.5, ease: "power1.easeOut", transformOrigin: "0% 100%"}, "-=0.5")
@@ -84,8 +84,8 @@ if (i !=points.length-1) {
 
   rebTl
       .to(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear" }, i + 1)//x: "-100vw", delay: 0.3, duration: 0.7, ease: Power1.easeInOut
-      .to(elem.querySelector('#reb-item__img'), { clipPath: "inset(100% 0% 0% 0%)", //autoAlpha: 0 //"circle(0% at center)"
-      }, { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7, //autoAlpha: 0 }, i + 1)
+      .to(elem.querySelector('#reb-item__img'), { clipPath: "inset(100% 0% 0% 0%)" }, 
+        { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7, }, i + 1) //autoAlpha: 0 //autoAlpha: 0 , //"circle(0% at center)" 
  
     }
 
