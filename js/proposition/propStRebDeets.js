@@ -10,7 +10,7 @@ var rebTl = gsap.timeline({
  // defaults: { overwrite: "auto" },
   scrollTrigger: {
     trigger: ".reb-items__wrap",
-    start: "top bottom",
+    start: "top top",
     end: "+="+height+"%",
     scrub: 2,
     toggleActions: "play none none reverse",
