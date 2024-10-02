@@ -40,31 +40,30 @@ points.forEach(function(elem, i) {
   
 gsap.set(elem, { position: "absolute", top: 0 });
 //gsap.set('#reb-item__img-1', { autoAlpha: 1, clipPath: "inset(0% 0% 0% 0%)" });//"circle(110% at center)"
-gsap.set('#reb-item__img-1', { clipPath: "inset(0% 0% 0% 0%)" });
-gsap.set(['#reb-item__img-M', '#reb-item__img-XXL'], { clipPath: "inset(0% 100% 0% 0%)" }); //"circle(110% at center)"
+gsap.set('#reb-item__img-1', { clipPath: "inset(0% 0% 0% 0%)" }); //"circle(110% at center)"
 gsap.set(['.is--s-scroll', '.is--m-scroll'], {scaleX: 0})
 
 if (i == 0) {
 
   //rebTl.to(elem.querySelector('#reb-item__img'), { delay: 1, autoAlpha: 0, clipPath: "inset(0% 0% 0% 0%)", ease: Power1.easeInOut, duration: 1 }, i)//"circle(110% at center)"
-  rebTl.to(elem.querySelector('#reb-item__img'), { clipPath: "inset(0% 0% 0% 0%)", ease: Power1.easeInOut, duration: 1 }, i)//"circle(110% at center)"
-  rebTl.set(elem.querySelectorAll('.reb-items__txt'), { autoAlpha:1 }, i)
+  //rebTl.to(elem.querySelector('#reb-item__img'), { clipPath: "inset(0% 0% 0% 0%)", ease: Power1.easeInOut, duration: 1 }, i)//"circle(110% at center)"
+  //rebTl.set(elem.querySelectorAll('.reb-items__txt'), { autoAlpha:1 }, i)
   
-} else if (i == 5) {
+} else if (i === 5) {
 
   rebTl
-    //.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
-  .fromTo(elem.querySelector('#reb-item__img-M'), { clipPath: "inset(0% 100% 0% 0%)" },
+  //.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
+  .fromTo(elem.querySelector('#reb-item__img'), { clipPath: "inset(0% 100% 0% 0%)" },
  { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(0% at center)" //"circle(110% at center)"
         .from(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
         .add("label" + i)
         .to('.is--s-scroll', {scaleX: 1, duration: 0.3, ease: "power1.easeOut", transformOrigin: "0% 100%"}, "-=0.3")
 
-} else if (i == 9) {
+} else if (i === 9) {
 
         rebTl
           //.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
-        .fromTo(elem.querySelector('#reb-item__img-XXL'), { clipPath: "inset(0% 100% 0% 0%)" },
+        .fromTo(elem.querySelector('#reb-item__img'), { clipPath: "inset(0% 100% 0% 0%)" },
        { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(0% at center)" //"circle(110% at center)"
               .from(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
               .add("label" + i)
