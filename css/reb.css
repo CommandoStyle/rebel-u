@@ -1824,7 +1824,8 @@
   }
   
   .Appointment__time-picker-inner {
-      height: 15.45em;
+      height: 15.45em !important;
+      min-height: 15.45em !important;
       background-color: black !important;
       border-top: 1px solid white;
   }
