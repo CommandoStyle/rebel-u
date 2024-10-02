@@ -40,7 +40,8 @@ points.forEach(function(elem, i) {
   
 gsap.set(elem, { position: "absolute", top: 0 });
 //gsap.set('#reb-item__img-1', { autoAlpha: 1, clipPath: "inset(0% 0% 0% 0%)" });//"circle(110% at center)"
-gsap.set('#reb-item__img-1', { clipPath: "inset(0% 0% 0% 0%)" });//"circle(110% at center)"
+gsap.set('#reb-item__img-1', { clipPath: "inset(0% 0% 0% 0%)" });
+gsap.set(['#reb-item__img-M', '#reb-item__img-XXL'], { clipPath: "inset(0% 100% 0% 0%)" }); //"circle(110% at center)"
 gsap.set(['.is--s-scroll', '.is--m-scroll'], {scaleX: 0})
 
 if (i == 0) {
