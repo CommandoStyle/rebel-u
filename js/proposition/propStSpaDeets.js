@@ -9,7 +9,7 @@ var height = 100 * spaPoints.length;
 var spaTl = gsap.timeline({
   scrollTrigger: {
     trigger: ".spa-items__wrap",
-    start: "top bottom",
+    start: "top center",
     end: "+="+height+"%",
     scrub: 2,
     toggleActions: "play none none reverse",
