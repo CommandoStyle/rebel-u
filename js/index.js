@@ -1222,6 +1222,7 @@ cookieLeave();
 globalMisc();
 NavRevertCurrent();
 propFaqAccordion();
+propStSpacers();
 share();
 shareFallbackMenu();
 //muzak();
