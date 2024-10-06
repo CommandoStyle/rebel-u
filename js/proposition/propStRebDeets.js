@@ -148,8 +148,8 @@ if (i !=points.length-1) {
       let targets = document.querySelectorAll(".you-logo__anim");
       let numberOfTargets = targets.length;
       
-      let duration = 1.4; //change this
-      let pause = 1.4; // change this
+      let duration = 1.2; //change this
+      let pause = 1.2; // change this
       
       let stagger = duration + pause;
       let repeatDelay = stagger * (numberOfTargets - 1) + pause;
