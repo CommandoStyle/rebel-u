@@ -57,7 +57,7 @@ if (i == 0) {
   .set(elem.querySelector('#reb-item__img-5'), {autoAlpha: 1}, i)
   .fromTo(elem.querySelector('#reb-item__img-5'), { clipPath: "inset(0% 100% 0% 0%)" },
  { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(0% at center)" //"circle(110% at center)"
-        .from(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
+        .from(elem.querySelectorAll('.reb-items__txt'), { x: -10, autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
         .add("label" + i)
         .to('.is--s-scroll', {scaleX: 1, duration: 0.3, ease: "power1.easeOut", transformOrigin: "0% 100%"}, "-=0.3")
 
@@ -67,7 +67,7 @@ if (i == 0) {
         .set(elem.querySelector('#reb-item__img-9'), {autoAlpha: 1}, i)
         .fromTo(elem.querySelector('#reb-item__img-9'), { clipPath: "inset(0% 100% 0% 0%)" },
        { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(0% at center)" //"circle(110% at center)"
-              .from(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
+              .from(elem.querySelectorAll('.reb-items__txt'), { x: -10, autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
               .add("label" + i)
               .to('.is--m-scroll', {scaleX: 1, duration: 0.5, ease: "power1.easeOut", transformOrigin: "0% 100%"}, "-=0.5")
 
@@ -77,7 +77,7 @@ if (i == 0) {
     //.set(elem.querySelector('#reb-item__img'), {autoAlpha: 1}, i)
 .fromTo(elem.querySelector('#reb-item__img'), { clipPath: "inset(100% 0% 0% 0%)" //"circle(0% at center)"
 }, { clipPath: "inset(0% 0% 0% 0%)", ease: "linear", delay: 0.3, duration: 0.7 }, i) //"circle(110% at center)"
-  .from(elem.querySelectorAll('.reb-items__txt'), { autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
+  .from(elem.querySelectorAll('.reb-items__txt'), { y: -10, autoAlpha: 0, delay: 0.99, duration: 0.01, ease: "linear"}, i)
   //.set(elem.querySelector('#reb-item__img'), {autoAlpha: 0}, i) //x: "100vw"
   .add("label" + i)
 }
