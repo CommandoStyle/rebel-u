@@ -70,7 +70,7 @@ export const cursorFirstNew = () => {
       // Get position of target instance from its center point
       const targetPosition = {
         x: rect.x + rect.width / 2.1,
-        y: rect.y + rect.height / 2.7
+        y: rect.y + rect.height / 2.1
       };
   
       // Get distance between target instance and mouse (adj & opp)
@@ -90,7 +90,7 @@ export const cursorFirstNew = () => {
       if (hypotenuse * 2 < triggerDistance && mouseInTarget) {
         // tween custom cursor position
         xTo(targetPosition.x - (Math.sin(angle) * hypotenuse) / 4.2);
-        yTo(targetPosition.y - (Math.cos(angle) * hypotenuse) / 5.4);
+        yTo(targetPosition.y - (Math.cos(angle) * hypotenuse) / 4.2);
         mouseInTarget = true;
 
       }
