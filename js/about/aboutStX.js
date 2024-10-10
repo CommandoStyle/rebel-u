@@ -2,6 +2,8 @@ export const aboutStX = () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
+  let mm = gsap.matchMedia();
+
   const underlineLG = document.getElementById("reb-escape__underline");
   const underlineLGdata = underlineLG.getAttribute("lottie-data");
   underlineLG.load(underlineLGdata);
