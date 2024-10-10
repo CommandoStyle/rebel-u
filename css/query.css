@@ -861,7 +861,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white;
+      border-bottom: 3px solid white;
       position: relative !important;
       top: 0.1em !important;
   }
@@ -887,7 +887,7 @@
       padding-right: 0.8em !important;
       padding-top: 0.1em !important;
       padding-bottom: 0.1em !important;
-      border-right: 1.5px solid white !important;
+      border-right: 3.5px solid white !important;
       padding: 0em;
       position: relative !important;
       top: 0.3em !important;
@@ -916,7 +916,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white;
+      border-bottom: 3px solid white;
       position: relative !important;
       top: 0em !important;
   }
@@ -1955,7 +1955,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white !important;
+      border-bottom: 2px solid white !important;
       position: relative !important;
       top: -1.5em !important;
   }
@@ -1978,7 +1978,7 @@
       padding-right: 0.8em !important;
       padding-top: 0.1em !important;
       padding-bottom: 0.1em !important;
-      border-right: 1.5px solid white !important;
+      border-right: 2.5px solid white !important;
       padding: 0em;
       position: relative !important;
       top: -1.6em !important;
@@ -2009,7 +2009,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white !important;
+      border-bottom: 2px solid white !important;
       position: relative !important;
       top: 0em !important;
   }
