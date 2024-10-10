@@ -1031,7 +1031,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white !important;
+      border-bottom: 3px solid white !important;
       position: relative;
       top: 1.2em;
   }
@@ -3972,7 +3972,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white !important;
+      border-bottom: 2px solid white !important;
       position: relative;
       top: 1.2em;
   }
@@ -3980,19 +3980,19 @@
   #field-text-3ojrf {
       letter-spacing: -0.035em;
       text-transform: capitalize !important;
-      border-bottom: 1px solid white !important;
+      border-bottom: 2px solid white !important;
   }
   
   #field-text-f49hp {
       letter-spacing: -0.035em;
       text-transform: uppercase;
-      border-bottom: 1px solid white !important;
+      border-bottom: 2px solid white !important;
   }
   
   #field-email-14t4u {
       letter-spacing: -0.035em;
       text-transform: lowercase;
-      border-bottom: 1px solid white !important;
+      border-bottom: 2px solid white !important;
   }
   
   #field-email-14t4u::placeholder {
