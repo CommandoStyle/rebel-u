@@ -48,5 +48,117 @@ var rotate = gsap.timeline({
       onLeaveBack: () => ctaReveal.reverse(),
     })
   })
+
+  //Desktop
+mm.add("(min-width: 990px)", () => {
+
+gsap.utils.toArray('.spacer-line__from-left').forEach(function(elem) {
+
+const spacerTimelineL = gsap.timeline(
+      {
+        scrollTrigger: {
+          trigger: elem,
+          start: "top 92%",
+          end: "bottom 0%",
+          toggleActions:"play none none none",
+        } 
+      });
+  
+spacerTimelineL.from(elem, {
+      duration: 1,
+      scaleX: 0,
+      transformOrigin: "0% 100%",
+      ease: "power4"
+    })
+  });
+
+gsap.utils.toArray(".what-the-faq__q-l-wrap").forEach(function(elem) {
+
+const questionTimeline = gsap.timeline(
+      {
+        scrollTrigger: {
+          trigger: elem,
+          start: "top 92%",
+          end: "bottom 0%",
+          toggleActions:"play none none none",
+        } 
+      });
+  
+questionTimeline.from(elem, {
+    duration: 1,
+    x: -30,
+    opacity: 0,
+    ease: "power4"
+  })
+});
+
+  gsap.utils.toArray(".what-the-faq__a-l-wrap").forEach(function(elem) {
+
+    const questionTimeline = gsap.timeline(
+          {
+            scrollTrigger: {
+              trigger: elem,
+              start: "top 92%",
+              end: "bottom 0%",
+              toggleActions:"play none none none",
+            } 
+          });
+      
+    questionTimeline.from(elem, {
+        duration: 1,
+        x: -30,
+        opacity: 0,
+        ease: "power4"
+      })
+   });  
+});
+
+//iPAD
+mm.add("(max-width: 991px) and (min-width: 429px)", () => {
+
+  gsap.utils.toArray('.what-the-faq__group').forEach(function(elem) {
+
+    const spacerTimelineL = gsap.timeline(
+          {
+            scrollTrigger: {
+              trigger: elem,
+              start: "top 92%",
+              end: "bottom 0%",
+              toggleActions:"play none none none",
+            } 
+          });
+      
+    spacerTimelineL.from(elem, {
+          duration: 1,
+          x: -30,
+          opacity: 0,
+          ease: "power4"
+        })
+    });
+});
+
+//Mobile
+mm.add("(max-width: 428px)", () => {
+
+  gsap.utils.toArray('.what-the-faq__group').forEach(function(elem) {
+
+    const spacerTimelineL = gsap.timeline(
+          {
+            scrollTrigger: {
+              trigger: elem,
+              start: "top 92%",
+              end: "bottom 0%",
+              toggleActions:"play none none none",
+            } 
+          });
+      
+    spacerTimelineL.from(elem, {
+          duration: 1,
+          x: -20,
+          opacity: 0,
+          ease: "power4"
+        })
+    });
+});
   
 }
