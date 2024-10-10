@@ -1027,7 +1027,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white !important;
+      border-bottom: 3px solid white !important;
       position: relative;
       top: 1.2em;
   }
@@ -1120,7 +1120,7 @@
       padding: 0em !important;
       letter-spacing: -0.035em;
       overflow: visible !important;
-      border-bottom: 1px solid white !important;
+      border-bottom: 3px solid white !important;
       position: relative;
       top: 3.2em;
   }
