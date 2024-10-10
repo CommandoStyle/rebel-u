@@ -77,7 +77,7 @@ function takepic() {
         .to(cursor, { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".cta-vid__wrap", {filter:"invert(100%)", duration: 0.001}, "<")
         .to(vidCover, { scale: 5, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 1.25 })
-        .to(".skill-stack__txt-item.is--you", {filter:"invert(100%)", duration: 0.001}, "-=0.61")
+        //.to(".skill-stack__txt-item.is--you", {filter:"invert(100%)", duration: 0.001}, "-=0.61")
         .to(".cta-vid__contain", {x: 15, opacity: 0, ease: "expo.out", duration: 0.77}, "<")
         .fromTo(".vid-container", { clipPath: "circle(0% at center)" },
           { clipPath: "circle(140.9% at center)", delay: 0.65, duration: 1.9, ease: "power2.inOut", clearProps: "clipPath"})
@@ -109,14 +109,6 @@ navigator.permissions.query({ name: "camera" }).then((result) => {
  });
 } 
 
-     // Hide cursor on Vid btn
-    
-     $( '.blk-cursor__buffer' ).mouseenter(function() {
-      $('.cursor-dot').addClass('hide');
-    });
-    
-      $( '.blk-cursor__buffer' ).mouseleave(function() {
-      $('.cursor-dot').removeClass('hide');
-    });
+
 
 }
