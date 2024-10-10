@@ -875,7 +875,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white !important;
+      border-bottom: 3px solid white !important;
   }
   
   #field-text-61bop {
@@ -887,7 +887,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white !important;
+      border-bottom: 3px solid white !important;
   }
   
   #field-email-14t4u {
@@ -899,7 +899,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white !important;
+      border-bottom: 3px solid white !important;
       position: relative !important;
       top: 0.25em !important;
   }
@@ -2163,7 +2163,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white !important;
+      border-bottom: 2px solid white !important;
   }
   
   #field-text-61bop {
@@ -2175,7 +2175,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white !important;
+      border-bottom: 2px solid white !important;
   }
   
   #field-email-14t4u {
@@ -2187,7 +2187,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 1px solid white !important;
+      border-bottom: 2px solid white !important;
       position: relative !important;
       top: -1.5em !important;
   }
