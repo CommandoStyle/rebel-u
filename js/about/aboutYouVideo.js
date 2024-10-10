@@ -75,15 +75,16 @@ function takepic() {
  showVid
         .to(vidCover, { autoAlpha: 1, duration: 0.001 })
         .to(cursor, { autoAlpha: 0, duration: 0.001 }, "<")
-        .to(".cta-inner__wrap", {filter:"invert(100%)", duration: 0.001}, "<")
+        .to(".cta-vid__wrap", {filter:"invert(100%)", duration: 0.001}, "<")
         .to(vidCover, { scale: 5, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 1.25 })
-        .to(".cta-inner__contain", {delay: 0.45, x: 15, opacity: 0, ease: "expo.out", duration: 0.77}, "<")
+        .to(".is--indie-op", {filter:"invert(100%)", duration: 0.001}, "-=0.9")
+        .to(".cta-vid__contain", {delay: 0.35, x: 15, opacity: 0, ease: "expo.out", duration: 0.77}, "<")
         .fromTo(".vid-container", { clipPath: "circle(0% at center)" },
           { clipPath: "circle(140.9% at center)", delay: 0.65, duration: 1.9, ease: "power2.inOut", clearProps: "clipPath"})
         .to('.script-xl', { autoAlpha: 0, duration: 0.01 }, "<")
-        .set(".cta-inner__wrap", {filter:"invert(0%)"}) 
+        .set(".cta-vid__wrap", {filter:"invert(0%)"}) 
         .set(vidBtn, {display: "none"})
-        .set([".cta-inner__wrap", ".cta-inner__contain"], { yPercent: 0 })
+        .set([".cta-vid__wrap", ".cta-vid__contain"], { yPercent: 0 })
         .set(cursor, {delay: 1, autoAlpha: 1 });
 
 
