@@ -62,12 +62,12 @@ const parentSplitR = new SplitText(".chars-right", {
 });
 
 gsap.from(childSplitR.chars, {
-  duration: 0.3,
+  duration: 0.24,
   //yPercent: 25,
   rotationY: 90,
   //transformOrigin: "right",
   ease: "power1.inOut",
-  stagger: -0.15,
+  stagger: -0.12,
         scrollTrigger: {
         trigger: ".rebel-me-h__contain",
         toggleActions: "restart none none reverse",
@@ -86,12 +86,12 @@ const parentSplitL = new SplitText(".chars-left", {
 });
 
 gsap.from(childSplitL.chars, {
-  duration: 0.3,
+  duration: 0.24,
   //yPercent: 25,
   rotationY: -90,
   //transformOrigin: "right",
   ease: "power1.inOut",
-  stagger: 0.15,
+  stagger: 0.12,
         scrollTrigger: {
         trigger: ".rebel-you-h__contain",
         toggleActions: "restart none none reverse",
