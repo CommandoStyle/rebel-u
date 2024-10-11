@@ -67,11 +67,11 @@ gsap.from(childSplitR.chars, {
   rotationY: 90,
   //transformOrigin: "right",
   ease: "power1.inOut",
-  stagger: -0.12,
+  stagger: -0.15,
         scrollTrigger: {
-        trigger: ".about-team__container",
+        trigger: ".rebel-me-h__contain",
         toggleActions: "restart none none reverse",
-        start: "top 70%"
+        start: "top 75%"
       }
 });
 
@@ -91,11 +91,11 @@ gsap.from(childSplitL.chars, {
   rotationY: -90,
   //transformOrigin: "right",
   ease: "power1.inOut",
-  stagger: 0.12,
+  stagger: 0.15,
         scrollTrigger: {
-        trigger: ".rebel-you__container",
+        trigger: ".rebel-you-h__contain",
         toggleActions: "restart none none reverse",
-        start: "top 70%"
+        start: "top 75%"
       }
 });
 
