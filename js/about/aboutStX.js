@@ -88,7 +88,7 @@ const parentSplitL = new SplitText(".chars-left", {
 gsap.from(childSplitL.chars, {
   duration: 0.3,
   //yPercent: 25,
-  rotationY: 90,
+  rotationY: -90,
   //transformOrigin: "right",
   ease: "power1.inOut",
   stagger: 0.12,
