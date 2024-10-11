@@ -1,6 +1,6 @@
 export const aboutStX = () => {
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
   let mm = gsap.matchMedia();
 
@@ -50,6 +50,30 @@ var rotate = gsap.timeline({
       onLeaveBack: () => ctaReveal.reverse(),
     })
   })
+
+// Headline scroll reveal
+const childSplit = new SplitText(".chars", {
+  type: "chars",
+  linesClass: "split-h-child"
+});
+const parentSplit = new SplitText(".chars", {
+  // type: "lines",
+  linesClass: "split-h-parent"
+});
+
+gsap.from(childSplit.chars, {
+  duration: 0.3,
+  //yPercent: 25,
+  rotationY: 90,
+  //transformOrigin: "right",
+  ease: "power1.inOut",
+  stagger: 0.1,
+        scrollTrigger: {
+        trigger: ".about-team__container",
+        toggleActions: "restart none none reverse",
+        start: "top 60%"
+      }
+});
 
   //Desktop
 mm.add("(min-width: 990px)", () => {
