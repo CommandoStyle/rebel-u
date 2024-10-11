@@ -51,7 +51,7 @@ var rotate = gsap.timeline({
     })
   })
 
-// Headline scroll reveal
+// Headline scroll reveal from Right
 const childSplitR = new SplitText(".chars-right", {
   type: "chars",
   linesClass: "split-h-child-r"
@@ -70,6 +70,30 @@ gsap.from(childSplitR.chars, {
   stagger: -0.12,
         scrollTrigger: {
         trigger: ".about-team__container",
+        toggleActions: "restart none none reverse",
+        start: "top 70%"
+      }
+});
+
+  // Headline scroll reveal from Left
+const childSplitL = new SplitText(".chars-left", {
+  type: "chars",
+  linesClass: "split-h-child-l"
+});
+const parentSplitL = new SplitText(".chars-left", {
+  // type: "lines",
+  linesClass: "split-h-parent-l"
+});
+
+gsap.from(childSplitL.chars, {
+  duration: 0.3,
+  //yPercent: 25,
+  rotationY: 90,
+  //transformOrigin: "right",
+  ease: "power1.inOut",
+  stagger: 0.12,
+        scrollTrigger: {
+        trigger: ".rebel-you__container",
         toggleActions: "restart none none reverse",
         start: "top 70%"
       }
