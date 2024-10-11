@@ -71,7 +71,7 @@ gsap.from(childSplitR.chars, {
         scrollTrigger: {
         trigger: ".rebel-me-h__contain",
         toggleActions: "restart none none reverse",
-        start: "top 75%"
+        start: "top 82%"
       }
 });
 
@@ -95,7 +95,7 @@ gsap.from(childSplitL.chars, {
         scrollTrigger: {
         trigger: ".rebel-you-h__contain",
         toggleActions: "restart none none reverse",
-        start: "top 75%"
+        start: "top 82%"
       }
 });
 
