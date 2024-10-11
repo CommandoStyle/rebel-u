@@ -71,7 +71,7 @@ gsap.from(childSplitR.chars, {
         scrollTrigger: {
         trigger: ".about-team__container",
         toggleActions: "restart none none reverse",
-        start: "top 60%"
+        start: "top 70%"
       }
 });
 
