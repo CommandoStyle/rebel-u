@@ -52,22 +52,22 @@ var rotate = gsap.timeline({
   })
 
 // Headline scroll reveal
-const childSplit = new SplitText(".chars", {
+const childSplitR = new SplitText(".chars-right", {
   type: "chars",
-  linesClass: "split-h-child"
+  linesClass: "split-h-child-r"
 });
-const parentSplit = new SplitText(".chars", {
+const parentSplitR = new SplitText(".chars-right", {
   // type: "lines",
-  linesClass: "split-h-parent"
+  linesClass: "split-h-parent-r"
 });
 
-gsap.from(childSplit.chars, {
+gsap.from(childSplitR.chars, {
   duration: 0.3,
   //yPercent: 25,
   rotationY: 90,
   //transformOrigin: "right",
   ease: "power1.inOut",
-  stagger: 0.1,
+  stagger: -0.12,
         scrollTrigger: {
         trigger: ".about-team__container",
         toggleActions: "restart none none reverse",
