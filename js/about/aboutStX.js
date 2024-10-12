@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
   corpScrub.load(corpScrubData);
   
   ScrollTrigger.create({
-    trigger: ".sub-hero__inline-corporate",
+    trigger: ".sub-hero__items",
     start: "top 75%",
     onEnter: () => corpScrub.play(),
   });
