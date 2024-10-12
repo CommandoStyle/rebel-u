@@ -4,6 +4,16 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
   let mm = gsap.matchMedia();
 
+  const corpScrub = document.getElementById("corporate-scrub");
+  const corpScrubData = corpScrub.getAttribute("lottie-data");
+  corpScrub.load(corpScrubData);
+  
+  ScrollTrigger.create({
+    trigger: ".sub-hero__inline-corporate",
+    start: "top 75%",
+    onEnter: () => corpScrub.play(),
+  });
+
   const underlineLG = document.getElementById("reb-escape__underline");
   const underlineLGdata = underlineLG.getAttribute("lottie-data");
   underlineLG.load(underlineLGdata);
