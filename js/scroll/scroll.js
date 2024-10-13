@@ -24,7 +24,7 @@ let smoother = ScrollSmoother.create({
       });
           setTimeout(() => {
             smoother.paused(false);
-          }, 5000);  
+          }, 3000);  
 
          smoother.scrollTo(0);
 
