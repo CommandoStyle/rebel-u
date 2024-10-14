@@ -1698,8 +1698,6 @@
       width: 100%;
       position: relative;
       top: -2.3em !important;
-   -webkit-mask: linear-gradient(180deg, rgba(255, 255, 255, 1) 85%, transparent 100%);
-           mask: linear-gradient(180deg, rgba(255, 255, 255, 1) 85%, transparent 100%);
   }
   
   .BtnV2--sm.BtnV2--light.BtnV2--fullwidth.Appointment__time-button {
@@ -1828,6 +1826,8 @@
       min-height: 15.45em !important;
       background-color: black !important;
       border-top: 1px solid white;
+       -webkit-mask: linear-gradient(180deg, rgba(255, 255, 255, 1) 85%, transparent 100%);
+           mask: linear-gradient(180deg, rgba(255, 255, 255, 1) 85%, transparent 100%);
   }
   
   .Appointment__time-picker-inner::-webkit-scrollbar {
