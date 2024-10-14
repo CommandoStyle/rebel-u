@@ -4446,7 +4446,9 @@
   
   /* SUCCESS - piped name */
   .AnswerPipe.AnswerPipe--fooo7 {
-    text-transform: uppercase;  
+    text-transform: uppercase;
+    position: relative;
+    top: 2em;
   }
   
   [data-editor="b2di1_description"] {
@@ -4476,6 +4478,8 @@
       opacity: 0;
       animation: appear ease 0.8s forwards;
       animation-delay: 0.2s;
+      position: relative;
+      top: 2em;
   }
   
   /* Submission success width */
