@@ -178,7 +178,7 @@
   
   /* SUCCESS - piped name */
   .AnswerPipe.AnswerPipe--3ojrf {
-    text-transform: uppercase;  
+    text-transform: capitalize;  
   }
   
   [data-editor="b2di1_description"] {
@@ -4446,8 +4446,9 @@
   
   /* SUCCESS - piped name */
   .AnswerPipe.AnswerPipe--fooo7,
-  .AnswerPipe AnswerPipe--5osh0 {
-    text-transform: uppercase;
+  .AnswerPipe AnswerPipe--5osh0,
+  .AnswerPipe.AnswerPipe--3ojrf {
+    text-transform: capitalize;
     margin-top: 2em;
   }
   
