@@ -4476,8 +4476,6 @@
       opacity: 0;
       animation: appear ease 0.8s forwards;
       animation-delay: 0.2s;
-      position: relative;
-      top: 6em;
   }
   
   /* Submission success width */
