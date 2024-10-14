@@ -4449,8 +4449,6 @@
   .AnswerPipe AnswerPipe--5osh0,
   .AnswerPipe.AnswerPipe--3ojrf {
     text-transform: capitalize;
-    position: relative !important;
-    top: 2em !important;
   }
   
   [data-editor="b2di1_description"] {
@@ -4480,13 +4478,12 @@
       opacity: 0;
       animation: appear ease 0.8s forwards;
       animation-delay: 0.2s;
-      position: relative;
-      top: 2em;
   }
   
   /* Submission success width */
   [data-offset-key="8dda0-0-0"] {
       width: 50% !important;
+      margin-top: 2em;
   }
   
   [data-offset-key="70tot-0-0"] {
