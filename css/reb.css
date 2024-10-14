@@ -3131,7 +3131,7 @@
   right: 20em !important;
   top: -2em !important;
   border-radius: 0em !important;
-  opacity: 0.55 !important;
+  opacity: 1 !important;
   box-shadow: 0 0px 0px 0px rgba(0,0,0,0) !important;
   background-image: url(https://cdn.prod.website-files.com/64217a46f171f9b7cb4bcfcf/66fce2318e17c9868b2a1218_reblu-REB%20man%20filled.svg) !important;
   background-size: contain;
@@ -5277,10 +5277,10 @@
   position: absolute;
   height: 5.9486em;
   width: 7.6032em !important;
-  left: -0.95em !important;
+  left: -0.55em !important;
   top: 13em !important;
   border-radius: 0em !important;
-  opacity: 0.55 !important;
+  opacity: 1 !important;
   box-shadow: 0 0px 0px 0px rgba(0,0,0,0) !important;
   background-image: url(https://cdn.prod.website-files.com/64217a46f171f9b7cb4bcfcf/66fce2318e17c9868b2a1218_reblu-REB%20man%20filled.svg) !important;
   background-size: contain;
@@ -5368,8 +5368,8 @@
     height: 4em;
     width: 4em;
     position: absolute;
-    top: -0.15em !important;
-    right: -0.28em !important;
+    top: -0.25em !important;
+    right: -0.43em !important;
     border-radius: 50%;
   }
   
@@ -5380,8 +5380,8 @@
     height: 4em;
     width: 4em;
     position: absolute;
-    top: -0.15em !important;
-    right: -0.28em !important;
+    top: -0.25em !important;
+    right: -0.43em !important;
     border-radius: 50%;
   }
   
@@ -5392,8 +5392,8 @@
     height: 4em;
     width: 4em;
     position: absolute;
-    top: -0.15em !important;
-    right: -0.28em !important;
+    top: -0.25em !important;
+    right: -0.43em !important;
     border-radius: 50%;
   }
   
@@ -5588,8 +5588,8 @@
     height: 4em;
     width: 4em;
     position: absolute;
-    top: -0.15em !important;
-    right: -0.28em !important;
+    top: -0.25em !important;
+    right: -0.43em !important;
     border-radius: 50%;
     color: white;
     z-index: -1;
@@ -5602,8 +5602,8 @@
     height: 4em;
     width: 4em;
     position: absolute;
-    top: -0.15em !important;
-    right: -0.28em !important;
+    top: -0.25em !important;
+    right: -0.43em !important;
     border-radius: 50%;
     color: white;
     z-index: -1;
@@ -6060,7 +6060,7 @@
       width: 100% !important;
       justify-content: space-between;
       padding-right: 0.3em;
-      margin-top: 5.5em !important;
+      margin-top: 4.5em !important;
   }
   
   .btn-raised.YesNo__button {
