@@ -4445,7 +4445,8 @@
   }
   
   /* SUCCESS - piped name */
-  .AnswerPipe.AnswerPipe--fooo7 {
+  .AnswerPipe.AnswerPipe--fooo7,
+  .AnswerPipe AnswerPipe--5osh0 {
     text-transform: uppercase;
     position: relative;
     top: 2em;
