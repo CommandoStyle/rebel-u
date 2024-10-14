@@ -4448,8 +4448,7 @@
   .AnswerPipe.AnswerPipe--fooo7,
   .AnswerPipe AnswerPipe--5osh0 {
     text-transform: uppercase;
-    position: relative;
-    top: 3em;
+    margin-top: 2em;
   }
   
   [data-editor="b2di1_description"] {
