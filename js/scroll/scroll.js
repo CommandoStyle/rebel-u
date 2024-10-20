@@ -19,12 +19,12 @@ let smoother = ScrollSmoother.create({
 
     // SS stop / start on first load
 
-    document.addEventListener("DOMContentLoaded", function(event) { 
-      smoother.paused(true);
-      });
-          setTimeout(() => {
-            smoother.paused(false);
-          }, 3000);  
+   //document.addEventListener("DOMContentLoaded", function(event) { 
+      //smoother.paused(true);
+      //});
+          //setTimeout(() => {
+            //smoother.paused(false);
+         // }, 3000);  
 
          //smoother.scrollTo(0);
 
