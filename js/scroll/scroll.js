@@ -26,7 +26,7 @@ let smoother = ScrollSmoother.create({
             smoother.paused(false);
          }, 3000);  
 
-         smoother.scrollTo(0);
+         //smoother.scrollTo(0);
 
   // SS stop / start on button hovers
       
