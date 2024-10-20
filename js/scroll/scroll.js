@@ -320,8 +320,7 @@ LegalCookiesLink.forEach(CookiesLink => {
   console.log("page is fully loaded");
 
   let urlHash = window.location.href.split("#")[1];
-  //let scrollElem = document.querySelector("#" + urlHash);
-  let scrollElem = document.getElementById("#reb-ready");
+  let scrollElem = document.querySelector("#" + urlHash);
   let rebReadyDirect = gsap.timeline();
 
   console.log(scrollElem, urlHash);
@@ -336,9 +335,7 @@ LegalCookiesLink.forEach(CookiesLink => {
           delay: 1, duration: 1, onComplete:  () => { ScrollTrigger.refresh(); }
         });
 //smoother.scrollTo("bottom bottom");
-  } else {
-  smoother.scrollTo(0);
-  }
+  } 
 };
 
 }
