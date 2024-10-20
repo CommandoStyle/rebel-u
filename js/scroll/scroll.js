@@ -314,4 +314,26 @@ LegalCookiesLink.forEach(CookiesLink => {
   });
 })
 
+//Go to Reb-ready test on load
+
+ window.onload = (event) => {
+  console.log("page is fully loaded");
+
+  let urlHash = window.location.href.split("#")[1];
+
+  let scrollElem = document.querySelector("#" + urlHash);
+
+  console.log(scrollElem, urlHash);
+
+  if (urlHash && scrollElem) {
+         gsap.set(smoother, {
+          scrollTop: Math.min(
+            ScrollTrigger.maxScroll(window),
+            smoother.offset("#reb-ready", "top 10px")
+          ),
+          duration: 0, onComplete:  () => { ScrollTrigger.refresh(); }
+        });
+  }
+};
+
 }
