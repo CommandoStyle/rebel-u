@@ -326,15 +326,9 @@ LegalCookiesLink.forEach(CookiesLink => {
   console.log(scrollElem, urlHash);
 
   if (urlHash && scrollElem) {
-rebReadyDirect.set(smoother, {
-          scrollTop: Math.min(
-            ScrollTrigger.maxScroll(window),
-            smoother.offset("#reb-ready", "top top")
-          ),
-          duration: 0 }
-        })
-      .to(smoother, {
-          scrollTop: Math.min(
+    rebReadyDirect
+     .set(smoother, { scrollTop: smoother.offset(scrollElem, "top top"), duration: 0 })
+     .to(smoother, { scrollTop: Math.min(
             ScrollTrigger.maxScroll(window),
             smoother.offset("#quiz-items", "top 10px")
           ),
