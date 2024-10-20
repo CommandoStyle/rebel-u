@@ -320,25 +320,25 @@ LegalCookiesLink.forEach(CookiesLink => {
   console.log("page is fully loaded");
 
   let urlHash = window.location.href.split("#")[1];
-
   let scrollElem = document.querySelector("#" + urlHash);
+  let rebReadyDirect = gsap.timeline();
 
   console.log(scrollElem, urlHash);
 
   if (urlHash && scrollElem) {
-         gsap.set(smoother, {
+rebReadyDirect.set(smoother, {
           scrollTop: Math.min(
             ScrollTrigger.maxScroll(window),
             smoother.offset("#reb-ready", "top top")
           ),
-          duration: 0, onComplete:  () => { ScrollTrigger.refresh(); }
-        });
-gsap.to(smoother, {
+          duration: 0 }
+        })
+      .to(smoother, {
           scrollTop: Math.min(
             ScrollTrigger.maxScroll(window),
             smoother.offset("#quiz-items", "top 10px")
           ),
-          delay: 0.5, duration: 1, onComplete:  () => { ScrollTrigger.refresh(); }
+          delay: 1, duration: 1, onComplete:  () => { ScrollTrigger.refresh(); }
         });
   }
 };
