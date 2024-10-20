@@ -26,7 +26,7 @@ let smoother = ScrollSmoother.create({
             smoother.paused(false);
          }, 3000);  
 
-         //smoother.scrollTo(0);
+         smoother.scrollTo(0);
 
   // SS stop / start on button hovers
       
@@ -331,11 +331,9 @@ window.onload = (event) => {
             ScrollTrigger.maxScroll(window),
             smoother.offset("#quiz-items", "top 10px")
           ),
-          delay: 0.5, duration: 1, onComplete:  () => { ScrollTrigger.refresh(); }
+          delay: 1.5, duration: 1.5, ease: power1.easeOut, onComplete:  () => { ScrollTrigger.refresh(); }
         });
-//smoother.paused(false);
-//smoother.scrollTo("bottom bottom");
-  } 
+     } 
 };
 
 }
