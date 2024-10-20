@@ -26,7 +26,7 @@ let smoother = ScrollSmoother.create({
             smoother.paused(false);
           }, 3000);  
 
-         smoother.scrollTo(0);
+         //smoother.scrollTo(0);
 
   // SS stop / start on button hovers
       
@@ -334,7 +334,9 @@ LegalCookiesLink.forEach(CookiesLink => {
           ),
           delay: 1, duration: 1, onComplete:  () => { ScrollTrigger.refresh(); }
         });
-smoother.scrollTo("bottom bottom");
+//smoother.scrollTo("bottom bottom");
+  } else {
+  smoother.scrollTo(0);
   }
 };
 
