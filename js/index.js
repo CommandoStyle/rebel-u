@@ -1211,7 +1211,8 @@ function initAbout() {
 
 setTimeout(() => {
 
-aboutMarquees();  
+aboutMarquees(); 
+NavRevertCurrent();
 aboutStGlobe();
 aboutYouVideo();
 aboutStX();
@@ -1220,7 +1221,7 @@ quizStLottie();
 legalFooterLeave();
 cookieLeave();
 globalMisc();
-NavRevertCurrent();
+//NavRevertCurrent();
 propFaqAccordion();
 share();
 shareFallbackMenu();
