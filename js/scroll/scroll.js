@@ -316,8 +316,8 @@ LegalCookiesLink.forEach(CookiesLink => {
 
 //Go to Reb-ready test on load
 
- window.onload = (event) => {
-  console.log("page is fully loaded");
+ //window.onload = (event) => {
+  //console.log("page is fully loaded");
 
   let urlHash = window.location.href.split("#")[1];
   let scrollElem = document.querySelector("#" + urlHash);
@@ -336,6 +336,6 @@ LegalCookiesLink.forEach(CookiesLink => {
         });
 //smoother.scrollTo("bottom bottom");
   } 
-};
+//};
 
 }
