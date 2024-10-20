@@ -19,12 +19,12 @@ let smoother = ScrollSmoother.create({
 
     // SS stop / start on first load
 
-   //document.addEventListener("DOMContentLoaded", function(event) { 
-      //smoother.paused(true);
-      //});
-          //setTimeout(() => {
-            //smoother.paused(false);
-         // }, 3000);  
+   document.addEventListener("DOMContentLoaded", function(event) { 
+      smoother.paused(true);
+      });
+          setTimeout(() => {
+            smoother.paused(false);
+         }, 3000);  
 
          //smoother.scrollTo(0);
 
@@ -326,13 +326,14 @@ window.onload = (event) => {
 
   if (urlHash && scrollElem) {
     rebReadyDirect
-     //.set(smoother, { scrollTop: smoother.offset(scrollElem, "top top"), duration: 0 })
+     .set(smoother, { scrollTop: smoother.offset(scrollElem, "top top"), duration: 0, onComplete:  () => { smoother.paused(false); })
      .to(smoother, { scrollTop: Math.min(
             ScrollTrigger.maxScroll(window),
             smoother.offset("#quiz-items", "top 10px")
           ),
           delay: 0.5, duration: 1, onComplete:  () => { ScrollTrigger.refresh(); }
         });
+//smoother.paused(false);
 //smoother.scrollTo("bottom bottom");
   } 
 };
