@@ -326,7 +326,7 @@ window.onload = (event) => {
 
   if (urlHash && scrollElem) {
     rebReadyDirect
-     .set(smoother, { scrollTop: smoother.offset(scrollElem, "top top"), duration: 0, onComplete:  () => { smoother.paused(false); })
+     .set(smoother, { scrollTop: smoother.offset(scrollElem, "top top"), duration: 0, onComplete:  () => { smoother.paused(false); } })
      .to(smoother, { scrollTop: Math.min(
             ScrollTrigger.maxScroll(window),
             smoother.offset("#quiz-items", "top 10px")
