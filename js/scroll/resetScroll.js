@@ -10,7 +10,7 @@ trigger.kill();
 
 // Get the current ScrollSmoother instance and 'reset' it
 var smoother = ScrollSmoother.get();
-smoother.scrollTo(0);
+//smoother.scrollTo(0);
 smoother.kill();
 
 }
