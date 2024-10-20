@@ -327,15 +327,15 @@ LegalCookiesLink.forEach(CookiesLink => {
 
   if (urlHash && scrollElem) {
     rebReadyDirect
-     .set(smoother, { scrollTop: smoother.offset(scrollElem, "top top"), duration: 0 })
+     //.set(smoother, { scrollTop: smoother.offset(scrollElem, "top top"), duration: 0 })
      .to(smoother, { scrollTop: Math.min(
             ScrollTrigger.maxScroll(window),
             smoother.offset("#quiz-items", "top 10px")
           ),
-          delay: 1, duration: 1, onComplete:  () => { ScrollTrigger.refresh(); }
+          delay: 0.5, duration: 1, onComplete:  () => { ScrollTrigger.refresh(); }
         });
 //smoother.scrollTo("bottom bottom");
   } 
-//};
+};
 
 }
