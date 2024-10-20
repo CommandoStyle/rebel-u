@@ -335,7 +335,7 @@ LegalCookiesLink.forEach(CookiesLink => {
           delay: 1, duration: 1, onComplete:  () => { ScrollTrigger.refresh(); }
         });
 //smoother.scrollTo("bottom bottom");
-  } else {
+  } else if (urlHash || scrollElem) {
   smoother.scrollTo(0);
   }
 };
