@@ -329,9 +329,16 @@ LegalCookiesLink.forEach(CookiesLink => {
          gsap.set(smoother, {
           scrollTop: Math.min(
             ScrollTrigger.maxScroll(window),
-            smoother.offset("#reb-ready", "top 10px")
+            smoother.offset("#reb-ready", "top top")
           ),
           duration: 0, onComplete:  () => { ScrollTrigger.refresh(); }
+        });
+gsap.to(smoother, {
+          scrollTop: Math.min(
+            ScrollTrigger.maxScroll(window),
+            smoother.offset("#quiz-items", "top 10px")
+          ),
+          delay: 0.5, duration: 1, onComplete:  () => { ScrollTrigger.refresh(); }
         });
   }
 };
