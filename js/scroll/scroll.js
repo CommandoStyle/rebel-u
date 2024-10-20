@@ -320,7 +320,8 @@ LegalCookiesLink.forEach(CookiesLink => {
   console.log("page is fully loaded");
 
   let urlHash = window.location.href.split("#")[1];
-  let scrollElem = document.querySelector("#red-ready" + urlHash);
+  //let scrollElem = document.querySelector("#" + urlHash);
+  let scrollElem = document.getElementById("#reb-ready");
   let rebReadyDirect = gsap.timeline();
 
   console.log(scrollElem, urlHash);
