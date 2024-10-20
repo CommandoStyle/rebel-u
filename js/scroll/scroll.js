@@ -327,17 +327,12 @@ window.onload = (event) => {
   if (urlHash && scrollElem) {
     rebReadyDirect
      //.set(smoother, { scrollTop: smoother.offset(scrollElem, "top top"), duration: 0, onComplete:  () => { smoother.paused(false); } })
-        .set(smoother, { scrollTop: Math.min(
-            ScrollTrigger.maxScroll(window),
-            smoother.offset("#reb-ready", "top top")
-          ),
-          duration: 0, onComplete: () => { smoother.paused(false); }
-        })
+
      .to(smoother, { scrollTop: Math.min(
             ScrollTrigger.maxScroll(window),
             smoother.offset("#quiz-items", "top 10px")
           ),
-          delay: 0.8, duration: 1.2, onComplete: () => { ScrollTrigger.refresh(); }
+          delay: 3, duration: 1.5, onComplete: () => { ScrollTrigger.refresh(); }
         });
      } 
 };
