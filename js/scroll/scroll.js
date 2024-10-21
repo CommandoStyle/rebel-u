@@ -326,13 +326,13 @@ window.onload = (event) => {
 
   if (urlHash && scrollElem) {
     rebReadyDirect
-     .to(smoother, { scrollTop: smoother.offset(scrollElem, "top top"), duration: 0, onComplete:  () => { smoother.paused(false); } })
+     //.to(smoother, { scrollTop: smoother.offset(scrollElem, "top top"), duration: 0, onComplete:  () => { smoother.paused(false); } })
 
      .to(smoother, { scrollTop: Math.min(
             ScrollTrigger.maxScroll(window),
             smoother.offset("#quiz-items", "top 10px")
           ),
-          delay: 0.6, duration: 1.4, onComplete: () => { ScrollTrigger.refresh(); }
+          delay: 3.5, duration: 1.5, onComplete: () => { ScrollTrigger.refresh(); }
         });
      } 
 };
