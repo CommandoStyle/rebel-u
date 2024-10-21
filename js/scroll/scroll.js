@@ -24,7 +24,7 @@ let smoother = ScrollSmoother.create({
       });
           setTimeout(() => {
             smoother.paused(false);
-         }, 3000);  
+         }, 3500);  
 
          //smoother.scrollTo(0);
 
@@ -332,7 +332,7 @@ window.onload = (event) => {
             ScrollTrigger.maxScroll(window),
             smoother.offset("#quiz-items", "top 10px")
           ),
-          delay: 4.1, duration: 0, onComplete: () => { ScrollTrigger.refresh(); }
+          delay: 3.5, duration: 0, onComplete: () => { ScrollTrigger.refresh(); }
         });
      } 
 };
