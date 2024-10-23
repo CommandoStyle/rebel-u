@@ -89,8 +89,8 @@ export const cursorFirstNew = () => {
       // Define the trigger area - inside
       if (hypotenuse * 2 < triggerDistance && mouseInTarget) {
         // tween custom cursor position
-        xTo(targetPosition.x - (Math.sin(angle) * hypotenuse) / 2);
-        yTo(targetPosition.y - (Math.cos(angle) * hypotenuse) / 2);
+        xTo(targetPosition.x - (Math.sin(angle) * hypotenuse) / 4);
+        yTo(targetPosition.y - (Math.cos(angle) * hypotenuse) / 4);
         mouseInTarget = true;
 
       }
