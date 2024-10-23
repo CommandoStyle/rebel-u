@@ -332,7 +332,7 @@ window.onload = (event) => {
             ScrollTrigger.maxScroll(window),
             smoother.offset("#quiz-items", "top 10px")
           ),
-          delay: 3.5, duration: 1.5, onComplete: () => { ScrollTrigger.refresh(); }
+          delay: 1.5, duration: 3.5, onComplete: () => { ScrollTrigger.refresh(); }
         });
      } 
 };
