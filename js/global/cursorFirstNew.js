@@ -69,8 +69,8 @@ export const cursorFirstNew = () => {
   
       // Get position of target instance from its center point
       const targetPosition = {
-        x: rect.x + rect.width / 2,
-        y: rect.y + rect.height / 2
+        x: rect.x + rect.width / 2.1,
+        y: rect.y + rect.height / 2.1
       };
   
       // Get distance between target instance and mouse (adj & opp)
@@ -89,8 +89,8 @@ export const cursorFirstNew = () => {
       // Define the trigger area - inside
       if (hypotenuse * 2 < triggerDistance && mouseInTarget) {
         // tween custom cursor position
-        xTo(targetPosition.x - (Math.sin(angle) * hypotenuse) / 4);
-        yTo(targetPosition.y - (Math.cos(angle) * hypotenuse) / 4);
+        xTo(targetPosition.x - (Math.sin(angle) * hypotenuse) / 4.2);
+        yTo(targetPosition.y - (Math.cos(angle) * hypotenuse) / 4.2);
         mouseInTarget = true;
 
       }
@@ -112,8 +112,7 @@ export const cursorFirstNew = () => {
         scale: 6.9444,
         duration: 0.33,
         ease: "expoScale(1, 6.9444, power1.out)",
-        overwrite: 'auto',
-        transformOrigin: "center center"
+        overwrite: 'auto'
       });
     });
 
@@ -123,8 +122,7 @@ export const cursorFirstNew = () => {
         scale: 1,
         duration: 0.33,
         ease: "expoScale(6.9444, 1, power1.in)",
-        overwrite: 'auto',
-        transformOrigin: "center center"
+        overwrite: 'auto'
       });
     });
 
@@ -151,8 +149,7 @@ target.addEventListener("pointerup", () => {
         gsap.to(cursor, {
           scale: 13.8888,
           duration: 0.66,
-          ease: "expoScale(1, 13.8888, power1.out)",
-          transformOrigin: "center center"
+          ease: "expoScale(1, 13.8888, power1.out)"
         });
       });
 
@@ -161,8 +158,7 @@ target.addEventListener("pointerup", () => {
         gsap.to(cursor, {
           scale: 1,
           duration: 0.66,
-          ease: "expoScale(13.8888, 1, power1.in)",
-          transformOrigin: "center center"
+          ease: "expoScale(13.8888, 1, power1.in)"
         });
       });
 
@@ -190,8 +186,7 @@ target.addEventListener("pointerup", () => {
           scaleX: 13.8888,
           scaleY: 6.9444,
           duration: 0.44,
-          ease: "none",
-          transformOrigin: "center center"
+          ease: "none"
         });
       });
       targetOval.addEventListener("mouseleave", (e) => {
@@ -200,8 +195,7 @@ target.addEventListener("pointerup", () => {
           scaleX: 1,
           scaleY: 1,
           duration: 0.44,
-          ease: "none",
-          transformOrigin: "center center"
+          ease: "none"
         });
       });
 
@@ -233,8 +227,7 @@ target.addEventListener("pointerup", () => {
           scaleY: 3.4722,
           duration: 0.33,
           ease: "none",
-          overwrite: 'auto',
-          transformOrigin: "center center"
+          overwrite: 'auto'
         });
       });
   
@@ -245,8 +238,7 @@ target.addEventListener("pointerup", () => {
           scaleY: 1,
           duration: 0.33,
           ease: "none",
-          overwrite: 'auto',
-          transformOrigin: "center center"
+          overwrite: 'auto'
         });
       });
   
