@@ -753,6 +753,7 @@
      width: auto !important;
      height: 2.6em;
      text-align: right;
+     padding-left: -42.5%;
      transition: all 0.45s ease-in-out !important;
   }
   
@@ -769,6 +770,7 @@
      float: left;
      text-align: left;
      height: 2.6em;
+     padding-left: -42.5%;
      transition: all 0.45s ease-in-out !important;
   }
   
