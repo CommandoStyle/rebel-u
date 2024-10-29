@@ -27,7 +27,7 @@ export const cursorFirstNew = () => {
       mouse.x = pos.x = e.clientX;
       mouse.y = pos.y = e.clientY;
       gsap.to(cursor, {
-        scale: 1,
+        scale: 0.072,
         autoAlpha: 1,
       });
       firstMouseMove = false;
@@ -147,31 +147,31 @@ target.addEventListener("pointerup", () => {
       targetXL.addEventListener("mouseenter", (e) => {
         mouseInTarget = true;
         gsap.to(cursor, {
-          scale: 13.8888,
+          scale: 1,
           duration: 0.66,
-          ease: "expoScale(1, 13.8888, power1.out)"
+          ease: "expoScale(0.072, 1, power1.out)"
         });
       });
 
       targetXL.addEventListener("mouseleave", (e) => {
         mouseInTarget = false;
         gsap.to(cursor, {
-          scale: 1,
+          scale: 0.072,
           duration: 0.66,
-          ease: "expoScale(13.8888, 1, power1.in)"
+          ease: "expoScale(1, 0.072, power1.in)"
         });
       });
 
       targetXL.addEventListener("pointerdown", () => {
         gsap.to(cursor, {
-          scale: 16.6665,
+          scale: 1.2,
           duration: 0.33
         });
       });
       
       targetXL.addEventListener("pointerup", () => {
         gsap.to(cursor, {
-          scale: 13.8888,
+          scale: 1,
           duration: 0.33
         });
        });
