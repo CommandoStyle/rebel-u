@@ -1029,7 +1029,7 @@
       text-align: center;
       letter-spacing: -0.035em;
       padding-bottom: 0.4em;
-      border-bottom: 3px solid white !important;
+      
       position: relative;
       top: 1.2em;
   }
@@ -1037,22 +1037,26 @@
   #field-text-5osh0 {
       letter-spacing: -0.035em;
       text-transform: capitalize !important;
+    border-bottom: 3px solid white !important;
   }
   
   #field-text-f49hp,
   #field-text-2thbu {
       letter-spacing: -0.035em;
       text-transform: uppercase !important;
+    border-bottom: 3px solid white !important;
   }
   
   #field-email-14t4u {
       letter-spacing: -0.035em;
       text-transform: lowercase;
+    border-bottom: 3px solid white !important;
   }
   
   #field-email-14t4u::placeholder {
       letter-spacing: -0.035em;
       text-transform: uppercase;
+    border-bottom: 3px solid white !important;
   }
   
   /* NAME - placeholder txt */
@@ -1181,7 +1185,7 @@
       padding-left: 0em !important;
   }
   
-  #field-country-8cl0n {
+  #field-dropdown-ngf0 {
       font-family: 'DiatypeReg' !important;
       font-weight: 300 !important;
       font-style: normal;
