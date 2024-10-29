@@ -2099,6 +2099,250 @@
   background-color: transparent;
   box-shadow: 0 0px 0px 0px;
   }
+
+/* DROP-DOWN */
+  .Select.LiveField__input.has-value.is-searchable.Select--single {
+      font-family: 'DiatypeReg';
+      font-style: normal;
+      font-size: 1em !important;
+      line-height: 1;
+      padding: 0em !important;
+      margin-top: -1.3em;
+  }
+  
+  .LiveField__input:not(.LiveField__input--manualfocus), textarea.LiveField__input[rows="1"], .LiveField__input--manualfocus:not(:focus) {
+  border-bottom: 1px solid transparent !important;
+      }
+  
+  .Select-control {
+      border-radius: 0px !important;
+      background-color: transparent !important;
+      color: white;
+      font-family: 'DiatypeReg';
+      font-style: normal;
+      font-size: 1em;
+      line-height: 1;
+      padding: 0em !important;
+      letter-spacing: -0.035em;
+      text-transform: capitalize;
+      overflow: visible !important;
+      border-bottom: 1px solid white !important;
+      min-height: none;
+      margin-top: -1.3em;
+  }
+  
+  .Select-input {
+     border-radius: 0px !important;
+      background-color: transparent !important;
+      color: white;
+      font-family: 'DiatypeReg';
+      font-style: normal;
+      font-size: 3.28em;
+      line-height: 1;
+      letter-spacing: -0.035em;
+      text-transform: capitalize;
+      overflow: visible !important;
+      padding-right: 0em !important;
+      padding-left: 0em !important;
+      padding-bottom: 0em;
+      padding-top: 0em;
+      position: relative;
+      top: -0.2em;
+  }
+  
+  .Select-placeholder {
+      color: rgba(255,255,255,1);
+      font-family: 'DiatypeReg' !important;
+      font-weight: 300 !important;
+      font-style: normal;
+      font-size: 3.28em !important;
+      line-height: 1 !important;
+      letter-spacing: -0.035em;
+      text-transform: uppercase;
+      overflow: visible;
+      padding-left: 0em !important;
+      padding-right: 0em;
+      padding-bottom: 0em;
+      padding-top: 0em;
+  }
+  
+  .Select-multi-value-wrapper {
+      color: white;
+      font-size: 1em;
+  }
+  
+  .is-open > .Select-control {
+    border-radius: 0;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: white;
+  }
+  
+  .is-open > .Select-control > .Select-arrow {
+    border-color: transparent transparent white;
+  }
+  
+  .Select-value-label {
+      font-family: 'DiatypeReg' !important;
+      font-weight: 300 !important;
+      font-style: normal;
+      font-size: 3.28em !important;
+      line-height: 1;
+      letter-spacing: -0.035em;
+      text-transform: capitalize; 
+      padding-left: -0.2em !important;
+      overflow: visible;
+  }
+  
+  .Select-value {
+      font-family: 'DiatypeReg' !important;
+      font-weight: 300 !important;
+      font-style: normal;
+      font-size: 1em !important;
+      line-height: 1;
+      letter-spacing: -0.035em;
+      text-transform: capitalize;
+      padding-left: -0.2em !important;
+      overflow: visible !important;
+      padding-left: 0em !important;
+      padding-bottom: 0em;
+      padding-top: -0.95em;
+  }
+  
+  .Select-input > input {
+      font-family: 'DiatypeReg' !important;
+      font-weight: 300 !important;
+      font-style: normal;
+      color: white;
+      line-height: 1;
+      letter-spacing: -0.035em;
+      text-transform: capitalize;
+      overflow: visible !important;
+      padding-left: -0.2em !important;
+  }
+  
+  .Select--single > .Select-control.Select-value {
+  overflow: visible !important;
+  }
+  
+  .Select-menu-outer {
+    border-bottom-right-radius: 0em;
+    border-bottom-left-radius: 0em;
+    background-color: transparent;
+    box-shadow: none;
+    height: 16em;
+    max-height: 16em;
+    border-top: 1px solid white !important;
+    position: relative !important;
+    overflow: visible;
+     -webkit-mask: linear-gradient(180deg, rgba(255, 255, 255, 1) 85%, transparent 100%);
+           mask: linear-gradient(180deg, rgba(255, 255, 255, 1) 85%, transparent 100%);
+  }
+  
+  .Select-menu {
+    max-height: 16em;
+    height: 16em;
+  
+  }
+  
+  .Select-menu::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .Select-option {
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0);
+    color: rgba(255, 255, 255, 1);
+    font-family: 'DiatypeReg' !important;
+    font-style: normal;
+    font-size: 0.89em !important;
+    letter-spacing: -0.008em;
+    height: 3.725em !important;
+    text-align: left !important;
+    padding-left: 0.1em;
+    padding-top: 0.98em !important;
+    text-transform: uppercase;
+    border-bottom: 1px solid white !important;
+  }
+  
+  .Select-option:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .Select-option:last-child {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    color: white !important;
+    font-family: 'DiatypeReg' !important;
+    font-style: normal;
+    font-size: 0.89em !important;
+    letter-spacing: -0.008em;
+    height: 3.725em;
+  }
+  
+  .Select-option.is-selected {
+    background-color: rgba(255,255,255,0);
+    color: white !important;
+    font-family: 'DiatypeReg' !important;
+    font-style: normal;
+    font-size: 0.89em !important;
+    letter-spacing: -0.008em;
+    height: 3.725em;
+    text-transform: uppercase;
+  }
+  
+  .Select-option.is-focused {
+    background-color: rgba(255,255,255,0);
+    color: white;
+    font-family: 'DiatypeReg' !important;
+    font-weight: 400 !important;
+    font-style: normal;
+    font-size: 0.89em !important;
+    letter-spacing: -0.008em;
+    height: 3.725em;
+    text-transform: uppercase;
+  }
+  
+  .Select-option.is-disabled {
+    color: var(--grey-mid, #ccc);
+    height: 3.725em;
+  }
+  
+  .Select-noresults {
+    color: white !important;
+    font-family: 'DiatypeReg' !important;
+    background-color: rgba(255,255,255,0);
+    font-style: normal;
+    font-size: 0.89em !important;
+    letter-spacing: -0.008em;
+    height: 3.725em;
+    padding-left: 0.1em;
+    padding-top: 0.98em;
+    text-transform: uppercase;
+  }
+  
+  
+  .Select-arrow {
+    border-color: white transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px 2.5px;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  
+  .is-open .Select-arrow,
+  .Select-arrow-zone:hover > .Select-arrow {
+    border-top-color: white;
+    opacity: 1;
+  }
+  
+  .Select-arrow-zone {
+      padding-top: 6px;
+      margin-right: -0.5em !important;
+  }
   
   /* REQUIRED prompt */
   .GuidedModeInstructions__advance-text  {
