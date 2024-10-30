@@ -30,7 +30,7 @@ morphFaq.forEach((morfaq) => {
         gsap.to("#circle", {
         morphSVG:{ shape: '#circle', shapeIndex:"circle"},
         transformOrigin: "50% 50%", duration: 0.3,
-        ease: Power2.Out, onComplete:  () => { ScrollTrigger.refresh(); } });   
+        ease: Power2.Out, clearProps: true, onComplete:  () => { ScrollTrigger.refresh(); } });   
  }
 
  morfaq.addEventListener("pointerdown", () => {
