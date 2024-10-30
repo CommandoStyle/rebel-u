@@ -31,7 +31,7 @@ gsap.registerPlugin( MorphSVGPlugin );
             morphSVG:{ shape: '#arrow', shapeIndex:"polygon"},
             transformOrigin: "50% 50%", duration: 0.3,
             ease: Power2.Out});
-            gsap.to(cursor, {xPercent: -16, yPercent: -8, scale: 0.32,
+            gsap.to(cursor, {left: "-1.45em", top: "1.7em", scale: 0.32,
             transformOrigin: "50% 50%", duration: 0.4,
             ease: Power1.Out}); 
       }
@@ -40,7 +40,7 @@ gsap.registerPlugin( MorphSVGPlugin );
             morphSVG:{ shape: '#circle', shapeIndex:"circle"},
             transformOrigin: "50% 50%", duration: 0.3,
             ease: Power2.Out});
-            gsap.to(cursor, {xPercent: -38, yPercent: -60, scale: 0.07,
+            gsap.to(cursor, {left: "-1.6em", top: "1.52em", scale: 0.07,
             transformOrigin: "50% 50%", duration: 0.4,
             ease: Power1.In});
      } 
