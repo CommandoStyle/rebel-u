@@ -27,7 +27,7 @@ export const cursorFirstNew = () => {
       mouse.x = pos.x = e.clientX;
       mouse.y = pos.y = e.clientY;
       gsap.to(cursor, {
-        scale: 0.072,
+        scale: 0.07,
         autoAlpha: 1,
       });
       firstMouseMove = false;
@@ -109,9 +109,9 @@ export const cursorFirstNew = () => {
     target.addEventListener("mouseenter", (e) => {
       mouseInTarget = true;
       gsap.to(cursor, {
-        scale: 6.9444,
+        scale: 0.5,
         duration: 0.33,
-        ease: "expoScale(1, 6.9444, power1.out)",
+        ease: "expoScale(0.07, 0.5, power1.out)",
         overwrite: 'auto'
       });
     });
@@ -119,23 +119,23 @@ export const cursorFirstNew = () => {
     target.addEventListener("mouseleave", (e) => {
       mouseInTarget = false;
       gsap.to(cursor, {
-        scale: 1,
+        scale: 0.07,
         duration: 0.33,
-        ease: "expoScale(6.9444, 1, power1.in)",
+        ease: "expoScale(0.5, 0.07, power1.in)",
         overwrite: 'auto'
       });
     });
 
  target.addEventListener("pointerdown", () => {
   gsap.to(cursor, {
-    scale: 8.333,
+    scale: 0.6,
     duration: 0.33
   });
 });
 
 target.addEventListener("pointerup", () => {
   gsap.to(cursor, {
-    scale: 6.9444,
+    scale: 0.5,
     duration: 0.33
   });
  });
@@ -149,16 +149,16 @@ target.addEventListener("pointerup", () => {
         gsap.to(cursor, {
           scale: 1,
           duration: 0.66,
-          ease: "expoScale(0.072, 1, power1.out)"
+          ease: "expoScale(0.07, 1, power1.out)"
         });
       });
 
       targetXL.addEventListener("mouseleave", (e) => {
         mouseInTarget = false;
         gsap.to(cursor, {
-          scale: 0.072,
+          scale: 0.07,
           duration: 0.66,
-          ease: "expoScale(1, 0.072, power1.in)"
+          ease: "expoScale(1, 0.07, power1.in)"
         });
       });
 
@@ -183,17 +183,18 @@ target.addEventListener("pointerup", () => {
     targetOval.addEventListener("mouseenter", (e) => {
         mouseInTarget = true;
         gsap.to(cursor, {
-          scaleX: 13.8888,
-          scaleY: 6.9444,
+          scaleX: 1,
+          scaleY: 0.5,
           duration: 0.44,
           ease: "none"
         });
       });
+    
       targetOval.addEventListener("mouseleave", (e) => {
         mouseInTarget = false;
         gsap.to(cursor, {
-          scaleX: 1,
-          scaleY: 1,
+          scaleX: 0.07,
+          scaleY: 0.07,
           duration: 0.44,
           ease: "none"
         });
@@ -201,16 +202,16 @@ target.addEventListener("pointerup", () => {
 
       targetOval.addEventListener("pointerdown", () => {
         gsap.to(cursor, {
-          scaleX: 16.6665,
-          scaleY: 8.333,
+          scaleX: 1.2,
+          scaleY: 0.6,
           duration: 0.33
         });
       });
       
       targetOval.addEventListener("pointerup", () => {
         gsap.to(cursor, {
-          scaleX: 13.8888,
-          scaleY: 6.9444,
+          scaleX: 1,
+          scaleY: 0.5,
           duration: 0.33
         });
        });
@@ -223,8 +224,8 @@ target.addEventListener("pointerup", () => {
       mini.addEventListener("mouseenter", (e) => {
         mouseInTarget = true;
         gsap.to(cursor, {
-          scaleX: 6.9444,
-          scaleY: 3.4722,
+          scaleX: 0.5,
+          scaleY: 0.25,
           duration: 0.33,
           ease: "none",
           overwrite: 'auto'
@@ -234,8 +235,8 @@ target.addEventListener("pointerup", () => {
       mini.addEventListener("mouseleave", (e) => {
         mouseInTarget = false;
         gsap.to(cursor, {
-          scaleX: 1,
-          scaleY: 1,
+          scaleX: 0.07,
+          scaleY: 0.07,
           duration: 0.33,
           ease: "none",
           overwrite: 'auto'
@@ -244,16 +245,16 @@ target.addEventListener("pointerup", () => {
   
   mini.addEventListener("pointerdown", () => {
     gsap.to(cursor, {
-      scaleX: 8.333,
-      scaleY: 4.1666,
+      scaleX: 0.6,
+      scaleY: 0.3,
       duration: 0.33
     });
   });
   
   mini.addEventListener("pointerup", () => {
     gsap.to(cursor, {
-      scaleX: 6.9444,
-      scaleY: 3.4722,
+      scaleX: 0.5,
+      scaleY: 0.25,
       duration: 0.33
     });
    });
