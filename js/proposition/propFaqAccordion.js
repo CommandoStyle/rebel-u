@@ -19,7 +19,7 @@ morphFaq.forEach((morfaq) => {
         morphSVG:{ shape: '#arrow', shapeIndex:"polygon"},
         transformOrigin: "50% 50%", duration: 0.3,
         ease: Power2.Out});
-        gsap.to(cursor, {left: "-1.45em", top: "1.7em", scale: 0.16,
+        gsap.to(cursor, {left: "-1.45em", top: "1.9em", scale: 0.16,
         transformOrigin: "50% 50%", duration: 0.3, 
         ease: Power1.Out}); 
   }
@@ -104,8 +104,20 @@ arrowFlip.forEach((arrowFlip) => {
       function flipout(){
             gsap.to(cursor, {rotateX: 0, left: "-1.45em", top: "1.9em",
             transformOrigin: "50% 50%", duration: 0.33, 
-            ease: Power2.In});
-            
+            ease: Power2.In});     
+     } 
+    }); 
+
+    // Rest cursor position after flip
+ 
+var cursorFlipReset = gsap.utils.toArray( ".is--what-the-faq" );
+
+cursorFlipReset.forEach((cursorFlipReset) => {
+      
+  cursorFlipReset.addEventListener("mouseenter", flipoutreset);
+      
+      function flipoutreset(){
+            gsap.to(cursor, {rotateX: 0, left: "-1.6em", top: "1.515em"});     
      } 
     }); 
 
