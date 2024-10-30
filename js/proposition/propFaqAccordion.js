@@ -19,12 +19,12 @@ morphFaq.forEach((morfaq) => {
         morphSVG:{ shape: '#arrow', shapeIndex:"polygon"},
         transformOrigin: "50% 50%", duration: 0.3,
         ease: Power2.Out});
-        gsap.to(cursor, {xPercent: -15, yPercent: -30, scale: 2.3,
+        gsap.to(cursor, {xPercent: -15, yPercent: -30, scale: 0.16,
         transformOrigin: "50% 50%", duration: 0.3, 
         ease: Power1.Out}); 
   }
   function morphout(){
-        gsap.to(cursor, {xPercent: -38, yPercent: -60, scale: 1,
+        gsap.to(cursor, {xPercent: -38, yPercent: -60, scale: 0.07,
         transformOrigin: "50% 50%", duration: 0.15, 
         ease: Power1.In });
         gsap.to("#circle", {
@@ -35,14 +35,14 @@ morphFaq.forEach((morfaq) => {
 
  morfaq.addEventListener("pointerdown", () => {
   gsap.to(cursor, {
-    scale: 2.76,
+    scale: 0.192,
     duration: 0.33
   });
 });
 
 morfaq.addEventListener("pointerup", () => {
   gsap.to(cursor, {
-    scale: 2.3,
+    scale: 0.16,
     duration: 0.33
   });
  });
