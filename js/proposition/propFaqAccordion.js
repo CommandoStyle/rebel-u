@@ -97,12 +97,12 @@ arrowFlip.forEach((arrowFlip) => {
   arrowFlip.addEventListener("mouseleave", flipout);
       
       function flipin(){
-            gsap.to(cursor, {rotateX: 180, top: "1.7em",
+            gsap.to(cursor, {rotateX: 180, left: "-1.45em", top: "1.515em",
             transformOrigin: "50% 50%", duration: 0.33, 
             ease: Power2.Out}); 
       }
       function flipout(){
-            gsap.to(cursor, {rotateX: 0, top: "1.7em",
+            gsap.to(cursor, {rotateX: 0, left: "-1.45em", top: "1.8em",
             transformOrigin: "50% 50%", duration: 0.33, 
             ease: Power2.In});
             
