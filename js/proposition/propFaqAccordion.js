@@ -19,18 +19,18 @@ morphFaq.forEach((morfaq) => {
         morphSVG:{ shape: '#arrow', shapeIndex:"polygon"},
         transformOrigin: "50% 50%", duration: 0.3,
         ease: Power2.Out});
-        gsap.to(cursor, {xPercent: -39, yPercent: -58, scale: 0.16,
+        gsap.to(cursor, {xPercent: -41, yPercent: -58, scale: 0.16,
         transformOrigin: "50% 50%", duration: 0.3, 
         ease: Power1.Out}); 
   }
   function morphout(){
-        gsap.to(cursor, {xPercent: -39, yPercent: -58, scale: 0.07,
+        gsap.to(cursor, {xPercent: -41, yPercent: -58, scale: 0.07,
         transformOrigin: "50% 50%", duration: 0.15, 
-        ease: Power1.In });
+        ease: Power1.In , clearProps: "all" });
         gsap.to("#circle", {
         morphSVG:{ shape: '#circle', shapeIndex:"circle"},
         transformOrigin: "50% 50%", duration: 0.3,
-        ease: Power2.Out, clearProps: true, onComplete:  () => { ScrollTrigger.refresh(); } });   
+        ease: Power2.Out, onComplete:  () => { ScrollTrigger.refresh(); } });   
  }
 
  morfaq.addEventListener("pointerdown", () => {
