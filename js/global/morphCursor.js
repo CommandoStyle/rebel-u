@@ -31,7 +31,7 @@ gsap.registerPlugin( MorphSVGPlugin );
             morphSVG:{ shape: '#arrow', shapeIndex:"polygon"},
             transformOrigin: "50% 50%", duration: 0.3,
             ease: Power2.Out});
-            gsap.to(cursor, {left: "-1.45em", top: "1.7em", scale: 0.32,
+            gsap.to(cursor, {left: "-1.45em", top: "2.3em", scale: 0.32,
             transformOrigin: "50% 50%", duration: 0.4,
             ease: Power1.Out}); 
       }
