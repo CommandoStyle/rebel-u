@@ -26,7 +26,7 @@ morphFaq.forEach((morfaq) => {
   function morphout(){
         gsap.to(cursor, {xPercent: -41, yPercent: -58, scale: 0.07,
         transformOrigin: "50% 50%", duration: 0.15, 
-        ease: Power1.In , clearProps: "all" });
+        ease: Power1.In, clearProps: "all" });
         gsap.to("#circle", {
         morphSVG:{ shape: '#circle', shapeIndex:"circle"},
         transformOrigin: "50% 50%", duration: 0.3,
