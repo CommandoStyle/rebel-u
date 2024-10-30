@@ -7,21 +7,42 @@ export const propFaqAccordion = () => {
 MorphSVGPlugin.convertToPath("#circle", "#arrow");
 
 var cursor = gsap.utils.toArray(".cursor-dot");
-var morphFaq = gsap.utils.toArray(".what-the-faq__items-contain");
+var morphFaqIn = gsap.utils.toArray(".what-the-faq__items-contain");
+var morphFaqOut = gsap.utils.toArray([".what-the-faq__items-contain", ".what-the-faq__actif"]);   
     
-morphFaq.forEach((morfaq) => {
+morphFaqIn.forEach((morfaqin) => {
       
-  morfaq.addEventListener("mouseenter", morphin);
-  morfaq.addEventListener("mouseleave", morphout);
+  morfaqin.addEventListener("mouseenter", morphin);
   
   function morphin(){
         gsap.to("#circle", {
         morphSVG:{ shape: '#arrow', shapeIndex:"polygon"},
         transformOrigin: "50% 50%", duration: 0.3, ease: Power2.Out});
-        gsap.to(cursor, {left: "-1.45em", top: "1.8em", rotateX: 0, scale: 0.16,
+        gsap.to(cursor, {left: "-1.45em", top: "2em", scale: 0.16,
         transformOrigin: "50% 50%", duration: 0.3, 
         ease: Power1.Out}); 
   }
+
+ morfaqin.addEventListener("pointerdown", () => {
+  gsap.to(cursor, {
+    scale: 0.192,
+    duration: 0.33
+  });
+});
+
+morfaqin.addEventListener("pointerup", () => {
+  gsap.to(cursor, {
+    scale: 0.16,
+    duration: 0.33
+  });
+ });
+
+}); 
+
+morphFaqOut.forEach((morfaqout) => {
+      
+  morfaqout.addEventListener("mouseleave", morphout);
+  
   function morphout(){
         gsap.to(cursor, {left: "-1.6em", top: "1.515em", scale: 0.07,
         transformOrigin: "50% 50%", rotateX: 0, duration: 0.15, ease: Power1.In});
@@ -31,14 +52,14 @@ morphFaq.forEach((morfaq) => {
         ease: Power2.Out, onComplete:  () => { ScrollTrigger.refresh(); } });   
  }
 
- morfaq.addEventListener("pointerdown", () => {
+morfaqout.addEventListener("pointerdown", () => {
   gsap.to(cursor, {
     scale: 0.192,
     duration: 0.33
   });
 });
 
-morfaq.addEventListener("pointerup", () => {
+morfaqout.addEventListener("pointerup", () => {
   gsap.to(cursor, {
     scale: 0.16,
     duration: 0.33
@@ -92,17 +113,16 @@ var arrowFlip = gsap.utils.toArray( ".what-the-faq__actif" );
 arrowFlip.forEach((arrowFlip) => {
       
   arrowFlip.addEventListener("mouseenter", flipin);
-  //arrowFlip.addEventListener("mouseleave", flipout);
+  arrowFlip.addEventListener("mouseleave", flipout);
       
       function flipin(){
             gsap.to(cursor, {rotateX: 180, left: "-1.45em", top: "1.3em",
             transformOrigin: "50% 50%", duration: 0.33, ease: Power2.Out}); 
       }
-      //function flipout(){
-            //gsap.to(cursor, {rotateX: 0, left: "-1.45em", top: "1.8em",
-            //transformOrigin: "50% 50%", duration: 0.33, 
-            //ease: Power2.In});     
-     //} 
+      function flipout(){
+            gsap.to(cursor, {rotateX: 0, left: "-1.45em", top: "2em",
+            transformOrigin: "50% 50%", duration: 0.33, ease: Power2.In});     
+     } 
     }); 
 
 }
