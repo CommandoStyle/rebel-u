@@ -15,7 +15,7 @@ ebelBtn.forEach(ebelBtn => {
     var post__go = gsap.timeline({ paused: true });
         
     post__go
-    .set(cursorSbg, {display: "block", height: "4.5em", width: "4.5em", yPercent: 39, xPercent: 39 })
+    .set(cursorSbg, {display: "block"})
     .to(cursorSbg, {scale: 44, transformOrigin: "50% 50%", duration: 1.1, ease: "expoScale(1, 44)"})
     .set(".transition-cover", { display: 'block' }, 1);
                         
