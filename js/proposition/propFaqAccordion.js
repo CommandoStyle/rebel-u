@@ -7,12 +7,12 @@ export const propFaqAccordion = () => {
 MorphSVGPlugin.convertToPath("#circle", "#arrow");
 
 var cursor = gsap.utils.toArray(".cursor-dot");
-var morphFaqIn = gsap.utils.toArray(".what-the-faq__items-contain");
-var morphFaqOut = gsap.utils.toArray([".what-the-faq__items-contain", ".what-the-faq__actif"]);   
+var morphFaq = gsap.utils.toArray(".what-the-faq__items-contain");
     
-morphFaqIn.forEach((morfaqin) => {
+morphFaq.forEach((morfaqin) => {
       
-  morfaqin.addEventListener("mouseenter", morphin);
+  morfaq.addEventListener("mouseenter", morphin);
+  morfaq.addEventListener("mouseleave", morphout);
   
   function morphin(){
         gsap.to("#circle", {
@@ -23,28 +23,8 @@ morphFaqIn.forEach((morfaqin) => {
         ease: Power1.Out}); 
   }
 
- morfaqin.addEventListener("pointerdown", () => {
-  gsap.to(cursor, {
-    scale: 0.192,
-    duration: 0.33
-  });
-});
-
-morfaqin.addEventListener("pointerup", () => {
-  gsap.to(cursor, {
-    scale: 0.16,
-    duration: 0.33
-  });
- });
-
-}); 
-
-morphFaqOut.forEach((morfaqout) => {
-      
-  morfaqout.addEventListener("mouseleave", morphout);
-  
-  function morphout(){
-        gsap.to(cursor, {left: "-1.6em", top: "1.515em", scale: 0.07,
+function morphout(){
+        gsap.to(cursor, {left: "-1.6em", top: "1.51em", scale: 0.07,
         transformOrigin: "50% 50%", rotateX: 0, duration: 0.15, ease: Power1.In});
         gsap.to("#circle", {
         morphSVG:{ shape: '#circle', shapeIndex:"circle"},
@@ -52,14 +32,14 @@ morphFaqOut.forEach((morfaqout) => {
         ease: Power2.Out, onComplete:  () => { ScrollTrigger.refresh(); } });   
  }
 
-morfaqout.addEventListener("pointerdown", () => {
+ morfaq.addEventListener("pointerdown", () => {
   gsap.to(cursor, {
     scale: 0.192,
     duration: 0.33
   });
 });
 
-morfaqout.addEventListener("pointerup", () => {
+morfaq.addEventListener("pointerup", () => {
   gsap.to(cursor, {
     scale: 0.16,
     duration: 0.33
@@ -120,7 +100,7 @@ arrowFlip.forEach((arrowFlip) => {
             transformOrigin: "50% 50%", duration: 0.33, ease: Power2.Out}); 
       }
       function flipout(){
-            gsap.to(cursor, {rotateX: 0, left: "-1.45em", top: "2em",
+            gsap.to(cursor, {rotateX: 0, 
             transformOrigin: "50% 50%", duration: 0.33, ease: Power2.In});     
      } 
     }); 
