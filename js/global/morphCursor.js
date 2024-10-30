@@ -31,7 +31,7 @@ gsap.registerPlugin( MorphSVGPlugin );
             morphSVG:{ shape: '#arrow', shapeIndex:"polygon"},
             transformOrigin: "50% 50%", duration: 0.3,
             ease: Power2.Out});
-            gsap.to(cursor, {left: "-1.45em", top: "2.8em", scale: 0.32,
+            gsap.to(cursor, {left: "-1.45em", top: "2.5em", scale: 0.32,
             transformOrigin: "50% 50%", duration: 0.4,
             ease: Power1.Out}); 
       }
@@ -151,10 +151,10 @@ ebelRead.forEach(function(el) {
   const read_out = new gsap.timeline({paused: true});
   
   read_in
- .to(".cursor-dot", {height: "3.75em", width: "3.75em", transformOrigin: "50% 50%", left: "-1.45em", top: "1.52em", duration: 0.33, ease: Power1.out});
+ .to(".cursor-dot", {scale: 0.25, transformOrigin: "50% 50%", left: "-1.45em", top: "1.52em", duration: 0.33, ease: Power1.out});
   
  read_out
- .to(".cursor-dot", {height: "1.04em", width: "1.04em", transformOrigin: "50% 50%", left: "-1.6em", top: "1.52em", duration: 0.33, ease: Power1.In});
+ .to(".cursor-dot", {scale: 0.07, transformOrigin: "50% 50%", left: "-1.6em", top: "1.52em", duration: 0.33, ease: Power1.In});
 
   el.addEventListener('mouseenter', function() {
     read_in.restart(); 
@@ -166,8 +166,7 @@ ebelRead.forEach(function(el) {
 
     el.addEventListener("pointerdown", () => {
       gsap.to(cursor, {
-        height: "4.5em", 
-        width: "4.5em", 
+        scale: 0.3, 
         duration: 0.33
       });
     });
@@ -183,7 +182,7 @@ ebelLatest.forEach(function(el) {
   
   latest_in
   .set(".ebel-read__contain", {x: -7, display: "none", autoAlpha: 0, transformOrigin: "0% 0%" })
-  .to(cursor, {height: "7.5em", width: "7.5em", scaleY: 0.5, transformOrigin: "center", left: "-1.45em", top: "1.52em", duration: 0.44, ease: Power1.Out, overwrite: "auto"})
+  .to(cursor, {scale: "7.5em", width: "7.5em", scaleY: 0.5, transformOrigin: "center", left: "-1.45em", top: "1.52em", duration: 0.44, ease: Power1.Out, overwrite: "auto"})
   .set(".ebel-read__contain", {display: 'flex'}, "<")
   .to(".ebel-read__contain", {x: 0, autoAlpha: 1, duration: 0.33, ease: "expo.out"});
   
