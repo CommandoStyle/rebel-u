@@ -93,16 +93,35 @@ var arrowFlip = gsap.utils.toArray( ".what-the-faq__actif" );
 arrowFlip.forEach((arrowFlip) => {
       
   arrowFlip.addEventListener("mouseenter", flipin);
-  arrowFlip.addEventListener("mouseleave", flipout);
+  //arrowFlip.addEventListener("mouseleave", flipout);
       
       function flipin(){
             gsap.to(cursor, {rotateX: 180, left: "-1.45em", top: "1.3em",
             transformOrigin: "50% 50%", duration: 0.33, ease: Power2.Out}); 
       }
-      function flipout(){
-            gsap.to(cursor, {rotateX: 0, 
-            transformOrigin: "50% 50%", duration: 0.33, ease: Power2.In});     
-     } 
+      //function flipout(){
+            //gsap.to(cursor, {rotateX: 0, 
+            //transformOrigin: "50% 50%", duration: 0.33, ease: Power2.In});     
+     //} 
+    }); 
+
+    // Flip cursor arrow back
+ 
+var arrowFlipBack = gsap.utils.toArray( ".what-the-faq__btn" );
+
+arrowFlipBack.forEach((arrowFlipBack) => {
+      
+  arrowFlipBack.addEventListener("mouseenter", flipinback);
+  //arrowFlip.addEventListener("mouseleave", flipout);
+      
+      function flipinback(){
+            gsap.to(cursor, {rotateX: 0, left: "-1.45em", top: "2em",
+            transformOrigin: "50% 50%", duration: 0.33, ease: Power2.In}); 
+      }
+      //function flipout(){
+            //gsap.to(cursor, {rotateX: 0, 
+            //transformOrigin: "50% 50%", duration: 0.33, ease: Power2.In});     
+     //} 
     }); 
 
 }
