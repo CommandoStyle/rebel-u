@@ -9,7 +9,7 @@ MorphSVGPlugin.convertToPath("#circle", "#arrow");
 var cursor = gsap.utils.toArray(".cursor-dot");
 var morphFaq = gsap.utils.toArray(".what-the-faq__items-contain");
     
-morphFaq.forEach((morfaqin) => {
+morphFaq.forEach((morfaq) => {
       
   morfaq.addEventListener("mouseenter", morphin);
   morfaq.addEventListener("mouseleave", morphout);
@@ -24,7 +24,7 @@ morphFaq.forEach((morfaqin) => {
   }
 
 function morphout(){
-        gsap.to(cursor, {left: "-1.6em", top: "1.51em", scale: 0.07,
+        gsap.to(cursor, {left: "-1.6em", top: "1.52em", scale: 0.07,
         transformOrigin: "50% 50%", rotateX: 0, duration: 0.15, ease: Power1.In});
         gsap.to("#circle", {
         morphSVG:{ shape: '#circle', shapeIndex:"circle"},
