@@ -19,12 +19,12 @@ morphFaq.forEach((morfaq) => {
         morphSVG:{ shape: '#arrow', shapeIndex:"polygon"},
         transformOrigin: "50% 50%", duration: 0.3,
         ease: Power2.Out});
-        gsap.to(cursor, {xPercent: -40, yPercent: -55, scale: 0.16,
+        gsap.to(cursor, {xPercent: -38, yPercent: -52, scale: 0.16,
         transformOrigin: "50% 50%", duration: 0.3, 
         ease: Power1.Out}); 
   }
   function morphout(){
-        gsap.to(cursor, {xPercent: 0, yPercent: 0, scale: 0.07,
+        gsap.to(cursor, {xPercent: -38, yPercent: -52, scale: 0.07,
         transformOrigin: "50% 50%", duration: 0.15, 
         ease: Power1.In });
         gsap.to("#circle", {
@@ -97,12 +97,12 @@ arrowFlip.forEach((arrowFlip) => {
   arrowFlip.addEventListener("mouseleave", flipout);
       
       function flipin(){
-            gsap.to(cursor, {rotateX: 180, yPercent: -55,
+            gsap.to(cursor, {rotateX: 180, yPercent: -62,
             transformOrigin: "50% 50%", duration: 0.33, 
             ease: Power2.Out}); 
       }
       function flipout(){
-            gsap.to(cursor, {rotateX: 0, yPercent: -55,
+            gsap.to(cursor, {rotateX: 0, yPercent: -52,
             transformOrigin: "50% 50%", duration: 0.33, 
             ease: Power2.In});
             
