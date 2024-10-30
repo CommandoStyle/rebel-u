@@ -19,12 +19,12 @@ morphFaq.forEach((morfaq) => {
         morphSVG:{ shape: '#arrow', shapeIndex:"polygon"},
         transformOrigin: "50% 50%", duration: 0.3,
         ease: Power2.Out});
-        gsap.to(cursor, {xPercent: -15, yPercent: -30, scale: 0.16,
+        gsap.to(cursor, {xPercent: 0, yPercent: 0, scale: 0.16,
         transformOrigin: "50% 50%", duration: 0.3, 
         ease: Power1.Out}); 
   }
   function morphout(){
-        gsap.to(cursor, {xPercent: -38, yPercent: -60, scale: 0.07,
+        gsap.to(cursor, {xPercent: 0, yPercent: 0, scale: 0.07,
         transformOrigin: "50% 50%", duration: 0.15, 
         ease: Power1.In });
         gsap.to("#circle", {
