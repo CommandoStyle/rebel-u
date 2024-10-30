@@ -31,7 +31,7 @@ gsap.registerPlugin( MorphSVGPlugin );
             morphSVG:{ shape: '#arrow', shapeIndex:"polygon"},
             transformOrigin: "50% 50%", duration: 0.3,
             ease: Power2.Out});
-            gsap.to(cursor, {xPercent: -16, yPercent: -8, scale: 4.6,
+            gsap.to(cursor, {xPercent: -16, yPercent: -8, scale: 0.32,
             transformOrigin: "50% 50%", duration: 0.4,
             ease: Power1.Out}); 
       }
@@ -40,21 +40,21 @@ gsap.registerPlugin( MorphSVGPlugin );
             morphSVG:{ shape: '#circle', shapeIndex:"circle"},
             transformOrigin: "50% 50%", duration: 0.3,
             ease: Power2.Out});
-            gsap.to(cursor, {xPercent: -38, yPercent: -60, scale: 1,
+            gsap.to(cursor, {xPercent: -38, yPercent: -60, scale: 0.07,
             transformOrigin: "50% 50%", duration: 0.4,
             ease: Power1.In});
      } 
 
      mortop.addEventListener("pointerdown", () => {
       gsap.to(cursor, {
-        scale: 5.52,
+        scale: 0.384,
         duration: 0.33
       });
     });
     
     mortop.addEventListener("pointerup", () => {
       gsap.to(cursor, {
-        scale: 4.6,
+        scale: 0.32,
         duration: 0.33
       });
      });
@@ -73,7 +73,7 @@ gsap.registerPlugin( MorphSVGPlugin );
             morphSVG:{ shape: '#arrow', shapeIndex:"polygon"},
             transformOrigin: "50% 50%", duration: 0.3, 
             ease: Power2.Out});
-            gsap.to(cursor, {xPercent: -50, yPercent: -40, scale: 4.6, rotation: 90, 
+            gsap.to(cursor, {xPercent: -50, yPercent: -40, scale: 0.32, rotation: 90, 
             transformOrigin: "50% 50%", duration: 0.3, ease: Power1.Out}); 
       }
       function morphout(){
@@ -81,20 +81,20 @@ gsap.registerPlugin( MorphSVGPlugin );
             morphSVG:{ shape: '#circle', shapeIndex:"circle"},
             transformOrigin: "50% 50%", duration: 0.3,
             ease: Power2.Out});
-            gsap.to(cursor, {xPercent: -38, yPercent: -60, scale: 1, rotation: 0,
+            gsap.to(cursor, {xPercent: -38, yPercent: -60, scale: 0.07, rotation: 0,
             transformOrigin: "50% 50%", duration: 0.3, ease: Power1.In});
      } 
 
      morlef.addEventListener("pointerdown", () => {
       gsap.to(cursor, {
-        scale: 5.52,
+        scale: 0.384,
         duration: 0.33
       });
     });
     
     morlef.addEventListener("pointerup", () => {
       gsap.to(cursor, {
-        scale: 4.6,
+        scale: 0.32,
         duration: 0.33
       });
      });
@@ -113,7 +113,7 @@ gsap.registerPlugin( MorphSVGPlugin );
             morphSVG:{ shape: '#arrow', shapeIndex:"polygon"},
             transformOrigin: "50% 50%", duration: 0.3, 
             ease: Power2.Out});
-            gsap.to(cursor, {xPercent: 5, yPercent: -40, scale: 4.6, rotation: -90, 
+            gsap.to(cursor, {xPercent: 5, yPercent: -40, scale: 0.32, rotation: -90, 
             transformOrigin: "50% 50%", duration: 0.3, 
             ease: Power1.Out}); 
       }
@@ -122,21 +122,21 @@ gsap.registerPlugin( MorphSVGPlugin );
             morphSVG:{ shape: '#circle', shapeIndex:"circle"},
             transformOrigin: "50% 50%", duration: 0.3, 
             ease: Power2.Out});
-            gsap.to(cursor, {xPercent: -38, yPercent: -60, scale: 1, rotation: 0, 
+            gsap.to(cursor, {xPercent: -38, yPercent: -60, scale: 0.07, rotation: 0, 
             transformOrigin: "50% 50%", duration: 0.3, 
             ease: Power1.In});
      }
 
      morrig.addEventListener("pointerdown", () => {
       gsap.to(cursor, {
-        scale: 5.52,
+        scale: 0.384,
         duration: 0.33
       });
     });
     
     morrig.addEventListener("pointerup", () => {
       gsap.to(cursor, {
-        scale: 4.6,
+        scale: 0.32,
         duration: 0.33
       });
      });
@@ -183,7 +183,7 @@ ebelLatest.forEach(function(el) {
   
   latest_in
   .set(".ebel-read__contain", {x: -7, display: "none", autoAlpha: 0, transformOrigin: "0% 0%" })
-  .to(cursor, {height: "7.5em", width: "7.5em", scaleY: 1, transformOrigin: "center", xPercent: -46, yPercent: -48, duration: 0.44, ease: Power1.Out, overwrite: "auto"})
+  .to(cursor, {height: "7.5em", width: "7.5em", scaleY: 0.5, transformOrigin: "center", xPercent: -46, yPercent: -48, duration: 0.44, ease: Power1.Out, overwrite: "auto"})
   .set(".ebel-read__contain", {display: 'flex'}, "<")
   .to(".ebel-read__contain", {x: 0, autoAlpha: 1, duration: 0.33, ease: "expo.out"});
   
@@ -253,7 +253,7 @@ el.addEventListener("pointerdown", () => {
           gsap.to(cursor, {scale: 0, transformOrigin: "50% 50%", duration: 0.33, ease: Power1.Out, overwrite: 'auto'}); 
     }
     function shrinkOut(){
-          gsap.to(cursor, {scale: 1, transformOrigin: "50% 50%", duration: 0.33, ease: Power1.In, overwrite: 'auto'});
+          gsap.to(cursor, {scale: 0.07, transformOrigin: "50% 50%", duration: 0.33, ease: Power1.In, overwrite: 'auto'});
    } 
 
   }); 
