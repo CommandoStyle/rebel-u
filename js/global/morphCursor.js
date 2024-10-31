@@ -181,15 +181,15 @@ ebelLatest.forEach(function(el) {
   const latest_out = new gsap.timeline({paused: true});
   
   latest_in
-  .set(".ebel-read__contain", {xPercent: -5, display: "none", autoAlpha: 0})
+  .set(".ebel-read__contain", {xPercent: -5, scale: 1, display: "none", autoAlpha: 0})
   .to(cursor, {scale: 0.5, transformOrigin: "center", left: "-1.45em", top: "1.52em", duration: 0.44, ease: Power1.Out, overwrite: "auto"})
   .set(".ebel-read__contain", {display: 'flex'}, "<")
   .to(".ebel-read__contain", {xPercent: 0, autoAlpha: 1, duration: 0.33, ease: "expo.out"});
   
  latest_out
- .to(".ebel-read__contain", {autoAlpha: 0, xPercent: 5, duration: 0.11, ease: "expo.out"})
- .set(".ebel-read__contain", {xPercent: -5, autoAlpha: 0, display: 'none'})
- .to(cursor, {scale: 0.07, transformOrigin: "center", left: "-1.6em", top: "1.52em", duration: 0.44, ease: Power1.In});
+ .to(".ebel-read__contain", {autoAlpha: 0, scale: 0.07, transformOrigin: "center", duration: 0.44, ease: "expo.out"})
+ .to(cursor, {scale: 0.07, transformOrigin: "center", left: "-1.6em", top: "1.52em", duration: 0.44, ease: Power1.In})
+ .set(".ebel-read__contain", {xPercent: -5, scale: 1, autoAlpha: 0, display: 'none'});
 
   el.addEventListener('mouseenter', function() {
     latest_in.restart(); 
