@@ -187,9 +187,9 @@ ebelLatest.forEach(function(el) {
   .to(".ebel-read__contain", {x: 0, autoAlpha: 1, duration: 0.33, ease: "expo.out"});
   
  latest_out
- .to(cursor, {scale: 0.07, transformOrigin: "center", left: "-1.6em", top: "1.52em", duration: 0.44, ease: Power1.In})
- .to(".ebel-read__contain", {autoAlpha: 0, x: 7, duration: 0.33, ease: "expo.out"}, "<")
- .set(".ebel-read__contain", {x: -7, autoAlpha: 0, display: 'none'});
+ .to(".ebel-read__contain", {autoAlpha: 0, x: 7, duration: 0.11, ease: "expo.out"})
+ .set(".ebel-read__contain", {x: -7, autoAlpha: 0, display: 'none'})
+ .to(cursor, {scale: 0.07, transformOrigin: "center", left: "-1.6em", top: "1.52em", duration: 0.44, ease: Power1.In});
 
   el.addEventListener('mouseenter', function() {
     latest_in.restart(); 
@@ -202,8 +202,9 @@ ebelLatest.forEach(function(el) {
     el.addEventListener("pointerdown", () => {
       gsap.to(cursor, {
         scale: 0.6,  
-        duration: 0.33
-      });
+        duration: 0.33});
+      gsap.to(".ebel-read__contain", {
+        scale: 0.8, transformOrigin: "0% 0%", duration: 0.33 }, "<");
     });
     
 
