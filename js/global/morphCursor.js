@@ -182,12 +182,12 @@ ebelLatest.forEach(function(el) {
   
   latest_in
   .set(".ebel-read__contain", {x: -7, display: "none", autoAlpha: 0, transformOrigin: "0% 0%" })
-  .to(cursor, {scale: "7.5em", width: "7.5em", scaleY: 0.5, transformOrigin: "center", left: "-1.45em", top: "1.52em", duration: 0.44, ease: Power1.Out, overwrite: "auto"})
+  .to(cursor, {scale: 0.5, transformOrigin: "center", left: "-1.45em", top: "1.52em", duration: 0.44, ease: Power1.Out, overwrite: "auto"})
   .set(".ebel-read__contain", {display: 'flex'}, "<")
   .to(".ebel-read__contain", {x: 0, autoAlpha: 1, duration: 0.33, ease: "expo.out"});
   
  latest_out
- .to(cursor, {height: "1.04em", width: "1.04em", transformOrigin: "center", left: "-1.6em", top: "1.52em", duration: 0.44, ease: Power1.In})
+ .to(cursor, {scale: 0.07, transformOrigin: "center", left: "-1.6em", top: "1.52em", duration: 0.44, ease: Power1.In})
  .to(".ebel-read__contain", {autoAlpha: 0, x: 7, duration: 0.33, ease: "expo.out"}, "<")
  .set(".ebel-read__contain", {x: -7, autoAlpha: 0, display: 'none'});
 
@@ -201,8 +201,7 @@ ebelLatest.forEach(function(el) {
 
     el.addEventListener("pointerdown", () => {
       gsap.to(cursor, {
-        height: "9em", 
-        width: "9em", 
+        scale: 0.6,  
         duration: 0.33
       });
     });
