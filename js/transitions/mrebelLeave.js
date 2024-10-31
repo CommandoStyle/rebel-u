@@ -35,7 +35,7 @@ latestBtn.forEach(latestBtn => {
         .to(".ebel-read__contain", {xPercent: 5, duration: 0.22, autoAlpha: 0, ease: "expo.out"})
         .to(cursorMbg, {scale: 22, transformOrigin: "50% 50%", duration: 1.1, ease: "expoScale(1, 22)"}, "<")
         .set(".transition-cover", { display: 'block' }, 1)
-        .set(".ebel-read__contain", {display: 'none'});
+        .set(".ebel-read__contain", {xPercent: -5, scale: 1, autoAlpha: 0, display: 'none'});
                             
         latestBtn.addEventListener('click', () => {
             latest__go.play(0);
