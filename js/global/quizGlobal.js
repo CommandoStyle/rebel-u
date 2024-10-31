@@ -121,7 +121,6 @@ quiz_open = gsap.timeline({ paused: true });
               .set(CategoryQuiz, { display: "block" }, "<")
 	      .set(".redact-cover-quiz-exit", { scaleX: 0 }, "<") 
 	      .set(".quiz-exit-txt", { autoAlpha: 1 }, "<")
-	      .set(".menu-txt", {autoAlpha: 0}, "<")
               .to(arrowMask, {filter:"invert(100%)", duration: 0.001}, "<")
               .to(quizBg, { scale: 12, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 1.2 })
 	      .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.6")
@@ -134,7 +133,8 @@ quiz_open = gsap.timeline({ paused: true });
 	      .set(navBg, {scale: 40, autoAlpha: 1, display: "block"})
               .set(arrowMask, { filter:"invert(0%)" })
               .set(arrowTrack, { autoAlpha: 1 })
-	      .set(".touch-print-open__wrap", { autoAlpha: 1 });
+	      .set(".touch-print-open__wrap", { autoAlpha: 1 })
+	      .set(".menu-txt", {autoAlpha: 0});
        
  quizOpen.addEventListener('click', () => {   
     quiz_open.play(0);
@@ -163,14 +163,14 @@ quizCancel.forEach((quizCancel) => {
         //gsap.set(quizHole, { left: xDist, top: yDist })
        
   quiz_cancel
-         .set(".menu__btn", { display: "none", opacity: 0 })
-         .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
+         //.set(".menu__btn", { display: "none", opacity: 0 })
+	 //.set(".menu__btn", { display: "flex", opacity: 1})
+         .set(cursor, { scale: 0.5, autoAlpha: 1})
          .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
          .to([CategoryQuiz, quizInnerWrap], { x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
          //.fromTo(quizHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
 	 .fromTo(navBg, { scale:40 }, {scale: 0.5, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
-	 .to(".menu__btn", { display: "flex", opacity: 1, duration: 0.001 }, "<")
-	 .to(cursor, { scale: 0.5, autoAlpha: 1, duration: 0.001 }, "<")
+	 //.to(cursor, { scale: 0.5, autoAlpha: 1, duration: 0.001 }, "<")
 	 .to(".redact-cover-quiz-exit", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}) 
 	 .to(".quiz-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
 	 .to(".menu-txt", { autoAlpha: 1, duration: 0.001 }, "<")
