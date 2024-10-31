@@ -187,8 +187,8 @@ ebelLatest.forEach(function(el) {
   .to(".ebel-read__contain", {xPercent: 0, autoAlpha: 1, duration: 0.33, ease: "expo.out"});
   
  latest_out
- .to(".ebel-read__contain", {autoAlpha: 0, scale: 0.07, transformOrigin: "center", duration: 0.44, ease: "expo.out"})
- .to(cursor, {scale: 0.07, transformOrigin: "center", left: "-1.6em", top: "1.52em", duration: 0.44, ease: Power1.In})
+ .to(".ebel-read__contain", {autoAlpha: 0, scale: 0.07, transformOrigin: "center", duration: 0.44, ease: "linear"})
+ .to(cursor, {scale: 0.07, transformOrigin: "center", left: "-1.6em", top: "1.52em", duration: 0.44, ease: Power1.In}, "<")
  .set(".ebel-read__contain", {xPercent: -5, scale: 1, autoAlpha: 0, display: 'none'});
 
   el.addEventListener('mouseenter', function() {
