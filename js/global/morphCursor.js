@@ -17,7 +17,7 @@ gsap.registerPlugin( MorphSVGPlugin );
     //var ebelQuery = gsap.utils.toArray(".mrebel__submit-query");
     var ease = 'none';
     
-    gsap.set(".ebel-read__contain", {display: 'none', x: -7, autoAlpha: 0});
+    gsap.set(".ebel-read__contain", {display: 'none', xPercent: -3, autoAlpha: 0});
     
     // ball to hero down
     
@@ -181,14 +181,14 @@ ebelLatest.forEach(function(el) {
   const latest_out = new gsap.timeline({paused: true});
   
   latest_in
-  .set(".ebel-read__contain", {x: -7, display: "none", autoAlpha: 0})
+  .set(".ebel-read__contain", {xPercent: -3, display: "none", autoAlpha: 0})
   .to(cursor, {scale: 0.5, transformOrigin: "center", left: "-1.45em", top: "1.52em", duration: 0.44, ease: Power1.Out, overwrite: "auto"})
   .set(".ebel-read__contain", {display: 'flex'}, "<")
-  .to(".ebel-read__contain", {x: 0, autoAlpha: 1, duration: 0.33, ease: "expo.out"});
+  .to(".ebel-read__contain", {xPercent: 0, autoAlpha: 1, duration: 0.33, ease: "expo.out"});
   
  latest_out
- .to(".ebel-read__contain", {autoAlpha: 0, x: 7, duration: 0.11, ease: "expo.out"})
- .set(".ebel-read__contain", {x: 7, autoAlpha: 0, display: 'none'})
+ .to(".ebel-read__contain", {autoAlpha: 0, xPercent: 3, duration: 0.11, ease: "expo.out"})
+ .set(".ebel-read__contain", {xPercent: -3, autoAlpha: 0, display: 'none'})
  .to(cursor, {scale: 0.07, transformOrigin: "center", left: "-1.6em", top: "1.52em", duration: 0.44, ease: Power1.In});
 
   el.addEventListener('mouseenter', function() {
