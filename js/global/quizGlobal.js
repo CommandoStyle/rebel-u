@@ -22,8 +22,9 @@ var quizOpen = gsap.utils.toArray('.quiz-cta__btn');
 var quizInnerWrap = gsap.utils.toArray('.quiz-inner__booking-wrap');
 const quizCancel = document.querySelectorAll(".quiz-cancel");
 const quizCancelSuccess = document.querySelectorAll(".quiz-cancel__success");
-const quizHole = document.querySelectorAll(".quiz-hole");
+//const quizHole = document.querySelectorAll(".quiz-hole");
 const quizHoleMobile = document.querySelectorAll(".quiz-hole-mobile");
+var navBg = gsap.utils.toArray('.nav__backdrop');
 
 gsap.registerPlugin(ExpoScaleEase);
 
@@ -34,6 +35,7 @@ gsap.set([QuizWrap, QuizContain, quizCancel, quizCancelSuccess], { display: "non
 gsap.set(quizBg, { autoAlpha: 0 });
 gsap.set(quizInnerWrap, { opacity: 0, display: "none" });
 gsap.set(".arrow-redact-cover", { scaleX: 0 });
+gsap.set(navBg, {autoAlpha: 0});
 
 //QUIZ FINI MARQUEE
 function horizontalLoop(items, config) {
@@ -125,7 +127,8 @@ quiz_open = gsap.timeline({ paused: true });
               .to(".arrow-redact-cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
               .to([quizCancelinner, CategoryQuiz], { delay: 0.2, x: 0, opacity: 1, ease: "expo.out", duration: 1.2 })
               .fromTo(quizInnerWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-              .set(quizHole, {display: "block"}, "<")
+              //.set(quizHole, {display: "block"}, "<")
+	      .set(navBg, {scale: 40, autoAlpha: 1, display: "block"})
               .set(arrowMask, { filter:"invert(0%)" })
               .set(arrowTrack, { autoAlpha: 1 })
 	      .set(".touch-print-open__wrap", { autoAlpha: 1 });
@@ -140,36 +143,38 @@ quiz_open = gsap.timeline({ paused: true });
 //All devices: close quiz
 quizCancel.forEach((quizCancel) => {
     if (!quizCancel) return
-    const quizHole = document.querySelector('.quiz-hole')
-    if (!quizHole) return
+    //const quizHole = document.querySelector('.quiz-hole')
+    //if (!quizHole) return
     const quizContain = document.querySelector('.quiz-items__container')
     if (!quizContain) return
 
-    gsap.set(quizHole, { scale: 1 })
+    //gsap.set(quizHole, { scale: 1 })
 
     quizCancel.addEventListener("click", (e) => {
-        // Calculate distance between user click and top left corner of button
-        let xDist = e.clientX - quizContain.getBoundingClientRect().x + 4
-        let yDist = e.clientY - quizContain.getBoundingClientRect().y
+
+        //let xDist = e.clientX - quizContain.getBoundingClientRect().x + 4
+        //let yDist = e.clientY - quizContain.getBoundingClientRect().y
         let quiz_cancel = gsap.timeline();
 
         // Immediately set left and top properties to position the circle element where user clicks
-        gsap.set(quizHole, { left: xDist, top: yDist })
+        //gsap.set(quizHole, { left: xDist, top: yDist })
        
   quiz_cancel
          .set(".menu__btn", { display: "none", opacity: 0 })
          .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
          .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
          .to([CategoryQuiz, quizCancelinner, quizInnerWrap], { x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
-         .fromTo(quizHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
-         .to(cursor, { delay: 0.55, scale: 0.07, autoAlpha: 1, duration: 0.45 })
+         //.fromTo(quizHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
+	 .fromTo(navBg, { scale:40 }, {scale: 0.6, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
+         .to(cursor, { delay: 0.55, scale: 0.5, autoAlpha: 1, duration: 0.45 })
          .set(CategoryQuiz, { x: -30, opacity: 0, display: "none" })
          .set(quizCancelinner, { x: -30, opacity: 0 })
          .set(quizCancel, { display: "none" })
          .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 })
          .set(QuizContain, { display: "none" })
-         .set(quizHole, {display: "none", clearProps: "all"})
-         .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+         //.set(quizHole, {display: "none", clearProps: "all"})
+	 .to(navBg, { autoAlpha: 0, duration: 0.001 },"<")
+         .to(".menu__btn", { delay: 0, display: "flex", opacity: 1, duration: 0.45 });
 
         })
       });
