@@ -17,7 +17,7 @@ gsap.registerPlugin( MorphSVGPlugin );
     //var ebelQuery = gsap.utils.toArray(".mrebel__submit-query");
     var ease = 'none';
     
-    .set(".ebel-read__contain", {xPercent: -5, scale: 1, autoAlpha: 0, display: 'none'});
+    gsap.set(".ebel-read__contain", {xPercent: -5, scale: 1, autoAlpha: 0, display: 'none'});
     
     // ball to hero down
     
