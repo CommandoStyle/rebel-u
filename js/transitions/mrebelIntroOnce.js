@@ -40,7 +40,7 @@ ebelIntroOnce
 .to(".redact-cover-42", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.125, ease: "linear"}, "+=0.3")
 .to('.ebel-42__wrap', { autoAlpha: 1, duration: 0.001, onComplete: () => { circleXL.play(); }})
 .to(".redact-cover-42", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.125, ease: "linear"}, "-=0.02")
-.to(".mrebel-reveal", { duration: 1.6, x: 0, stagger: 0.03, ease: "expo.out" }, "-=2.282")
+.to(".mrebel-reveal", { duration: 1.6, x: 0, stagger: 0.03, ease: "expo.out" }, "-=2.252")
 .to(".mrebel-reveal", { duration: 0.4, opacity: 1, stagger: 0.03, ease: "linear" }, "<")
 .add(gsap.delayedCall(0.8, function() { fortyTwo.play(); }))
 .to('.cookie__wrap', { delay: 0.5, xPercent: 0, duration: 1.6, ease: "expo.easeOut" })
