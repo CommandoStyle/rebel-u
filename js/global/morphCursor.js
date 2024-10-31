@@ -204,7 +204,7 @@ ebelLatest.forEach(function(el) {
         scale: 0.6,  
         duration: 0.33});
       gsap.to(".ebel-read__contain", {
-        scale: 0.8, transformOrigin: "0% 0%", duration: 0.33 }, "<");
+        scale: 0.8, autoAlpha: 0, xPercent: 3, transformOrigin: "0% 0%", duration: 0.33 }, "<");
     });
     
 
