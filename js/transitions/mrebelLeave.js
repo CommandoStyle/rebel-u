@@ -31,7 +31,7 @@ latestBtn.forEach(latestBtn => {
         var latest__go = gsap.timeline({ paused: true });
             
         latest__go
-        .set(cursorMbg, {display: "block", height: "9em", width: "9em", yPercent: 44, xPercent: 44 })
+        .set(cursorMbg, {display: "block"})
         .to(".ebel-read__contain", {x: 7, duration: 0.22, autoAlpha: 0, ease: "expo.out"})
         .to(cursorMbg, {scale: 22, transformOrigin: "50% 50%", duration: 1.1, ease: "expoScale(1, 22)"}, "<")
         .set(".transition-cover", { display: 'block' }, 1)
