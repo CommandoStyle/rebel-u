@@ -140,7 +140,7 @@ query_cancel
 	 //.set([queryCancel, QueryContain], { pointerEvents: "none" })
          .to(queryInnerWrap, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .to(CategoryQ, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-         .fromTo(navBg, { scale:40 }, {scale: 0.4, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
+         .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
 	 .to(".redact-cover-query-exit", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}) 
 	 .to(".query-menu-txt", { autoAlpha: 1, duration: 0.001 })
 	 .to(".query-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
