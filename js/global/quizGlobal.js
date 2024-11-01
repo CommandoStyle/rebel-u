@@ -134,7 +134,9 @@ quiz_open = gsap.timeline({ paused: true });
               .set(arrowMask, { filter:"invert(0%)" })
               .set(arrowTrack, { autoAlpha: 1 })
 	      .set(".touch-print-open__wrap", { autoAlpha: 1 })
-	      .set(".menu-txt", {autoAlpha: 0});
+	      .set(".menu-txt", {autoAlpha: 0})
+	      .fromTo([".menu__btn", ".currency__btn", ".home-nav__btn", ".nav__logo-btn"], { display: "none" }, { display: "flex", duration: 0.001, overwrite: 'auto' })
+              .fromTo([".home-logo", ".beta__txt", ".menu-txt", ".touch-print-open__wrap", ".query-txt", ".currencies-list__contain", ".query-away__track", ".mrebel-says__category-contain"], { opacity: 0 }, { opacity: 1, duration:0.55, ease: Power1.easeInOut, overwrite: 'auto' });
        
  quizOpen.addEventListener('click', () => {   
     quiz_open.play(0);
