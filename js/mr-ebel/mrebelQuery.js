@@ -143,7 +143,7 @@ query_cancel
          //.to(queryCancelinner, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .fromTo(navBg, { scale:40 }, {scale: 0.4, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
 	 .to(".redact-cover-query-exit", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}) 
-	 .to(".menu-txt", { autoAlpha: 1, duration: 0.05 })
+	 .to(".menu-txt", { autoAlpha: 1, duration: 0.05 }, "<")
 	 .to(".query-exit-txt", { autoAlpha: 0, duration: 0.05 }, "<")
 	 .to(".redact-cover-query-exit", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"}) 
 	 .set(navBg, { autoAlpha: 0 })
