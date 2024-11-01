@@ -148,10 +148,10 @@ query_cancel
 	 .to(".redact-cover-query-exit", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"}) 
 	 .set(navBg, { autoAlpha: 0 })
          //.fromTo(queryHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
-         .set(CategoryQ, { x: -30, opacity: 0, display: "none" })
-         .set(queryCancelinner, { x: -30, opacity: 0 })
+         .set(CategoryQ, { x: -30, opacity: 0, display: "none" }) 
          .set(queryCancel, { display: "none" })
          .set(queryInnerWrap, { opacity: 0, display: "none", x: -30 })
+	 .set(queryCancelinner, { x: -30, opacity: 0 })
          .set(QueryContain, { display: "none" });
          //.set(queryHole, {display: "none", clearProps: "all"})
          //.to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
