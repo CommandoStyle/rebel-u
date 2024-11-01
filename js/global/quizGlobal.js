@@ -165,7 +165,7 @@ quizCancel.forEach((quizCancel) => {
   quiz_cancel
          .set(quizBg, {autoAlpha: 0, scale: 1})
 	 .set([QuizContain, quizInnerWrap, quizCancel], { pointerEvents: "none" }, "<")
-	 .set(cursor, { scale: 0.07, autoAlpha: 1})
+	 .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.45em", top: "1.7em", })
          .to([CategoryQuiz, quizInnerWrap], { x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
          //.fromTo(quizHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
 	 .fromTo(navBg, { scale:40 }, {scale: 0.6, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
