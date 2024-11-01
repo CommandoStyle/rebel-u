@@ -272,11 +272,11 @@ target.addEventListener("pointerup", () => {
       
     // Add class on Top bar CTAs to center cursor and elevate Z
     
-    $( ".menu__btn, .menu-close__btn, .mrebel__submit-query, .currency__btn, .currency-exit__btn, .quiz-cta__btn, .cookie-ok__btn, .nav__logo-btn" ).mouseenter(function() {
+    $( ".menu__btn, .menu-close__btn, .mrebel__submit-query, .currency__btn, .currency-exit__btn, .quiz-cta__btn, .cookie-ok__btn, .nav__logo-btn, .quiz-cancel" ).mouseenter(function() {
       $('.cursor-dot').addClass('top-stuck');
     });
     
-      $( ".menu__btn, .menu-close__btn, .mrebel__submit-query, .currency__btn, .currency-exit__btn, .quiz-cta__btn, .cookie-ok__btn, .nav__logo-btn" ).mouseleave(function() {
+      $( ".menu__btn, .menu-close__btn, .mrebel__submit-query, .currency__btn, .currency-exit__btn, .quiz-cta__btn, .cookie-ok__btn, .nav__logo-btn, .quiz-cancel" ).mouseleave(function() {
       $('.cursor-dot').removeClass('top-stuck');
     }); 
   
