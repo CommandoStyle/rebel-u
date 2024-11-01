@@ -82,8 +82,7 @@ query_open = gsap.timeline({ paused: true });
 
     query_open.set(queryBg, { scale: 1, autoAlpha: 1 })
               .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
-              .set(QueryContain, { display: "flex" }, "<")
-              .set(queryCancel, { display: "flex" }, "<")
+              .set([QueryContain, queryCancel], { display: "flex", autoAlpha: 1 }, "<")
               .set(queryInnerWrap, { display: "flex" }, "<")
               .set(CategoryQ, { display: "block" }, "<")
               .set(".redact-cover-query", { scaleX: 0 }, "<")
@@ -146,6 +145,7 @@ query_cancel
 	 .to(".query-menu-txt", { autoAlpha: 1, duration: 0.001 })
 	 .to(".query-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
 	 .to(".redact-cover-query-exit", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
+	 .to([queryCancel, QueryContain], { autoAlpha: 0, duration: 0.3 });
 	 .set(navBg, { autoAlpha: 0 })
 	 .set(CategoryQ, { x: -30, opacity: 0, display: "none" }) 
          .set(queryInnerWrap, { opacity: 0, display: "none", x: -30 })
