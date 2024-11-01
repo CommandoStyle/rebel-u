@@ -29,6 +29,8 @@ export const cursorFirstNew = () => {
       gsap.to(cursor, {
         scale: 0.07,
         autoAlpha: 1,
+        left: "-1.6em", 
+        top: "1.52em"
       });
       firstMouseMove = false;
     } else {
@@ -111,6 +113,8 @@ export const cursorFirstNew = () => {
       gsap.to(cursor, {
         scale: 0.5,
         duration: 0.33,
+        left: "-1.65em", 
+        top: "1.7em",
         ease: "expoScale(0.07, 0.5, power1.out)",
         overwrite: 'auto'
       });
@@ -121,6 +125,8 @@ export const cursorFirstNew = () => {
       gsap.to(cursor, {
         scale: 0.07,
         duration: 0.33,
+        left: "-1.6em", 
+        top: "1.52em",
         ease: "expoScale(0.5, 0.07, power1.in)",
         overwrite: 'auto'
       });
@@ -149,6 +155,8 @@ target.addEventListener("pointerup", () => {
         gsap.to(cursor, {
           scale: 1,
           duration: 0.66,
+          left: "-1.45em", 
+          top: "1.7em",
           ease: "expoScale(0.07, 1, power1.out)"
         });
       });
@@ -158,6 +166,8 @@ target.addEventListener("pointerup", () => {
         gsap.to(cursor, {
           scale: 0.07,
           duration: 0.66,
+          left: "-1.6em", 
+          top: "1.52em",
           ease: "expoScale(1, 0.07, power1.in)"
         });
       });
@@ -185,6 +195,8 @@ target.addEventListener("pointerup", () => {
         gsap.to(cursor, {
           scaleX: 1,
           scaleY: 0.5,
+          left: "-1.45em", 
+          top: "1.7em",
           duration: 0.44,
           ease: "none"
         });
@@ -195,6 +207,8 @@ target.addEventListener("pointerup", () => {
         gsap.to(cursor, {
           scaleX: 0.07,
           scaleY: 0.07,
+          left: "-1.6em", 
+          top: "1.52em",
           duration: 0.44,
           ease: "none"
         });
