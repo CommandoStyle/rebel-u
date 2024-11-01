@@ -166,11 +166,9 @@ quizCancel.forEach((quizCancel) => {
        
   quiz_cancel
          .set(quizBg, {autoAlpha: 0, scale: 1})
-	 //.set([QuizContain, quizInnerWrap, quizCancel], { pointerEvents: "none" }, "<")
 	 .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' })
          .to([CategoryQuiz, quizInnerWrap], { x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
-         //.fromTo(quizHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
-	 .fromTo(navBg, { scale:40 }, {scale: 0.6, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
+	 .fromTo(navBg, { scale:40 }, {scale: 0.4, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
 	 .to(".redact-cover-quiz-exit", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}) 
 	 .to(".menu-txt", { autoAlpha: 1, duration: 0.05 })
 	 .to(".quiz-exit-txt", { autoAlpha: 0, duration: 0.05 }, "<")
@@ -181,7 +179,6 @@ quizCancel.forEach((quizCancel) => {
          .set(quizCancel, { display: "none" })
          .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 })
          .set(QuizContain, { display: "none" });
-         //.set(quizHole, {display: "none", clearProps: "all"});
 
         })
       });
