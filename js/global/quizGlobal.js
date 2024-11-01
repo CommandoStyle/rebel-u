@@ -129,7 +129,6 @@ quiz_open = gsap.timeline({ paused: true });
               .to(".arrow-redact-cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
               .to([quizCancelinner, CategoryQuiz], { delay: 0.2, x: 0, opacity: 1, ease: "expo.out", duration: 1.2 })
               .fromTo(quizInnerWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-              //.set(quizHole, {display: "block"}, "<")
 	      .set(navBg, {scale: 40, autoAlpha: 1, display: "block"})
               .set(arrowMask, { filter:"invert(0%)" })
               .set(arrowTrack, { autoAlpha: 1 })
