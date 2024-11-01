@@ -89,6 +89,7 @@ query_open = gsap.timeline({ paused: true });
               .set(".redact-cover-query", { scaleX: 0 }, "<")
               .set(".redact-cover-query-exit", { scaleX: 0 }, "<") 
 	      .set(".query-exit-txt", { autoAlpha: 1 }, "<")
+	      .set(".query-menu-txt", {autoAlpha: 0}, "<")
               .set(".nav__items-container", {display: "none" }, "<")
               .to(ctaMask, {filter:"invert(100%)", duration: 0.001}, "<")
               .to(queryBg, { scale: 24, transformOrigin: "50% 50%", ease: "expoScale(1, 24, power2.inOut)", duration: 1 })
@@ -104,7 +105,6 @@ query_open = gsap.timeline({ paused: true });
               //.set(queryHole, {display: "block"}, "<")
               .set(ctaMask, {filter:"invert(0%)" })
               .set(".touch-print-open__wrap", { autoAlpha: 1 })
-      	      .set(".menu-txt", {autoAlpha: 0})
 	      .set([".menu__btn", ".currency__btn", ".home-nav__btn", ".nav__logo-btn"], { display: "flex", overwrite: 'auto' })
               .set([".home-logo", ".beta__txt", ".menu-txt", ".touch-print-open__wrap", ".query-txt", ".currencies-list__contain", ".query-away__track", ".mrebel-says__category-contain"], { opacity: 1, overwrite: 'auto' });
        
@@ -143,7 +143,7 @@ query_cancel
          //.to(queryCancelinner, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .fromTo(navBg, { scale:40 }, {scale: 0.4, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
 	 .to(".redact-cover-query-exit", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}) 
-	 .to(".menu-txt", { autoAlpha: 1, duration: 0.05 }, "<")
+	 .to(".query-menu-txt", { autoAlpha: 1, duration: 0.05 })
 	 .to(".query-exit-txt", { autoAlpha: 0, duration: 0.05 }, "<")
 	 .to(".redact-cover-query-exit", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"}) 
 	 .set(navBg, { autoAlpha: 0 })
