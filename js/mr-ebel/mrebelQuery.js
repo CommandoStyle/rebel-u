@@ -56,7 +56,8 @@ var queryOpen = gsap.utils.toArray('.mrebel__submit-query');
 var queryInnerWrap = gsap.utils.toArray('.query-inner__wrap');
 var queryCancel = gsap.utils.toArray(".query-cancel");
 var queryCancelSuccess = gsap.utils.toArray(".query-cancel__success");
-var queryHole = gsap.utils.toArray(".query-hole");
+//var queryHole = gsap.utils.toArray(".query-hole");
+var navBg = gsap.utils.toArray('.nav__backdrop');
 
 // GSAP SET QUERY
 gsap.set(queryCancelinner, { x: -30, opacity: 0 });
@@ -67,6 +68,7 @@ gsap.set(queryBg, { autoAlpha: 0 });
 gsap.set(queryInnerWrap, { opacity: 0, x: -30, display: "none" });
 gsap.set(queryCancel, { display: "none" });
 //gsap.set(".query-q__wrap", { xPercent: -60 });
+gsap.set(navBg, {autoAlpha: 0});
 
 // OPEN QUERY
 // DESKTOP
@@ -85,6 +87,8 @@ query_open = gsap.timeline({ paused: true });
               .set(queryInnerWrap, { display: "flex" }, "<")
               .set(CategoryQ, { display: "block" }, "<")
               .set(".redact-cover-query", { scaleX: 0 }, "<")
+          	  .set(".redact-cover-query-exit", { scaleX: 0 }, "<") 
+	        .set(".query-exit-txt", { autoAlpha: 1 }, "<")
               .set(".nav__items-container", {display: "none" }, "<")
               .to(ctaMask, {filter:"invert(100%)", duration: 0.001}, "<")
               .to(queryBg, { scale: 24, transformOrigin: "50% 50%", ease: "expoScale(1, 24, power2.inOut)", duration: 1 })
@@ -96,9 +100,13 @@ query_open = gsap.timeline({ paused: true });
               .to(CategoryQ, { delay: 0.2, x: 0, opacity: 1, ease: "expo.out", duration: 1.2 })
               .to(queryCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
               .fromTo(queryInnerWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-              .set(queryHole, {display: "block"}, "<")
+              .set(navBg, {scale: 40, autoAlpha: 1, display: "block"})
+              //.set(queryHole, {display: "block"}, "<")
               .set(ctaMask, {filter:"invert(0%)" })
-              .set(".touch-print-open__wrap", { autoAlpha: 1 });
+              .set(".touch-print-open__wrap", { autoAlpha: 1 })
+      	  .set(".menu-txt", {autoAlpha: 0})
+	        .set([".menu__btn", ".currency__btn", ".home-nav__btn", ".nav__logo-btn"], { display: "flex", overwrite: 'auto' })
+              .set([".home-logo", ".beta__txt", ".menu-txt", ".touch-print-open__wrap", ".query-txt", ".currencies-list__contain", ".query-away__track", ".mrebel-says__category-contain"], { opacity: 1, overwrite: 'auto' });
        
     queryOpen.addEventListener('click', () => {   
       query_open.play(0);
@@ -110,38 +118,43 @@ query_open = gsap.timeline({ paused: true });
 //All devices: close query
 queryCancel.forEach((queryCancel) => {
   if (!queryCancel) return
-  const queryHole = document.querySelector('.query-hole')
-  if (!queryHole) return
+  //const queryHole = document.querySelector('.query-hole')
+  //if (!queryHole) return
   const queryContain = document.querySelector('.query-items__container')
   if (!queryContain) return
 
-  gsap.set(queryHole, { scale: 1 })
+  //gsap.set(queryHole, { scale: 1 })
 
   queryCancel.addEventListener("click", (e) => {
-      let xDist = e.clientX - queryContain.getBoundingClientRect().x + 4
-      let yDist = e.clientY - queryContain.getBoundingClientRect().y
+      //let xDist = e.clientX - queryContain.getBoundingClientRect().x + 4
+      //let yDist = e.clientY - queryContain.getBoundingClientRect().y
       let query_cancel = gsap.timeline();
 
-      gsap.set(queryHole, { left: xDist, top: yDist })
+      //gsap.set(queryHole, { left: xDist, top: yDist })
        
 query_cancel
-         .set(".menu__btn", { display: "none", opacity: 0 })
+         .set(queryBg, {autoAlpha: 0, scale: 1})
+	   .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' })
+         //.set(".menu__btn", { display: "none", opacity: 0 })
          .set(".query-txt", { autoAlpha: 1 })
-         .set(cursor, { scale: 0, autoAlpha: 0}, "<")
-         .set(queryBg, {autoAlpha: 0, scale: 1}, "<")
          .to(queryInnerWrap, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .to(CategoryQ, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .to(queryCancelinner, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-         .fromTo(queryHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
+         .fromTo(navBg, { scale:40 }, {scale: 0.4, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
+	   .to(".redact-cover-query-exit", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}) 
+	   .to(".menu-txt", { autoAlpha: 1, duration: 0.05 })
+	   .to(".query-exit-txt", { autoAlpha: 0, duration: 0.05 }, "<")
+	   .to(".redact-cover-query-exit", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"}) 
+	   .set(navBg, { autoAlpha: 0 })
+         //.fromTo(queryHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
          .to(".beta__contain", {display: "flex", duration: 0.001}, "-=0.6")
-         .to(cursor, { delay: 0.55, scale: 0.07, autoAlpha: 1, duration: 0.45 })
          .set(CategoryQ, { x: -30, opacity: 0, display: "none" })
          .set(queryCancelinner, { x: -30, opacity: 0 })
          .set(queryCancel, { display: "none" })
          .set(queryInnerWrap, { opacity: 0, display: "none", x: -30 })
-         .set(QueryContain, { display: "none" })
-         .set(queryHole, {display: "none", clearProps: "all"})
-         .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+         .set(QueryContain, { display: "none" });
+         //.set(queryHole, {display: "none", clearProps: "all"})
+         //.to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
 
     })
   });
