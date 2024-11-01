@@ -83,7 +83,7 @@ query_open = gsap.timeline({ paused: true });
     query_open.set(queryBg, { scale: 1, autoAlpha: 1 })
               .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
               .set(QueryContain, { display: "flex" }, "<")
-              .set(queryCancel, { display: "flex", autoAlpha: 1 }, "<")
+              .set(queryCancel, { display: "flex" }, "<")
               .set(queryInnerWrap, { display: "flex" }, "<")
               .set(CategoryQ, { display: "block" }, "<")
               .set(".redact-cover-query", { scaleX: 0 }, "<")
@@ -135,27 +135,22 @@ queryCancel.forEach((queryCancel) => {
 query_cancel
          .set(queryBg, {autoAlpha: 0, scale: 1})
 	 .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' })
-         //.set(".menu__btn", { display: "none", opacity: 0 })
          .set(".query-txt", { autoAlpha: 1 })
 	 .set(".beta__contain", {display: "flex"})
          .to(queryInnerWrap, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .to(CategoryQ, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-         //.to(queryCancelinner, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .fromTo(navBg, { scale:40 }, {scale: 0.4, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
 	 .to(".redact-cover-query-exit", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}) 
 	 .to(".query-menu-txt", { autoAlpha: 1, duration: 0.001 })
 	 .to(".query-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
-	 .to(".redact-cover-query-exit", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"}) 
+	 .to(".redact-cover-query-exit", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
+	 .set(queryCancel, { display: "none" }, "-=0.009")
 	 .set(navBg, { autoAlpha: 0 })
-         //.fromTo(queryHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
-         .to(queryCancel, { autoAlpha: 0, duration: 0.15, ease: "linear" }) 
 	 .set(CategoryQ, { x: -30, opacity: 0, display: "none" }) 
-         .set(queryCancel, { display: "none" })
          .set(queryInnerWrap, { opacity: 0, display: "none", x: -30 })
 	 .set(queryCancelinner, { x: -30, opacity: 0 })
          .set(QueryContain, { display: "none" });
-         //.set(queryHole, {display: "none", clearProps: "all"})
-         //.to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+
 
     })
   });
