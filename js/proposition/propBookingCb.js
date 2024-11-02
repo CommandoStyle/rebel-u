@@ -294,7 +294,6 @@ CbGbpCancel.forEach((CbGbpCancel) => {
   cbgbp_cancel
              .set(".cta-txt", { autoAlpha: 1}, "<")
              .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
-             .set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
              .set(cbBg, {autoAlpha: 0, scale: 1}, "<")
              .to([cbGbpWrap, CategoryCb], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
              .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
