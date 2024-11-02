@@ -506,7 +506,7 @@ cbExitSuccess.forEach((cbExitSuccess) => {
            .to([".redact-cover-cb-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
            .to(".cb-menu-txt", { autoAlpha: 1, duration: 0.001 })
            .to(".cb-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
-           .set([BookContain, CbEurCancel, CbUsdCancel, CbGbpCancel, CbSgdCancel, CbSekCancel, ".cb-eur__cta", ".cb-usd__cta", ".cb-gbp__cta", ".cb-sek__cta", ".cb-sgd__cta"], { display: "none" })
+           .set([BookContain, CbEurCancel, CbUsdCancel, CbGbpCancel, CbSgdCancel, CbSekCancel, bookSuccessBtn, ".cb-eur__cta", ".cb-usd__cta", ".cb-gbp__cta", ".cb-sek__cta", ".cb-sgd__cta"], { display: "none" })
            .to([".redact-cover-cb-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"}) 
            .set(navBg, { autoAlpha: 0 })
            .set(CategoryCb, { x: -30, opacity: 0, display: "none" })
