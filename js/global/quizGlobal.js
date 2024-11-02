@@ -167,7 +167,7 @@ quizCancel.forEach((quizCancel) => {
          .set(quizBg, {autoAlpha: 0, scale: 1})
 	 .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' })
          .to([CategoryQuiz, quizInnerWrap], { x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
-	 .fromTo(navBg, { scale:40 }, {scale: 0.4, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
+	 .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
 	 .to([".redact-cover-quiz-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}) 
 	 .to(".quiz-menu-txt", { autoAlpha: 1, duration: 0.001 })
 	 .to(".quiz-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
