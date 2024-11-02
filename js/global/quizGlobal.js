@@ -113,14 +113,14 @@ quiz_open = gsap.timeline({ paused: true });
 
     quiz_open.set(quizBg, { scale: 1, autoAlpha: 1 })
               .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
-              .set(QuizContain, { display: "flex", pointerEvents: "auto" }, "<")
+              .set([QuizContain, quizCancel], { display: "flex" }, "<")
               .set(QuizWrap, { display: "flex"}, "<")
-              .set(quizCancel, { display: "flex", pointerEvents: "auto" }, "<")
               .set(quizCancelSuccess, { display: "none" }, "<")
-              .set(quizInnerWrap, { display: "flex", pointerEvents: "auto" }, "<")
+              .set(quizInnerWrap, { display: "flex" }, "<")
               .set(CategoryQuiz, { display: "block" }, "<")
-	      .set(".redact-cover-quiz-exit", { scaleX: 0 }, "<") 
+	      .set([".redact-cover-quiz-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
 	      .set(".quiz-exit-txt", { autoAlpha: 1 }, "<")
+	      .set(".quiz-menu-txt", { autoAlpha: 0 }, "<")
               .to(arrowMask, {filter:"invert(100%)", duration: 0.001}, "<")
               .to(quizBg, { scale: 12, transformOrigin: "50% 50%", ease: "power2.inOut", duration: 1.2 })
 	      .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.6")
@@ -133,7 +133,7 @@ quiz_open = gsap.timeline({ paused: true });
               .set(arrowMask, { filter:"invert(0%)" })
               .set(arrowTrack, { autoAlpha: 1 })
 	      .set(".touch-print-open__wrap", { autoAlpha: 1 })
-	      .set(".menu-txt", {autoAlpha: 0})
+	      //.set(".menu-txt", {autoAlpha: 0})
 	      .set([".menu__btn", ".currency__btn", ".home-nav__btn", ".nav__logo-btn"], { display: "flex", overwrite: 'auto' })
               .set([".home-logo", ".beta__txt", ".menu-txt", ".touch-print-open__wrap", ".query-txt", ".currencies-list__contain", ".query-away__track", ".mrebel-says__category-contain"], { opacity: 1, overwrite: 'auto' });
        
@@ -168,16 +168,15 @@ quizCancel.forEach((quizCancel) => {
 	 .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' })
          .to([CategoryQuiz, quizInnerWrap], { x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
 	 .fromTo(navBg, { scale:40 }, {scale: 0.4, ease: Expo.easeOut, duration: 1.1 }, "-=0.2")
-	 .to(".redact-cover-quiz-exit", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}) 
-	 .to(".menu-txt", { autoAlpha: 1, duration: 0.05 })
-	 .to(".quiz-exit-txt", { autoAlpha: 0, duration: 0.05 }, "<")
-	 .to(".redact-cover-quiz-exit", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"}) 
+	 .to([".redact-cover-quiz-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}) 
+	 .to(".quiz-menu-txt", { autoAlpha: 1, duration: 0.001 })
+	 .to(".quiz-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+	  .set([QuizContain, quizCancel], { display: "none" })
+	 .to([".redact-cover-quiz-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"}) 
 	 .set(navBg, { autoAlpha: 0 })
          .set(CategoryQuiz, { x: -30, opacity: 0, display: "none" })
          .set(quizCancelinner, { x: -30, opacity: 0 })
-         .set(quizCancel, { display: "none" })
-         .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 })
-         .set(QuizContain, { display: "none" });
+         .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 });
 
         })
       });
