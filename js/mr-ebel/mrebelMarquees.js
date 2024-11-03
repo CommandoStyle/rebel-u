@@ -65,7 +65,7 @@ const readyMarquee = gsap.utils.toArray(".marquee__items.is--ready");
 const loopReady = horizontalLoop(readyMarquee, {repeat: -1, speed: 0.4, paused: true});
 
 ScrollTrigger.create({
-  trigger: ".quiz__container",
+  trigger: ".headline__wrap.is--quiz",
   onEnter: () => loopReady.play(),
   onLeave: () => loopReady.pause(),
   onEnterBack: () => loopReady.play(),
