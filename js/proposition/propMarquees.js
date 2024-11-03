@@ -135,7 +135,7 @@ ScrollTrigger.create({
   });
 
 ScrollTrigger.create({
-  trigger: ".quiz__container",
+  trigger: ".headline__wrap.is--quiz",
   onEnter: () => loopReady.play(),
   onLeave: () => loopReady.pause(),
   onEnterBack: () => loopReady.play(),
