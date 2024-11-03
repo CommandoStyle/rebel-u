@@ -78,7 +78,7 @@ var navIn = new gsap.timeline({ paused: true });
            .to([navRevIn, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
            .to(navBotRev, { x: 30, opacity: 0, ease: "expo.out", duration: 0.3 },"-=0.65")
            .to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<")
-           .fromTo(navBg, { scale:1 }, {scale: 0.023, ease: Expo.easeOut, duration: 1.1 })
+           .fromTo(navBg, { scale:1 }, {scale: 0.023, ease: "expoScale(1, 0.023)", duration: 1.1 })
            .to(".home-nav__btn", { autoAlpha: 0, duration: 0.01 }, "-=1")
            .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.01 }, "<")
            //.to(".beta__contain", {display: "flex", duration: 0.01 }, "<")
