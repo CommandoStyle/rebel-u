@@ -119,6 +119,7 @@ quiz_open = gsap.timeline({ paused: true });
               .set(quizInnerWrap, { display: "flex" }, "<")
               .set(CategoryQuiz, { display: "block" }, "<")
 	      .set([".redact-cover-quiz-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
+	      .set(".redact-cover-nav", {backgroundColor: '#ffffff'}, "<")
 	      .set(".quiz-exit-txt", { autoAlpha: 1 }, "<")
 	      .set(".quiz-menu-txt", { autoAlpha: 0 }, "<")
               .to(arrowMask, {filter:"invert(100%)", duration: 0.001}, "<")
@@ -172,9 +173,9 @@ quizCancel.forEach((quizCancel) => {
 	 .to(".quiz-menu-txt", { autoAlpha: 1, duration: 0.001 })
 	 .to(".quiz-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
 	 .set([QuizContain, quizCancel], { display: "none" })
-	 .set(cursor, { mixBlendMode:'difference' })
 	 .to([".redact-cover-quiz-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"}) 
 	 .set(navBg, { autoAlpha: 0 })
+	 .set(".redact-cover-nav", {backgroundColor: '#000000'}, "<")
          .set(CategoryQuiz, { x: -30, opacity: 0, display: "none" })
          .set(quizCancelinner, { x: -30, opacity: 0 })
          .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 });
