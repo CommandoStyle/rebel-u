@@ -16,7 +16,7 @@ gsap.set(navRevIn, { x: -30, opacity: 0 });
 gsap.set(navBotRev, { x: -30, opacity: 0 });
 gsap.set(".nav-bot-rev-vert", { y: 15, opacity: 0 });
 gsap.set(navWrap, {display: 'none'});
-gsap.set(navBg, {autoAlpha: 0});
+gsap.set(navBg, {autoAlpha: 0, scale: 0.025});
 gsap.set(".home-nav__btn", {autoAlpha: 0});
 gsap.set(".nav__logo-btn", {autoAlpha: 1});
 gsap.set(".exit-txt", {autoAlpha: 0});
