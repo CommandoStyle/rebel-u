@@ -50,7 +50,7 @@ var navIn = new gsap.timeline({ paused: true });
           .to(".nav__logo-btn", { autoAlpha: 0, duration: 0.01 }, "-=0.22")
           .to(".home-nav__btn", { autoAlpha: 1, duration: 0.01 }, "<")
           //.to(".beta__contain", {display: "none", duration: 0.01}, "<")
-          .to(navWrap, { display: 'flex', duration: 0.001 },"<")
+          .to(navWrap, { display: 'flex', backgroundColor: '#000000', duration: 0.001 },"<")
           .to(navRevIn, { duration: 1.6, x: 0, stagger: 0.03, ease: "expo.out" }, "<")
           .to(navRevIn, { duration: 0.8, opacity: 1, stagger: 0.03, ease: "linear" }, "<")
           .to(navBotRev, { x: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "-=1.4")
