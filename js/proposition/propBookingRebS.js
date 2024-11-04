@@ -81,12 +81,10 @@ rebsEurOpen.forEach(rebsEurOp => {
   rebseur_open
   .set(rebsBg, { scale: 1, autoAlpha: 1 })
   .set(cursor, { display: "none" }, "<")
-
   .set([BookContain, RebsEurCancel], { display: "flex" }, "<")
   .set([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
   .set(".cb-exit-txt", { autoAlpha: 1 }, "<")
   .set(".cb-menu-txt", { autoAlpha: 0 }, "<")
-
   .set(bookSuccessBtn, { display: "none" }, "<")
   //.set(BookContain, { display: "flex" }, "<")
   .set(rebsWrap, { display: "flex"}, "<")
@@ -105,7 +103,6 @@ rebsEurOpen.forEach(rebsEurOp => {
   .fromTo(rebsEurWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   //.set(bookHole, {display: "block"}, "<")
   .set(ctaMask, {filter:"invert(0%)" })
-
   .set([".menu__btn", ".currency__btn", ".home-nav__btn", ".nav__logo-btn"], { display: "flex", overwrite: 'auto' })
   .set([".home-logo", ".beta__txt", ".menu-txt", ".touch-print-open__wrap", ".query-txt", ".currencies-list__contain", ".query-away__track", ".mrebel-says__category-contain"], { opacity: 1, overwrite: 'auto' });
        
@@ -137,7 +134,6 @@ rebseur_cancel
 .set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
 .set(rebsBg, {autoAlpha: 0, scale: 1}, "<")
 .to([rebsEurWrap, CategoryReb], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
-
 .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
 .to([".redact-cover-reb-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
 .to(".cb-menu-txt", { autoAlpha: 1, duration: 0.001 })
@@ -145,14 +141,13 @@ rebseur_cancel
 .set([BookContain, RebsEurCancel], { display: "none" })
 .to([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"}) 
 .set(navBg, { autoAlpha: 0 })
-
 //.fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
 //.to(cursor, { delay: 0.55, scale: 0.07, autoAlpha: 1, duration: 0.45 })
 .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
 .set(bookCancelinner, { x: -30, opacity: 0 })
 .set(rebsWrap, { display: "none" })
 .set(rebsBtnsWrap, { display: "none" })
-.//set(RebsEurCancel, { display: "none" })
+//set(RebsEurCancel, { display: "none" })
 .set(rebsEurWrap, { opacity: 0, display: "none", x: -30 });
 
 
