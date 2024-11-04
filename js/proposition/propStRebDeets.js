@@ -206,6 +206,7 @@ if (i !=points.length-1) {
 
 // Skip direction arrow
 let scrollDirArrow = gsap.timeline( { paused: true });
+let direction = -1;
 
 scrollDirArrow.fromTo([".skip-btn-arrow__wrap", ".skip-btn-arrow-up__wrap"], { rotateX: 0 }, { rotateX: 180, duration: 0.2, overwrite: 'auto', ease: "power1.easeOut" })
               .fromTo([".reb__skip-btn", ".spa__skip-btn"], { display: "flex" }, { display: "none", duration: 0, overwrite: 'auto' }, "<")
