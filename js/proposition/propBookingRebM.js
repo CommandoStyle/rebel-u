@@ -479,8 +479,8 @@ rebmsgd_cancel
 
 // CLOSE REB S SUCCESS - ALL CURRENCIES
 
-rebSexitSuccess.forEach((rebSexitSuccess) => {
-  if (!rebSexitSuccess) return
+rebMexitSuccess.forEach((rebMexitSuccess) => {
+  if (!rebMexitSuccess) return
   //const bookHole = document.querySelector('.book-hole')
   //if (!bookHole) return
   const bookingContain = document.querySelector('.booking-items__container')
@@ -488,7 +488,7 @@ rebSexitSuccess.forEach((rebSexitSuccess) => {
 
   //gsap.set(bookHole, { scale: 1 })
 
-  rebSexitSuccess.addEventListener("click", (e) => {
+  rebMexitSuccess.addEventListener("click", (e) => {
       let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
       let yDist = e.clientY - bookingContain.getBoundingClientRect().y
       let rebm_cancel_success = gsap.timeline();
