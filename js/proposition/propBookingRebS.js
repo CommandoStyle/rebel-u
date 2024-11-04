@@ -132,7 +132,7 @@ RebsEurCancel.forEach((RebsEurCancel) => {
 rebseur_cancel
 //.set(".menu__btn", { display: "none", opacity: 0 })
 .set(".cta-txt", { autoAlpha: 1}, "<")
-.set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
+.set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
 .set(rebsBg, {autoAlpha: 0, scale: 1}, "<")
 .to([rebsEurWrap, CategoryReb], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
 .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
@@ -214,7 +214,7 @@ RebsUsdCancel.forEach((RebsUsdCancel) => {
        
 rebsusd_cancel
 .set(".cta-txt", { autoAlpha: 1}, "<")
-.set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
+.set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
 .set(rebsBg, {autoAlpha: 0, scale: 1}, "<")
 .to([rebsUsdWrap, CategoryReb], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
 .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
@@ -292,7 +292,7 @@ RebsGbpCancel.forEach((RebsGbpCancel) => {
        
 rebsgbp_cancel
 .set(".cta-txt", { autoAlpha: 1}, "<")
-.set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
+.set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
 .set(rebsBg, {autoAlpha: 0, scale: 1}, "<")
 .to([rebsGbpWrap, CategoryReb], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
 .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
@@ -370,7 +370,7 @@ RebsSekCancel.forEach((RebsSekCancel) => {
        
 rebssek_cancel
 .set(".cta-txt", { autoAlpha: 1}, "<")
-.set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
+.set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
 .set(rebsBg, {autoAlpha: 0, scale: 1}, "<")
 .to([rebsSekWrap, CategoryReb], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
 .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
@@ -448,7 +448,7 @@ RebsSgdCancel.forEach((RebsSgdCancel) => {
        
 rebssgd_cancel
 .set(".cta-txt", { autoAlpha: 1}, "<")
-.set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
+.set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
 .set(rebsBg, {autoAlpha: 0, scale: 1}, "<")
 .to([rebsSgdWrap, CategoryReb], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
 .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
@@ -486,7 +486,7 @@ rebSexitSuccess.forEach((rebSexitSuccess) => {
       //gsap.set(bookHole, { left: xDist, top: yDist })
            
     rebs_cancel_success
-             .set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
+             .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
              .set(rebsBg, {autoAlpha: 0, scale: 1}, "<")
              .set(".rebs-booked__cover", { display: "block" }, "<")
              .set([".cb-btn__covered", ".rebm-btn__covered", ".rebxxl-btn__covered", ".spa-btn__covered"], { display: "flex" }, "<")
