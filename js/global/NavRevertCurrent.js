@@ -101,6 +101,7 @@ currentRevert.forEach((currentRevert) => {
         .set(navClose, {delay: 0.3, display: "none"})
         .set(navOpen, {display: "flex"}, "<")
         .set(navBg, {display: "none", scale: 1}, "<")
+        .set(".nav__items-container", {backgroundColor: 'transparent'}, "<")
         .to([navRevIn, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.7, x: 30, stagger: 0, ease: "expo.out" }, "<")
         .to([navRevIn, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
         .to(navBotRev, { x: 30, ease: "expo.out", opacity: 0, duration: 0.3 },"-=0.65")
