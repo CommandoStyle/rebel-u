@@ -80,7 +80,7 @@ rebsEurOpen.forEach(rebsEurOp => {
 
   rebseur_open
   .set(rebsBg, { scale: 1, autoAlpha: 1 })
-  .set(cursor, { display: "none" }, "<")
+  .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
   .set([BookContain, RebsEurCancel], { display: "flex" }, "<")
   .set([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
   .set(".reb-exit-txt", { autoAlpha: 1 }, "<")
@@ -166,7 +166,7 @@ rebsUsdOpen.forEach(rebsUsdOp => {
 
   rebsusd_open
   .set(rebsBg, { scale: 1, autoAlpha: 1 })
-  .set(cursor, { display: "none" }, "<")
+  .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
   .set([BookContain, RebsUsdCancel], { display: "flex" }, "<")
   .set([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
   .set(".reb-exit-txt", { autoAlpha: 1 }, "<")
@@ -244,7 +244,7 @@ rebsGbpOpen.forEach(rebsGbpOp => {
 
   rebsgbp_open
   .set(rebsBg, { scale: 1, autoAlpha: 1 })
-  .set(cursor, { display: "none" }, "<")
+  .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
   .set([BookContain, RebsGbpCancel], { display: "flex" }, "<")
   .set([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
   .set(".reb-exit-txt", { autoAlpha: 1 }, "<")
@@ -322,7 +322,7 @@ rebsSekOpen.forEach(rebsSekOp => {
 
   rebssek_open
   .set(rebsBg, { scale: 1, autoAlpha: 1 })
-  .set(cursor, { display: "none" }, "<")
+  .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
   .set([BookContain, RebsSekCancel], { display: "flex" }, "<")
   .set([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
   .set(".reb-exit-txt", { autoAlpha: 1 }, "<")
@@ -400,7 +400,7 @@ rebsSgdOpen.forEach(rebsSgdOp => {
 
   rebssgd_open
   .set(rebsBg, { scale: 1, autoAlpha: 1 })
-  .set(cursor, { display: "none" }, "<")
+  .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
   .set([BookContain, RebsSgdCancel], { display: "flex" }, "<")
   .set([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
   .set(".reb-exit-txt", { autoAlpha: 1 }, "<")
