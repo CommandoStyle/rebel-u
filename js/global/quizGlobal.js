@@ -172,13 +172,13 @@ quizCancel.forEach((quizCancel) => {
 	 .to([".redact-cover-quiz-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}) 
 	 .to(".quiz-menu-txt", { autoAlpha: 1, duration: 0.001 })
 	 .to(".quiz-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+	 .set([QuizContain, quizCancel], { display: "none" })
 	 .to([".redact-cover-quiz-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"}) 
 	 .set(navBg, { autoAlpha: 0 })
          .set(CategoryQuiz, { x: -30, opacity: 0, display: "none" })
          .set(quizCancelinner, { x: -30, opacity: 0 })
          .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 })
-	 .set(".redact-cover-nav", { filter: "invert(0)" }, "<")
-	 .set([QuizContain, quizCancel], { display: "none" }, "<");
+	 .set(".redact-cover-nav", { filter: "invert(0)" }, "<");
 
         })
       });
