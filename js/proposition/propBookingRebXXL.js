@@ -499,7 +499,7 @@ rebXXLexitSuccess.forEach((rebXXLexitSuccess) => {
              .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
              .set(rebxxlBg, {autoAlpha: 0, scale: 1}, "<")
              .set(".rebxxl-booked__cover", { display: "block" }, "<")
-             .set([".cb-btn__covered", ".rebxxl-btn__covered", ".rebxxl-btn__covered", ".spa-btn__covered"], { display: "flex" }, "<")
+             .set([".cb-btn__covered", ".rebs-btn__covered", ".rebm-btn__covered", ".spa-btn__covered"], { display: "flex" }, "<")
              .to([".reb-success-marquee__wrap", ".reb-success-img__wrap"], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
              .to(CategoryReb, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
              .to([rebxxlEurWrap, rebxxlUsdWrap, rebxxlGbpWrap, rebxxlSgdWrap, rebxxlSekWrap], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
