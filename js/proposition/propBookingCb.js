@@ -84,7 +84,6 @@ cbEurOpen.forEach(cbEurOp => {
                 .set([".redact-cover-cb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
                 .set(".cb-exit-txt", { autoAlpha: 1 }, "<")
                 .set(".cb-menu-txt", { autoAlpha: 0 }, "<")
-                .set(".redact-cover-nav", { filter: "invert(100%)" }, "<")
                 .set(bookSuccessBtn, { display: "none" }, "<")
                 .set(cbWrap, { display: "flex"}, "<")
                 .set(cbBtnsWrap, { display: "block" }, "<")
@@ -148,8 +147,7 @@ CbEurCancel.forEach((CbEurCancel) => {
              .set(cbBtnsWrap, { display: "none" })
              .set(CbEurCancel, { display: "none" })
              .set(cbEurWrap, { opacity: 0, display: "none", x: -30 })
-             .set(BookContain, { display: "none" })
-             .set(".redact-cover-nav", { filter: "invert(0%)" }, "<");
+             .set(BookContain, { display: "none" });
              //.set(bookHole, {display: "none", clearProps: "all"})
              //.to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
     
@@ -171,7 +169,6 @@ cbusd_open = gsap.timeline({ paused: true });
                 .set([".redact-cover-cb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
                 .set(".cb-exit-txt", { autoAlpha: 1 }, "<")
                 .set(".cb-menu-txt", { autoAlpha: 0 }, "<")
-                .set(".redact-cover-nav", { filter: "invert(100%)" }, "<")
                 .set(bookSuccessBtn, { display: "none" }, "<")
                 .set(cbWrap, { display: "flex"}, "<")
                 .set(cbBtnsWrap, { display: "block" }, "<")
@@ -232,8 +229,7 @@ CbUsdCancel.forEach((CbUsdCancel) => {
              .set(cbBtnsWrap, { display: "none" })
              .set(CbUsdCancel, { display: "none" })
              .set(cbUsdWrap, { opacity: 0, display: "none", x: -30 })
-             .set(BookContain, { display: "none" })
-             .set(".redact-cover-nav", { filter: "invert(0%)" }, "<");
+             .set(BookContain, { display: "none" });
 
     });
 })
@@ -253,7 +249,6 @@ cbgbp_open = gsap.timeline({ paused: true });
                 .set([".redact-cover-cb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
                 .set(".cb-exit-txt", { autoAlpha: 1 }, "<")
                 .set(".cb-menu-txt", { autoAlpha: 0 }, "<")
-                .set(".redact-cover-nav", { filter: "invert(100%)" }, "<")
                 .set(bookSuccessBtn, { display: "none" }, "<")
                 .set(cbWrap, { display: "flex"}, "<")
                 .set(cbBtnsWrap, { display: "block" }, "<")
@@ -314,8 +309,7 @@ CbGbpCancel.forEach((CbGbpCancel) => {
              .set(cbBtnsWrap, { display: "none" })
              .set(CbGbpCancel, { display: "none" })
              .set(cbGbpWrap, { opacity: 0, display: "none", x: -30 })
-             .set(BookContain, { display: "none" })
-             .set(".redact-cover-nav", { filter: "invert(0%)" }, "<");
+             .set(BookContain, { display: "none" });
 
 
     });
@@ -336,7 +330,6 @@ cbsek_open = gsap.timeline({ paused: true });
                 .set([".redact-cover-cb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
                 .set(".cb-exit-txt", { autoAlpha: 1 }, "<")
                 .set(".cb-menu-txt", { autoAlpha: 0 }, "<")
-                .set(".redact-cover-nav", { filter: "invert(100%)" }, "<")
                 .set(bookSuccessBtn, { display: "none" }, "<")
                 .set(cbWrap, { display: "flex"}, "<")
                 .set(cbBtnsWrap, { display: "block" }, "<")
@@ -397,8 +390,7 @@ CbSekCancel.forEach((CbSekCancel) => {
              .set(cbBtnsWrap, { display: "none" })
              .set(CbSekCancel, { display: "none" })
              .set(cbSekWrap, { opacity: 0, display: "none", x: -30 })
-             .set(BookContain, { display: "none" })
-             .set(".redact-cover-nav", { filter: "invert(0%)" }, "<");
+             .set(BookContain, { display: "none" });
 
 
     });
@@ -419,7 +411,6 @@ cbsgd_open = gsap.timeline({ paused: true });
                 .set([".redact-cover-cb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
                 .set(".cb-exit-txt", { autoAlpha: 1 }, "<")
                 .set(".cb-menu-txt", { autoAlpha: 0 }, "<")
-                .set(".redact-cover-nav", { filter: "invert(100%)" }, "<")
                 .set(bookSuccessBtn, { display: "none" }, "<")
                 .set(cbWrap, { display: "flex"}, "<")
                 .set(cbBtnsWrap, { display: "block" }, "<")
@@ -480,8 +471,7 @@ CbSgdCancel.forEach((CbSgdCancel) => {
              .set(cbBtnsWrap, { display: "none" })
              .set(CbSgdCancel, { display: "none" })
              .set(cbSgdWrap, { opacity: 0, display: "none", x: -30 })
-             .set(BookContain, { display: "none" })
-             .set(".redact-cover-nav", { filter: "invert(0%)" }, "<");
+             .set(BookContain, { display: "none" });
 
     });
 })
@@ -524,7 +514,6 @@ cbExitSuccess.forEach((cbExitSuccess) => {
            .set(cbBtnsWrap, { display: "none" })
            .set([cbEurWrap, cbUsdWrap, cbGbpWrap, cbSgdWrap, cbSekWrap], { opacity: 0, display: "none", x: -30 })
            .set(BookContain, { display: "none" })
-           .set(".redact-cover-nav", { filter: "invert(0%)" }, "<")
            .set([".ready-fini__wrap", ".reb-success-marquee__wrap", ".reb-success-img__wrap", ".cb-success-marquee__wrap", ".cb-success-img__wrap", ".home-mrebel__qa-pong-wrap"], { yPercent: 101, opacity: 0 })
            .set([".reb-success-items__contain", ".cb-success-items__contain", ".q-a-pong__mask", ".ready-fini__mask"], { display: "none" });
 
