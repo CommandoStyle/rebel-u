@@ -69,7 +69,7 @@ gsap.set([RebmEurCancel, RebmUsdCancel, RebmGbpCancel, RebmSekCancel, RebmSgdCan
 // DESKTOP
 mm.add("(min-width: 991px)", () => {  
   
-// OPEN REB M EUR
+// OPEN REB S EUR
 rebmEurOpen.forEach(rebmEurOp => {
 
     let ctaMask = rebmEurOp.querySelector(".book-cta__mask"),
@@ -80,12 +80,17 @@ rebmEurOpen.forEach(rebmEurOp => {
 
   rebmeur_open
   .set(rebmBg, { scale: 1, autoAlpha: 1 })
-  .set(cursor, { display: "none" }, "<")
+  .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
+  .set([BookContain, RebmEurCancel], { display: "flex" }, "<")
+  .set([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
+  .set(".reb-exit-txt", { autoAlpha: 1 }, "<")
+  .set(".reb-menu-txt", { autoAlpha: 0 }, "<")
+  .set(".redact-cover-nav", { backgroundColor: '#ffffff'})
   .set(bookSuccessBtn, { display: "none" }, "<")
-  .set(BookContain, { display: "flex" }, "<")
+  //.set(BookContain, { display: "flex" }, "<")
   .set(rebmWrap, { display: "flex"}, "<")
   .set(rebmBtnsWrap, { display: "block" }, "<")
-  .set(RebmEurCancel, { display: "flex" }, "<")
+  //.set(RebmEurCancel, { display: "flex" }, "<")
   .set(rebmEurWrap, { display: "block" }, "<")
   .set(CategoryReb, { display: "block" }, "<")
   .set(ctaCover, { scaleX: 0 }, "<")
@@ -97,53 +102,62 @@ rebmEurOpen.forEach(rebmEurOp => {
   .to(CategoryReb, { delay: 0.2, x: 0, opacity: 1, ease: "expo.out", duration: 1.2 })
   .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .fromTo(rebmEurWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-  .set(bookHole, {display: "block"}, "<")
-  .set(ctaMask, {filter:"invert(0%)" });
+  .set(navBg, {scale: 40, autoAlpha: 1, display: "block"})
+  //.set(bookHole, {display: "block"}, "<")
+  .set(ctaMask, {filter:"invert(0%)" })
+  .set([".menu__btn", ".currency__btn", ".home-nav__btn", ".nav__logo-btn"], { display: "flex", overwrite: 'auto' })
+  .set([".home-logo", ".beta__txt", ".menu-txt", ".touch-print-open__wrap", ".query-txt", ".currencies-list__contain", ".query-away__track", ".mrebel-says__category-contain"], { opacity: 1, overwrite: 'auto' });
        
    rebmEurOp.addEventListener('click', () => {   
     rebmeur_open.play(0);
   });
 })
 
-// CLOSE REB M EUR
+// CLOSE REB S EUR
 RebmEurCancel.forEach((RebmEurCancel) => {
   if (!RebmEurCancel) return
-  const bookHole = document.querySelector('.book-hole')
-  if (!bookHole) return
+  //const bookHole = document.querySelector('.book-hole')
+  //if (!bookHole) return
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHole, { scale: 1 })
+  //gsap.set(bookHole, { scale: 1 })
 
   RebmEurCancel.addEventListener("click", (e) => {
       let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
       let yDist = e.clientY - bookingContain.getBoundingClientRect().y
       let rebmeur_cancel = gsap.timeline();
 
-      gsap.set(bookHole, { left: xDist, top: yDist })
-    
+     //gsap.set(bookHole, { left: xDist, top: yDist })
+       
 rebmeur_cancel
-.set(".menu__btn", { display: "none", opacity: 0 })
+//.set(".menu__btn", { display: "none", opacity: 0 })
 .set(".cta-txt", { autoAlpha: 1}, "<")
-.set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
+.set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
 .set(rebmBg, {autoAlpha: 0, scale: 1}, "<")
-.to([rebmEurWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
-.fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
-.to(cursor, { delay: 0.55, scale: 0.07, autoAlpha: 1, duration: 0.45 })
+.to([rebmEurWrap, CategoryReb], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+.fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
+.to([".redact-cover-reb-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
+.to(".reb-menu-txt", { autoAlpha: 1, duration: 0.001 })
+.to(".reb-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+.set([BookContain, RebmEurCancel], { display: "none" })
+.to([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"}) 
+.set(navBg, { autoAlpha: 0 })
+.set(".redact-cover-nav", { backgroundColor: '#000000'})
+//.fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
+//.to(cursor, { delay: 0.55, scale: 0.07, autoAlpha: 1, duration: 0.45 })
 .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
 .set(bookCancelinner, { x: -30, opacity: 0 })
 .set(rebmWrap, { display: "none" })
 .set(rebmBtnsWrap, { display: "none" })
-.set(RebmEurCancel, { display: "none" })
-.set(rebmEurWrap, { opacity: 0, display: "none", x: -30 })
-.set(BookContain, { display: "none" })
-.set(bookHole, {display: "none", clearProps: "all"})
-.to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+//set(RebmEurCancel, { display: "none" })
+.set(rebmEurWrap, { opacity: 0, display: "none", x: -30 });
+
 
     });
 })
 
-// OPEN REB M USD
+// OPEN REB S USD
 rebmUsdOpen.forEach(rebmUsdOp => {
 
     let ctaMask = rebmUsdOp.querySelector(".book-cta__mask"),
@@ -154,12 +168,15 @@ rebmUsdOpen.forEach(rebmUsdOp => {
 
   rebmusd_open
   .set(rebmBg, { scale: 1, autoAlpha: 1 })
-  .set(cursor, { display: "none" }, "<")
+  .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
+  .set([BookContain, RebmUsdCancel], { display: "flex" }, "<")
+  .set([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
+  .set(".reb-exit-txt", { autoAlpha: 1 }, "<")
+  .set(".reb-menu-txt", { autoAlpha: 0 }, "<")
+  .set(".redact-cover-nav", { backgroundColor: '#ffffff'})
   .set(bookSuccessBtn, { display: "none" }, "<")
-  .set(BookContain, { display: "flex" }, "<")
   .set(rebmWrap, { display: "flex"}, "<")
   .set(rebmBtnsWrap, { display: "block" }, "<")
-  .set(RebmUsdCancel, { display: "flex" }, "<")
   .set(rebmUsdWrap, { display: "block" }, "<")
   .set(CategoryReb, { display: "block" }, "<")
   .set(ctaCover, { scaleX: 0 }, "<")
@@ -171,53 +188,56 @@ rebmUsdOpen.forEach(rebmUsdOp => {
   .to(CategoryReb, { delay: 0.2, x: 0, opacity: 1, ease: "expo.out", duration: 1.2 })
   .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .fromTo(rebmUsdWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-  .set(bookHole, {display: "block"}, "<")
-  .set(ctaMask, {filter:"invert(0%)" });
+  .set(navBg, {scale: 40, autoAlpha: 1, display: "block"})
+  .set(ctaMask, {filter:"invert(0%)" })
+  .set([".menu__btn", ".currency__btn", ".home-nav__btn", ".nav__logo-btn"], { display: "flex", overwrite: 'auto' })
+  .set([".home-logo", ".beta__txt", ".menu-txt", ".touch-print-open__wrap", ".query-txt", ".currencies-list__contain", ".query-away__track", ".mrebel-says__category-contain"], { opacity: 1, overwrite: 'auto' });
        
    rebmUsdOp.addEventListener('click', () => {   
     rebmusd_open.play(0);
   });
 })
 
-// CLOSE REB M USD
+// CLOSE REB S USD
 RebmUsdCancel.forEach((RebmUsdCancel) => {
   if (!RebmUsdCancel) return
-  const bookHole = document.querySelector('.book-hole')
-  if (!bookHole) return
+  //const bookHole = document.querySelector('.book-hole')
+  //if (!bookHole) return
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHole, { scale: 1 })
+  //gsap.set(bookHole, { scale: 1 })
 
   RebmUsdCancel.addEventListener("click", (e) => {
       let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
       let yDist = e.clientY - bookingContain.getBoundingClientRect().y
       let rebmusd_cancel = gsap.timeline();
 
-      gsap.set(bookHole, { left: xDist, top: yDist })
+      //gsap.set(bookHole, { left: xDist, top: yDist })
        
 rebmusd_cancel
-.set(".menu__btn", { display: "none", opacity: 0 })
 .set(".cta-txt", { autoAlpha: 1}, "<")
-.set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
+.set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
 .set(rebmBg, {autoAlpha: 0, scale: 1}, "<")
-.to([rebmUsdWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
-.fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
-.to(cursor, { delay: 0.55, scale: 0.07, autoAlpha: 1, duration: 0.45 })
+.to([rebmUsdWrap, CategoryReb], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+.fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
+.to([".redact-cover-reb-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
+.to(".reb-menu-txt", { autoAlpha: 1, duration: 0.001 })
+.to(".reb-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+.set([BookContain, RebmUsdCancel], { display: "none" })
+.to([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"}) 
+.set(navBg, { autoAlpha: 0 })
+.set(".redact-cover-nav", { backgroundColor: '#000000'})
 .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
 .set(bookCancelinner, { x: -30, opacity: 0 })
 .set(rebmWrap, { display: "none" })
 .set(rebmBtnsWrap, { display: "none" })
-.set(RebmUsdCancel, { display: "none" })
-.set(rebmUsdWrap, { opacity: 0, display: "none", x: -30 })
-.set(BookContain, { display: "none" })
-.set(bookHole, {display: "none", clearProps: "all"})
-.to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+.set(rebmUsdWrap, { opacity: 0, display: "none", x: -30 });
 
     });
 })
 
-// OPEN REB M GBP
+// OPEN REB S GBP
 rebmGbpOpen.forEach(rebmGbpOp => {
 
     let ctaMask = rebmGbpOp.querySelector(".book-cta__mask"),
@@ -228,12 +248,15 @@ rebmGbpOpen.forEach(rebmGbpOp => {
 
   rebmgbp_open
   .set(rebmBg, { scale: 1, autoAlpha: 1 })
-  .set(cursor, { display: "none" }, "<")
+  .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
+  .set([BookContain, RebmGbpCancel], { display: "flex" }, "<")
+  .set([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
+  .set(".reb-exit-txt", { autoAlpha: 1 }, "<")
+  .set(".reb-menu-txt", { autoAlpha: 0 }, "<")
+  .set(".redact-cover-nav", { backgroundColor: '#ffffff'})
   .set(bookSuccessBtn, { display: "none" }, "<")
-  .set(BookContain, { display: "flex" }, "<")
   .set(rebmWrap, { display: "flex"}, "<")
   .set(rebmBtnsWrap, { display: "block" }, "<")
-  .set(RebmGbpCancel, { display: "flex" }, "<")
   .set(rebmGbpWrap, { display: "block" }, "<")
   .set(CategoryReb, { display: "block" }, "<")
   .set(ctaCover, { scaleX: 0 }, "<")
@@ -245,53 +268,56 @@ rebmGbpOpen.forEach(rebmGbpOp => {
   .to(CategoryReb, { delay: 0.2, x: 0, opacity: 1, ease: "expo.out", duration: 1.2 })
   .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .fromTo(rebmGbpWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-  .set(bookHole, {display: "block"}, "<")
-  .set(ctaMask, {filter:"invert(0%)" });
+  .set(navBg, {scale: 40, autoAlpha: 1, display: "block"})
+  .set(ctaMask, {filter:"invert(0%)" })
+  .set([".menu__btn", ".currency__btn", ".home-nav__btn", ".nav__logo-btn"], { display: "flex", overwrite: 'auto' })
+  .set([".home-logo", ".beta__txt", ".menu-txt", ".touch-print-open__wrap", ".query-txt", ".currencies-list__contain", ".query-away__track", ".mrebel-says__category-contain"], { opacity: 1, overwrite: 'auto' });
        
    rebmGbpOp.addEventListener('click', () => {   
     rebmgbp_open.play(0);
   });
 })
 
-// CLOSE REB M GBP
+// CLOSE REB S GBP
 RebmGbpCancel.forEach((RebmGbpCancel) => {
   if (!RebmGbpCancel) return
-  const bookHole = document.querySelector('.book-hole')
-  if (!bookHole) return
+  //const bookHole = document.querySelector('.book-hole')
+  //if (!bookHole) return
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHole, { scale: 1 })
+  //gsap.set(bookHole, { scale: 1 })
 
   RebmGbpCancel.addEventListener("click", (e) => {
       let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
       let yDist = e.clientY - bookingContain.getBoundingClientRect().y
       let rebmgbp_cancel = gsap.timeline();
 
-      gsap.set(bookHole, { left: xDist, top: yDist })
+      //gsap.set(bookHole, { left: xDist, top: yDist })
        
 rebmgbp_cancel
-.set(".menu__btn", { display: "none", opacity: 0 })
 .set(".cta-txt", { autoAlpha: 1}, "<")
-.set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
+.set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
 .set(rebmBg, {autoAlpha: 0, scale: 1}, "<")
-.to([rebmGbpWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
-.fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
-.to(cursor, { delay: 0.55, scale: 0.07, autoAlpha: 1, duration: 0.45 })
+.to([rebmGbpWrap, CategoryReb], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+.fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
+.to([".redact-cover-reb-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
+.to(".reb-menu-txt", { autoAlpha: 1, duration: 0.001 })
+.to(".reb-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+.set([BookContain, RebmGbpCancel], { display: "none" })
+.to([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"}) 
+.set(navBg, { autoAlpha: 0 })
+.set(".redact-cover-nav", { backgroundColor: '#000000'})
 .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
 .set(bookCancelinner, { x: -30, opacity: 0 })
 .set(rebmWrap, { display: "none" })
 .set(rebmBtnsWrap, { display: "none" })
-.set(RebmGbpCancel, { display: "none" })
-.set(rebmGbpWrap, { opacity: 0, display: "none", x: -30 })
-.set(BookContain, { display: "none" })
-.set(bookHole, {display: "none", clearProps: "all"})
-.to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+.set(rebmGbpWrap, { opacity: 0, display: "none", x: -30 });
 
     });
 })
 
-// OPEN REB M SEK
+// OPEN REB S SEK
 rebmSekOpen.forEach(rebmSekOp => {
 
     let ctaMask = rebmSekOp.querySelector(".book-cta__mask"),
@@ -302,12 +328,15 @@ rebmSekOpen.forEach(rebmSekOp => {
 
   rebmsek_open
   .set(rebmBg, { scale: 1, autoAlpha: 1 })
-  .set(cursor, { display: "none" }, "<")
+  .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
+  .set([BookContain, RebmSekCancel], { display: "flex" }, "<")
+  .set([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
+  .set(".reb-exit-txt", { autoAlpha: 1 }, "<")
+  .set(".reb-menu-txt", { autoAlpha: 0 }, "<")
+  .set(".redact-cover-nav", { backgroundColor: '#ffffff'})
   .set(bookSuccessBtn, { display: "none" }, "<")
-  .set(BookContain, { display: "flex" }, "<")
   .set(rebmWrap, { display: "flex"}, "<")
   .set(rebmBtnsWrap, { display: "block" }, "<")
-  .set(RebmSekCancel, { display: "flex" }, "<")
   .set(rebmSekWrap, { display: "block" }, "<")
   .set(CategoryReb, { display: "block" }, "<")
   .set(ctaCover, { scaleX: 0 }, "<")
@@ -319,53 +348,56 @@ rebmSekOpen.forEach(rebmSekOp => {
   .to(CategoryReb, { delay: 0.2, x: 0, opacity: 1, ease: "expo.out", duration: 1.2 })
   .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .fromTo(rebmSekWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-  .set(bookHole, {display: "block"}, "<")
-  .set(ctaMask, {filter:"invert(0%)" });
+  .set(navBg, {scale: 40, autoAlpha: 1, display: "block"})
+  .set(ctaMask, {filter:"invert(0%)" })
+  .set([".menu__btn", ".currency__btn", ".home-nav__btn", ".nav__logo-btn"], { display: "flex", overwrite: 'auto' })
+  .set([".home-logo", ".beta__txt", ".menu-txt", ".touch-print-open__wrap", ".query-txt", ".currencies-list__contain", ".query-away__track", ".mrebel-says__category-contain"], { opacity: 1, overwrite: 'auto' });
        
    rebmSekOp.addEventListener('click', () => {   
     rebmsek_open.play(0);
   });
 })
 
-// CLOSE REB M SEK
+// CLOSE REB S SEK
 RebmSekCancel.forEach((RebmSekCancel) => {
   if (!RebmSekCancel) return
-  const bookHole = document.querySelector('.book-hole')
-  if (!bookHole) return
+  //const bookHole = document.querySelector('.book-hole')
+  //if (!bookHole) return
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHole, { scale: 1 })
+  //gsap.set(bookHole, { scale: 1 })
 
   RebmSekCancel.addEventListener("click", (e) => {
       let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
       let yDist = e.clientY - bookingContain.getBoundingClientRect().y
       let rebmsek_cancel = gsap.timeline();
 
-      gsap.set(bookHole, { left: xDist, top: yDist })
+      //gsap.set(bookHole, { left: xDist, top: yDist })
        
 rebmsek_cancel
-.set(".menu__btn", { display: "none", opacity: 0 })
 .set(".cta-txt", { autoAlpha: 1}, "<")
-.set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
+.set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
 .set(rebmBg, {autoAlpha: 0, scale: 1}, "<")
-.to([rebmSekWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
-.fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
-.to(cursor, { delay: 0.55, scale: 0.07, autoAlpha: 1, duration: 0.45 })
+.to([rebmSekWrap, CategoryReb], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+.fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
+.to([".redact-cover-reb-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
+.to(".reb-menu-txt", { autoAlpha: 1, duration: 0.001 })
+.to(".reb-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+.set([BookContain, RebmSekCancel], { display: "none" })
+.to([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"}) 
+.set(navBg, { autoAlpha: 0 })
+.set(".redact-cover-nav", { backgroundColor: '#000000'})
 .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
 .set(bookCancelinner, { x: -30, opacity: 0 })
 .set(rebmWrap, { display: "none" })
 .set(rebmBtnsWrap, { display: "none" })
-.set(RebmSekCancel, { display: "none" })
-.set(rebmSekWrap, { opacity: 0, display: "none", x: -30 })
-.set(BookContain, { display: "none" })
-.set(bookHole, {display: "none", clearProps: "all"})
-.to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+.set(rebmSekWrap, { opacity: 0, display: "none", x: -30 });
 
     });
 })
 
-// OPEN REB M SGD
+// OPEN REB S SGD
 rebmSgdOpen.forEach(rebmSgdOp => {
 
     let ctaMask = rebmSgdOp.querySelector(".book-cta__mask"),
@@ -376,12 +408,15 @@ rebmSgdOpen.forEach(rebmSgdOp => {
 
   rebmsgd_open
   .set(rebmBg, { scale: 1, autoAlpha: 1 })
-  .set(cursor, { display: "none" }, "<")
+  .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
+  .set([BookContain, RebmSgdCancel], { display: "flex" }, "<")
+  .set([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
+  .set(".reb-exit-txt", { autoAlpha: 1 }, "<")
+  .set(".reb-menu-txt", { autoAlpha: 0 }, "<")
+  .set(".redact-cover-nav", { backgroundColor: '#ffffff'})
   .set(bookSuccessBtn, { display: "none" }, "<")
-  .set(BookContain, { display: "flex" }, "<")
   .set(rebmWrap, { display: "flex"}, "<")
   .set(rebmBtnsWrap, { display: "block" }, "<")
-  .set(RebmSgdCancel, { display: "flex" }, "<")
   .set(rebmSgdWrap, { display: "block" }, "<")
   .set(CategoryReb, { display: "block" }, "<")
   .set(ctaCover, { scaleX: 0 }, "<")
@@ -393,93 +428,98 @@ rebmSgdOpen.forEach(rebmSgdOp => {
   .to(CategoryReb, { delay: 0.2, x: 0, opacity: 1, ease: "expo.out", duration: 1.2 })
   .to(bookCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
   .fromTo(rebmSgdWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
-  .set(bookHole, {display: "block"}, "<")
-  .set(ctaMask, {filter:"invert(0%)" });
+  .set(navBg, {scale: 40, autoAlpha: 1, display: "block"})
+  .set(ctaMask, {filter:"invert(0%)" })
+  .set([".menu__btn", ".currency__btn", ".home-nav__btn", ".nav__logo-btn"], { display: "flex", overwrite: 'auto' })
+  .set([".home-logo", ".beta__txt", ".menu-txt", ".touch-print-open__wrap", ".query-txt", ".currencies-list__contain", ".query-away__track", ".mrebel-says__category-contain"], { opacity: 1, overwrite: 'auto' });
        
    rebmSgdOp.addEventListener('click', () => {   
     rebmsgd_open.play(0);
   });
 })
 
-// CLOSE REB M SGD
+// CLOSE REB S SGD
 RebmSgdCancel.forEach((RebmSgdCancel) => {
   if (!RebmSgdCancel) return
-  const bookHole = document.querySelector('.book-hole')
-  if (!bookHole) return
+  //const bookHole = document.querySelector('.book-hole')
+  //if (!bookHole) return
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHole, { scale: 1 })
+  //gsap.set(bookHole, { scale: 1 })
 
   RebmSgdCancel.addEventListener("click", (e) => {
       let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
       let yDist = e.clientY - bookingContain.getBoundingClientRect().y
       let rebmsgd_cancel = gsap.timeline();
 
-      gsap.set(bookHole, { left: xDist, top: yDist })
+      //gsap.set(bookHole, { left: xDist, top: yDist })
        
 rebmsgd_cancel
-.set(".menu__btn", { display: "none", opacity: 0 })
 .set(".cta-txt", { autoAlpha: 1}, "<")
-.set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
+.set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
 .set(rebmBg, {autoAlpha: 0, scale: 1}, "<")
-.to([rebmSgdWrap, CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
-.fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
-.to(cursor, { delay: 0.55, scale: 0.07, autoAlpha: 1, duration: 0.45 })
+.to([rebmSgdWrap, CategoryReb], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
+.fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
+.to([".redact-cover-reb-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
+.to(".reb-menu-txt", { autoAlpha: 1, duration: 0.001 })
+.to(".reb-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+.set([BookContain, RebmSgdCancel], { display: "none" })
+.to([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"}) 
+.set(navBg, { autoAlpha: 0 })
+.set(".redact-cover-nav", { backgroundColor: '#000000'})
 .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
 .set(bookCancelinner, { x: -30, opacity: 0 })
 .set(rebmWrap, { display: "none" })
 .set(rebmBtnsWrap, { display: "none" })
-.set(RebmSgdCancel, { display: "none" })
-.set(rebmSgdWrap, { opacity: 0, display: "none", x: -30 })
-.set(BookContain, { display: "none" })
-.set(bookHole, {display: "none", clearProps: "all"})
-.to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+.set(rebmSgdWrap, { opacity: 0, display: "none", x: -30 });
 
     });
 })
 
-// CLOSE REB M SUCCESS - ALL CURRENCIES
+// CLOSE REB S SUCCESS - ALL CURRENCIES
 
-rebMexitSuccess.forEach((rebMexitSuccess) => {
-  if (!rebMexitSuccess) return
-  const bookHole = document.querySelector('.book-hole')
-  if (!bookHole) return
+rebSexitSuccess.forEach((rebSexitSuccess) => {
+  if (!rebSexitSuccess) return
+  //const bookHole = document.querySelector('.book-hole')
+  //if (!bookHole) return
   const bookingContain = document.querySelector('.booking-items__container')
   if (!bookingContain) return
 
-  gsap.set(bookHole, { scale: 1 })
+  //gsap.set(bookHole, { scale: 1 })
 
-  rebMexitSuccess.addEventListener("click", (e) => {
+  rebSexitSuccess.addEventListener("click", (e) => {
       let xDist = e.clientX - bookingContain.getBoundingClientRect().x + 4
       let yDist = e.clientY - bookingContain.getBoundingClientRect().y
       let rebm_cancel_success = gsap.timeline();
 
-      gsap.set(bookHole, { left: xDist, top: yDist })
+      //gsap.set(bookHole, { left: xDist, top: yDist })
            
     rebm_cancel_success
-             .set(".menu__btn", { display: "none", opacity: 0 })
-             .set(cursor, { display: "flex", scale: 0, autoAlpha: 0}, "<")
+             .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
              .set(rebmBg, {autoAlpha: 0, scale: 1}, "<")
              .set(".rebm-booked__cover", { display: "block" }, "<")
-             .set([".cb-btn__covered", ".rebs-btn__covered", ".rebxxl-btn__covered", ".spa-btn__covered"], { display: "flex" }, "<")
+             .set([".cb-btn__covered", ".rebm-btn__covered", ".rebxxl-btn__covered", ".spa-btn__covered"], { display: "flex" }, "<")
              .to([".reb-success-marquee__wrap", ".reb-success-img__wrap"], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 })
-             .to([CategoryReb, bookCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+             .to(CategoryReb, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
              .to([rebmEurWrap, rebmUsdWrap, rebmGbpWrap, rebmSgdWrap, rebmSekWrap], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-             .fromTo(bookHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)", onComplete() { sessionStorage.setItem("rebmSuccessPlayed", true) } }, "-=0.2")
-             .to(cursor, { delay: 0.55, scale: 0.07, autoAlpha: 1, duration: 0.45 })
+             .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
+             .to([".redact-cover-reb-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
+             .to(".reb-menu-txt", { autoAlpha: 1, duration: 0.001 })
+             .to(".reb-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+             .set([BookContain, RebmEurCancel, RebmUsdCancel, RebmGbpCancel, RebmSgdCancel, RebmSekCancel, bookSuccessBtn], { display: "none" })
+             .to([".redact-cover-reb-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"}) 
+             .set(navBg, { autoAlpha: 0 })
+             .set(".redact-cover-nav", { backgroundColor: '#000000'})
              .set(CategoryReb, { x: -30, opacity: 0, display: "none" })
              .set(bookCancelinner, { x: -30, opacity: 0 })
              .set(rebmWrap, { display: "none" })
              .set(rebmBtnsWrap, { display: "none" })
-             .set([RebmEurCancel, RebmUsdCancel, RebmGbpCancel, RebmSgdCancel, RebmSekCancel], { display: "none" })
              .set([rebmEurWrap, rebmUsdWrap, rebmGbpWrap, rebmSgdWrap, rebmSekWrap], { opacity: 0, display: "none", x: -30 })
              .set(BookContain, { display: "none" })
-             .set(bookHole, {display: "none", clearProps: "all"})
              .set([".ready-fini__wrap", ".reb-success-marquee__wrap", ".reb-success-img__wrap", ".cb-success-marquee__wrap", ".cb-success-img__wrap", ".home-mrebel__qa-pong-wrap"], { yPercent: 101, opacity: 0 })
-             .set([".reb-success-items__contain", ".cb-success-items__contain", ".q-a-pong__mask", ".ready-fini__mask"], { display: "none" })
-             .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
-
+             .set([".reb-success-items__contain", ".cb-success-items__contain", ".q-a-pong__mask", ".ready-fini__mask"], { display: "none" });
+    
         });
      })
   });
