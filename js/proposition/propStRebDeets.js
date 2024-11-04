@@ -215,8 +215,12 @@ ScrollTrigger.create({
   //invalidateOnRefresh: false,
   //scrub: 2, 
   onRefresh: () => scrollDirArrow.pause(),
-  onUpdate: self => {
-    self.direction === 1 ? scrollDirArrow.reverse() : scrollDirArrow.play(); },
+  onUpdate: (self) => {
+    if (self.direction !== direction) {
+    self.direction === 1 ? scrollDirArrow.reverse(0) : scrollDirArrow.play(); 
+    direction = self.direction;
+      }
+    },
   onLeave: () => scrollDirArrow.play()
 })
 
