@@ -30,6 +30,7 @@ var rebmBg = gsap.utils.toArray('.reb-m__backdrop');
 var rebxxlBg = gsap.utils.toArray('.reb-xxl__backdrop');
 var spaBg = gsap.utils.toArray('.spa__backdrop'); // New add!!!
 let cursor = gsap.utils.toArray(".cursor-dot");
+var navBg = gsap.utils.toArray('.nav__backdrop');
 let bookSuccessBtn = gsap.utils.toArray([".cb-exit__success", ".rebs-exit__success", ".rebm-exit__success", ".rebxxl-exit__success", ".spa-exit__success"]); // New add last!!!
 let mm = gsap.matchMedia();
   
@@ -39,6 +40,7 @@ gsap.set([CategoryCb, CategoryReb, CategorySpa], { display: "none", x: -30, opac
 gsap.set([BookContain], { display: "none" });
 gsap.set([cbWrap, rebsWrap, rebmWrap, rebxxlWrap, spaWrap], { display: "none" });
 gsap.set([cbBg, rebsBg, rebmBg, rebxxlBg, spaBg], { autoAlpha: 0 });
+gsap.set(navBg, {autoAlpha: 0});
 
 //----------------------- BOOK SPA - BEGIN -----------------------//
 
