@@ -89,6 +89,7 @@ query_open = gsap.timeline({ paused: true });
               .set([".redact-cover-query-exit", ".redact-cover-nav"], { scaleX: 0 }, "<") 
 	      .set(".query-exit-txt", { autoAlpha: 1 }, "<")
 	      .set(".query-menu-txt", {autoAlpha: 0}, "<")
+	      .set(".redact-cover-nav", { filter: "invert(100%)" }, "<")
               .set(".nav__items-container", {display: "none" }, "<")
               .to(ctaMask, {filter:"invert(100%)", duration: 0.001}, "<")
               .to(queryBg, { scale: 24, transformOrigin: "50% 50%", ease: "expoScale(1, 24, power2.inOut)", duration: 1 })
@@ -138,15 +139,16 @@ query_cancel
          .to(queryInnerWrap, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .to(CategoryQ, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
-	 .to([".redact-cover-query-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.169, ease: "linear"}) 
+	 .to([".redact-cover-query-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}) 
 	 .to(".query-menu-txt", { autoAlpha: 1, duration: 0.001 })
 	 .to(".query-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
 	 .set([queryCancel, QueryContain], { display: "none" })
-	 .to([".redact-cover-query-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.169, ease: "linear"})	 
+	 .to([".redact-cover-query-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})	 
 	 .set(navBg, { autoAlpha: 0 })
 	 .set(CategoryQ, { x: -30, opacity: 0, display: "none" }) 
          .set(queryInnerWrap, { opacity: 0, display: "none", x: -30 })
-	 .set(queryCancelinner, { x: -30, opacity: 0 });
+	 .set(queryCancelinner, { x: -30, opacity: 0 })
+	 .set(".redact-cover-nav", { filter: "invert(0%)" }, "<");
 
     })
   });
