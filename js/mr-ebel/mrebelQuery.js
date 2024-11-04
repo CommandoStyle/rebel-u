@@ -90,6 +90,7 @@ query_open = gsap.timeline({ paused: true });
 	      .set(".query-exit-txt", { autoAlpha: 1 }, "<")
 	      .set(".query-menu-txt", {autoAlpha: 0}, "<")
               .set(".nav__items-container", {display: "none" }, "<")
+	      .set(".redact-cover-nav", { backgroundColor: '#ffffff'})
               .to(ctaMask, {filter:"invert(100%)", duration: 0.001}, "<")
               .to(queryBg, { scale: 24, transformOrigin: "50% 50%", ease: "expoScale(1, 24, power2.inOut)", duration: 1 })
               .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.75")
@@ -144,6 +145,7 @@ query_cancel
 	 .set([queryCancel, QueryContain], { display: "none" })
 	 .to([".redact-cover-query-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"})	 
 	 .set(navBg, { autoAlpha: 0 })
+	 .set(".redact-cover-nav", { backgroundColor: '#000000'})
 	 .set(CategoryQ, { x: -30, opacity: 0, display: "none" }) 
          .set(queryInnerWrap, { opacity: 0, display: "none", x: -30 })
 	 .set(queryCancelinner, { x: -30, opacity: 0 });
