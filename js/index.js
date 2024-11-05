@@ -176,7 +176,7 @@ const initRblu = () => {
     
     barba.hooks.beforeEnter((data) => {
 
-      initGlobal(data.next.container);
+      //initGlobal(data.next.container);
       
       // Set cursor
       gsap.set(".cursor-dot", {
