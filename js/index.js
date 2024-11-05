@@ -151,16 +151,7 @@ import { legalLinksSt } from './legal/legalLinksSt.js';
 
 import { errorMarquees } from './error/errorMarquees.js';
 
-// Get mouse position on click  
-let percentTop;
-let percentLeft;
-$(document).on("click touchstart", function (e) {
-  let mouseTop = e.pageY - $(window).scrollTop();
-  let mouseLeft = e.pageX;
-  percentTop = (mouseTop / $(window).height()) * 100;
-  percentLeft = (mouseLeft / $(window).width()) * 100;
-  return false; 
-});
+
 
 const mmTrans = window.matchMedia("(max-width: 480px)");
 
