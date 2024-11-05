@@ -170,7 +170,7 @@ const initRblu = () => {
 
     barba.hooks.once(() => {
 
-      //cursorFirstNew();
+      cursorFirstNew();
     
     });
     
@@ -186,21 +186,21 @@ const initRblu = () => {
       yPercent: -60
       });
 
-      //resetScroll(data.next.container);
+      resetScroll(data.next.container);
 
     });
 
     barba.hooks.after((data) => {
 
-      //cursorFirstNew(data.next.container);
-      //navHoverNew(data.next.container);
+      cursorFirstNew(data.next.container);
+      navHoverNew(data.next.container);
      
        });
 
        if(window.barba) {
         barba.init({
           
-          preventRunning: true,
+          preventRunning: false,
           timeout: 10000,
           sync: true,
           cacheIgnore: true,
