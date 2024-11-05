@@ -156,7 +156,7 @@ const mmTrans = window.matchMedia("(max-width: 480px)");
 // Get mouse position on click  
 let percentTop;
 let percentLeft;
-$(document).on("click touchstart", function (e) {
+$(document).on("click touchstart", { passive: false }, function (e) {
   let mouseTop = e.pageY - $(window).scrollTop();
   let mouseLeft = e.pageX;
   percentTop = (mouseTop / $(window).height()) * 100;
