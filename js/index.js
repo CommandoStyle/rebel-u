@@ -1072,21 +1072,7 @@ const initRblu = () => {
 initRblu();
 
 // Global scripts
-function initGlobal() {
 
-setTimeout(() => {
-
-arrowCtaBtn();
-morphCursor();
-quizGlobal();
-bookedCover();
-cookieSelect();
-iframeOut();
-responsiveText();
-
-}, 0);
-
-}
 
 // Home scripts
 function initHome() {
