@@ -162,7 +162,7 @@ $(document).on("click touchstart", { passive: false }, function (e) {
   percentTop = (mouseTop / $(window).height()) * 100;
   percentLeft = (mouseLeft / $(window).width()) * 100;
   e.preventDefault();
-  return false; 
+  //return false; 
 });
 
 // Load all functions on first load
