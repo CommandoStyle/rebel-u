@@ -1238,7 +1238,7 @@ function initEbel() {
 
 setTimeout(() => {
 
-//mrebelSubscribe();
+mrebelSubscribe();
 mrebelMarquees();   
 mrebelImages();
 mrebelLeave();  
