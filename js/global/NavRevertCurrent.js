@@ -25,7 +25,7 @@ currentRevert.forEach((currentRevert) => {
     const navContain = document.querySelector('.nav__items-container')
     if (!navContain) return
 
-    gsap.set(navHole, { scale: 1, display: "none" });
+    //gsap.set(navHole, { scale: 1, display: "none" });
 
     currentRevert.addEventListener("click", (e) => {
         // Calculate distance between user click and top left corner of button
@@ -39,7 +39,7 @@ currentRevert.forEach((currentRevert) => {
  currentRevOut
         .set(navClose, {display: "none"})
         .set(navOpen, {display: "flex"}, "<")
-        .set(navHole, {display: "block"}, "<")
+        //.set(navHole, {display: "block"}, "<")
         .set(".cursor-dot", { scale: 0, autoAlpha: 0 }, "<")
         .set(navBg, {display: "none"}, "<")
         .set(".nav__items-container", {backgroundColor: 'transparent'}, "<")
