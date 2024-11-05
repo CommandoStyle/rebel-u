@@ -12,8 +12,8 @@ let smoother = ScrollSmoother.create({
         effects: true,
         ignoreMobileResize: true,
         smoothTouch: 0.3,
-        normalizeScroll: false,
-        preventDefault: true
+        normalizeScroll: false
+        //preventDefault: true,
         //normalizeScroll: !!ScrollTrigger.isTouch
     });
 
