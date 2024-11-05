@@ -156,7 +156,12 @@ const mmTrans = window.matchMedia("(max-width: 480px)");
 // Get mouse position on click  
 let percentTop;
 let percentLeft;
-$(document).not('.submit-email').on("click touchstart", function (e) {
+$(document).on("click touchstart", function (e) {
+  if(e.target.id == "submit-email")
+          return;
+       //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
+       if($(e.target).closest('#submit-email').length)
+          return;   
   let mouseTop = e.pageY - $(window).scrollTop();
   let mouseLeft = e.pageX;
   percentTop = (mouseTop / $(window).height()) * 100;
