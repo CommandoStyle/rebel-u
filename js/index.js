@@ -170,13 +170,13 @@ const initRblu = () => {
 
     barba.hooks.once(() => {
 
-      cursorFirstNew();
+      //cursorFirstNew();
     
     });
     
     barba.hooks.beforeEnter((data) => {
 
-      //initGlobal(data.next.container);
+      initGlobal(data.next.container);
       
       // Set cursor
       gsap.set(".cursor-dot", {
@@ -186,14 +186,14 @@ const initRblu = () => {
       yPercent: -60
       });
 
-      resetScroll(data.next.container);
+      //resetScroll(data.next.container);
 
     });
 
     barba.hooks.after((data) => {
 
-      cursorFirstNew(data.next.container);
-      navHoverNew(data.next.container);
+      //cursorFirstNew(data.next.container);
+      //navHoverNew(data.next.container);
      
        });
 
@@ -1072,7 +1072,21 @@ const initRblu = () => {
 initRblu();
 
 // Global scripts
+function initGlobal() {
 
+setTimeout(() => {
+
+arrowCtaBtn();
+morphCursor();
+quizGlobal();
+bookedCover();
+cookieSelect();
+iframeOut();
+responsiveText();
+
+}, 0);
+
+}
 
 // Home scripts
 function initHome() {
