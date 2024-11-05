@@ -153,11 +153,7 @@ import { errorMarquees } from './error/errorMarquees.js';
 
 const mmTrans = window.matchMedia("(max-width: 480px)");
 
-// Load all functions on first load
-
-const initRblu = () => {
-
-  // Get mouse position on click  
+// Get mouse position on click  
 let percentTop;
 let percentLeft;
 $(document).on("click touchstart", function (e) {
@@ -165,8 +161,13 @@ $(document).on("click touchstart", function (e) {
   let mouseLeft = e.pageX;
   percentTop = (mouseTop / $(window).height()) * 100;
   percentLeft = (mouseLeft / $(window).width()) * 100;
+  e.preventDefault();
   return false; 
-});
+}, { passive: false });
+
+// Load all functions on first load
+
+const initRblu = () => {
 
     barba.hooks.once(() => {
 
