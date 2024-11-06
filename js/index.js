@@ -182,7 +182,7 @@ if($(e.target).closest('#carl-contact').length)
   let mouseLeft = e.pageX;
   percentTop = (mouseTop / $(window).height()) * 100;
   percentLeft = (mouseLeft / $(window).width()) * 100;
-  //e.preventDefault();
+  e.preventDefault();
   return false; 
 });
 
