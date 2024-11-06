@@ -397,48 +397,51 @@ function querySuccess() {
 //All devices: close query - success
 queryCancelSuccess.forEach((queryCancelSuccess) => {
   if (!queryCancelSuccess) return
-  const queryHole = document.querySelector('.query-hole')
-  if (!queryHole) return
+  //const queryHole = document.querySelector('.query-hole')
+  //if (!queryHole) return
   const queryContain = document.querySelector('.query-items__container')
   if (!queryContain) return
 
-  gsap.set(queryHole, { scale: 1 })
+  //gsap.set(queryHole, { scale: 1 })
 
   queryCancelSuccess.addEventListener("click", (e) => {
       let xDist = e.clientX - queryContain.getBoundingClientRect().x + 4
       let yDist = e.clientY - queryContain.getBoundingClientRect().y
       let query_cancel_success = gsap.timeline();
 
-      gsap.set(queryHole, { left: xDist, top: yDist })
+      //gsap.set(queryHole, { left: xDist, top: yDist })
               
 query_cancel_success
-         .set(".menu__btn", { display: "none", opacity: 0 })
          .set(".query-txt", { autoAlpha: 1 })
-         .set(cursor, { scale: 0, autoAlpha: 0}, "<")
+         .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
          .set(queryBg, {autoAlpha: 0, scale: 1}, "<")
          .set(".query-away__cover", { display: "flex" }, "<")
          .set(".oval-cta__btn", { display: "none" }, "<")
          .to(".home-mrebel__qa-pong-wrap", { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-         .to([CategoryQ, queryCancelinner, queryInnerWrap], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-         .fromTo(queryHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)", onComplete() { sessionStorage.setItem("querySuccessPlayed", true) } }, "-=0.2")
-         .to(".beta__contain", {display: "flex", duration: 0.001}, "-=0.6")
-         .to(cursor, { delay: 0.55, scale: 0.07, autoAlpha: 1, duration: 0.45 })
+         .to([CategoryQ, queryInnerWrap], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+         .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2, onComplete() { sessionStorage.setItem("querySuccessPlayed", true) } }, "-=0.2")
+	 .to([".redact-cover-query-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
+	 .to(".query-menu-txt", { autoAlpha: 1, duration: 0.001 })
+	 .to(".query-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+	 .set([queryCancel, QueryContain], { display: "none" })
+	 .to([".redact-cover-query-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"})	 
+	 .set(navBg, { autoAlpha: 0 })
+	 .set(".redact-cover-nav", { backgroundColor: '#000000'})
+         //.fromTo(queryHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
          .set(CategoryQ, { x: -30, opacity: 0, display: "none" })
          .set(queryCancelinner, { x: -30, opacity: 0 })
          .set(queryCancel, { display: "none" })
          .set(queryInnerWrap, { opacity: 0, display: "none", x: -30 })
          .set(QueryContain, { display: "none" })
-         .set(queryHole, {display: "none", clearProps: "all"})
+         //.set(queryHole, {display: "none", clearProps: "all"})
          .set([".ready-fini__wrap", ".reb-success-marquee__wrap", ".reb-success-img__wrap", ".cb-success-marquee__wrap", ".cb-success-img__wrap", ".home-mrebel__qa-pong-wrap"], { yPercent: 101, opacity: 0 })
          //.set([".ready-fini__mask", ".reb-success-marquee__mask", ".reb-success-img__mask", ".cb-success-marquee__mask", ".cb-success-img__mask", ".q-a-pong__mask"], { yPercent: 101 })
-         .set([".reb-success-items__contain", ".cb-success-items__contain", ".q-a-pong__mask", ".ready-fini__mask"], { display: "none" })
-         .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+         .set([".reb-success-items__contain", ".cb-success-items__contain", ".q-a-pong__mask", ".ready-fini__mask"], { display: "none" });
 
       QApongMini.play();
       QApongSuccess.pause(); 
 
     })
-});
-
-
+  });	
 }
+
