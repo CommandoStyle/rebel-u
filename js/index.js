@@ -164,11 +164,15 @@ if(e.target.id == "submit-email")
           //return;
 if(e.target.id == "submit-success")
           return;
+if(e.target.id == "footer-contact")
+          return;
 if($(e.target).closest('#submit-email').length)
           return;
 //if($(e.target).closest('#email-form').length)
           //return;  
 if($(e.target).closest('#submit-success').length)
+          return;   
+if($(e.target).closest('#footer-contact').length)
           return;   
   let mouseTop = e.pageY - $(window).scrollTop();
   let mouseLeft = e.pageX;
