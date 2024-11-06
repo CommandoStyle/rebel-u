@@ -76,12 +76,13 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
   $('.form-important-class').submit(()=>{ 
       setTimeout(()=>{
      // click our div trigger to run success anim
-     $('.form-success-trigger').click(e); 
-        e.preventDefault();
+     $('.form-success-trigger').click(); 
       }, 666);
    });
 
-  //submit-email
+  $("#submit-email").click(function(e) {
+    e.preventDefault();
+   });
 
 gsap.set("subscribe-drop__contain",{perspective:600})
 gsap.set("img",{xPercent:"-50%",yPercent:"-50%"})
