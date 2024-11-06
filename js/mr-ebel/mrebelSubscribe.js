@@ -80,8 +80,8 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
       }, 666);
    });
 
-  $("#submit-email").click(function(e) {
-    return false;
+  $("#Email").submit(function(e) {
+    e.preventDefault();
    });
 
 gsap.set("subscribe-drop__contain",{perspective:600})
