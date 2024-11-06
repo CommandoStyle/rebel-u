@@ -159,8 +159,10 @@ let percentLeft;
 
 $(document).on("click touchstart", function (e) {
 if(e.target.id == "submit-email")
+  e.preventDefault();
           return;
 if(e.target.id == "submit-success")
+  e.preventDefault();
           return;
 if(e.target.id == "footer-contact")
           return;
@@ -169,8 +171,10 @@ if(e.target.id == "nav-contact")
 if(e.target.id == "carl-contact")
           return;
 if($(e.target).closest('#submit-email').length)
+  e.preventDefault();
           return;
 if($(e.target).closest('#submit-success').length)
+  e.preventDefault();
           return;   
 if($(e.target).closest('#footer-contact').length)
           return;
