@@ -160,16 +160,12 @@ let percentLeft;
 $(document).on("click touchstart", function (e) {
 if(e.target.id == "submit-email")
           return;
-//if(e.target.id == "email-form")
-          //return;
 if(e.target.id == "submit-success")
           return;
 if(e.target.id == "footer-contact")
           return;
 if($(e.target).closest('#submit-email').length)
           return;
-//if($(e.target).closest('#email-form').length)
-          //return;  
 if($(e.target).closest('#submit-success').length)
           return;   
 if($(e.target).closest('#footer-contact').length)
