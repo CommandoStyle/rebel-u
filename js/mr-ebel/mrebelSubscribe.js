@@ -73,10 +73,11 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
       });
   
       // on form submit
-  $('.form-important-class').submit(()=>{ 
+  $('.form-important-class').submit((e)=>{ 
       setTimeout(()=>{
      // click our div trigger to run success anim
      $('.form-success-trigger').click(); 
+        e.preventDefault();
       }, 666);
    });
 
