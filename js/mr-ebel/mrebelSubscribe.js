@@ -80,9 +80,18 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
       }, 666);
    });
 
-  $("#Email").submit(function(e) {
-    e.preventDefault();
-   });
+var Webflow = Webflow || [];
+Webflow.push(function () {
+
+    $("#email-form").submit(function (event) {
+        setTimeout(function () { location.reload(false); }, 0);
+    });
+});
+
+
+  //$("#email-form").submit(function(e) {
+    //e.preventDefault();
+   //});
 
 gsap.set("subscribe-drop__contain",{perspective:600})
 gsap.set("img",{xPercent:"-50%",yPercent:"-50%"})
