@@ -313,12 +313,12 @@ quizCancel.forEach((quizCancel) => {
 //All devices: close quiz - SUCCESS
 quizCancelSuccess.forEach((quizCancelSuccess) => {
   if (!quizCancelSuccess) return
-  const quizHole = document.querySelector('.quiz-hole')
-  if (!quizHole) return
+  //const quizHole = document.querySelector('.quiz-hole')
+  //if (!quizHole) return
   const quizContain = document.querySelector('.quiz-items__container')
   if (!quizContain) return
 
-  gsap.set(quizHole, { scale: 1 })
+  //gsap.set(quizHole, { scale: 1 })
 
 quizCancelSuccess.addEventListener("click", (e) => {
 
@@ -326,26 +326,29 @@ quizCancelSuccess.addEventListener("click", (e) => {
       let yDist = e.clientY - quizContain.getBoundingClientRect().y
       let quiz_cancel_success = gsap.timeline();
 
-      gsap.set(quizHole, { left: xDist, top: yDist })
+      //gsap.set(quizHole, { left: xDist, top: yDist })
               
     quiz_cancel_success
-           .set(".menu__btn", { display: "none", opacity: 0 })
 	   //.set('.quiz-hole-mobile', { scale: 1, display: "flex" }, "<")
-           .set(cursor, { scale: 0, autoAlpha: 0 }, "<")
+           .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' })
            .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
            .set(".quiz-done__cover", { display: "block" }, "<")
            .to(".ready-fini__mask", { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-           .to([CategoryQuiz, quizCancelinner, quizInnerWrap],{ x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
-           .fromTo(quizHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
-	   .fromTo('.quiz-hole-mobile', { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)" }, "-=1.6")
-           .to(cursor, { delay: 0.55, scale: 0.07, autoAlpha: 1, duration: 0.45 })
+           .to([CategoryQuiz, quizInnerWrap],{ x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
+	   .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
+	   //.fromTo('.quiz-hole-mobile', { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)" }, "-=1.6")
+	   .to([".redact-cover-quiz-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
+	   .to(".quiz-menu-txt", { autoAlpha: 1, duration: 0.001 })
+	   .to(".quiz-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+	   .set([QuizContain, quizCancel], { display: "none" })
+	   .to([".redact-cover-quiz-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"}) 
+	   .set(navBg, { autoAlpha: 0 })
+	   .set(".redact-cover-nav", { backgroundColor: '#000000'})
            .set(CategoryQuiz, { x: -30, yPercent: 0, display: "none" })
            .set(quizCancelinner, { x: -30, yPercent: 0 })
            .set([QuizContain, quizCancel, quizCancelSuccess, QuizWrap], { display: "none" })
-           .set(quizInnerWrap, { opacity: 0, display: "none", x: -30 })
-           .set(quizHole, {display: "none", clearProps: "all"})
-	   .set('.quiz-hole-mobile', {display: "none", clearProps: "all" })
-           .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45, onComplete() { sessionStorage.setItem("quizSuccessPlayed", true) } })
+           .set(quizInnerWrap, { opacity: 0, display: "none", x: -20, onComplete() { sessionStorage.setItem("quizSuccessPlayed", true) }  })
+	   //.set('.quiz-hole-mobile', {display: "none", clearProps: "all" })
            .set([".ready-fini__mask", ".reb-success-marquee__wrap", ".reb-success-img__wrap", ".cb-success-marquee__wrap", ".cb-success-img__wrap", ".q-a-pong__mask"], { x: -30, opacity: 0 })
            //.set([".ready-fini__mask", ".reb-success-marquee__mask", ".reb-success-img__mask", ".cb-success-marquee__mask", ".cb-success-img__mask", ".q-a-pong__mask"], { yPercent: 101 })
            .set([".reb-success-items__contain", ".cb-success-items__contain", ".q-a-pong__mask", ".ready-fini__mask"], { display: "none" });
@@ -355,3 +358,4 @@ quizCancelSuccess.addEventListener("click", (e) => {
       })
    });
 }
+
