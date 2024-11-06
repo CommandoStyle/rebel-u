@@ -81,7 +81,7 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
    });
 
   $("#submit-email").click(function(e) {
-    e.preventDefault();
+    return false;
    });
 
 gsap.set("subscribe-drop__contain",{perspective:600})
