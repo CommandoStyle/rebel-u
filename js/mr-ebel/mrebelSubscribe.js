@@ -80,6 +80,7 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
       }, 666);
    });
 
+  // block page reload on submit
 var Webflow = Webflow || [];
 Webflow.push(function () {
 
@@ -88,11 +89,7 @@ Webflow.push(function () {
     });
 });
 
-
-  //$("#email-form").submit(function(e) {
-    //e.preventDefault();
-   //});
-
+ // On submit balloon anim
 gsap.set("subscribe-drop__contain",{perspective:600})
 gsap.set("img",{xPercent:"-50%",yPercent:"-50%"})
 
