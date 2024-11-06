@@ -73,13 +73,15 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
       });
   
       // on form submit
-  $('.form-important-class').submit((e)=>{ 
+  $('.form-important-class').submit(()=>{ 
       setTimeout(()=>{
      // click our div trigger to run success anim
-     $('.form-success-trigger').click(); 
+     $('.form-success-trigger').click(e); 
         e.preventDefault();
       }, 666);
    });
+
+  //submit-email
 
 gsap.set("subscribe-drop__contain",{perspective:600})
 gsap.set("img",{xPercent:"-50%",yPercent:"-50%"})
