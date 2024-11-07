@@ -168,7 +168,7 @@ mm.add("(max-width: 428px)", () => {
   const ebelSwiper = new Swiper ('.swiper.mrebel-text', {
     loop: true,
     speed: 600,
-    autoplay: { delay: 2200 },
+    autoplay: { delay: 2000 },
     //autoplay: false,
     on: {
       slideChangeTransitionStart: function () {
