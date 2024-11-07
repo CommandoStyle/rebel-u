@@ -166,10 +166,10 @@ mm.add("(max-width: 991px) and (min-width: 429px)", () => {
 mm.add("(max-width: 428px)", () => {
 
   const ebelSwiper = new Swiper ('.swiper.mrebel-text', {
-    //loop: true,
-    rewind: true,
+    loop: true,
     speed: 600,
-    autoplay: false,
+    autoplay: { delay: 0 },
+    //autoplay: false,
     on: {
       slideChangeTransitionStart: function () {
           // Slide captions
