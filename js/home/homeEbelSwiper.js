@@ -105,16 +105,16 @@ mm.add("(max-width: 991px) and (min-width: 429px)", () => {
   .to(".a-contain", {
       x: "6.12em",
       duration: 1.8,
-      ease: Expo.easeOut }, "<")
+      ease: Expo.easeOut })
   .to(".ampersand-contain", {
       x: "-11.6em", 
       duration: 1.8,
       rotation: 0,
-      ease: Power1.easeOut }, "<")
+      ease: Power1.easeOut }, "-=1.8")
   .to(".q-contain", {
       x: "6.12em",
       duration: 1.8,
-      ease: Expo.easeIn }, "<")
+      ease: Expo.easeIn }, "-=1.8")
   .to(".q-contain", {
       x: "0em",
       duration: 1.8,
@@ -123,12 +123,13 @@ mm.add("(max-width: 991px) and (min-width: 429px)", () => {
       x: "0em", 
       duration: 1.8,
       rotation: 360,
-      ease: Power1.easeOut }, 1.8)
+      ease: Power1.easeOut }, "-=1.8")
   .to(".a-contain", {
       x: "0em",
       duration: 1.8,
-      ease: Expo.easeIn }, "<");
+      ease: Expo.easeIn }, "-=1.8");
       },
+           
    slideChangeTransitionEnd: function () {
             // Slide captions
             var swiper = this;
@@ -184,16 +185,16 @@ QApong
 .to(".a-contain", {
     x: "2.5em",
     duration: 1.2,
-    ease: Expo.easeOut },"<")
+    ease: Expo.easeOut })
 .to(".ampersand-contain", {
     x: "-5.8em", 
     duration: 1.2,
     rotation: 0,
-    ease: Power1.easeOut },"<")
+    ease: Power1.easeOut }, "-=1.2")
 .to(".q-contain", {
     x: "2.5em",
     duration: 1.2,
-    ease: Expo.easeIn },"<")
+    ease: Expo.easeIn }, "-=1.2")
 .to(".q-contain", {
     x: "0em",
     duration: 1.2,
@@ -202,12 +203,13 @@ QApong
     x: "0.2em", 
     duration: 1.2,
     rotation: 360,
-    ease: Power1.easeOut }, 1.2)
+    ease: Power1.easeOut }, "-=1.2")
 .to(".a-contain", {
     x: "0em",
     duration: 1.2,
-    ease: Expo.easeIn },"<");
+    ease: Expo.easeIn }, "-=1.2");
     },
+         
  slideChangeTransitionEnd: function () {
           // Slide captions
           var swiper = this;
