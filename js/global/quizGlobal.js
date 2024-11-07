@@ -280,7 +280,7 @@ quizCancel.forEach((quizCancel) => {
    let yDist = touch.clientY - quizContain.getBoundingClientRect().y
    let quiz_cancel = gsap.timeline();
 
-   gsap.set(quizHoleMobile, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
+   gsap.set(quizHoleMobile, {left: xDist, top: yDist});
 
   quiz_cancel
          .set(".menu__btn", { display: "none", opacity: 0 })
@@ -317,7 +317,7 @@ quizCancelSuccess.addEventListener("click", (e) => {
       let yDist = e.clientY - quizContain.getBoundingClientRect().y
       let quiz_cancel_success = gsap.timeline();
 
-      gsap.set(quizHoleMobile, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
+      gsap.set(quizHoleMobile, { left: xDist, top: yDist });
               
     quiz_cancel_success
 	   .set(".menu__btn", { display: "none", opacity: 0 })
