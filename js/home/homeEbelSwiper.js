@@ -181,6 +181,7 @@ var QApongMobile = gsap.timeline();
 
 QApongMobile
 
+.to(".lineChild", { duration: 0.3, x: -10, opacity: 0, stagger: -0.03, ease: Power2.easeIn})
 .to(".a-contain", {
     x: "2.5em",
     duration: 1.2,
@@ -189,8 +190,7 @@ QApongMobile
     x: "-5.8em", 
     duration: 1.2,
     rotation: 0,
-    ease: Power1.easeOut }, "<")
-.to(".lineChild", { duration: 0.3, x: -10, opacity: 0, stagger: -0.03, ease: Power2.easeIn}, "<")
+    ease: Power1.easeOut }, "-=1.2")
 .to(".q-contain", {
     x: "2.5em",
     duration: 1.2,
@@ -223,7 +223,7 @@ new SplitText("data-title", { type: "lines", linesClass: "lineParent" });
 
 var slideswap = gsap.timeline();
 
-slideswap.from(".lineChild", { duration: 0.3, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
+slideswap.from(".lineChild", { duration: 0.001, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
       
         }
      }
