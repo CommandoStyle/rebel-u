@@ -180,7 +180,7 @@ var QApongMobile = gsap.timeline();
 
 QApongMobile
 
-.to(".lineChild", { duration: 0.3, x: -10, opacity: 0, stagger: -0.03, ease: Power2.easeIn}, "<")
+.to(".lineChild", { duration: 0.3, x: -10, opacity: 0, stagger: -0.03, ease: Power2.easeIn})
 .to(".a-contain", {
     x: "2.5em",
     duration: 1.2,
@@ -219,9 +219,9 @@ slideChangeTransitionEnd: function () {
 new SplitText("data-title", { type: "lines", linesClass: "lineChild" });
 new SplitText("data-title", { type: "lines", linesClass: "lineParent" });
 
-//var slideswap = gsap.timeline();
+var slideswap = gsap.timeline();
 
-gsap.from(".lineChild", { duration: 0.3, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
+slideswap.from(".lineChild", { duration: 0.3, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
       
         }
      }
