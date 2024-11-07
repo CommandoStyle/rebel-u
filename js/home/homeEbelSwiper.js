@@ -170,7 +170,6 @@ mm.add("(max-width: 428px)", () => {
     loop: true,
     speed: 600,
     autoplay: false,
-    cssMode: true,
     on: {
       slideChangeTransitionStart: function () {
           // Slide captions
