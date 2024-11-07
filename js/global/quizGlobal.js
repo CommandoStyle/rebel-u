@@ -144,8 +144,6 @@ quiz_open = gsap.timeline({ paused: true });
 })
 
 // CLOSE QUIZ
-
-//All devices: close quiz
 quizCancel.forEach((quizCancel) => {
     if (!quizCancel) return
     //const quizHole = document.querySelector('.quiz-hole')
@@ -182,11 +180,57 @@ quizCancel.forEach((quizCancel) => {
 
         })
       });
-    });
+
+//All devices: close quiz - SUCCESS
+quizCancelSuccess.forEach((quizCancelSuccess) => {
+  if (!quizCancelSuccess) return
+  //const quizHole = document.querySelector('.quiz-hole')
+  //if (!quizHole) return
+  const quizContain = document.querySelector('.quiz-items__container')
+  if (!quizContain) return
+
+  //gsap.set(quizHole, { scale: 1 })
+
+quizCancelSuccess.addEventListener("click", (e) => {
+
+      let xDist = e.clientX - quizContain.getBoundingClientRect().x + 4
+      let yDist = e.clientY - quizContain.getBoundingClientRect().y
+      let quiz_cancel_success = gsap.timeline();
+
+      //gsap.set(quizHole, { left: xDist, top: yDist })
+              
+    quiz_cancel_success
+           .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' })
+           .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
+           .set(".quiz-done__cover", { display: "block" }, "<")
+           .to(".ready-fini__mask", { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+           .to([CategoryQuiz, quizInnerWrap],{ x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
+	   .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2, onComplete() { sessionStorage.setItem("quizSuccessPlayed", true) } }, "-=0.2")
+	   .to([".redact-cover-quiz-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
+	   .to(".quiz-menu-txt", { autoAlpha: 1, duration: 0.001 })
+	   .to(".quiz-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+	   .set([QuizContain, quizCancel], { display: "none" })
+	   .to([".redact-cover-quiz-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"}) 
+	   .set(navBg, { autoAlpha: 0 })
+	   .set(".redact-cover-nav", { backgroundColor: '#000000'})
+           .set(CategoryQuiz, { x: -30, yPercent: 0, display: "none" })
+           .set(quizCancelinner, { x: -30, yPercent: 0 })
+           .set([quizCancelSuccess, QuizWrap], { display: "none" })
+           .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 })
+           .set([".ready-fini__mask", ".reb-success-marquee__wrap", ".reb-success-img__wrap", ".cb-success-marquee__wrap", ".cb-success-img__wrap", ".q-a-pong__mask"], { x: -30, opacity: 0 })
+           //.set([".ready-fini__mask", ".reb-success-marquee__mask", ".reb-success-img__mask", ".cb-success-marquee__mask", ".cb-success-img__mask", ".q-a-pong__mask"], { yPercent: 101 })
+           .set([".reb-success-items__contain", ".cb-success-items__contain", ".q-a-pong__mask", ".ready-fini__mask"], { display: "none" });
+  
+           loopFini.pause();
+
+      })
+   });
+});
 
 // MOBILE
-mm.add("(max-width: 428px)", () => {
-	
+mm.add("(max-width: 990px)", () => {
+
+// OPEN QUIZ
 quizOpen.forEach(quizOpen => {
 
   let arrowMask = quizOpen.querySelector(".is--arrow-inner"),
@@ -220,8 +264,6 @@ quiz_open = gsap.timeline({ paused: true });
 })
 
 // CLOSE QUIZ
-
-//iPad and mobile
 quizCancel.forEach((quizCancel) => {
     if (!quizCancel) return
     const quizHoleMobile = document.querySelector('.quiz-hole-mobile')
@@ -246,22 +288,65 @@ quizCancel.forEach((quizCancel) => {
          .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
 	 .set(".touch-print-open__wrap", { autoAlpha: 1 })
          .to([CategoryQuiz, quizCancelinner, quizInnerWrap], { x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
-         .fromTo('.quiz-hole-mobile', { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)" }, "-=0.4")
+         .fromTo(quizHoleMobile, { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)" }, "-=0.4")
          .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
          .set(CategoryQuiz, { x: -30, opacity: 0, display: "none" })
          .set(quizCancelinner, { x: -30, opacity: 0 })
          .set(quizCancel, { display: "none" })
          .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 })
          .set(QuizContain, { display: "none" })
-         .set('.quiz-hole-mobile', {display: "none", clearProps: "all" })
+         .set(quizHoleMobile, {display: "none", clearProps: "all" })
          .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
 
         })
       });
-    });
+	
+//QUIZ SUCCESS CLOSE
+quizCancelSuccess.forEach((quizCancelSuccess) => {
+  if (!quizCancelSuccess) return
+  const quizHoleMobile = document.querySelector('.quiz-hole-mobile')
+  if (!quizHoleMobile) return
+  const quizContain = document.querySelector('.quiz-items__container')
+  if (!quizContain) return
+
+  gsap.set(quizHoleMobile, { scale: 1 })
+
+quizCancelSuccess.addEventListener("click", (e) => {
+
+      let xDist = e.clientX - quizContain.getBoundingClientRect().x + 4
+      let yDist = e.clientY - quizContain.getBoundingClientRect().y
+      let quiz_cancel_success = gsap.timeline();
+
+      gsap.set(quizHoleMobile, { left: xDist, top: yDist })
+              
+    quiz_cancel_success
+	   .set(".menu__btn", { display: "none", opacity: 0 })
+           .set(".touch-print-open__wrap", { autoAlpha: 1 })
+	   .set(quizHoleMobile, { scale: 1, display: "flex" }, "<")
+           .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' })
+           .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
+           .set(".quiz-done__cover", { display: "block" }, "<")
+           .to(".ready-fini__mask", { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+           .to([CategoryQuiz, quizInnerWrap, quizCancelinner],{ x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
+	   .fromTo(quizHoleMobile, { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)", onComplete() { sessionStorage.setItem("quizSuccessPlayed", true) } }, "-=1.6")
+           .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
+           .set(CategoryQuiz, { x: -30, yPercent: 0, display: "none" })
+           .set(quizCancelinner, { x: -30, yPercent: 0 })
+           .set([QuizContain, quizCancel, quizCancelSuccess, QuizWrap], { display: "none" })
+           .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 })
+	   .set(quizHoleMobile, {display: "none", clearProps: "all" })
+           .set([".ready-fini__mask", ".reb-success-marquee__wrap", ".reb-success-img__wrap", ".cb-success-marquee__wrap", ".cb-success-img__wrap", ".q-a-pong__mask"], { x: -30, opacity: 0 })
+           //.set([".ready-fini__mask", ".reb-success-marquee__mask", ".reb-success-img__mask", ".cb-success-marquee__mask", ".cb-success-img__mask", ".q-a-pong__mask"], { yPercent: 101 })
+           .set([".reb-success-items__contain", ".cb-success-items__contain", ".q-a-pong__mask", ".ready-fini__mask"], { display: "none" })
+	   .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+  
+           loopFini.pause();
+
+      })
+   });
+});
 
   // QUIZ SUCCESS
-
   gsap.set([".quiz-drop__contain", ".quiz-cancel__success"], { display: "none" });
   gsap.set("img", { xPercent: "-50%", yPercent: "-50%" });
   gsap.set(".ready-fini__mask", { x: -30, opacity: 0, display: "none" });
@@ -310,52 +395,6 @@ quizCancel.forEach((quizCancel) => {
   
   function R(min,max) {return min+Math.random()*(max-min)};
 
-//All devices: close quiz - SUCCESS
-quizCancelSuccess.forEach((quizCancelSuccess) => {
-  if (!quizCancelSuccess) return
-  //const quizHole = document.querySelector('.quiz-hole')
-  //if (!quizHole) return
-  const quizContain = document.querySelector('.quiz-items__container')
-  if (!quizContain) return
 
-  //gsap.set(quizHole, { scale: 1 })
-
-quizCancelSuccess.addEventListener("click", (e) => {
-
-      let xDist = e.clientX - quizContain.getBoundingClientRect().x + 4
-      let yDist = e.clientY - quizContain.getBoundingClientRect().y
-      let quiz_cancel_success = gsap.timeline();
-
-      //gsap.set(quizHole, { left: xDist, top: yDist })
-              
-    quiz_cancel_success
-	   //.set('.quiz-hole-mobile', { scale: 1, display: "flex" }, "<")
-           .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' })
-           .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
-           .set(".quiz-done__cover", { display: "block" }, "<")
-           .to(".ready-fini__mask", { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-           .to([CategoryQuiz, quizInnerWrap],{ x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
-	   .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2, onComplete() { sessionStorage.setItem("quizSuccessPlayed", true) } }, "-=0.2")
-	   //.fromTo('.quiz-hole-mobile', { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)" }, "-=1.6")
-	   .to([".redact-cover-quiz-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
-	   .to(".quiz-menu-txt", { autoAlpha: 1, duration: 0.001 })
-	   .to(".quiz-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
-	   .set([QuizContain, quizCancel], { display: "none" })
-	   .to([".redact-cover-quiz-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"}) 
-	   .set(navBg, { autoAlpha: 0 })
-	   .set(".redact-cover-nav", { backgroundColor: '#000000'})
-           .set(CategoryQuiz, { x: -30, yPercent: 0, display: "none" })
-           .set(quizCancelinner, { x: -30, yPercent: 0 })
-           .set([QuizContain, quizCancel, quizCancelSuccess, QuizWrap], { display: "none" })
-           .set(quizInnerWrap, { opacity: 0, display: "none", x: -20 })
-	   //.set('.quiz-hole-mobile', {display: "none", clearProps: "all" })
-           .set([".ready-fini__mask", ".reb-success-marquee__wrap", ".reb-success-img__wrap", ".cb-success-marquee__wrap", ".cb-success-img__wrap", ".q-a-pong__mask"], { x: -30, opacity: 0 })
-           //.set([".ready-fini__mask", ".reb-success-marquee__mask", ".reb-success-img__mask", ".cb-success-marquee__mask", ".cb-success-img__mask", ".q-a-pong__mask"], { yPercent: 101 })
-           .set([".reb-success-items__contain", ".cb-success-items__contain", ".q-a-pong__mask", ".ready-fini__mask"], { display: "none" });
-  
-           loopFini.pause();
-
-      })
-   });
 }
 
