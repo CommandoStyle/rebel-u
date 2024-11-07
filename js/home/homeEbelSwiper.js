@@ -177,7 +177,7 @@ mm.add("(max-width: 428px)", () => {
    
             $(swiper.slides[swiper.activeIndex]).attr("data-title");
 
-var QApongMobile = gsap.timeline({repeat: -1});
+var QApongMobile = gsap.timeline();
 
 QApongMobile
 
