@@ -70,7 +70,6 @@ gsap.set(queryCancel, { display: "none" });
 //gsap.set(".query-q__wrap", { xPercent: -60 });
 gsap.set(navBg, {autoAlpha: 0});
 
-// OPEN QUERY
 // DESKTOP
 mm.add("(min-width: 991px)", () => {
       
@@ -101,7 +100,7 @@ query_open = gsap.timeline({ paused: true });
               .to(queryCancelinner, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
               .fromTo(queryInnerWrap, { x: -30, opacity: 0 }, { x: 0, opacity: 1, ease: "expo.out", duration: 1.2 }, "<")
               .set(navBg, {scale: 40, autoAlpha: 1, display: "block"})
-	      .set(".beta__contain", {display: "none"})
+	      //.set(".beta__contain", {display: "none"})
               .set(ctaMask, {filter:"invert(0%)" })
               .set(".touch-print-open__wrap", { autoAlpha: 1 })
 	      .set([".menu__btn", ".currency__btn", ".home-nav__btn", ".nav__logo-btn"], { display: "flex", overwrite: 'auto' })
@@ -135,7 +134,7 @@ query_cancel
          .set(queryBg, {autoAlpha: 0, scale: 1})
 	 .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' })
          .set(".query-txt", { autoAlpha: 1 })
-	 .set(".beta__contain", {display: "flex"})
+	 //.set(".beta__contain", {display: "flex"})
          .to(queryInnerWrap, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .to(CategoryQ, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
@@ -152,6 +151,54 @@ query_cancel
 
     })
   });
+
+// CLOSE QUERY SUCCESS
+queryCancelSuccess.forEach((queryCancelSuccess) => {
+  if (!queryCancelSuccess) return
+  //const queryHole = document.querySelector('.query-hole')
+  //if (!queryHole) return
+  const queryContain = document.querySelector('.query-items__container')
+  if (!queryContain) return
+
+  //gsap.set(queryHole, { scale: 1 })
+
+  queryCancelSuccess.addEventListener("click", (e) => {
+      let xDist = e.clientX - queryContain.getBoundingClientRect().x + 4
+      let yDist = e.clientY - queryContain.getBoundingClientRect().y
+      let query_cancel_success = gsap.timeline();
+
+      //gsap.set(queryHole, { left: xDist, top: yDist })
+              
+query_cancel_success
+         .set(".query-txt", { autoAlpha: 1 })
+         .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
+         .set(queryBg, {autoAlpha: 0, scale: 1}, "<")
+         .set(".query-away__cover", { display: "flex" }, "<")
+         .set(".oval-cta__btn", { display: "none" }, "<")
+         .to(".home-mrebel__qa-pong-wrap", { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+         .to([CategoryQ, queryInnerWrap], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+         .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2, onComplete() { sessionStorage.setItem("querySuccessPlayed", true) } }, "-=0.2")
+	 .to([".redact-cover-query-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
+	 .to(".query-menu-txt", { autoAlpha: 1, duration: 0.001 })
+	 .to(".query-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
+	 .set([queryCancel, QueryContain], { display: "none" })
+	 .to([".redact-cover-query-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"})	 
+	 .set(navBg, { autoAlpha: 0 })
+	 .set(".redact-cover-nav", { backgroundColor: '#000000'})
+         .set(CategoryQ, { x: -30, opacity: 0, display: "none" })
+         .set(queryCancelinner, { x: -30, opacity: 0 })
+         .set(queryCancel, { display: "none" })
+         .set(queryInnerWrap, { opacity: 0, display: "none", x: -30 })
+         .set(QueryContain, { display: "none" })
+         .set([".ready-fini__wrap", ".reb-success-marquee__wrap", ".reb-success-img__wrap", ".cb-success-marquee__wrap", ".cb-success-img__wrap", ".home-mrebel__qa-pong-wrap"], { yPercent: 101, opacity: 0 })
+         //.set([".ready-fini__mask", ".reb-success-marquee__mask", ".reb-success-img__mask", ".cb-success-marquee__mask", ".cb-success-img__mask", ".q-a-pong__mask"], { yPercent: 101 })
+         .set([".reb-success-items__contain", ".cb-success-items__contain", ".q-a-pong__mask", ".ready-fini__mask"], { display: "none" });
+
+      QApongMini.play();
+      QApongSuccess.pause(); 
+
+    })
+  });		
 });
 
 // MOBILE
@@ -174,7 +221,7 @@ query_open = gsap.timeline({ paused: true });
               .to(ctaMask, {filter:"invert(100%)", duration: 0.001}, "<")
               .to(queryBg, { scale: 24, transformOrigin: "50% 50%", ease: "expoScale(1, 24, power2.inOut)", duration: 1 })
               .set(".touch-print-open__wrap", { autoAlpha: 0 }, "-=0.67")
-              .to(".beta__contain", {display: "none", duration: 0.001}, "-=0.5")
+              //.to(".beta__contain", {display: "none", duration: 0.001}, "-=0.5")
               .to(".redact-cover-query", { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 4, ease: "power0.easeOut" })
               .to(".query-txt", { autoAlpha: 0, duration: 0.001})
               .to(".redact-cover-query", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.3, ease: "linear" })
@@ -190,8 +237,6 @@ query_open = gsap.timeline({ paused: true });
 })
 
 // CLOSE QUERY
-
-//All devices: close query
 queryCancel.forEach((queryCancel) => {
   if (!queryCancel) return
   const queryHoleMobile = document.querySelector(".query-hole-mobile")
@@ -220,7 +265,7 @@ query_cancel
          .to(CategoryQ, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
          .to(queryCancelinner, { x: 30, opacity: 0, ease: "expo.out", duration: 0.4 }, "<")
          .fromTo(queryHoleMobile, { force3D: false, scale: 1 }, { force3D: false, duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)" }, "-=0.4")
-         .to(".beta__contain", {display: "flex", duration: 0.001}, "-=0.6")
+         //.to(".beta__contain", {display: "flex", duration: 0.001}, "-=0.6")
          .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
          .set(CategoryQ, { x: -30, opacity: 0, display: "none" })
          .set(queryCancelinner, { x: -30, opacity: 0 })
@@ -232,6 +277,54 @@ query_cancel
 
     })
   });
+
+// CLOSE QUERY SUCCESS
+
+//All devices: close query - success
+queryCancelSuccess.forEach((queryCancelSuccess) => {
+  if (!queryCancelSuccess) return
+  const queryHoleMobile = document.querySelector(".query-hole-mobile")
+  if (!queryHoleMobile) return
+  const queryContain = document.querySelector('.query-items__container')
+  if (!queryContain) return
+
+  gsap.set(queryHoleMobile, { scale: 1, display: "none" })
+
+  queryCancelSuccess.addEventListener("click", (e) => {
+      let xDist = e.clientX - queryContain.getBoundingClientRect().x + 4
+      let yDist = e.clientY - queryContain.getBoundingClientRect().y
+      let query_cancel_success = gsap.timeline();
+
+  gsap.set(queryHoleMobile, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
+              
+query_cancel_success
+         .set(".menu__btn", { display: "none", opacity: 0 })
+         .set(".touch-print-open__wrap", { autoAlpha: 1 })
+         .set(".query-txt", { autoAlpha: 1 })
+         .set(cursor, { display: "flex", scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
+         .set(queryBg, {autoAlpha: 0, scale: 1}, "<")
+         .set(".query-away__cover", { display: "flex" }, "<")
+         .set(".oval-cta__btn", { display: "none" }, "<")
+         .to(".home-mrebel__qa-pong-wrap", { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+         .to([CategoryQ, queryInnerWrap, queryCancelinner], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
+         .fromTo(queryHoleMobile, { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)", onComplete() { sessionStorage.setItem("querySuccessPlayed", true) } }, "-=0.2")
+         .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
+         .set(CategoryQ, { x: -30, opacity: 0, display: "none" })
+         .set(queryCancelinner, { x: -30, opacity: 0 })
+         .set(queryCancel, { display: "none" })
+         .set(queryInnerWrap, { opacity: 0, display: "none", x: -30 })
+         .set(QueryContain, { display: "none" })
+         .set(queryHoleMobile, {display: "none", clearProps: "all"})
+         .set([".ready-fini__wrap", ".reb-success-marquee__wrap", ".reb-success-img__wrap", ".cb-success-marquee__wrap", ".cb-success-img__wrap", ".home-mrebel__qa-pong-wrap"], { yPercent: 101, opacity: 0 })
+         //.set([".ready-fini__mask", ".reb-success-marquee__mask", ".reb-success-img__mask", ".cb-success-marquee__mask", ".cb-success-img__mask", ".q-a-pong__mask"], { yPercent: 101 })
+         .set([".reb-success-items__contain", ".cb-success-items__contain", ".q-a-pong__mask", ".ready-fini__mask"], { display: "none" })
+	 .to(".menu__btn", { delay: 2, display: "flex", opacity: 1, duration: 0.45 });
+
+      QApongMini.play();
+      QApongSuccess.pause(); 
+
+    })
+  });	
 });
 
 // PONG ANIM SUCCESS
@@ -372,7 +465,7 @@ QApongSuccess
     duration: 1.2,
     ease: Expo.easeIn },"<");
 
-    // QUERY SUBMISSION TRIGGER
+// QUERY SUBMISSION TRIGGER
 var qsubmit = gsap.timeline({ paused: true });
 
 qsubmit
@@ -390,58 +483,5 @@ function querySuccess() {
 
 });
 
-
-
-// CLOSE QUERY SUCCESS
-
-//All devices: close query - success
-queryCancelSuccess.forEach((queryCancelSuccess) => {
-  if (!queryCancelSuccess) return
-  //const queryHole = document.querySelector('.query-hole')
-  //if (!queryHole) return
-  const queryContain = document.querySelector('.query-items__container')
-  if (!queryContain) return
-
-  //gsap.set(queryHole, { scale: 1 })
-
-  queryCancelSuccess.addEventListener("click", (e) => {
-      let xDist = e.clientX - queryContain.getBoundingClientRect().x + 4
-      let yDist = e.clientY - queryContain.getBoundingClientRect().y
-      let query_cancel_success = gsap.timeline();
-
-      //gsap.set(queryHole, { left: xDist, top: yDist })
-              
-query_cancel_success
-         .set(".query-txt", { autoAlpha: 1 })
-         .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' }, "<")
-         .set(queryBg, {autoAlpha: 0, scale: 1}, "<")
-         .set(".query-away__cover", { display: "flex" }, "<")
-         .set(".oval-cta__btn", { display: "none" }, "<")
-         .to(".home-mrebel__qa-pong-wrap", { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-         .to([CategoryQ, queryInnerWrap], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-         .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2, onComplete() { sessionStorage.setItem("querySuccessPlayed", true) } }, "-=0.2")
-	 .to([".redact-cover-query-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
-	 .to(".query-menu-txt", { autoAlpha: 1, duration: 0.001 })
-	 .to(".query-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
-	 .set([queryCancel, QueryContain], { display: "none" })
-	 .to([".redact-cover-query-exit", ".redact-cover-nav"], { scaleX: 0, transformOrigin: "100% 0%", duration: 0.179, ease: "linear"})	 
-	 .set(navBg, { autoAlpha: 0 })
-	 .set(".redact-cover-nav", { backgroundColor: '#000000'})
-         //.fromTo(queryHole, { scale: 1 }, { duration: 1.2, scale: 2800, ease: "expoScale(1, 2800, power1.easeOut)" }, "-=0.2")
-         .set(CategoryQ, { x: -30, opacity: 0, display: "none" })
-         .set(queryCancelinner, { x: -30, opacity: 0 })
-         .set(queryCancel, { display: "none" })
-         .set(queryInnerWrap, { opacity: 0, display: "none", x: -30 })
-         .set(QueryContain, { display: "none" })
-         //.set(queryHole, {display: "none", clearProps: "all"})
-         .set([".ready-fini__wrap", ".reb-success-marquee__wrap", ".reb-success-img__wrap", ".cb-success-marquee__wrap", ".cb-success-img__wrap", ".home-mrebel__qa-pong-wrap"], { yPercent: 101, opacity: 0 })
-         //.set([".ready-fini__mask", ".reb-success-marquee__mask", ".reb-success-img__mask", ".cb-success-marquee__mask", ".cb-success-img__mask", ".q-a-pong__mask"], { yPercent: 101 })
-         .set([".reb-success-items__contain", ".cb-success-items__contain", ".q-a-pong__mask", ".ready-fini__mask"], { display: "none" });
-
-      QApongMini.play();
-      QApongSuccess.pause(); 
-
-    })
-  });	
 }
 
