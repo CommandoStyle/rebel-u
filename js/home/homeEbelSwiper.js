@@ -131,7 +131,6 @@ mm.add("(max-width: 991px) and (min-width: 429px)", () => {
       },
            
    slideChangeTransitionEnd: function () {
-            // Slide captions
             var swiper = this;
             var currentTitle = $(swiper.slides[swiper.activeIndex]).attr("data-title");
             $(".slide-captions").html(function() {
@@ -207,11 +206,11 @@ QApongMobile
 .to(".a-contain", {
     x: "0em",
     duration: 1.2,
-    ease: Expo.easeIn }, "-=1.2");
+    ease: Expo.easeIn, , onComplete() { slideChangeTransitionEnd(); } }, "-=1.2")
+    .from(".lineChild", { duration: 0.3, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
     },
          
- slideChangeTransitionEnd: function () {
-          // Slide captions
+const slideChangeTransitionEnd = () => {         
           var swiper = this;
           var currentTitle = $(swiper.slides[swiper.activeIndex]).attr("data-title");
           $(".slide-captions").html(function() {
@@ -221,9 +220,9 @@ QApongMobile
 new SplitText("data-title", { type: "lines", linesClass: "lineChild" });
 new SplitText("data-title", { type: "lines", linesClass: "lineParent" });
 
-var slideswap = gsap.timeline();
+//var slideswap = gsap.timeline();
 
-slideswap.from(".lineChild", { duration: 0.3, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
+//slideswap.from(".lineChild", { duration: 0.3, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
       
         }
      }
