@@ -181,6 +181,7 @@ var QApongMobile = gsap.timeline();
 
 QApongMobile
 
+.to(".lineChild", { duration: 0.3, x: -10, opacity: 0, stagger: -0.03, ease: Power2.easeIn})
 .to(".a-contain", {
     x: "2.5em",
     duration: 1.2,
@@ -206,8 +207,7 @@ QApongMobile
 .to(".a-contain", {
     x: "0em",
     duration: 1.2,
-    ease: Expo.easeIn }, "-=1.2")
-.to(".lineChild", { duration: 0.3, x: -10, opacity: 0, stagger: -0.03, ease: Power2.easeIn}, "<");
+    ease: Expo.easeIn }, "-=1.2");
     },
          
  slideChangeTransitionEnd: function () {
@@ -230,10 +230,10 @@ slideswap.from(".lineChild", { duration: 0.3, x: 10, opacity: 0, stagger: 0.03, 
 });
 
 // Slide captions
-var currentTitle = $(ebelSwiper.slides[ebelSwiper.activeIndex]).attr("data-title");
-$(".slide-captions").html(function() {
-  return "<data-title class='current-title'>" + currentTitle + "</data-title>";
-});
+//var currentTitle = $(ebelSwiper.slides[ebelSwiper.activeIndex]).attr("data-title");
+//$(".slide-captions").html(function() {
+  //return "<data-title class='current-title'>" + currentTitle + "</data-title>";
+//});
 
 ScrollTrigger.create({
  trigger: ".ebel-swiper__trigger",
