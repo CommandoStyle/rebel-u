@@ -181,7 +181,6 @@ var QApongMobile = gsap.timeline();
 
 QApongMobile
 
-.to(".lineChild", { duration: 0.3, x: -10, opacity: 0, stagger: -0.03, ease: Power2.easeIn})
 .to(".a-contain", {
     x: "2.5em",
     duration: 1.2,
@@ -207,7 +206,8 @@ QApongMobile
 .to(".a-contain", {
     x: "0em",
     duration: 1.2,
-    ease: Expo.easeIn }, "-=1.2");
+    ease: Expo.easeIn }, "-=1.2")
+.to(".lineChild", { duration: 0.3, x: -10, opacity: 0, stagger: -0.03, ease: Power2.easeIn}, "<");
     },
          
  slideChangeTransitionEnd: function () {
@@ -223,7 +223,7 @@ new SplitText("data-title", { type: "lines", linesClass: "lineParent" });
 
 var slideswap = gsap.timeline();
 
-slideswap.from(".lineChild", { duration: 0.001, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
+slideswap.from(".lineChild", { duration: 0.3, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
       
         }
      }
