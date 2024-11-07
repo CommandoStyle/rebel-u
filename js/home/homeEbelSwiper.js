@@ -98,9 +98,9 @@ mm.add("(max-width: 991px) and (min-width: 429px)", () => {
      
               $(swiper.slides[swiper.activeIndex]).attr("data-title");
  
-  var QApong = gsap.timeline();
+  var QApongIpad = gsap.timeline();
  
-  QApong.to(".lineChild", { duration: 0.45, x: -10, opacity: 0, stagger: -0.045, ease: Power2.easeIn})
+  QApongIpad.to(".lineChild", { duration: 0.45, x: -10, opacity: 0, stagger: -0.045, ease: Power2.easeIn})
   
   .to(".a-contain", {
       x: "6.12em",
@@ -177,9 +177,9 @@ mm.add("(max-width: 428px)", () => {
    
             $(swiper.slides[swiper.activeIndex]).attr("data-title");
 
-var QApong = gsap.timeline();
+var QApongMobile = gsap.timeline();
 
-QApong
+QApongMobile
 
 .to(".lineChild", { duration: 0.3, x: -10, opacity: 0, stagger: -0.03, ease: Power2.easeIn})
 .to(".a-contain", {
