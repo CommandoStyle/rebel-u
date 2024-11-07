@@ -511,7 +511,7 @@ cbExitSuccess.forEach((cbExitSuccess) => {
            .to([".cb-success-marquee__wrap", ".cb-success-img__wrap"], { delay: 0.6, x: 30, opacity: 0, ease: "expo.out", duration: 0.6})
            .to(CategoryCb, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
            .to([cbEurWrap, cbUsdWrap, cbGbpWrap, cbSgdWrap, cbSekWrap], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-           .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
+           .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2, onComplete() { sessionStorage.setItem("cbSuccessPlayed", true) } }, "-=0.2")
            .to([".redact-cover-cb-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
            .to(".cb-menu-txt", { autoAlpha: 1, duration: 0.001 })
            .to(".cb-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
