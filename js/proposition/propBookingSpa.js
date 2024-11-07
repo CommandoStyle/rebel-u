@@ -506,7 +506,7 @@ spaExitSuccess.forEach((spaExitSuccess) => {
              .to([".spa-success-marquee__wrap", ".spa-success-img__wrap"], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6})
              .to(CategorySpa, { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
              .to([spaEurWrap, spaUsdWrap, spaGbpWrap, spaSgdWrap, spaSekWrap], { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
-             .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2 }, "-=0.2")
+             .fromTo(navBg, { scale:40 }, {scale: 0, ease: Expo.easeOut, duration: 1.2, onComplete() { sessionStorage.setItem("spaSuccessPlayed", true) } }, "-=0.2")
              .to([".redact-cover-spa-exit", ".redact-cover-nav"], { delay: 0.2, scaleX: 1, transformOrigin: "0% 100%", duration: 0.179, ease: "linear"}) 
              .to(".spa-menu-txt", { autoAlpha: 1, duration: 0.001 })
              .to(".spa-exit-txt", { autoAlpha: 0, duration: 0.001 }, "<")
