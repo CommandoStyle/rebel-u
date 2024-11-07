@@ -280,16 +280,16 @@ quizCancel.forEach((quizCancel) => {
    let yDist = touch.clientY - quizContain.getBoundingClientRect().y
    let quiz_cancel = gsap.timeline();
 
-   gsap.set(quizHoleMobile, {left: xDist, top: yDist});
+   gsap.set(quizHoleMobile, {display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50});
 
   quiz_cancel
          .set(".menu__btn", { display: "none", opacity: 0 })
-         //.set(cursor, { scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
+         .set(cursor, { scale: 0, autoAlpha: 0, xPercent: -38, yPercent: -60}, "<")
          .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
 	 .set(".touch-print-open__wrap", { autoAlpha: 1 })
          .to([CategoryQuiz, quizCancelinner, quizInnerWrap], { x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
          .fromTo(quizHoleMobile, { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)" }, "-=0.4")
-         //.to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
+         .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
          .set(CategoryQuiz, { x: -30, opacity: 0, display: "none" })
          .set(quizCancelinner, { x: -30, opacity: 0 })
          .set(quizCancel, { display: "none" })
@@ -309,7 +309,7 @@ quizCancelSuccess.forEach((quizCancelSuccess) => {
   const quizContain = document.querySelector('.quiz-items__container')
   if (!quizContain) return
 
-  gsap.set(quizHoleMobile, { scale: 1 })
+  gsap.set(quizHoleMobile, { scale: 1, display: "none" })
 
 quizCancelSuccess.addEventListener("click", (e) => {
 
@@ -317,19 +317,19 @@ quizCancelSuccess.addEventListener("click", (e) => {
       let yDist = e.clientY - quizContain.getBoundingClientRect().y
       let quiz_cancel_success = gsap.timeline();
 
-      gsap.set(quizHoleMobile, { left: xDist, top: yDist });
+      gsap.set(quizHoleMobile, { display: "flex", left: xDist, top: yDist, xPercent: -50, yPercent: -50 });
               
     quiz_cancel_success
 	   .set(".menu__btn", { display: "none", opacity: 0 })
            .set(".touch-print-open__wrap", { autoAlpha: 1 })
 	   .set(quizHoleMobile, { scale: 1, display: "flex" }, "<")
-           //.set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' })
+           .set(cursor, { scale: 0.5, autoAlpha: 1, left: "-1.65em", top: "1.7em", overwrite: 'auto' })
            .set(quizBg, {autoAlpha: 0, scale: 1}, "<")
            .set(".quiz-done__cover", { display: "block" }, "<")
            .to(".ready-fini__mask", { x: 30, opacity: 0, ease: "expo.out", duration: 0.6 }, "<")
            .to([CategoryQuiz, quizInnerWrap, quizCancelinner],{ x: 30, ease: "expo.out", opacity: 0, duration: 0.6 }, "<")
 	   .fromTo(quizHoleMobile, { scale: 1 }, { duration: 1.2, scale: 280, ease: "expoScale(1, 280, power1.easeOut)", onComplete() { sessionStorage.setItem("quizSuccessPlayed", true) } }, "-=1.6")
-           //.to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
+           .to(cursor, { delay: 0.55, scale: 1, autoAlpha: 1, xPercent: -38, yPercent: -60, duration: 0.45 })
            .set(CategoryQuiz, { x: -30, yPercent: 0, display: "none" })
            .set(quizCancelinner, { x: -30, yPercent: 0 })
            .set([QuizContain, quizCancel, quizCancelSuccess, QuizWrap], { display: "none" })
