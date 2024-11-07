@@ -206,7 +206,7 @@ QApongMobile
 .to(".a-contain", {
     x: "0em",
     duration: 1.2,
-    ease: Expo.easeIn, , onComplete() { slideChangeTransitionEnd(); } }, "-=1.2")
+    ease: Expo.easeIn, onComplete() { slideChangeTransitionEnd(); } }, "-=1.2")
     .from(".lineChild", { duration: 0.3, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
     },
          
