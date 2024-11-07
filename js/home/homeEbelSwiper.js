@@ -180,7 +180,7 @@ var QApongMobile = gsap.timeline();
 
 QApongMobile
 
-.to(".lineChild", { duration: 0.3, x: -10, opacity: 0, stagger: -0.03, ease: Power2.easeIn})
+.to(".lineChild", { duration: 0.3, x: -10, opacity: 0, stagger: -0.03, ease: Power2.easeIn}, "<")
 .to(".a-contain", {
     x: "2.5em",
     duration: 1.2,
@@ -206,11 +206,10 @@ QApongMobile
 .to(".a-contain", {
     x: "0em",
     duration: 1.2,
-    ease: Expo.easeIn, onComplete() { slideChangeTransitionEnd(); } }, "-=1.2")
-    .from(".lineChild", { duration: 0.3, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
+    ease: Expo.easeIn }, "-=1.2");
     },
          
-const slideChangeTransitionEnd = () => {         
+slideChangeTransitionEnd: function () {      
           var swiper = this;
           var currentTitle = $(swiper.slides[swiper.activeIndex]).attr("data-title");
           $(".slide-captions").html(function() {
@@ -222,17 +221,11 @@ new SplitText("data-title", { type: "lines", linesClass: "lineParent" });
 
 //var slideswap = gsap.timeline();
 
-//slideswap.from(".lineChild", { duration: 0.3, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
+gsap.from(".lineChild", { duration: 0.3, x: 10, opacity: 0, stagger: 0.03, ease: Power2.easeOut});
       
         }
      }
 });
-
-// Slide captions
-//var currentTitle = $(ebelSwiper.slides[ebelSwiper.activeIndex]).attr("data-title");
-//$(".slide-captions").html(function() {
-  //return "<data-title class='current-title'>" + currentTitle + "</data-title>";
-//});
 
 ScrollTrigger.create({
  trigger: ".ebel-swiper__trigger",
