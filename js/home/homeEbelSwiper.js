@@ -166,12 +166,12 @@ mm.add("(max-width: 991px) and (min-width: 429px)", () => {
 mm.add("(max-width: 428px)", () => {
 
   const ebelSwiper = new Swiper ('.swiper.mrebel-text', {
-    loop: true,
-    loopAdditionalSlides: 0,
+    //loop: true,
+    rewind: true,
     speed: 600,
     autoplay: false,
     on: {
-      slideChangeTransitionEnd: function () {
+      slideChangeTransitionStart: function () {
           // Slide captions
           var swiper = this;
    
@@ -210,7 +210,7 @@ QApongMobile
     ease: Expo.easeIn }, "-=1.2");
     },
          
-slideChangeTransitionStart: function () {      
+slideChangeTransitionEnd: function () {      
           var swiper = this;
           var currentTitle = $(swiper.slides[swiper.activeIndex]).attr("data-title");
           $(".slide-captions").html(function() {
