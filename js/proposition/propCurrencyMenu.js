@@ -51,7 +51,7 @@ currencyIn.set(currRev, { x: -30, opacity: 0 })
           .to(".nav__logo-btn", { autoAlpha: 0, duration: 0.01 }, "-=0.56")
           .to(".home-nav__btn", { autoAlpha: 1, duration: 0.01 }, "<") 
           .to(currWrap, { display: 'flex', duration: 0.001 },"<")
-          .set('.hole.is--currency', {display: "block"}, "<")
+          .set('#currency-hole', {display: "block"}, "<")
           .to(currRev, { duration: 1.6, x: 0, stagger: 0.06, ease: "expo.out" }, "-=0.4")
           .to(currRev, { duration: 0.4, opacity: 1, stagger: 0.06, ease: "linear" }, "<")
           .to(navBotRev, { x: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "-=1.2" )
@@ -76,7 +76,7 @@ currencyExit.forEach(currExit => {
       currencyOut
            .set(currencyExit, {display: "none"})
            .set(currencyOpen, {display: "flex"}, "<")
-           .set('.hole.is--currency', { display: "none" },"<")
+           .set('#currency-hole', { display: "none" },"<")
            .set([".menu__btn", ".menu-close__btn"], { pointerEvents: "auto" }, "<")
            .to(".redact-cover-nav", {scaleX: 0, transformOrigin: "100% 0%", duration: 0.15, ease: "linear"})
            .to([currRev, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.7, x: 30, stagger: 0, ease: "expo.out" }, "<")
@@ -140,7 +140,7 @@ currencyIn.set(currRev, { x: -30, opacity: 0 })
           .to(".beta__contain", {display: "none", duration: 0.01}, "<")
           .to(".home-nav__btn", { autoAlpha: 1, duration: 0.01 }, "<")
           .to(currWrap, { display: 'flex', duration: 0.001 },"<")
-          .set('.hole.is--currency', {display: "block"}, "<")
+          .set('.currency-hole-mobile', {display: "block"}, "<")
           .to(currRev, { duration: 1.6, x: 0, stagger: 0.06, ease: "expo.out" }, "-=0.4")
           .to(currRev, { duration: 0.4, opacity: 1, stagger: 0.06, ease: "linear" }, "<")
           .to(navBotRev, { x: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "-=1.2" )
@@ -165,7 +165,7 @@ currencyExit.forEach(currExit => {
       currencyOut
            .set(currencyExit, {display: "none"})
            .set(currencyOpen, {display: "flex"}, "<")
-           .set('.hole.is--currency', { display: "none" },"<")
+           .set('.currency-hole-mobile', { display: "none" },"<")
            .set([".menu__btn", ".menu-close__btn"], { pointerEvents: "auto" }, "<")
            .to(".redact-cover-nav", {scaleX: 0, transformOrigin: "100% 0%", duration: 0.15, ease: "linear"})
            .to([currRev, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.7, x: 30, stagger: 0, ease: "expo.out" }, "<")
@@ -418,7 +418,7 @@ const currencySelect = document.querySelectorAll('.currency-dropdown__select')
 
 currencySelect.forEach((currencySelect) => {
     if (!currencySelect) return
-    const currencyHole = document.querySelector('.currency-hole')
+    const currencyHole = document.querySelector('#currency-hole')
     if (!currencyHole) return
     const currencyContain = document.querySelector('.currency__items-container')
     if (!currencyContain) return
