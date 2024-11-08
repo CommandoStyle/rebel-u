@@ -430,6 +430,7 @@ currencySelect.forEach((currencySelect) => {
         let xDist = e.clientX - currencyContain.getBoundingClientRect().x + 4
         let yDist = e.clientY - currencyContain.getBoundingClientRect().y
         let currSelectOut = gsap.timeline();
+        e.preventDefault();
 
         // Immediately set left and top properties to position the circle element where user clicks
         gsap.set(currencyHole, { left: xDist, top: yDist })
