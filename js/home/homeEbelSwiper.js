@@ -10,8 +10,7 @@ mm.add("(min-width: 992px)", () => {
  const ebelSwiper = new Swiper (".swiper.mrebel-text", {
      loop: true,
      speed: 1100,
-     autoplay: { delay: 2750 },
-     //autoplay: false,
+     autoplay: false,
      on: {
        slideChangeTransitionStart: function () {
            // Slide captions
@@ -91,7 +90,8 @@ mm.add("(max-width: 991px) and (min-width: 429px)", () => {
   const ebelSwiper = new Swiper ('.swiper.mrebel-text', {
       loop: true,
       speed: 900,
-      autoplay: false,
+      autoplay: { delay: 2250 },
+      //autoplay: false,
       on: {
         slideChangeTransitionStart: function () {
             // Slide captions
