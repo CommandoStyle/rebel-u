@@ -423,7 +423,7 @@ currencySelect.forEach((currencySelect) => {
     const currencyContain = document.querySelector('.currency__items-container')
     if (!currencyContain) return
 
-    gsap.set(currencyHole, { scale: 0.01, display: "none", rotation: 0, force3D:false })
+    gsap.set(currencyHole, { scale: 0.01, display: "none", rotation: 0})
 
     currencySelect.addEventListener("click", (e) => {
         // Calculate distance between user click and top left corner of button
@@ -447,7 +447,7 @@ currencySelect.forEach((currencySelect) => {
         .to([currRev, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
         .to(navBotRev, { x: 30, opacity: 0, ease: "expo.out", duration: 0.3 },"-=0.65")
         .to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<") 
-        .fromTo(currencyHole, { scale: 0.01, rotation: 0, force3D:false }, { duration: 1.2, scale: 1, rotation:0.01, force3D:false, ease: "expoScale(0.01, 1, power1.easeOut)" }, "-=0.3")    
+        .fromTo(currencyHole, { scale: 0.01, rotation: 0 }, { duration: 1.2, scale: 1, rotation:0.01, ease: "expoScale(0.01, 1, power1.easeOut)" }, "-=0.3")    
         .to('[data-img]', { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" },"-=1.5")
         .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "-=0.05")
         .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.001 }, "<")
@@ -461,7 +461,7 @@ currencySelect.forEach((currencySelect) => {
         .set(".touch-print-close__wrap", {filter: "invert(0)", autoAlpha: 0}, "<")
         .to(".cursor-dot", { delay: 0.55, scale: 0.07, autoAlpha: 1, left: "-1.6em", top: "1.52em", duration: 0.45 })
         .set(currWrap, {display: 'none'})
-        .set(currencyHole, {display: "none", clearProps: "all"})
+        .set(currencyHole, {display: "none", scale: 0.01})
         .set(currRev, { x: -20, opacity: 0 })
         .set(navBotRev, { x: -10, opacity: 0 })
         .set(".nav-bot-rev-vert", { y: 5, opacity: 0 })
