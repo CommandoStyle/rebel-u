@@ -411,7 +411,7 @@ new currMenu(currMenuEl);
  
 gsap.registerPlugin(ExpoScaleEase);
 
- //iPAD and MOBILE
+ //DESKTOP
 mm.add("(min-width: 991px)", () => {
 
 const currencySelect = document.querySelectorAll('.currency-dropdown__select')
@@ -423,7 +423,7 @@ currencySelect.forEach((currencySelect) => {
     const currencyContain = document.querySelector('.currency__items-container')
     if (!currencyContain) return
 
-    gsap.set(currencyHole, { scale: 1, display: "none" })
+    gsap.set(currencyHole, { scale: 0.006897, display: "none" })
 
     currencySelect.addEventListener("click", (e) => {
         // Calculate distance between user click and top left corner of button
@@ -446,7 +446,8 @@ currencySelect.forEach((currencySelect) => {
         .to([currRev, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
         .to(navBotRev, { x: 30, opacity: 0, ease: "expo.out", duration: 0.3 },"-=0.65")
         .to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<") 
-        .fromTo(currencyHole, { scale: 0.006897 }, { duration: 1.2, scale: 1, ease: "expoScale(0.006897, 1, power1.easeOut)" }, "-=0.3")  
+        //.fromTo(currencyHole, { scale: 0.006897 }, { duration: 1.2, scale: 1, ease: "expoScale(0.006897, 1, power1.easeOut)" }, "-=0.3")  
+        .fromTo(currencyHole, { scale: 0.006897 }, { duration: 1.2, scale: 1, ease: Expo.easeOut }, "-=0.3") 
         .to('[data-img]', { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" },"-=1.5")
         .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "-=0.05")
         .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.001 }, "<")
