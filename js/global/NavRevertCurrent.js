@@ -30,7 +30,7 @@ currentRevert.forEach((currentRevert) => {
 
     currentRevert.addEventListener("click", (e) => {
         // Calculate distance between user click and top left corner of button
-        let xDist = e.clientX - navContain.getBoundingClientRect().x + 4
+        let xDist = e.clientX - navContain.getBoundingClientRect().x
         let yDist = e.clientY - navContain.getBoundingClientRect().y
         let currentRevOut = gsap.timeline();
 
