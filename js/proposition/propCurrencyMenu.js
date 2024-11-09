@@ -451,7 +451,7 @@ currencySelect.forEach((currencySelect) => {
         //.fromTo(currencyHole, { scale: 0.01, rotation: 0 }, { duration: 1.2, scale: 1, rotation:0.01, ease: "expoScale(0.01, 1, power1.easeOut)" }, "-=0.3") 
         .fromTo(currencyHole, { borderTopWidth:1220, borderRightWidth:1220, borderBottomWidth:1220, borderLeftWidth:1220, borderRadius: "50%", rotation: 0 }, { duration: 1.2, borderTopWidth:40, borderRightWidth:40, borderBottomWidth:40, borderLeftWidth:40, borderRadius: "50%", rotation:0.01, ease: Power1.easeOut }, "-=0.3")    
         .to('[data-img]', { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" },"-=1.5")
-        .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "-=0.6")
+        .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "-=0.68")
         .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.001 }, "<")
         //.to(".beta__contain", {display: "flex", duration: 0.001}, "<")
         .to(".currency-exit-txt", { color: '#000000', duration: 0.001}, "<")
