@@ -424,7 +424,7 @@ currencySelect.forEach((currencySelect) => {
     if (!currencyContain) return
 
     //gsap.set(currencyHole, { scale: 0.01, display: "none", rotation: 0})
-    gsap.set(currencyHole, { borderTopWidth:1220, borderRightWidth:1220, borderBottomWidth:1220, borderLeftWidth:1220, borderRadius: "50%", display: "none", rotation: 0})
+    gsap.set(currencyHole, { borderTopWidth:"99.9vw", borderRightWidth:"99.9vw", borderBottomWidth:"99.9vw", borderLeftWidth:"99.9vw", borderRadius: "50%", display: "none", rotation: 0})
 
     currencySelect.addEventListener("click", (e) => {
         // Calculate distance between user click and top left corner of button
@@ -456,7 +456,7 @@ if (isSafari) {
         .to(navBotRev, { x: 30, opacity: 0, ease: "expo.out", duration: 0.3 },"-=0.65")
         .to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<") 
         //.fromTo(currencyHole, { scale: 0.01, rotation: 0 }, { duration: 1.2, scale: 1, rotation:0.01, ease: "expoScale(0.01, 1, power1.easeOut)" }, "-=0.3") 
-        .fromTo(currencyHole, { borderTopWidth:1220, borderRightWidth:1220, borderBottomWidth:1220, borderLeftWidth:1220, borderRadius: "50%", rotation: 0 }, { duration: 1.2, borderTopWidth:40, borderRightWidth:40, borderBottomWidth:40, borderLeftWidth:40, borderRadius: "50%", rotation:0.01, ease: Power1.easeOut }, "-=0.3")    
+        .fromTo(currencyHole, { borderTopWidth:"99.9vw", borderRightWidth:"99.9vw", borderBottomWidth:"99.9vw", borderLeftWidth:"99.9vw", borderRadius: "50%", rotation: 0 }, { duration: 1.2, borderTopWidth:"2.9vw", borderRightWidth:"2.9vw", borderBottomWidth:"2.9vw", borderLeftWidth:"2.9vw", borderRadius: "50%", rotation:0.01, ease: Power1.easeOut }, "-=0.3")    
         .to('[data-img]', { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" },"-=1.5")
         .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "-=0.68")
         .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.001 }, "<")
@@ -470,7 +470,7 @@ if (isSafari) {
         .set(".touch-print-close__wrap", {filter: "invert(0)", autoAlpha: 0}, "<")
         .to(".cursor-dot", { delay: 0.55, scale: 0.07, autoAlpha: 1, left: "-1.6em", top: "1.52em", duration: 0.45 })
         .set(currWrap, {display: 'none'})
-        .set(currencyHole, {display: "none", borderTopWidth:1220, borderRightWidth:1220, borderBottomWidth:1220, borderLeftWidth:1220, borderRadius: "50%", rotation: 0 })
+        .set(currencyHole, {display: "none", borderTopWidth:"99.9vw", borderRightWidth:"99.9vw", borderBottomWidth:"99.9vw", borderLeftWidth:"99.9vw", borderRadius: "50%", rotation: 0 })
         .set(currRev, { x: -20, opacity: 0 })
         .set(navBotRev, { x: -10, opacity: 0 })
         .set(".nav-bot-rev-vert", { y: 5, opacity: 0 })
