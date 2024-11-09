@@ -56,7 +56,7 @@ var navIn = new gsap.timeline({ paused: true });
           .to(navBotRev, { x: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "-=1.4")
           .to(".nav-bot-rev-vert", { y: 0, opacity: 1, ease: "power1.out", duration: 0.4 }, "<")
           .to(".redact-cover-nav", { scaleX: 1, transformOrigin: "0% 100%", duration: 0.129, ease: "linear"}, "-=0.271")
-          .set(navHole, {display: "block", scale: 0.006897}, "<")
+          .set(navHole, {display: "block"}, "<")
           .to(".exit-txt", { autoAlpha: 1, duration: 0.001 })
           .to(".menu-txt", { autoAlpha: 0, duration: 0.001 }, "<")
           .to(".redact-cover-nav", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
