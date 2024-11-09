@@ -431,11 +431,18 @@ currencySelect.forEach((currencySelect) => {
         let xDist = e.clientX - currencyContain.getBoundingClientRect().x
         let yDist = e.clientY - currencyContain.getBoundingClientRect().y
         let currSelectOut = gsap.timeline();
-        //e.preventDefault();
 
-        // Immediately set left and top properties to position the circle element where user clicks
-        gsap.set(currencyHole, { left: xDist, top: yDist })
-      
+let isSafari = navigator.vendor.match(/apple/i) &&
+             !navigator.userAgent.match(/crios/i) &&
+             !navigator.userAgent.match(/fxios/i) &&
+             !navigator.userAgent.match(/Opera|OPT\//);
+
+if (isSafari) {
+  gsap.set(currencyHole, { left: xDist + 100, top: yDist + 100 })
+} else {
+  gsap.set(currencyHole, { left: xDist, top: yDist })
+}
+    
  currSelectOut
         .set(currencyExit, {delay: 0.3, display: "none"})
         .set(currencyOpen, {display: "flex"}, "<")
