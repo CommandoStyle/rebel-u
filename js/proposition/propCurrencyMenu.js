@@ -438,7 +438,7 @@ let isSafari = navigator.vendor.match(/apple/i) &&
              !navigator.userAgent.match(/Opera|OPT\//);
 
 if (isSafari) {
-  gsap.set(currencyHole, { left: xDist + 100, top: yDist + 100 })
+  gsap.set(currencyHole, { left: xDist + 150, top: yDist + 150 })
 } else {
   gsap.set(currencyHole, { left: xDist, top: yDist })
 }
