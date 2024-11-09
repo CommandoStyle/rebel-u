@@ -26,6 +26,7 @@ currentRevert.forEach((currentRevert) => {
     if (!navContain) return
 
     //gsap.set(navHole, { scale: 1, display: "none" });
+    gsap.set(navHole, { borderTopWidth:"99.9vw", borderRightWidth:"99.9vw", borderBottomWidth:"99.9vw", borderLeftWidth:"99.9vw", borderRadius: "50%", display: "none", rotation: 0})
 
     currentRevert.addEventListener("click", (e) => {
         // Calculate distance between user click and top left corner of button
@@ -33,13 +34,22 @@ currentRevert.forEach((currentRevert) => {
         let yDist = e.clientY - navContain.getBoundingClientRect().y
         let currentRevOut = gsap.timeline();
 
-        // Immediately set left and top properties to position the circle element where user clicks
-        gsap.set(navHole, { left: xDist, top: yDist })
+// Fix Safari positioning bug if necessary
+let isSafari = navigator.vendor.match(/apple/i) &&
+             !navigator.userAgent.match(/crios/i) &&
+             !navigator.userAgent.match(/fxios/i) &&
+             !navigator.userAgent.match(/Opera|OPT\//);
+
+if (isSafari) {
+  gsap.set(navHole, { left: xDist, top: yDist })
+} else {
+  gsap.set(navHole, { left: xDist, top: yDist })
+}
        
  currentRevOut
         .set(navClose, {display: "none"})
         .set(navOpen, {display: "flex"}, "<")
-        //.set(navHole, {display: "block"}, "<")
+        .set(navHole, {display: "block"}, "<")
         .set(".cursor-dot", { scale: 0, autoAlpha: 0 }, "<")
         .set(navBg, {display: "none"}, "<")
         .set(".nav__items-container", {backgroundColor: 'transparent'}, "<")
@@ -47,9 +57,8 @@ currentRevert.forEach((currentRevert) => {
         .to([navRevIn, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
         .to(navBotRev, { x: 30, ease: "expo.out", opacity: 0, duration: 0.3 },"-=0.65")
         .to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<")  
-        .fromTo(navHole, { scale: 0.006897 }, { duration: 1.2, scale: 1, ease: "expoScale(0.006897, 1, power1.easeOut)" }, "-=0.3")  
+        .fromTo(navHole, { borderTopWidth:"99.9vw", borderRightWidth:"99.9vw", borderBottomWidth:"99.9vw", borderLeftWidth:"99.9vw", borderRadius: "50%", rotation: 0 }, { duration: 1.2, borderTopWidth:"2.9vw", borderRightWidth:"2.9vw", borderBottomWidth:"2.9vw", borderLeftWidth:"2.9vw", borderRadius: "50%", rotation:0.01, ease: Power1.easeOut }, "-=0.3")
         .to('[data-img]', { autoAlpha: 0, duration: 0.3, ease: "sine.easeIn" },"-=1.2")
-        //.to(".beta__contain", {display: "flex", duration: 0.001}, "-=0.1")
         .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.001 }, "<")
         .to([".menu-txt", ".exit-txt"], { color: '#000000', duration: 0.001}, "<")
@@ -60,7 +69,7 @@ currentRevert.forEach((currentRevert) => {
         .to(".redact-cover-nav", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.129, ease: "linear"})
         .to(".cursor-dot", { delay: 0.55, scale: 0.07, autoAlpha: 1, left: "-1.6em", top: "1.52em", duration: 0.45 })
         .set(navWrap, {display: 'none'})
-        .set(navHole, {display: "none", clearProps: "all" })
+        .set(navHole, {display: "none", borderTopWidth:"99.9vw", borderRightWidth:"99.9vw", borderBottomWidth:"99.9vw", borderLeftWidth:"99.9vw", borderRadius: "50%", rotation: 0 })
         .set( ".redact-cover-nav", { scaleX: 0 })
         .set(navRevIn, { x: -30, opacity: 0 })
         .set(navBotRev, { x: -30, opacity: 0 })
