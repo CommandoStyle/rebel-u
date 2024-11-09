@@ -428,7 +428,7 @@ currencySelect.forEach((currencySelect) => {
 
     currencySelect.addEventListener("click", (e) => {
         // Calculate distance between user click and top left corner of button
-        let xDist = e.clientX - currencyContain.getBoundingClientRect().x + 4
+        let xDist = e.clientX - currencyContain.getBoundingClientRect().x
         let yDist = e.clientY - currencyContain.getBoundingClientRect().y
         let currSelectOut = gsap.timeline();
         //e.preventDefault();
