@@ -57,7 +57,7 @@ if (isSafari) {
         .to([navRevIn, ".current-arrow-right__track", ".current-arrow-left__track"], { duration: 0.5, opacity: 0, stagger: 0, ease: "linear" }, "<")
         .to(navBotRev, { x: 30, ease: "expo.out", opacity: 0, duration: 0.3 },"-=0.65")
         .to(".nav-bot-rev-vert", { y: -15, opacity: 0, ease: "expo.out", duration: 0.3 },"<")  
-        .fromTo(navHole, { borderTopWidth:"99.9vw", borderRightWidth:"99.9vw", borderBottomWidth:"99.9vw", borderLeftWidth:"99.9vw", borderRadius: "50%", rotation: 0 }, { duration: 1.2, borderTopWidth:"2.9vw", borderRightWidth:"2.9vw", borderBottomWidth:"2.9vw", borderLeftWidth:"2.9vw", borderRadius: "50%", rotation:0.01, ease: Power1.easeOut }, "-=0.3")
+        .fromTo(navHole, { borderTopWidth:"99.9vw", borderRightWidth:"99.9vw", borderBottomWidth:"99.9vw", borderLeftWidth:"99.9vw", borderRadius: "50%", rotation: 0 }, { duration: 1.5, borderTopWidth:"2.9vw", borderRightWidth:"2.9vw", borderBottomWidth:"2.9vw", borderLeftWidth:"2.9vw", borderRadius: "50%", rotation:0.01, ease: Power1.easeOut }, "-=0.3")
         .to('[data-img]', { autoAlpha: 0, duration: 0.3, ease: "sine.easeIn" },"-=1.2")
         .to(".home-nav__btn", { autoAlpha: 0, duration: 0.001 }, "<")
         .to(".nav__logo-btn", { autoAlpha: 1, duration: 0.001 }, "<")
