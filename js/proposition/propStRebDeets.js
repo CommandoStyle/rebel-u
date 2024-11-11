@@ -160,7 +160,7 @@ var bounceXXL = new gsap.timeline({ paused: true });
 bounceXXL.to("#y-dot", {
   x: "-=1000", 
   y: "+=1800", 
-  duration: 18, 
+  duration: 22, 
   repeat: -1,
   repeatRefresh: true,
   ease: "none", 
@@ -173,7 +173,7 @@ bounceXXL.to("#y-dot", {
 .to("#o-dot", {
   x: "+=2000", 
   y: "+=1500", 
-  duration: 20, 
+  duration: 24, 
   repeat: -1,
   repeatRefresh: true,
   ease: "none", 
@@ -186,7 +186,7 @@ bounceXXL.to("#y-dot", {
 .to("#u-dot", {
   x: "+=3000", 
   y: "-=1000", 
-  duration: 22, 
+  duration: 26, 
   repeat: -1,
   repeatRefresh: true,
   ease: "none", 
