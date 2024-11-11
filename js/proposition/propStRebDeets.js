@@ -144,63 +144,89 @@ if (i !=points.length-1) {
       });
 
 // REB animations 2.0 
-      let animation = gsap.timeline({ repeat: -1, paused: true, defaults: { ease: "circ.easeInOut" } });
-      let targets = document.querySelectorAll(".you-logo__anim");
-      let numberOfTargets = targets.length;
-      
-      let duration = 1.2; //change this
-      let pause = 1.2; // change this
-      
-      let stagger = duration + pause;
-      let repeatDelay = stagger * (numberOfTargets - 1) + pause;
-      
+  var dot = document.querySelector("#y-dot"),
+    dot2 = document.querySelector("#o-dot"),
+    dot3 = document.querySelector("#u-dot"),
+    container = document.querySelector("#you-contain"),
+    dotBounds = dot.getBoundingClientRect(),
+    containerBounds = container.getBoundingClientRect(),
+    xMax = containerBounds.right - dotBounds.right,
+    xMin = containerBounds.left - dotBounds.left,
+    yMax = containerBounds.bottom - dotBounds.bottom,
+    yMin = containerBounds.top - dotBounds.top;
 
-        gsap.set(".you-logo-anim__track", { autoAlpha: 1 });
-        animation
-          .from(targets, {
-            //y: 400,
-            rotationX: "-90",
-            transformOrigin: "center center -270px",
-            backfaceVisibility: "hidden",
-            duration: duration,
-            opacity: 0,
-            stagger: {
-              each: stagger,
-              repeat: -1,
-              repeatDelay: repeatDelay
-            }
-          })
-          .to(
-            targets,
-            {
-              //y: -400,
-              rotationX: "90",
-              transformOrigin: "center center -270px",
-              backfaceVisibility: "hidden",
-              duration: duration,
-              opacity: 0,
-              stagger: {
-                each: stagger,
-                repeat: -1,
-                repeatDelay: repeatDelay
-              }
-            },
-            stagger
-          );
+var bounceXXL = new gsap.timeline({ paused: true });
+
+bounceXXL.to("#y-dot", {
+  x: "-=1000", 
+  y: "+=1800", 
+  duration: 18, 
+  repeat: -1,
+  repeatRefresh: true,
+  ease: "none", 
+  modifiers:{
+    x: bounceModifier(xMin, xMax),
+    y: bounceModifier(yMin, yMax)
+  }
+})
+
+.to("#o-dot", {
+  x: "+=2000", 
+  y: "+=1500", 
+  duration: 20, 
+  repeat: -1,
+  repeatRefresh: true,
+  ease: "none", 
+  modifiers:{
+    x: bounceModifier(xMin, xMax),
+    y: bounceModifier(yMin, yMax)
+  }
+}, "<")
+
+.to("#u-dot", {
+  x: "+=3000", 
+  y: "-=1000", 
+  duration: 22, 
+  repeat: -1,
+  repeatRefresh: true,
+  ease: "none", 
+  modifiers:{
+    x: bounceModifier(xMin, xMax),
+    y: bounceModifier(yMin, yMax)
+  }
+}, "<");
+
+function bounceModifier(min, max) {
+  var range = max - min;
+  return function(value) {
+    value = parseFloat(value); // comes in as px, like "10px"
+    var cycle, clippedValue;
+    if (value > max) {
+      cycle = (value - max) / range;
+      clippedValue = (cycle % 1) * range;
+      value = ((cycle | 0) & 1 !== 0) ? min + clippedValue : max - clippedValue; //on even cycles, go backwards.
+    } else if (value < min) {
+      cycle = (min - value) / range;
+      clippedValue = (cycle % 1) * range;
+      value = ((cycle | 0) & 1 !== 0) ? max - clippedValue : min + clippedValue; //on even cycles, go backwards.
+    }
+    return value + "px";
+  }
+}
 
           ScrollTrigger.create({
             trigger: ".anim-trigger-start",
-            onEnter: () => animation.play(),
-            //onLeave: () => animation.pause(),
-            //onEnterBack: () => animation.pause(),
-            onLeaveBack: () => animation.pause()
+            onEnter: () => bounceXXL.play(),
+            //onLeave: () => bounceXXL.pause(),
+            //onEnterBack: () => bounceXXL.pause(),
+            onLeaveBack: () => bounceXXL.pause()
           });
 
           ScrollTrigger.create({
             trigger: ".container.is--rebellion-levels",
-            onEnter: () => animation.pause(),
-            //onEnterBack: () => animation.play(),
-            onLeaveBack: () => animation.play()
+            onEnter: () => bounceXXL.pause(),
+            //onEnterBack: () => bounceXXL.play(),
+            onLeaveBack: () => bounceXXL.play()
           });
 
 
