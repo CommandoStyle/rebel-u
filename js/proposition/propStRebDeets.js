@@ -223,7 +223,7 @@ function bounceModifier(min, max) {
           });
 
           ScrollTrigger.create({
-            trigger: ".container.is--rebellion-levels",
+            trigger: ".container.is--wtfaq-reb",
             onEnter: () => bounceXXL.pause(),
             //onEnterBack: () => bounceXXL.play(),
             onLeaveBack: () => bounceXXL.play()
