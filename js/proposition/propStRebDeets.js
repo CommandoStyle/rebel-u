@@ -238,7 +238,7 @@ class ImageHover {
 
 preloadImages('[data-repetition]').then(() => {
     // Initialize the hover effect on the images
-    [...document.querySelectorAll('.reb-item__img.is--anim')].forEach(el => new ImageHover(el));
+    [...document.querySelectorAll('.repeat-image-wrapper')].forEach(el => new ImageHover(el));
 });
 
 		ScrollTrigger.create({
