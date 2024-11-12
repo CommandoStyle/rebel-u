@@ -183,7 +183,7 @@ class ImageHover {
 				this.bgImage = style.backgroundImage.slice(4, -1).replace(/"/g, "");
         
         // Remove bg image
-        //gsap.set(this.DOM.el, {backgroundImage: 'none'});
+        gsap.set(this.DOM.el, {backgroundImage: 'none'});
 
         // Add the .image__element inner elements (data-repetition-elems times)
         // First inner element will have a wrapper with overflow hidden so it's image child can scale up or down
