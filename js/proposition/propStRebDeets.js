@@ -144,89 +144,116 @@ if (i !=points.length-1) {
       });
 
 // REB animations 2.0 
-  var dot = document.querySelector("#y-dot"),
-    dot2 = document.querySelector("#o-dot"),
-    dot3 = document.querySelector("#u-dot"),
-    container = document.querySelector("#you-contain"),
-    dotBounds = dot.getBoundingClientRect(),
-    containerBounds = container.getBoundingClientRect(),
-    xMax = containerBounds.right - dotBounds.right,
-    xMin = containerBounds.left - dotBounds.left,
-    yMax = containerBounds.bottom - dotBounds.bottom,
-    yMin = containerBounds.top - dotBounds.top;
+  
+// Preload images
+const preloadImages = (selector = 'img') => {
+    return new Promise((resolve) => {
+        imagesLoaded(document.querySelectorAll(selector), {background: true}, resolve);
+    });
+};
 
-var bounceXXL = new gsap.timeline({ paused: true });
-
-bounceXXL.to("#y-dot", {
-  x: "-=1000", 
-  y: "+=1800", 
-  duration: 22, 
-  repeat: -1,
-  repeatRefresh: true,
-  ease: "none", 
-  modifiers:{
-    x: bounceModifier(xMin, xMax),
-    y: bounceModifier(yMin, yMax)
-  }
-})
-
-.to("#o-dot", {
-  x: "+=2000", 
-  y: "+=1500", 
-  duration: 24, 
-  repeat: -1,
-  repeatRefresh: true,
-  ease: "none", 
-  modifiers:{
-    x: bounceModifier(xMin, xMax),
-    y: bounceModifier(yMin, yMax)
-  }
-}, "<")
-
-.to("#u-dot", {
-  x: "+=3000", 
-  y: "-=1000", 
-  duration: 26, 
-  repeat: -1,
-  repeatRefresh: true,
-  ease: "none", 
-  modifiers:{
-    x: bounceModifier(xMin, xMax),
-    y: bounceModifier(yMin, yMax)
-  }
-}, "<");
-
-function bounceModifier(min, max) {
-  var range = max - min;
-  return function(value) {
-    value = parseFloat(value); // comes in as px, like "10px"
-    var cycle, clippedValue;
-    if (value > max) {
-      cycle = (value - max) / range;
-      clippedValue = (cycle % 1) * range;
-      value = ((cycle | 0) & 1 !== 0) ? min + clippedValue : max - clippedValue; //on even cycles, go backwards.
-    } else if (value < min) {
-      cycle = (min - value) / range;
-      clippedValue = (cycle % 1) * range;
-      value = ((cycle | 0) & 1 !== 0) ? max - clippedValue : min + clippedValue; //on even cycles, go backwards.
+/**
+ * Class representing an image that has the repetitive hover effect 
+ */
+class ImageHover {
+    // DOM elements
+    DOM = {
+        // main element (.image)
+        el: null,
+        // .image__element
+        innerElems: null,
     }
-    return value + "px";
-  }
+    // Background image path
+    bgImage;
+    // Total inner image elments
+    totalInnerElems;
+    // Hover timeline
+    hoverTimeline;
+
+    /**
+     * Constructor.
+     * @param {Element} DOM_el - the .image element
+     */
+    constructor(DOM_el) {
+        this.DOM = {el: DOM_el};
+        
+        // Get bg image url
+        
+        const style = window.getComputedStyle(this.DOM.el, false)  
+				this.bgImage = style.backgroundImage.slice(4, -1).replace(/"/g, "");
+        
+        // Remove bg image
+        gsap.set(this.DOM.el, {backgroundImage: 'none'});
+
+        // Add the .image__element inner elements (data-repetition-elems times)
+        // First inner element will have a wrapper with overflow hidden so it's image child can scale up or down
+        this.totalInnerElems = +this.DOM.el.dataset.repetitionElems || 4;
+        // Minimum of two inner elments
+        this.totalInnerElems = this.totalInnerElems <= 1 ? 2 : this.totalInnerElems;
+        
+        let innerHTML = '';
+        for (let i = 0, len = this.totalInnerElems || 1; i <= len - 1; ++i) {
+            innerHTML += i === 0 ? 
+                `<div class="image-element__wrap"><div class="image__element" style="background-image:url(${this.bgImage})"></div></div>` :
+                `<div class="image__element" style="background-image:url(${this.bgImage})"></div>`    
+        }
+
+        // Append
+        this.DOM.el.innerHTML = innerHTML;
+
+        // Get inner .image__element
+        this.DOM.innerElems = this.DOM.el.querySelectorAll('.image__element');
+
+        // transform origin
+        gsap.set([this.DOM.el, this.DOM.innerElems[0]], {transformOrigin: this.DOM.el.dataset.repetitionOrigin || '50% 50%'});
+        
+        // Hover timeline
+        this.createHoverTimeline();
+
+        //this.initEvents();
+    }
+
+    /**
+     * Create the gsap timeline for the hover in/out animation
+     */
+    createHoverTimeline() {
+        const property = this.DOM.el.dataset.repetitionAnimate || 'scale';
+        let animationProperties = {
+            duration: this.DOM.el.dataset.repetitionDuration || 0.8,
+            ease: this.DOM.el.dataset.repetitionEase || 'power2.inOut',
+            stagger: this.DOM.el.dataset.repetitionStagger || -0.1
+        }, 
+        firstInnerElementProperties = {};
+
+        animationProperties[property] = i => +!i;
+        // initial scale of first inner element
+        firstInnerElementProperties[property] = this.DOM.el.dataset.repetitionInitialScale || 2;
+        
+        this.hoverTimeline = gsap.timeline({paused: true, repeat: -1})
+        .set(this.DOM.innerElems[0], firstInnerElementProperties)
+        .to([this.DOM.innerElems], animationProperties, 0)
+    }
+
 }
+
+preloadImages('[data-repetition]').then(() => {
+    // Initialize the hover effect on the images
+    [...document.querySelectorAll('.image-wrapper')].forEach(el => new ImageHover(el));
+});
 
           ScrollTrigger.create({
             trigger: ".anim-trigger-start",
-            onEnter: () => bounceXXL.play(),
-            //onLeave: () => bounceXXL.pause(),
-            //onEnterBack: () => bounceXXL.pause(),
-            onLeaveBack: () => bounceXXL.pause()
+            onEnter: () => this.hoverTimeline.play(),
+            //onLeave: () => this.hoverTimeline.pause(),
+            //onEnterBack: () => this.hoverTimeline.pause(),
+            onLeaveBack: () => this.hoverTimeline.pause()
           });
 
           ScrollTrigger.create({
             trigger: ".container.is--wtfaq-reb",
-            onEnter: () => bounceXXL.pause(),
-            //onEnterBack: () => bounceXXL.play(),
-            onLeaveBack: () => bounceXXL.play()
+            onEnter: () => this.hoverTimeline.pause(),
+            onEnterBack: () => this.hoverTimeline.reverse(),
+            onLeaveBack: () => this.hoverTimeline.play()
           });
 
 
