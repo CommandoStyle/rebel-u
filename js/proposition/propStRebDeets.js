@@ -234,7 +234,14 @@ class ImageHover {
         .to([this.DOM.innerElems], animationProperties, 0)
     }
 
-	ScrollTrigger.create({
+}
+
+preloadImages('[data-repetition]').then(() => {
+    // Initialize the hover effect on the images
+    [...document.querySelectorAll('.reb-item__img.is--anim')].forEach(el => new ImageHover(el));
+});
+
+		ScrollTrigger.create({
             trigger: ".anim-trigger-start",
             onEnter: () => this.hoverTimeline.play(),
             //onLeave: () => this.hoverTimeline.pause(),
@@ -248,13 +255,6 @@ class ImageHover {
             onEnterBack: () => this.hoverTimeline.reverse(),
             onLeaveBack: () => this.hoverTimeline.play()
           });
-
-}
-
-preloadImages('[data-repetition]').then(() => {
-    // Initialize the hover effect on the images
-    [...document.querySelectorAll('.reb-item__img.is--anim')].forEach(el => new ImageHover(el));
-});
 
 // Skip direction arrow
 let scrollDirArrow = gsap.timeline( { paused: true });
