@@ -241,20 +241,7 @@ preloadImages('[data-repetition]').then(() => {
     [...document.querySelectorAll('.repeat-image-wrapper')].forEach(el => new ImageHover(el));
 });
 
-		ScrollTrigger.create({
-            trigger: ".anim-trigger-start",
-            onEnter: () => this.hoverTimeline.play(),
-            //onLeave: () => this.hoverTimeline.pause(),
-            //onEnterBack: () => this.hoverTimeline.pause(),
-            onLeaveBack: () => this.hoverTimeline.pause()
-          });
 
-          ScrollTrigger.create({
-            trigger: ".container.is--wtfaq-reb",
-            onEnter: () => this.hoverTimeline.pause(),
-            onEnterBack: () => this.hoverTimeline.reverse(),
-            onLeaveBack: () => this.hoverTimeline.play()
-          });
 
 // Skip direction arrow
 let scrollDirArrow = gsap.timeline( { paused: true });
