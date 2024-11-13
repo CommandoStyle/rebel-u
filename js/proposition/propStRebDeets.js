@@ -229,7 +229,7 @@ class ImageHover {
         // initial scale of first inner element
         firstInnerElementProperties[property] = this.DOM.el.dataset.repetitionInitialScale || 2;
         
-        this.hoverTimeline = gsap.timeline({paused: false, repeat: -1})
+        this.hoverTimeline = gsap.timeline({paused: true, repeat: -1})
         .set(this.DOM.innerElems[0], firstInnerElementProperties)
         .to([this.DOM.innerElems], animationProperties, 0)
 
