@@ -232,6 +232,21 @@ class ImageHover {
         this.hoverTimeline = gsap.timeline({paused: false, repeat: -1})
         .set(this.DOM.innerElems[0], firstInnerElementProperties)
         .to([this.DOM.innerElems], animationProperties, 0)
+
+	  ScrollTrigger.create({
+            trigger: ".anim-trigger-start",
+            onEnter: () => this.hoverTimeline.play(),
+            //onLeave: () => this.hoverTimeline.pause(),
+            //onEnterBack: () => this.hoverTimeline.pause(),
+            onLeaveBack: () => this.hoverTimeline.pause()
+          });
+
+          ScrollTrigger.create({
+            trigger: ".container.is--wtfaq-reb",
+            onEnter: () => this.hoverTimeline.pause(),
+            //onEnterBack: () => this.hoverTimeline.reverse(),
+            onLeaveBack: () => this.hoverTimeline.play()
+          });
     }
 
 }
