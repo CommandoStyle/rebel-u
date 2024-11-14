@@ -73,20 +73,20 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
       });
   
       // on form submit
-  $('.form-important-class').submit(()=>{ 
+  $('.form-important-class').submit(function (event)=> { 
       setTimeout(()=>{
      // click our div trigger to run success anim
      $('.form-success-trigger').click(); 
       }, 666);
       if ( window.history.replaceState ) {
   window.history.replaceState( null, null, window.location.href );
-}
+   }
+    event.preventDefault()
    });
 
   // block page reload on submit
 var Webflow = Webflow || [];
 Webflow.push(function () {
-
     $("#email-form").submit(function (event) {
         //setTimeout(function () { location.reload(false); }, 0);
         event.preventDefault()
