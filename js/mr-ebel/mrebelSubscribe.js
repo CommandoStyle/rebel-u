@@ -78,17 +78,22 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
      // click our div trigger to run success anim
      $('.form-success-trigger').click(); 
       }, 666);
+      if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
    });
 
   // block page reload on submit
 var Webflow = Webflow || [];
 Webflow.push(function () {
 
-    $("#email-form, .form-important-class").submit(function (event) {
-        setTimeout(function () { location.reload(false); }, 0);
+    $("#email-form").submit(function (event) {
+        //setTimeout(function () { location.reload(false); }, 0);
         event.preventDefault()
     });
 });
+
+
 
  // On submit balloon anim
 gsap.set("subscribe-drop__contain",{perspective:600})
