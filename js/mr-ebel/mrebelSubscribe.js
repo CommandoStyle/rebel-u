@@ -84,8 +84,9 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
 var Webflow = Webflow || [];
 Webflow.push(function () {
 
-    $("#email-form").submit(function (event) {
+    $("#email-form, .form-important-class").submit(function (event) {
         setTimeout(function () { location.reload(false); }, 0);
+        event.preventDefault()
     });
 });
 
