@@ -73,7 +73,7 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
       });
   
       // on form submit
-  $('.form-important-class').submit(function (event)=> { 
+  $('.form-important-class').submit(()=> { 
       setTimeout(()=>{
      // click our div trigger to run success anim
      $('.form-success-trigger').click(); 
@@ -81,7 +81,7 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
       if ( window.history.replaceState ) {
   window.history.replaceState( null, null, window.location.href );
    }
-    event.preventDefault()
+    return false;
    });
 
   // block page reload on submit
@@ -89,7 +89,7 @@ var Webflow = Webflow || [];
 Webflow.push(function () {
     $("#email-form").submit(function (event) {
         //setTimeout(function () { location.reload(false); }, 0);
-        event.preventDefault()
+        event.preventDefault();
     });
 });
 
