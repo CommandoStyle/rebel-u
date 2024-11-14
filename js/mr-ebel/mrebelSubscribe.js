@@ -81,7 +81,7 @@ if (sessionStorage.getItem("emailSuccessPlayed", true)) {
       if ( window.history.replaceState ) {
   window.history.replaceState( null, null, window.location.href );
    }
-    return false;
+    //return false;
    });
 
   // block page reload on submit
