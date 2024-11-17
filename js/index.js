@@ -1343,3 +1343,20 @@ function initError() {
   }, 0);
   
   }
+
+// Readiness scripts
+function initReadiness() {
+
+  setTimeout(() => {
+
+  revertHome();
+  quizStLottie();
+  legalFooterLeave();
+  cookieLeave();
+  globalMisc();
+  share();
+  shareFallbackMenu();
+  
+  }, 0);
+  
+  }
