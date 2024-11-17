@@ -1349,6 +1349,7 @@ function initReadiness() {
 
   setTimeout(() => {
 
+  legalMarquees();  
   revertHome();
   quizStLottie();
   legalFooterLeave();
