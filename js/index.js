@@ -1086,6 +1086,12 @@ const initRblu = () => {
           initError(data.next.container);
           navMenuNew(data.next.container);
       }
+    }, { 
+        namespace: 'readiness',
+        afterEnter(data) { 
+          initReadiness(data.next.container);
+          navMenuNew(data.next.container);
+      }
     }]
      })
    }
