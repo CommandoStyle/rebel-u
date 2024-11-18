@@ -1046,8 +1046,6 @@ const initRblu = () => {
 
               $(data.next.container).addClass("fixed");
 
-              legalIntro();
-
              //iPad and Mobile
              if (mmTrans.matches) {
                
@@ -1075,6 +1073,7 @@ const initRblu = () => {
              afterEnter(data) {},
              after(data) {},
             }],
+          
           views: [{
             namespace: 'home',
           afterEnter(data) { 
