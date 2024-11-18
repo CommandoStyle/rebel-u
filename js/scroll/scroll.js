@@ -21,12 +21,14 @@ let smoother = ScrollSmoother.create({
 
    document.addEventListener("DOMContentLoaded", function(event) { 
       smoother.paused(true);
+        gsap.set('.body', { pointerEvents: "none" });
       });
           setTimeout(() => {
             smoother.paused(false);
+            gsap.set('.body', { pointerEvents: "auto" });
          }, 3500);  
 
-         //smoother.scrollTo(0);
+         smoother.scrollTo(0);
 
   // SS stop / start on button hovers
       
