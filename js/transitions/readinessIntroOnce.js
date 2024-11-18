@@ -33,7 +33,7 @@ readinessCircled.load(readinessCircdata);
 	  .to(".stamp-redact-cover", { delay: 0.6, scaleX: 1, transformOrigin: "0% 100%", duration: 0.45, ease: "linear"})
 	  .to("#quizstampimg", { autoAlpha: 1, duration: 0.001})
 	  .to(".stamp-redact-cover", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.45, ease: "linear"})
-	  .add(gsap.delayedCall(0.6, function() { readinessCircled.play(); }))
+	  .add(gsap.delayedCall(0.3, function() { readinessCircled.play(); }))
 	  .to('.cookie__wrap', { delay: 0.5, xPercent: 0, duration: 1.6, ease: "expo.easeOut" })
           .to('.cookie__container', { xPercent: 0, duration: 1.6, ease: "expo.easeOut" }, "<")
 	  .to(".cookie-txt__reveal", { x: 0, opacity: 1, duration: 0.3, ease: "power1.out" }, "-=0.2")
