@@ -1,9 +1,7 @@
 export const readinessIntroOnce = (container) => {
 
-gsap.registerPlugin(ScrollTrigger);
-
 gsap.set(".quiz__h-contain", { "will-change": "transform, opacity", x: -30, opacity: 0 });
-gsap.set(['.home-logo', ".menu-txt", ".touch-print-open__wrap", '.beta__txt', '.hero-info__marquee-wrap'], {autoAlpha: 0});
+gsap.set(['.home-logo', ".menu-txt", ".touch-print-open__wrap", '.hero-info__marquee-wrap'], {autoAlpha: 0});
 gsap.set([".redact-cover-logo", ".redact-cover-info", ".redact-cover-nav"], {scaleX: 0 });
 gsap.set('.cookie__wrap', { xPercent: -105 });
 gsap.set('.cookie__container', { xPercent: 105 });
@@ -21,7 +19,7 @@ readinessCircled.load(readinessCircdata);
 
     readyIntroOnce
 	  .to(".redact-cover-logo", { delay: 1, scaleX: 1, transformOrigin: "0% 100%", duration: 0.711, ease: "linear"})
-	  .to(['.home-logo', '.beta__txt'], { autoAlpha: 1, duration: 0.001})
+	  .to('.home-logo', { autoAlpha: 1, duration: 0.001})
 	  .to(".redact-cover-logo", { scaleX: 0, transformOrigin: "100% 0%", duration: 0.711, ease: "linear"})
 	  .to('.beta__contain', {delay: 0.12, clipPath: "inset(0% 0% 0% 0%)", duration: 0.18, ease: "power1.eastOut"})
 	  .to(".redact-cover-info", { delay: 0.548, scaleX: 1, transformOrigin: "0% 100%", duration: 0.468, ease: "linear"})
@@ -34,7 +32,7 @@ readinessCircled.load(readinessCircdata);
 	  .to(".quiz__h-contain", { duration: 0.3, opacity: 1, ease: "linear" }, "<")
 	  .add(gsap.delayedCall(0.15, function() { readinessCircled.play(); }))	   
 	  .to('.cookie__wrap', { delay: 0.5, xPercent: 0, duration: 1.6, ease: "expo.easeOut" })
-    .to('.cookie__container', { xPercent: 0, duration: 1.6, ease: "expo.easeOut" }, "<")
+          .to('.cookie__container', { xPercent: 0, duration: 1.6, ease: "expo.easeOut" }, "<")
 	  .to(".cookie-txt__reveal", { x: 0, opacity: 1, duration: 0.3, ease: "power1.out" }, "-=0.2")
 	  .to('.cookie__notice', { overflow: "visible", duration: 0.001 });
 	  
