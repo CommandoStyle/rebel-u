@@ -21,12 +21,12 @@ let smoother = ScrollSmoother.create({
 
    document.addEventListener("DOMContentLoaded", function(event) { 
       smoother.paused(true);
-        gsap.set('.body', { pointerEvents: "none" });
+        gsap.set('.content-wrapper', { pointerEvents: "none" });
       });
           setTimeout(() => {
             smoother.paused(false);
-            gsap.set('.body', { pointerEvents: "auto" });
-         }, 3500);  
+            gsap.set('.content-wrapper', { pointerEvents: "auto" });
+         }, 4000);  
 
          smoother.scrollTo(0);
 
