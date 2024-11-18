@@ -1022,6 +1022,57 @@ const initRblu = () => {
                                            
             },
             after(data) { scroll(data.next.container); },
+            }, // Readiness
+             {
+             name: 'readinessIn',
+             to : {
+               namespace: ['readiness'],
+             },
+             once(data) {
+
+               readinessIntroOnce(data.next.container);
+               
+             },
+             leave(data) {
+
+              return gsap.fromTo(data.current.container, { autoAlpha: 1 }, { delay: 0.9, autoAlpha: 1, duration: 0.001 });
+               
+            },
+             afterLeave(data) {},
+             beforeLeave(data) {},
+             beforeEnter(data) {},
+             enter(data) {
+
+              $(data.next.container).addClass("fixed");
+
+              legalIntro();
+
+             //iPad and Mobile
+             if (mmTrans.matches) {
+               
+              return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(3% at ${percentLeft - 3}% ${percentTop - 3}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft - 3}% ${percentTop - 3}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
+
+             } else {
+
+                return gsap.fromTo(
+                data.next.container,
+                { clipPath: `circle(0% at ${percentLeft}% ${percentTop}%)` },
+                { clipPath: `circle(140.9% at ${percentLeft}% ${percentTop}%)`, delay: 0.75, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath",
+                onComplete: () => { 
+                scrollTo({ top: 0, behavior: 'instant' });
+                $(data.next.container).removeClass("fixed"); }}); 
+
+             }
+                  
+             },
+             afterEnter(data) {},
+             after(data) {},
             }],
           views: [{
             namespace: 'home',
