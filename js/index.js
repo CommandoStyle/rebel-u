@@ -47,6 +47,7 @@ import { legalIntroIframe } from './transitions/legalIntroIframe.js';
 import { legalIntroNav } from './transitions/legalIntroNav.js';
 import { legalIntroCookie } from './transitions/legalIntroCookie.js';
 import { cookieLeave } from './transitions/cookieLeave.js';
+import { readinessIntroOnce } from './transitions/readinessIntroOnce.js';
 
 /**
 * Global
