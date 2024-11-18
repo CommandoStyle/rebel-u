@@ -12,7 +12,7 @@ gsap.set('.cookie__notice', { overflow: "hidden", display: "flex" });
 //gsap.set([".sneaky__dot-contain", ".sneaky__dot-round"], {autoAlpha: 0});
 
 const readinessCircled = document.getElementById("reb-ready__circled");
-const readinessCircdata = employeeScrub.getAttribute("lottie-data");
+const readinessCircdata = readinessCircled.getAttribute("lottie-data");
 readinessCircled.load(readinessCircdata);
                
       var readyIntroOnce = gsap.timeline();
