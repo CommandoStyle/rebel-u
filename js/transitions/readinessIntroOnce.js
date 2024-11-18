@@ -2,7 +2,7 @@ export const readinessIntroOnce = (container) => {
 
 //gsap.set(".quiz__h-contain", { "will-change": "transform, opacity", x: -30, opacity: 0 });
 gsap.set("#quizstampimg", {autoAlpha: 0});
-gsap.set(".stamp-redact-cover", {scaleX: 0 });
+gsap.set([".stamp-redact-cover", ".redact-cover-nav.is--readiness"], {scaleX: 0 });
 gsap.set('.cookie__wrap', { xPercent: -105 });
 gsap.set('.cookie__container', { xPercent: 105 });
 gsap.set('.cookie-txt__reveal', { x: -30, opacity: 0 });
