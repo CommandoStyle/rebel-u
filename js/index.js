@@ -152,6 +152,12 @@ import { legalLinksSt } from './legal/legalLinksSt.js';
 
 import { errorMarquees } from './error/errorMarquees.js';
 
+/**
+* Readiness
+*/
+
+import { readinessMarquees } from './readiness/readinessMarquees.js';
+
 const mmTrans = window.matchMedia("(max-width: 480px)");
 
 // Get mouse position on click  
@@ -1406,7 +1412,7 @@ function initReadiness() {
 
   setTimeout(() => {
 
-  legalMarquees();  
+  readinessMarquees();  
   revertHome();
   quizStLottie();
   legalFooterLeave();
