@@ -29,7 +29,7 @@ ScrollTrigger.create({
   trigger: ".reb-items__contain",
   start: "top top",
   end: "+="+height+"%",
-  scrub: true,
+  scrub: 2,
   toggleActions: "play none none reverse",
   pin: ".reb-items__wrap", // 750vh in loco
   pinSpacing: false,
