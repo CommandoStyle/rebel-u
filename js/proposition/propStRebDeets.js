@@ -28,7 +28,7 @@ var rebTl = gsap.timeline({
 ScrollTrigger.create({
   trigger: ".reb-items__contain",
   start: "top top",
-  end: "+="+height+"%"+=100px",
+  end: "+="+height+"%",
   scrub: 2,
   toggleActions: "play none none reverse",
   pin: ".reb-items__wrap", // 750vh in loco
