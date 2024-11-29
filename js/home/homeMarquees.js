@@ -113,8 +113,8 @@ Observer.create({
         ease: "none",
       }
     })
-      .to([loopReady, loopPOW, loopEscape], { timeScale: factor * 3, duration: 0.3 })
-      .to([loopReady, loopPOW, loopEscape], { timeScale: factor / 3, duration: 0.5 }, "<");
+      .to([loopReady, loopPOW, loopEscape], { timeScale: factor * 3, duration: 0.2 })
+      .to([loopReady, loopPOW, loopEscape], { timeScale: factor / 3, duration: 0.4 }, "<");
   }
 });
 
