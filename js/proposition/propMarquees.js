@@ -160,7 +160,7 @@ Observer.create({
 
 Observer.create({
   onChangeY(self) {
-    let factor = 2;
+    let factor = 3;
     if (self.deltaY < 0) {
       factor *= 1;
     } 
@@ -169,8 +169,8 @@ Observer.create({
         ease: "none",
       }
     })
-      .to(loopReady, { timeScale: factor * 3, duration: 0.6 })
-      .to(loopReady, { timeScale: factor / 3, duration: 1 }, "<");
+      .to(loopReady, { timeScale: factor * 3, duration: 0.2 })
+      .to(loopReady, { timeScale: factor / 3, duration: 0.4 }, "<");
   }
 });
 
