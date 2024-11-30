@@ -104,7 +104,7 @@ ScrollTrigger.create({
 
 Observer.create({
   onChangeY(self) {
-    let factor = 2;
+    let factor = 3;
     if (self.deltaY < 0) {
       factor *= 1;
     } 
