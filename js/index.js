@@ -1180,12 +1180,12 @@ function initHome() {
   
   homeMarquees();   
   homePowEmoji();
-  //homeStLottie();
+  homeStLottie();
   homeStReveal();
   homeEbelSwiper();
   homeLeave();
   homeCloseNavHome();
-  //quizStLottie();
+  quizStLottie();
   legalFooterLeave();
   cookieLeave();
   globalMisc();
