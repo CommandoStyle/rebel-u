@@ -1180,7 +1180,7 @@ function initHome() {
   
   homeMarquees();   
   homePowEmoji();
-  homeStLottie();
+  //homeStLottie();
   homeStReveal();
   homeEbelSwiper();
   homeLeave();
