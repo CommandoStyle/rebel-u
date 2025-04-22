@@ -1,4 +1,4 @@
-export const scroll = () => {
+export const scrolling = () => {
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
