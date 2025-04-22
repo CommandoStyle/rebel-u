@@ -7,7 +7,7 @@ gsap.config({
 //Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, Observer, SplitText, ExpoScaleEase, MotionPathPlugin, MorphSVGPlugin);
 
-const initImports = () => {
+function initImports () {
   
 /**
 * Scroll
