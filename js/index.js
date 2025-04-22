@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, Observer, SplitText, ExpoScal
 * Scroll
 */
 
-import { scroll } from './scroll/scroll.js';
+import { scrolling } from './scroll/scrolling.js';
 import { resetScroll } from './scroll/resetScroll.js';
 import { noHoverScroll } from './scroll/noHoverScroll.js';
 
