@@ -243,8 +243,8 @@ const initRblu = () => {
             },
             once(data) {
 
-              //scroll(data.next.container);
-              //homeIntroOnce(data.next.container); 
+              scroll(data.next.container);
+              homeIntroOnce(data.next.container); 
             
             },
             beforeEnter(data){},
@@ -257,7 +257,7 @@ const initRblu = () => {
 
               $(data.next.container).addClass("fixed");
 
-              //homeIntro();
+              homeIntro();
 
               //iPad and Mobile
               if (mmTrans.matches) {
