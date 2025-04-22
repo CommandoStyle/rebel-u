@@ -6,8 +6,6 @@ gsap.config({
 
 //Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, Observer, SplitText, ExpoScaleEase, MotionPathPlugin, MorphSVGPlugin);
-
-function initImports () {
   
 /**
 * Scroll
@@ -159,10 +157,6 @@ import { errorMarquees } from './error/errorMarquees.js';
 */
 
 import { readinessMarquees } from './readiness/readinessMarquees.js';
-
-}
-
-initImports();
 
 const mmTrans = window.matchMedia("(max-width: 480px)");
 
