@@ -1084,7 +1084,7 @@ const initRblu = () => {
             namespace: 'home',
           afterEnter(data) { 
             navMenuNew(data.next.container);
-            //initHome(data.next.container); 
+            initHome(data.next.container); 
             noHoverScroll(data.next.container);
             }
           }, {
