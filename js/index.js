@@ -1,11 +1,4 @@
-//Turn off GSAP alerts
-gsap.config({
-  nullTargetWarn: false,
-  trialWarn: false
-});
 
-//Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, Observer, SplitText, ExpoScaleEase, MotionPathPlugin, MorphSVGPlugin);
 
 /**
 * Scroll
