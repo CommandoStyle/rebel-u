@@ -243,7 +243,7 @@ const initRblu = () => {
             },
             once(data) {
 
-              scroll(data.next.container);
+              scrolling(data.next.container);
               homeIntroOnce(data.next.container); 
             
             },
@@ -285,7 +285,7 @@ const initRblu = () => {
             afterEnter(data) {},
             after(data) {
 
-            scroll(data.next.container);  
+            scrolling(data.next.container);  
               
             },
            },
@@ -297,7 +297,7 @@ const initRblu = () => {
             },
             once(data) {
 
-              scroll(data.next.container);
+              scrolling(data.next.container);
               propIntroOnce(data.next.container);
     
             },
@@ -335,7 +335,7 @@ const initRblu = () => {
             after(data) {
 
               initWebflow(data.next.container);
-              scroll(data.next.container);
+              scrolling(data.next.container);
     
             },
            },
@@ -379,7 +379,7 @@ const initRblu = () => {
             },
             after(data) { 
               initWebflow(data.next.container);
-              scroll(data.next.container); 
+              scrolling(data.next.container); 
                }
             },
          // proposition from home CTA (Escape btn)
@@ -421,7 +421,7 @@ const initRblu = () => {
           },
           after(data) { 
             initWebflow(data.next.container);
-            scroll(data.next.container); },
+            scrolling(data.next.container); },
           },
              // alumni
            {
@@ -431,7 +431,7 @@ const initRblu = () => {
             },
             once(data) {
 
-              scroll(data.next.container);
+              scrolling(data.next.container);
               alumniIntroOnce(data.next.container);
             
             },
@@ -469,7 +469,7 @@ const initRblu = () => {
             afterEnter(data) {},
             after(data) {
 
-             scroll(data.next.container);
+             scrolling(data.next.container);
 
             },
            },
@@ -510,7 +510,7 @@ const initRblu = () => {
           }
                                           
           },
-          after(data) { scroll(data.next.container); },
+          after(data) { scrolling(data.next.container); },
           },
           // alumni from alum revert
           {
@@ -549,7 +549,7 @@ const initRblu = () => {
           }
                                                       
           },
-          after(data) { scroll(data.next.container); },
+          after(data) { scrolling(data.next.container); },
           },
            // Alum deets
            {
@@ -560,7 +560,7 @@ const initRblu = () => {
             once(data) {
 
               alumIntroOnce(data.next.container);
-              scroll(data.next.container);
+              scrolling(data.next.container);
               
             },
             before(data) {},
@@ -605,7 +605,7 @@ const initRblu = () => {
             afterEnter(data) {},
             after(data) {
 
-              scroll(data.next.container);
+              scrolling(data.next.container);
             
             },
            },
@@ -616,7 +616,7 @@ const initRblu = () => {
             namespace: ['about']},
             once(data) {
               aboutIntroOnce(data.next.container); 
-              scroll(data.next.container);
+              scrolling(data.next.container);
             },
             enter(data) {
 
@@ -650,7 +650,7 @@ const initRblu = () => {
             },
             after(data) {
 
-              scroll(data.next.container);
+              scrolling(data.next.container);
 
             },
            },
@@ -691,7 +691,7 @@ const initRblu = () => {
            }
                                 
            },
-           after(data) { scroll(data.next.container); },
+           after(data) { scrolling(data.next.container); },
            },
             // Mr Ebel
           {
@@ -702,7 +702,7 @@ const initRblu = () => {
             once(data) {
               
               mrebelIntroOnce(data.next.container); 
-              scroll(data.next.container);
+              scrolling(data.next.container);
               
             },
             enter(data) {
@@ -738,7 +738,7 @@ const initRblu = () => {
             afterEnter(data) {},
             after(data) {
 
-              scroll(data.next.container);
+              scrolling(data.next.container);
               
             }
            },
@@ -779,7 +779,7 @@ const initRblu = () => {
           }
                                                       
           },
-          after(data) { scroll(data.next.container); },
+          after(data) { scrolling(data.next.container); },
           },
           // mr Ebel from post revert
           {
@@ -818,7 +818,7 @@ const initRblu = () => {
           }
                                                        
            },
-           after(data) { scroll(data.next.container); },
+           after(data) { scrolling(data.next.container); },
            },
           // Mr Ebel POSTS
           {
@@ -829,7 +829,7 @@ const initRblu = () => {
             once(data) {
               
               ebelPostIntroOnce(data.next.container);
-              scroll(data.next.container);
+              scrolling(data.next.container);
               
             },
             leave(data) {
@@ -873,7 +873,7 @@ const initRblu = () => {
             afterEnter(data) {},
             after(data) {
               
-              scroll(data.next.container);
+              scrolling(data.next.container);
 
             },
            },
@@ -886,7 +886,7 @@ const initRblu = () => {
              once(data) {
 
                legalIntroOnce(data.next.container);
-               scroll(data.next.container);
+               scrolling(data.next.container);
                
              },
              leave(data) {
@@ -930,7 +930,7 @@ const initRblu = () => {
              afterEnter(data) {},
              after(data) {
                
-               scroll(data.next.container);
+               scrolling(data.next.container);
  
              },
             },
@@ -971,7 +971,7 @@ const initRblu = () => {
             }
                                            
             },
-            after(data) { scroll(data.next.container); },
+            after(data) { scrolling(data.next.container); },
             },
                // Legal from cookie btn
                {
@@ -988,7 +988,7 @@ const initRblu = () => {
                                           
                                                
                 },
-                after(data) { scroll(data.next.container); 
+                after(data) { scrolling(data.next.container); 
                   $(data.next.container).removeClass("fixed");},
                 },
                    // Legal from iFrame
@@ -1028,7 +1028,7 @@ const initRblu = () => {
             }
                                            
             },
-            after(data) { scroll(data.next.container); },
+            after(data) { scrolling(data.next.container); },
             }, // Readiness
              {
              name: 'readinessIn',
