@@ -4,7 +4,7 @@ export const homeStLottie = () => {
 
   const indieCircle = document.getElementById("independence-circled");
   const indieCircleData = indieCircle.getAttribute("lottie-data");
-  indieCircle.loadAnimation(indieCircleData);
+  indieCircle.load(indieCircleData);
   
   ScrollTrigger.create({
     trigger: ".sub-hero__inline-independence",
@@ -17,7 +17,7 @@ export const homeStLottie = () => {
 
   const corpScrub = document.getElementById("corporate-scrub");
   const corpScrubData = corpScrub.getAttribute("lottie-data");
-  corpScrub.loadAnimation(corpScrubData);
+  corpScrub.load(corpScrubData);
   
   ScrollTrigger.create({
     trigger: ".sub-hero__inline-corporate",
@@ -30,7 +30,7 @@ export const homeStLottie = () => {
 
   const rebBridge = document.getElementById("reb-bridge");
   const rebBridgeData = rebBridge.getAttribute("lottie-data");
-  rebBridge.loadAnimation(rebBridgeData);
+  rebBridge.load(rebBridgeData);
   
   ScrollTrigger.create({
     trigger: ".reb-bridge__contain",
