@@ -1185,7 +1185,7 @@ function initHome() {
   homeEbelSwiper();
   homeLeave();
   homeCloseNavHome();
-  quizStLottie();
+  //quizStLottie();
   legalFooterLeave();
   cookieLeave();
   globalMisc();
